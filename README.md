@@ -12,7 +12,7 @@ Arsenal+ English Translation 自体がロシア語で作成された Arsenal+ �
       (動作には Java (JRE) が必要。Windows なら [こちら](https://www.java.com/ja/download/ie_manual.jsp) ）
     * [Arsenal+ Base Resources v1.27.1](https://www.dropbox.com/s/ze6hw5x53g5hi6c/ARS%20-%20Base%20Resources%20v1.27.1.ftl?dl=0)
     * [Arsenal+ Base v1.27.1](https://www.dropbox.com/s/po2fjvhu6tvap8x/Arsenal%2B%20English.zip?dl=0)
-* [本パッチ](https://github.com/AyKo/arsenal-plus-japanese-patch/releases/download/v0.1/Arsenal+.English.Japanese.Machine.Translation.Patch.zip)
+* [本パッチ](https://github.com/AyKo/arsenal-plus-japanese-patch/releases/download/v0.2/Arsenal+English.JapaneseMachineTranslationPatch.zip)
 
 ## インストール
 当方の環境がWindows/Steamですので、その環境を前提に書いています。違う環境の場合は異なる部分があると思いますが、適時置き換えて読んでください。
@@ -51,7 +51,7 @@ Base はいくつかの .ftl ファイルをまとめた zip ファイルがダ�
 
 
 #### 4. 日本語パッチ(機械翻訳) の入手と格納
-本ページから 「Arsenal+ English Translation」の[日本語パッチ(機械翻訳)](https://github.com/AyKo/arsenal-plus-japanese-patch/releases/download/v0.1/Arsenal+.English.Japanese.Machine.Translation.Patch.zip) をダウンロードします。
+本ページから 「Arsenal+ English Translation」の[日本語パッチ(機械翻訳)](https://github.com/AyKo/arsenal-plus-japanese-patch/releases/download/v0.2/Arsenal+English.JapaneseMachineTranslationPatch.zip) をダウンロードします。
 こちらも zip ファイルを解凍すると、いくつかの .ftl ファイルができますので同じく mods フォルダに格納します。
 
 
