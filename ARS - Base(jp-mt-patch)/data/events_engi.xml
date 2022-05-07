@@ -922,7 +922,7 @@ Idea — make an event where you're fighting to save an engi ship but theres man
 		<event/>
 	</choice>
 	<choice req="engi">
-		<text>(Engi Crewmember) エンギ乗組員に船を雹で呼び、損傷を評価してもらいます。</text>
+		<text>(Engi Crewmember) エンギ乗組員を歓迎し、損傷を評価してもらいます。</text>
 		<event>
 			<text>あなたのエンギの乗組員は拒否します。形容詞と名詞の使用を停止し、続いていくつかのアニメーションのホログラフィックエイズで、エンギは船が...お互いを使用して、大まかに翻訳して「結合を達成する」と説明しています。何らかの理由で、この船の問題の統合は恥ずかしくて個人的に聞こえます。</text>
 			<choice hidden="true">
@@ -3031,11 +3031,11 @@ Idea — make an event where you're fighting to save an engi ship but theres man
 		<event load="MENGI_EVENT_ATTACK"/>
 	</choice>
 	<choice req="engi" lvl="0" max_lvl="0" hidden="true" blue="false">
-		<text>船を雹。</text>
+		<text>船に呼びかけます。</text>
 		<event load="MENGI_CRYSTAL_EVENT_NOTALK"/>
 	</choice>
 	<choice req="engi" lvl="1" hidden="true" blue="false">
-		<text>船を雹。</text>
+		<text>船を呼びかけます。</text>
 		<event load="MENGI_CRYSTAL_EVENT_TALK"/>
 	</choice>
 	<choice hidden="true">
@@ -3044,7 +3044,7 @@ Idea — make an event where you're fighting to save an engi ship but theres man
 	</choice>
 </event>
 <event name="MENGI_CRYSTAL_EVENT_NOTALK">
-	<text>あなたの雹は沈黙に出会う...</text>
+	<text>あなたの呼びかけは沈黙に出会う...</text>
 	<choice hidden="true">
 		<text>船を攻撃します。</text>
 		<event load="MENGI_EVENT_ATTACK"/>
@@ -3055,7 +3055,7 @@ Idea — make an event where you're fighting to save an engi ship but theres man
 	</choice>
 </event>
 <event name="MENGI_CRYSTAL_EVENT_TALK">
-	<text>モーフは次のように応答します。 。RESTART... "接続が失われました。</text>
+	<text>モーフは次のように応答します。 。RESTART... 接続が失われました。</text>
 	<status type="limit" target="enemy" system="teleporter" amount="0"/>
 	<quest event="MENGI_CRYSTAL_EVENTQ"/>
 	<choice hidden="true">

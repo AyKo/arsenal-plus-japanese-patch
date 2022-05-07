@@ -3455,7 +3455,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXX --><!-- 1.21 -->
 
 <ship name="HAL_SHIP_ROCK_IS_DEAD" auto_blueprint="HAL_SHIPS">
 	<destroyed>
-		<text>あなたが戦っている間に、すべてのロックマンが死にました。彼らの船体はあまりにも多くの違反でいっぱいで、貧しい人々は酸素を乗せずに窒息死しました。残っているのは、両方の船から物資を集めて先に進むことだけです。</text>
+		<text>あなたが戦っている間に、すべてのロックマンが死にました。彼らの船体はあまりにも多くの破損でいっぱいで、貧しい人々は酸素を乗せずに窒息死しました。残っているのは、両方の船から物資を集めて先に進むことだけです。</text>
 		<autoReward level="HIGH">scrap_only</autoReward> <!-- 1.25.1 was med in 1.23 -->
 		<item_modify>
 			<item type="drones" min="0" max="5"/>
@@ -3506,7 +3506,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXX --><!-- 1.21 -->
 		<status type="clear" target="enemy" system="reactor" amount="100"/>
 	</event>
 	<event>
-		<text>突然、搭載されているHALコンピューターの電源が切れ、ドローンがまだ宇宙にぶら下がっています。しばらく待ちますが、すべてが順調に進んでいるようです。あなたの乗組員は船にスクラップがないか調べて、船倉に機能しているHALドローンの概略図を見つけます。残念ながら、あなたが戦っている間に、すべてのロックマンが死にました。彼らの船体はあまりにも多くの違反でいっぱいで、貧しい人々は酸素を乗せずに窒息死しました。あなたは先に進む準備をしています...</text>
+		<text>突然、搭載されているHALコンピューターの電源が切れ、ドローンがまだ宇宙にぶら下がっています。しばらく待ちますが、すべてが順調に進んでいるようです。あなたの乗組員は船にスクラップがないか調べて、船倉に機能しているHALドローンの概略図を見つけます。残念ながら、あなたが戦っている間に、すべてのロックマンが死にました。彼らの船体はあまりにも多くの破損でいっぱいで、貧しい人々は酸素を乗せずに窒息死しました。あなたは先に進む準備をしています...</text>
 		<ship hostile="false"/>
 		<autoReward level="HIGH">scrap_only</autoReward> <!-- 1.25.1 was random -->
 		<drone name="DRONES_COMBAT_HAL"/>
@@ -3519,7 +3519,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXX --><!-- 1.21 -->
 		<autoReward level="MED">scrap_only</autoReward>
 	</event>
 	<event>
-		<text>ロックマンは危機的な状態にあります！彼らの船体は違反でいっぱいです、そして彼らがすぐに修理されなければ、彼らはすべて窒息するでしょう！</text>
+		<text>ロックマンは危機的な状態にあります！彼らの船体は破損でいっぱいです、そして彼らがすぐに修理されなければ、彼らはすべて窒息するでしょう！</text>
 		<choice hidden="false">
 			<text>スクラップストックを使用してメッキを修復します。</text>
 			<event>

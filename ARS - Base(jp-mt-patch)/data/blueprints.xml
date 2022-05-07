@@ -2230,7 +2230,7 @@ TRAINING SHIPS
 </augBlueprint>
 <augBlueprint name="INJECTOR_BRC"> <!-- € -->
 	<title>Breach Injector</title>
-	<desc>1つの武器の違反の可能性が40％増加します。セクター開始時に使用されます。少なくとも違反の可能性が低い武器にのみ適用できます。</desc>
+	<desc>1つの武器の破損の可能性が40％増加します。セクター開始時に使用されます。少なくとも破損の可能性が低い武器にのみ適用できます。</desc>
 	<cost>30</cost>
 	<bp>15</bp>
 	<rarity>5</rarity>
@@ -5153,7 +5153,7 @@ TRAINING SHIPS
 	<type>LASER</type>
 	<title>Slug Artillery</title>
 	<short>Slug Artil.</short>
-	<desc>違反が可能な麻痺するダーツを頻繁に発射します。 [4‡]</desc><!-- 1.26 -->
+	<desc>破損が可能な麻痺するダーツを頻繁に発射します。 [4‡]</desc><!-- 1.26 -->
 	<tooltip>Slug Artillery: Fires breach-capable paralyzing darts quite often. [4 ‡]</tooltip><!-- 1.26 -->
 	<radius>35</radius>
 	<damage>0</damage>
@@ -11022,7 +11022,7 @@ TRAINING SHIPS
 	<tip>ce_tip_laser_light_f0_b6</tip>
 	<title>Light Breach Laser Mark II</title>
 	<short>Light Breach II</short>
-	<desc>侵入の可能性を最大化するように設計された対人レーザー。この新しいモデルは、クールダウンと違反の可能性を念頭に置いてアップグレードされました。</desc>
+	<desc>侵入の可能性を最大化するように設計された対人レーザー。この新しいモデルは、クールダウンと破損の可能性を念頭に置いてアップグレードされました。</desc>
 	<persDamage>1</persDamage>
 	<stunChance>6</stunChance>
 	<damage>0</damage>
@@ -11063,7 +11063,7 @@ TRAINING SHIPS
 	<title>Light Breach Vulcan</title>
 	<short>LB. Vulcan</short>
 	<!-- aka the cheese maker -->
-	<desc>ライトブリーチレーザーのガトリングバリアント。多くの場合、なぞなぞは違反で部屋を襲います。</desc>
+	<desc>ライトブリーチレーザーのガトリングバリアント。頻繁に破損で穴だらけにします。</desc>
 	<persDamage>1</persDamage>
 	<damage>0</damage>
 	<stunChance>5</stunChance>
@@ -13209,7 +13209,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b8</tip>
 	<title>Hull Crusher Laser Mark II</title>
 	<short>Hull Crush II</short>
-	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前任者よりも高速で、より多くの違反に対応できます。</desc>
+	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前作よりも高速かつ多くの破壊を引き起こす能力があります。</desc>
 	<!-- ...hull laser + artillery laser... -->
 	<damage>2</damage> <!-- 1.26 was 3 -->
 	<stun>1</stun>
@@ -13250,7 +13250,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b9</tip>
 	<title>Hull Crusher Laser Mark III</title>
 	<short>Hull Crush III</short>
-	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前任者よりも高速で、より多くの違反に対応できます。</desc>
+	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前作よりも高速かつ多くの破壊を引き起こす能力があります。</desc>
 	<!-- ...hull laser + artillery laser... -->
 	<damage>2</damage> <!-- 1.26 was 3 -->
 	<stun>1</stun>
@@ -13538,7 +13538,7 @@ TRAINING SHIPS
 	<tip>tip_laser_orden_f7_b7</tip>
 	<title>Combination Laser</title>
 	<short>Combo Laser</short>
-	<desc>Order狂信者によって設計されたこの標準レーザーのバリエーションは、発火や違反を引き起こす可能性が高いことを誇っています。</desc>
+	<desc>Order狂信者によって設計されたこの標準レーザーのバリエーションは、発火や破損を引き起こす可能性が高いことを誇っています。</desc>
 	<!-- ...cumulative projectile... -->
 	<damage>1</damage>
 	<shots>1</shots>
@@ -13576,7 +13576,7 @@ TRAINING SHIPS
 	<title>Heavy Combination Laser</title>
 	<short>H-Combo Laser</short>
 	<tip>tip_laser_orden_f8_b8</tip>
-	<desc>Order狂信者によって設計されたこのヘビーレーザーのバリエーションは、発火や違反を引き起こす可能性が高いことを誇っています。</desc>
+	<desc>Order狂信者によって設計されたこのヘビーレーザーのバリエーションは、発火や破損を引き起こす可能性が高いことを誇っています。</desc>
 	<!-- ...heavy laser... -->
 	<damage>2</damage>
 	<shots>1</shots>
@@ -15929,7 +15929,7 @@ TRAINING SHIPS
 	<title>Timer Bomb</title>
 	<short>Timer B.</short>
 	<locked>1</locked><!-- in 1.26 reduced description -->
-	<desc>タイマー付きユニバーサル爆弾。乗組員に甚大な被害を与え、対象の部屋に火事を起こしたり、違反を引き起こしたりする可能性があります。印象的！</desc>
+	<desc>タイマー付きユニバーサル爆弾。乗組員に甚大な被害を与え、対象の部屋に火事を起こしたり、破損を引き起こしたりする可能性があります。すばらしい！</desc>
 	<damage>0</damage>
 	<sysDamage>2</sysDamage> <!-- 1.26 added -->
 	<persDamage>5</persDamage>
@@ -16253,7 +16253,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark I</title>
 	<short>Breach-I</short>
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された自己テレポーティング爆薬。</desc>
+	<desc>システムに損傷を与え、破損を引き起こすように設計された自己テレポーティング爆薬。</desc>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>
@@ -16285,7 +16285,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark II</title>
 	<short>Breach-II</short>
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された自己テレポーティング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
+	<desc>システムに損傷を与え、破損を引き起こすように設計された自己テレポーティング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
 	<damage>0</damage>
 	<sysDamage>2</sysDamage>
 	<persDamage>2</persDamage>
@@ -16317,7 +16317,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark III</title>
 	<short>Breach-III</short>
 	<locked>1</locked>
-	<desc>システムに損傷を与えるように設計された自己テレポーティング違反爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
+	<desc>システムに損傷を与えるように設計された自己テレポーティングブリーチ爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
 	<damage>0</damage>
 	<sysDamage>3</sysDamage>
 	<persDamage>3</persDamage>
@@ -16349,7 +16349,7 @@ TRAINING SHIPS
 	<title>Cluster Breach Bomb</title>
 	<short>Breach*</short>
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された3つのセルフテレポーティング爆薬のクラスターを発射します。</desc>
+	<desc>システムに損傷を与え、破損を引き起こすように設計された3つのセルフテレポーティング爆薬のクラスターを発射します。</desc>
 	<!--  Cluster Breach Bomb yo! The payload is split across several mini-bombs. -->
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
@@ -17750,7 +17750,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b3</tip>
 	<title>Hull Missiles Mark I</title>
 	<short>Hull M. I</short>
-	<desc>違反の可能性は悪くないが、軽微なダメージを与える。</desc>
+	<desc>破損の可能性は悪くないが、軽微なダメージを与える。</desc>
 	<damage>1</damage>
 	<stun>3</stun>
 	<missiles>1</missiles>
@@ -17787,7 +17787,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b6</tip>
 	<title>Hull Missiles Mark II</title>
 	<short>Hull M. II</short>
-	<desc>かなりまともな違反の可能性で良い船体ダメージを与えます。</desc>
+	<desc>かなりまともな破損の可能性で良い船体ダメージを与えます。</desc>
 	<damage>2</damage>
 	<stun>4</stun>
 	<missiles>1</missiles>
@@ -18674,7 +18674,7 @@ TRAINING SHIPS
 	<tip>tip_no_missiles_f1_b3</tip>
 	<title>Hull Missiles Mark I*</title>
 	<short>Hull M. I*</short>
-	<desc>違反の可能性は悪くないが、軽微なダメージを与える。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
+	<desc>破損の可能性は悪くないが、軽微なダメージを与える。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
 	<damage>1</damage>
 	<stun>3</stun>
 	<missiles>0</missiles>
@@ -19678,7 +19678,7 @@ TRAINING SHIPS
 	<title>Hull Missiles Mark II*</title>
 	<short>Hull M. II*</short>
 	<tip>tip_hull_f2_b6</tip>
-	<desc>かなりまともな違反の可能性で良い船体ダメージを与えます。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
+	<desc>かなりまともな破損の可能性で良い船体ダメージを与えます。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
 	<damage>2</damage>
 	<stun>4</stun>
 	<missiles>0</missiles>
@@ -29250,7 +29250,7 @@ TRAINING SHIPS
 	<title>Breach Pulse Blaster</title>
 	<short>Br-Pulse Blaster</short>
 	<!-- <desc>Ion stun weapon created by hacker factions. This modification boasts a higher chance to cause a breach. -->
-	<desc>有害なイオンスタンパルスを発射します。違反を引き起こす可能性が高くなります。</desc>
+	<desc>有害なイオンスタンパルスを発射します。破損を引き起こす可能性が高くなります。</desc>
 	<damage>1</damage>
 	<ion>1</ion>
 	<speed>90</speed>
@@ -29372,7 +29372,7 @@ TRAINING SHIPS
 	<title>Charge Breach Pulse Blaster</title>
 	<short>Br-Pulse*</short>
 	<!--  Ion weapon created by hacker factions. Higher breach chance and can accumulate up to 2 charges. -->
-	<desc>最大2つの有害なイオンスタンパルスを保存できます。違反を引き起こす可能性が高くなります。</desc>
+	<desc>最大2つの有害なイオンスタンパルスを保存できます。破損を引き起こす可能性が高くなります。</desc>
 	<damage>1</damage>
 	<ion>1</ion>
 	<speed>90</speed>
@@ -29637,7 +29637,7 @@ TRAINING SHIPS
 	<short>Ion Blast+</short>
 	<tip>tip_ion_f0_b1</tip>
 	<locked>1</locked>
-	<desc>イオン兵器は、船体に損傷を与えることなくシステムを無効にすることができます。イオンブラストマークのこの改善された変更は、違反を引き起こす可能性があります。</desc>
+	<desc>イオン兵器は、船体に損傷を与えることなくシステムを無効にすることができます。イオンブラストマークのこの改善された変更は、破損を引き起こす可能性があります。</desc>
 	<damage>0</damage>
 	<ion>1</ion>
 	<speed>30</speed>
@@ -29702,7 +29702,7 @@ TRAINING SHIPS
 	<tip>ce_tip_mines_f1_b3</tip>
 	<title>Frigg Mine Launcher+</title>
 	<short>Frigg+</short>
-	<desc>ベースのフリッグマインランチャーの高度なバージョンで、より多くのダメージを与え、システムにもダメージを与えます。クールダウンが速く、違反が発生する可能性があります。</desc>
+	<desc>ベースのフリッグマインランチャーの高度なバージョンで、より多くのダメージを与え、システムにもダメージを与えます。クールダウンが速く、破損が発生する可能性があります。</desc>
 	<damage>3</damage>
 	<sysDamage>0</sysDamage>
 	<persDamage>-3</persDamage>
@@ -45477,7 +45477,7 @@ TRAINING SHIPS
 	<tip>ce_tip_laser_light_f0_b6</tip>
 	<title>Light Breach Laser Mark II ™</title> <!-- inj -->
 	<short>Light Breach II ™</short> <!-- inj -->
-	<desc>侵入の可能性を最大化するように設計された対人レーザー。この新しいモデルは、クールダウンと違反の可能性を念頭に置いてアップグレードされました。</desc>
+	<desc>侵入の可能性を最大化するように設計された対人レーザー。この新しいモデルは、クールダウンと破損の可能性を念頭に置いてアップグレードされました。</desc>
 	<persDamage>1</persDamage>
 	<stunChance>6</stunChance>
 	<damage>0</damage>
@@ -45516,7 +45516,7 @@ TRAINING SHIPS
 	<tip>ce_tip_laser_light_f0_b10</tip>
 	<title>Light Breach Laser Mark II €</title> <!-- inj -->
 	<short>Light Breach II €</short> <!-- inj -->
-	<desc>侵入の可能性を最大化するように設計された対人レーザー。この新しいモデルは、クールダウンと違反の可能性を念頭に置いてアップグレードされました。</desc>
+	<desc>侵入の可能性を最大化するように設計された対人レーザー。この新しいモデルは、クールダウンと破損の可能性を念頭に置いてアップグレードされました。</desc>
 	<persDamage>1</persDamage>
 	<stunChance>6</stunChance>
 	<damage>0</damage>
@@ -45555,7 +45555,7 @@ TRAINING SHIPS
 	<tip>ce_tip_laser_light_f0_b6</tip>
 	<title>Light Breach Laser Mark II ‡</title> <!-- inj -->
 	<short>Light Breach II ‡</short> <!-- inj -->
-	<desc>侵入の可能性を最大化するように設計された対人レーザー。この新しいモデルは、クールダウンと違反の可能性を念頭に置いてアップグレードされました。</desc>
+	<desc>侵入の可能性を最大化するように設計された対人レーザー。この新しいモデルは、クールダウンと破損の可能性を念頭に置いてアップグレードされました。</desc>
 	<persDamage>1</persDamage>
 	<stunChance>6</stunChance>
 	<damage>0</damage>
@@ -45594,7 +45594,7 @@ TRAINING SHIPS
 	<tip>ce_tip_laser_light_f0_b6</tip>
 	<title>Light Breach Laser Mark II †</title> <!-- inj -->
 	<short>Light Breach II †</short> <!-- inj -->
-	<desc>侵入の可能性を最大化するように設計された対人レーザー。この新しいモデルは、クールダウンと違反の可能性を念頭に置いてアップグレードされました。</desc>
+	<desc>侵入の可能性を最大化するように設計された対人レーザー。この新しいモデルは、クールダウンと破損の可能性を念頭に置いてアップグレードされました。</desc>
 	<persDamage>1</persDamage>
 	<stunChance>6</stunChance>
 	<damage>0</damage>
@@ -45633,7 +45633,7 @@ TRAINING SHIPS
 	<tip>ce_tip_laser_light_f0_b6</tip>
 	<title>Light Breach Laser Mark II √</title> <!-- inj -->
 	<short>Light Breach II √</short> <!-- inj -->
-	<desc>侵入の可能性を最大化するように設計された対人レーザー。この新しいモデルは、クールダウンと違反の可能性を念頭に置いてアップグレードされました。</desc>
+	<desc>侵入の可能性を最大化するように設計された対人レーザー。この新しいモデルは、クールダウンと破損の可能性を念頭に置いてアップグレードされました。</desc>
 	<persDamage>2</persDamage> <!-- inj -->
 	<stunChance>6</stunChance>
 	<damage>0</damage>
@@ -45673,7 +45673,7 @@ TRAINING SHIPS
 	<title>Light Breach Vulcan ™</title> <!-- inj -->
 	<short>LB. Vulcan ™</short> <!-- inj -->
 
-	<desc>ライトブリーチレーザーのガトリングバリアント。多くの場合、なぞなぞは違反で部屋を襲います。</desc>
+	<desc>ライトブリーチレーザーのガトリングバリアント。頻繁に破損で穴だらけにします。</desc>
 	<persDamage>1</persDamage>
 	<damage>0</damage>
 	<stunChance>5</stunChance>
@@ -45718,7 +45718,7 @@ TRAINING SHIPS
 	<title>Light Breach Vulcan €</title> <!-- inj -->
 	<short>LB. Vulcan €</short> <!-- inj -->
 
-	<desc>ライトブリーチレーザーのガトリングバリアント。多くの場合、なぞなぞは違反で部屋を襲います。</desc>
+	<desc>ライトブリーチレーザーのガトリングバリアント。頻繁に破損で穴だらけにします。</desc>
 	<persDamage>1</persDamage>
 	<damage>0</damage>
 	<stunChance>5</stunChance>
@@ -45763,7 +45763,7 @@ TRAINING SHIPS
 	<title>Light Breach Vulcan ‡</title> <!-- inj -->
 	<short>LB. Vulcan ‡</short> <!-- inj -->
 
-	<desc>ライトブリーチレーザーのガトリングバリアント。多くの場合、なぞなぞは違反で部屋を襲います。</desc>
+	<desc>ライトブリーチレーザーのガトリングバリアント。頻繁に破損で穴だらけにします。</desc>
 	<persDamage>1</persDamage>
 	<damage>0</damage>
 	<stunChance>5</stunChance>
@@ -45808,7 +45808,7 @@ TRAINING SHIPS
 	<title>Light Breach Vulcan †</title> <!-- inj -->
 	<short>LB. Vulcan †</short> <!-- inj -->
 
-	<desc>ライトブリーチレーザーのガトリングバリアント。多くの場合、なぞなぞは違反で部屋を襲います。</desc>
+	<desc>ライトブリーチレーザーのガトリングバリアント。頻繁に破損で穴だらけにします。</desc>
 	<persDamage>1</persDamage>
 	<damage>0</damage>
 	<stunChance>5</stunChance>
@@ -45853,7 +45853,7 @@ TRAINING SHIPS
 	<title>Light Breach Vulcan √</title> <!-- inj -->
 	<short>LB. Vulcan √</short> <!-- inj -->
 
-	<desc>ライトブリーチレーザーのガトリングバリアント。多くの場合、なぞなぞは違反で部屋を襲います。</desc>
+	<desc>ライトブリーチレーザーのガトリングバリアント。頻繁に破損で穴だらけにします。</desc>
 	<persDamage>2</persDamage> <!-- inj -->
 	<damage>0</damage>
 	<stunChance>5</stunChance>
@@ -54538,7 +54538,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b8</tip>
 	<title>Hull Crusher Laser Mark II ™</title> <!-- inj -->
 	<short>Hull Crush II ™</short> <!-- inj -->
-	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前任者よりも高速で、より多くの違反に対応できます。</desc>
+	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前作よりも高速かつ多くの破壊を引き起こす能力があります。</desc>
 
 	<damage>2</damage>
 	<stun>1</stun>
@@ -54578,7 +54578,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b10</tip>
 	<title>Hull Crusher Laser Mark II €</title> <!-- inj -->
 	<short>Hull Crush II €</short> <!-- inj -->
-	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前任者よりも高速で、より多くの違反に対応できます。</desc>
+	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前作よりも高速かつ多くの破壊を引き起こす能力があります。</desc>
 
 	<damage>2</damage>
 	<stun>1</stun>
@@ -54618,7 +54618,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b8</tip>
 	<title>Hull Crusher Laser Mark II ‡</title> <!-- inj -->
 	<short>Hull Crush II ‡</short> <!-- inj -->
-	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前任者よりも高速で、より多くの違反に対応できます。</desc>
+	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前作よりも高速かつ多くの破壊を引き起こす能力があります。</desc>
 
 	<damage>2</damage>
 	<stun>1</stun>
@@ -54658,7 +54658,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b8</tip>
 	<title>Hull Crusher Laser Mark II †</title> <!-- inj -->
 	<short>Hull Crush II †</short> <!-- inj -->
-	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前任者よりも高速で、より多くの違反に対応できます。</desc>
+	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前作よりも高速かつ多くの破壊を引き起こす能力があります。</desc>
 
 	<damage>2</damage>
 	<stun>1</stun>
@@ -54698,7 +54698,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b8</tip>
 	<title>Hull Crusher Laser Mark II √</title> <!-- inj -->
 	<short>Hull Crush II √</short> <!-- inj -->
-	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前任者よりも高速で、より多くの違反に対応できます。</desc>
+	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前作よりも高速かつ多くの破壊を引き起こす能力があります。</desc>
 
 	<persDamage>1</persDamage> <!-- inj -->
 	<damage>2</damage>
@@ -54739,7 +54739,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b9</tip>
 	<title>Hull Crusher Laser Mark III ™</title> <!-- inj -->
 	<short>Hull Crush III ™</short> <!-- inj -->
-	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前任者よりも高速で、より多くの違反に対応できます。</desc>
+	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前作よりも高速かつ多くの破壊を引き起こす能力があります。</desc>
 
 	<damage>2</damage>
 	<stun>1</stun>
@@ -54779,7 +54779,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b10</tip>
 	<title>Hull Crusher Laser Mark III €</title> <!-- inj -->
 	<short>Hull Crush III €</short> <!-- inj -->
-	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前任者よりも高速で、より多くの違反に対応できます。</desc>
+	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前作よりも高速かつ多くの破壊を引き起こす能力があります。</desc>
 
 	<damage>2</damage>
 	<stun>1</stun>
@@ -54819,7 +54819,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b9</tip>
 	<title>Hull Crusher Laser Mark III ‡</title> <!-- inj -->
 	<short>Hull Crush III ‡</short> <!-- inj -->
-	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前任者よりも高速で、より多くの違反に対応できます。</desc>
+	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前作よりも高速かつ多くの破壊を引き起こす能力があります。</desc>
 
 	<damage>2</damage>
 	<stun>1</stun>
@@ -54859,7 +54859,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b9</tip>
 	<title>Hull Crusher Laser Mark III †</title> <!-- inj -->
 	<short>Hull Crush III †</short> <!-- inj -->
-	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前任者よりも高速で、より多くの違反に対応できます。</desc>
+	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前作よりも高速かつ多くの破壊を引き起こす能力があります。</desc>
 
 	<damage>2</damage>
 	<stun>1</stun>
@@ -54899,7 +54899,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b9</tip>
 	<title>Hull Crusher Laser Mark III √</title> <!-- inj -->
 	<short>Hull Crush III √</short> <!-- inj -->
-	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前任者よりも高速で、より多くの違反に対応できます。</desc>
+	<desc>この砲兵レーザーは、システムのない部屋に2倍のダメージを与えます。前作よりも高速かつ多くの破壊を引き起こす能力があります。</desc>
 
 	<persDamage>1</persDamage> <!-- inj -->
 	<damage>2</damage>
@@ -56097,7 +56097,7 @@ TRAINING SHIPS
 	<tip>tip_laser_orden_f7_b7</tip>
 	<title>Combination Laser ™</title> <!-- inj -->
 	<short>Combo Laser ™</short> <!-- inj -->
-	<desc>Order狂信者によって設計されたこの標準レーザーのバリエーションは、発火や違反を引き起こす可能性が高いことを誇っています。</desc>
+	<desc>Order狂信者によって設計されたこの標準レーザーのバリエーションは、破損や違反を引き起こす可能性が高いことを誇っています。</desc>
 
 	<damage>1</damage>
 	<shots>1</shots>
@@ -56134,7 +56134,7 @@ TRAINING SHIPS
 	<tip>tip_laser_orden_f10_b7</tip>
 	<title>Combination Laser ‰</title> <!-- inj -->
 	<short>Combo Laser ‰</short> <!-- inj -->
-	<desc>Order狂信者によって設計されたこの標準レーザーのバリエーションは、発火や違反を引き起こす可能性が高いことを誇っています。</desc>
+	<desc>Order狂信者によって設計されたこの標準レーザーのバリエーションは、破損や違反を引き起こす可能性が高いことを誇っています。</desc>
 
 	<damage>1</damage>
 	<shots>1</shots>
@@ -56171,7 +56171,7 @@ TRAINING SHIPS
 	<tip>tip_laser_orden_f7_b10</tip>
 	<title>Combination Laser €</title> <!-- inj -->
 	<short>Combo Laser €</short> <!-- inj -->
-	<desc>Order狂信者によって設計されたこの標準レーザーのバリエーションは、発火や違反を引き起こす可能性が高いことを誇っています。</desc>
+	<desc>Order狂信者によって設計されたこの標準レーザーのバリエーションは、破損や違反を引き起こす可能性が高いことを誇っています。</desc>
 
 	<damage>1</damage>
 	<shots>1</shots>
@@ -56208,7 +56208,7 @@ TRAINING SHIPS
 	<tip>tip_laser_orden_f7_b7</tip>
 	<title>Combination Laser ‡</title> <!-- inj -->
 	<short>Combo Laser ‡</short> <!-- inj -->
-	<desc>Order狂信者によって設計されたこの標準レーザーのバリエーションは、発火や違反を引き起こす可能性が高いことを誇っています。</desc>
+	<desc>Order狂信者によって設計されたこの標準レーザーのバリエーションは、破損や違反を引き起こす可能性が高いことを誇っています。</desc>
 
 	<damage>1</damage>
 	<shots>1</shots>
@@ -56245,7 +56245,7 @@ TRAINING SHIPS
 	<tip>tip_laser_orden_f7_b7</tip>
 	<title>Combination Laser √</title> <!-- inj -->
 	<short>Combo Laser √</short> <!-- inj -->
-	<desc>Order狂信者によって設計されたこの標準レーザーのバリエーションは、発火や違反を引き起こす可能性が高いことを誇っています。</desc>
+	<desc>Order狂信者によって設計されたこの標準レーザーのバリエーションは、破損や違反を引き起こす可能性が高いことを誇っています。</desc>
 
 	<persDamage>1</persDamage> <!-- inj -->
 	<speed>90</speed> <!-- inj -->
@@ -56284,7 +56284,7 @@ TRAINING SHIPS
 	<title>Heavy Combination Laser ™</title> <!-- inj -->
 	<short>H-Combo Laser ™</short> <!-- inj -->
 	<tip>tip_laser_orden_f8_b8</tip>
-	<desc>Order狂信者によって設計されたこのヘビーレーザーのバリエーションは、発火や違反を引き起こす可能性が高いことを誇っています。</desc>
+	<desc>Order狂信者によって設計されたこのヘビーレーザーのバリエーションは、破損や違反を引き起こす可能性が高いことを誇っています。</desc>
 
 	<damage>2</damage>
 	<shots>1</shots>
@@ -56321,7 +56321,7 @@ TRAINING SHIPS
 	<title>Heavy Combination Laser ‰</title> <!-- inj -->
 	<short>H-Combo Laser ‰</short> <!-- inj -->
 	<tip>tip_laser_orden_f10_b8</tip>
-	<desc>Order狂信者によって設計されたこのヘビーレーザーのバリエーションは、発火や違反を引き起こす可能性が高いことを誇っています。</desc>
+	<desc>Order狂信者によって設計されたこのヘビーレーザーのバリエーションは、破損や違反を引き起こす可能性が高いことを誇っています。</desc>
 
 	<damage>2</damage>
 	<shots>1</shots>
@@ -56358,7 +56358,7 @@ TRAINING SHIPS
 	<title>Heavy Combination Laser €</title> <!-- inj -->
 	<short>H-Combo Laser €</short> <!-- inj -->
 	<tip>tip_laser_orden_f8_b10</tip>
-	<desc>Order狂信者によって設計されたこのヘビーレーザーのバリエーションは、発火や違反を引き起こす可能性が高いことを誇っています。</desc>
+	<desc>Order狂信者によって設計されたこのヘビーレーザーのバリエーションは、破損や違反を引き起こす可能性が高いことを誇っています。</desc>
 
 	<damage>2</damage>
 	<shots>1</shots>
@@ -56395,7 +56395,7 @@ TRAINING SHIPS
 	<title>Heavy Combination Laser ‡</title> <!-- inj -->
 	<short>H-Combo Laser ‡</short> <!-- inj -->
 	<tip>tip_laser_orden_f8_b8</tip>
-	<desc>Order狂信者によって設計されたこのヘビーレーザーのバリエーションは、発火や違反を引き起こす可能性が高いことを誇っています。</desc>
+	<desc>Order狂信者によって設計されたこのヘビーレーザーのバリエーションは、破損や違反を引き起こす可能性が高いことを誇っています。</desc>
 
 	<damage>2</damage>
 	<shots>1</shots>
@@ -56432,7 +56432,7 @@ TRAINING SHIPS
 	<title>Heavy Combination Laser √</title> <!-- inj -->
 	<short>H-Combo Laser √</short> <!-- inj -->
 	<tip>tip_laser_orden_f8_b8</tip>
-	<desc>Order狂信者によって設計されたこのヘビーレーザーのバリエーションは、発火や違反を引き起こす可能性が高いことを誇っています。</desc>
+	<desc>Order狂信者によって設計されたこのヘビーレーザーのバリエーションは、破損や違反を引き起こす可能性が高いことを誇っています。</desc>
 
 	<persDamage>1</persDamage> <!-- inj -->
 	<speed>90</speed> <!-- inj -->
@@ -66535,7 +66535,7 @@ TRAINING SHIPS
 	<title>Timer Bomb ‰</title> <!-- inj -->
 	<short>Timer B. ‰</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>タイマー付きユニバーサル爆弾。乗組員に甚大な被害を与え、対象の部屋に火事を起こしたり、違反を引き起こしたりする可能性があります。印象的！</desc>
+	<desc>タイマー付きユニバーサル爆弾。乗組員に甚大な被害を与え、対象の部屋に火事を起こしたり、破壊を引き起こしたりする可能性があります。すばらしい！</desc>
 	<damage>0</damage>
 	<sysDamage>2</sysDamage>
 	<persDamage>5</persDamage>
@@ -66565,7 +66565,7 @@ TRAINING SHIPS
 	<title>Timer Bomb €</title> <!-- inj -->
 	<short>Timer B. €</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>タイマー付きユニバーサル爆弾。乗組員に甚大な被害を与え、対象の部屋に火事を起こしたり、違反を引き起こしたりする可能性があります。印象的！</desc>
+	<desc>タイマー付きユニバーサル爆弾。乗組員に甚大な被害を与え、対象の部屋に火事を起こしたり、破壊を引き起こしたりする可能性があります。すばらしい！</desc>
 	<damage>0</damage>
 	<sysDamage>2</sysDamage>
 	<persDamage>5</persDamage>
@@ -66595,7 +66595,7 @@ TRAINING SHIPS
 	<title>Timer Bomb ‡</title> <!-- inj -->
 	<short>Timer B. ‡</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>タイマー付きユニバーサル爆弾。乗組員に甚大な被害を与え、対象の部屋に火事を起こしたり、違反を引き起こしたりする可能性があります。印象的！</desc>
+	<desc>タイマー付きユニバーサル爆弾。乗組員に甚大な被害を与え、対象の部屋に火事を起こしたり、破壊を引き起こしたりする可能性があります。すばらしい！</desc>
 	<damage>0</damage>
 	<sysDamage>2</sysDamage>
 	<persDamage>5</persDamage>
@@ -66625,7 +66625,7 @@ TRAINING SHIPS
 	<title>Timer Bomb †</title> <!-- inj -->
 	<short>Timer B. †</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>タイマー付きユニバーサル爆弾。乗組員に甚大な被害を与え、対象の部屋に火事を起こしたり、違反を引き起こしたりする可能性があります。印象的！</desc>
+	<desc>タイマー付きユニバーサル爆弾。乗組員に甚大な被害を与え、対象の部屋に火事を起こしたり、破壊を引き起こしたりする可能性があります。すばらしい！</desc>
 	<damage>0</damage>
 	<sysDamage>2</sysDamage>
 	<persDamage>5</persDamage>
@@ -66655,7 +66655,7 @@ TRAINING SHIPS
 	<title>Timer Bomb √</title> <!-- inj -->
 	<short>Timer B. √</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>タイマー付きユニバーサル爆弾。乗組員に甚大な被害を与え、対象の部屋に火事を起こしたり、違反を引き起こしたりする可能性があります。印象的！</desc>
+	<desc>タイマー付きユニバーサル爆弾。乗組員に甚大な被害を与え、対象の部屋に火事を起こしたり、破壊を引き起こしたりする可能性があります。すばらしい！</desc>
 	<damage>0</damage>
 	<sysDamage>2</sysDamage>
 	<persDamage>5</persDamage>
@@ -67554,7 +67554,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark I €</title> <!-- inj -->
 	<short>Breach-I €</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された自己テレポーティング爆薬。</desc>
+	<desc>システムに損傷を与え、破壊を引き起こすように設計された自己テレポーティング爆薬。</desc>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>
@@ -67585,7 +67585,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark I ‡</title> <!-- inj -->
 	<short>Breach-I ‡</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された自己テレポーティング爆薬。</desc>
+	<desc>システムに損傷を与え、破壊を引き起こすように設計された自己テレポーティング爆薬。</desc>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>
@@ -67616,7 +67616,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark I †</title> <!-- inj -->
 	<short>Breach-I †</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された自己テレポーティング爆薬。</desc>
+	<desc>システムに損傷を与え、破壊を引き起こすように設計された自己テレポーティング爆薬。</desc>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>
@@ -67647,7 +67647,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark I √</title> <!-- inj -->
 	<short>Breach-I √</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された自己テレポーティング爆薬。</desc>
+	<desc>システムに損傷を与え、破壊を引き起こすように設計された自己テレポーティング爆薬。</desc>
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
 	<persDamage>1</persDamage>
@@ -67678,7 +67678,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark II €</title> <!-- inj -->
 	<short>Breach-II €</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された自己テレポーティング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
+	<desc>システムに損傷を与え、破壊を引き起こすように設計された自己テレポーティング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
 	<damage>0</damage>
 	<sysDamage>2</sysDamage>
 	<persDamage>2</persDamage>
@@ -67709,7 +67709,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark II ‡</title> <!-- inj -->
 	<short>Breach-II ‡</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された自己テレポーティング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
+	<desc>システムに損傷を与え、破壊を引き起こすように設計された自己テレポーティング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
 	<damage>0</damage>
 	<sysDamage>2</sysDamage>
 	<persDamage>2</persDamage>
@@ -67740,7 +67740,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark II †</title> <!-- inj -->
 	<short>Breach-II †</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された自己テレポーティング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
+	<desc>システムに損傷を与え、破壊を引き起こすように設計された自己テレポーティング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
 	<damage>0</damage>
 	<sysDamage>2</sysDamage>
 	<persDamage>2</persDamage>
@@ -67771,7 +67771,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark II √</title> <!-- inj -->
 	<short>Breach-II √</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された自己テレポーティング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
+	<desc>システムに損傷を与え、破壊を引き起こすように設計された自己テレポーティング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
 	<damage>0</damage>
 	<sysDamage>2</sysDamage>
 	<persDamage>2</persDamage>
@@ -67802,7 +67802,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark III ‡</title> <!-- inj -->
 	<short>Breach-III ‡</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与えるように設計された自己テレポーティング違反爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
+	<desc>システムに損傷を与えるように設計された自己テレポーティングブリーチング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
 	<damage>0</damage>
 	<sysDamage>3</sysDamage>
 	<persDamage>3</persDamage>
@@ -67833,7 +67833,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark III †</title> <!-- inj -->
 	<short>Breach-III †</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与えるように設計された自己テレポーティング違反爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
+	<desc>システムに損傷を与えるように設計された自己テレポーティングブリーチング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
 	<damage>0</damage>
 	<sysDamage>3</sysDamage>
 	<persDamage>3</persDamage>
@@ -67864,7 +67864,7 @@ TRAINING SHIPS
 	<title>Breach Bomb Mark III √</title> <!-- inj -->
 	<short>Breach-III √</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与えるように設計された自己テレポーティング違反爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
+	<desc>システムに損傷を与えるように設計された自己テレポーティングブリーチング爆薬。前任者よりも多くのダメージをシステムと乗組員に与えます。</desc>
 	<damage>0</damage>
 	<sysDamage>3</sysDamage>
 	<persDamage>3</persDamage>
@@ -67895,7 +67895,7 @@ TRAINING SHIPS
 	<title>Cluster Breach Bomb €</title> <!-- inj -->
 	<short>Breach* €</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された3つのセルフテレポーティング爆薬のクラスターを発射します。</desc>
+	<desc>システムに損傷を与え、破壊を引き起こすように設計された3つのセルフテレポーティング爆薬のクラスターを発射します。</desc>
 
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
@@ -67927,7 +67927,7 @@ TRAINING SHIPS
 	<title>Cluster Breach Bomb ‡</title> <!-- inj -->
 	<short>Breach* ‡</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された3つのセルフテレポーティング爆薬のクラスターを発射します。</desc>
+	<desc>システムに損傷を与え、破壊を引き起こすように設計された3つのセルフテレポーティング爆薬のクラスターを発射します。</desc>
 
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
@@ -67959,7 +67959,7 @@ TRAINING SHIPS
 	<title>Cluster Breach Bomb †</title> <!-- inj -->
 	<short>Breach* †</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された3つのセルフテレポーティング爆薬のクラスターを発射します。</desc>
+	<desc>システムに損傷を与え、破壊を引き起こすように設計された3つのセルフテレポーティング爆薬のクラスターを発射します。</desc>
 
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
@@ -67991,7 +67991,7 @@ TRAINING SHIPS
 	<title>Cluster Breach Bomb √</title> <!-- inj -->
 	<short>Breach* √</short> <!-- inj -->
 	<locked>1</locked>
-	<desc>システムに損傷を与え、違反を引き起こすように設計された3つのセルフテレポーティング爆薬のクラスターを発射します。</desc>
+	<desc>システムに損傷を与え、破壊を引き起こすように設計された3つのセルフテレポーティング爆薬のクラスターを発射します。</desc>
 
 	<damage>0</damage>
 	<sysDamage>1</sysDamage>
@@ -72890,7 +72890,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b7</tip>
 	<title>Hull Missiles Mark I €</title> <!-- inj -->
 	<short>Hull M. I €</short> <!-- inj -->
-	<desc>違反の可能性は悪くないが、軽微なダメージを与える。</desc>
+	<desc>破壊の可能性は悪くないが、軽微なダメージを与える。</desc>
 	<damage>1</damage>
 	<stun>3</stun>
 	<missiles>1</missiles>
@@ -72926,7 +72926,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b3</tip>
 	<title>Hull Missiles Mark I ‡</title> <!-- inj -->
 	<short>Hull M. I ‡</short> <!-- inj -->
-	<desc>違反の可能性は悪くないが、軽微なダメージを与える。</desc>
+	<desc>破壊の可能性は悪くないが、軽微なダメージを与える。</desc>
 	<damage>1</damage>
 	<stun>3</stun>
 	<missiles>1</missiles>
@@ -72962,7 +72962,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b3</tip>
 	<title>Hull Missiles Mark I √</title> <!-- inj -->
 	<short>Hull M. I √</short> <!-- inj -->
-	<desc>違反の可能性は悪くないが、軽微なダメージを与える。</desc>
+	<desc>破壊の可能性は悪くないが、軽微なダメージを与える。</desc>
 	<damage>2</damage> <!-- inj -->
 	<stun>3</stun>
 	<missiles>1</missiles>
@@ -72998,7 +72998,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b10</tip>
 	<title>Hull Missiles Mark II €</title> <!-- inj -->
 	<short>Hull M. II €</short> <!-- inj -->
-	<desc>かなりまともな違反の可能性で良い船体ダメージを与えます。</desc>
+	<desc>かなりまともな破壊の可能性で良い船体ダメージを与えます。</desc>
 	<damage>2</damage>
 	<stun>4</stun>
 	<missiles>1</missiles>
@@ -73034,7 +73034,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b6</tip>
 	<title>Hull Missiles Mark II ‡</title> <!-- inj -->
 	<short>Hull M. II ‡</short> <!-- inj -->
-	<desc>かなりまともな違反の可能性で良い船体ダメージを与えます。</desc>
+	<desc>かなりまともな破壊の可能性で良い船体ダメージを与えます。</desc>
 	<damage>2</damage>
 	<stun>4</stun>
 	<missiles>1</missiles>
@@ -73070,7 +73070,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b6</tip>
 	<title>Hull Missiles Mark II †</title> <!-- inj -->
 	<short>Hull M. II †</short> <!-- inj -->
-	<desc>かなりまともな違反の可能性で良い船体ダメージを与えます。</desc>
+	<desc>かなりまともな破壊の可能性で良い船体ダメージを与えます。</desc>
 	<damage>2</damage>
 	<stun>4</stun>
 	<missiles>1</missiles>
@@ -73106,7 +73106,7 @@ TRAINING SHIPS
 	<tip>tip_hull_f0_b6</tip>
 	<title>Hull Missiles Mark II √</title> <!-- inj -->
 	<short>Hull M. II √</short> <!-- inj -->
-	<desc>かなりまともな違反の可能性で良い船体ダメージを与えます。</desc>
+	<desc>かなりまともな破壊の可能性で良い船体ダメージを与えます。</desc>
 	<damage>3</damage> <!-- inj -->
 	<stun>4</stun>
 	<missiles>1</missiles>
@@ -76139,7 +76139,7 @@ TRAINING SHIPS
 	<tip>tip_no_missiles_f5_b3</tip>
 	<title>Hull Missiles Mark I* ‰</title> <!-- inj -->
 	<short>Hull M. I* ‰</short> <!-- inj -->
-	<desc>違反の可能性は悪くないが、軽微なダメージを与える。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
+	<desc>破壊の可能性は悪くないが、軽微なダメージを与える。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
 	<damage>1</damage>
 	<stun>3</stun>
 	<missiles>0</missiles>
@@ -76175,7 +76175,7 @@ TRAINING SHIPS
 	<tip>tip_no_missiles_f1_b7</tip>
 	<title>Hull Missiles Mark I* €</title> <!-- inj -->
 	<short>Hull M. I* €</short> <!-- inj -->
-	<desc>違反の可能性は悪くないが、軽微なダメージを与える。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
+	<desc>破壊の可能性は悪くないが、軽微なダメージを与える。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
 	<damage>1</damage>
 	<stun>3</stun>
 	<missiles>0</missiles>
@@ -76211,7 +76211,7 @@ TRAINING SHIPS
 	<tip>tip_no_missiles_f1_b3</tip>
 	<title>Hull Missiles Mark I* ‡</title> <!-- inj -->
 	<short>Hull M. I* ‡</short> <!-- inj -->
-	<desc>違反の可能性は悪くないが、軽微なダメージを与える。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
+	<desc>破壊の可能性は悪くないが、軽微なダメージを与える。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
 	<damage>1</damage>
 	<stun>3</stun>
 	<missiles>0</missiles>
@@ -76247,7 +76247,7 @@ TRAINING SHIPS
 	<tip>tip_no_missiles_f1_b3</tip>
 	<title>Hull Missiles Mark I* √</title> <!-- inj -->
 	<short>Hull M. I* √</short> <!-- inj -->
-	<desc>違反の可能性は悪くないが、軽微なダメージを与える。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
+	<desc>破壊の可能性は悪くないが、軽微なダメージを与える。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
 	<damage>2</damage> <!-- inj -->
 	<stun>3</stun>
 	<missiles>0</missiles>
@@ -80055,7 +80055,7 @@ TRAINING SHIPS
 	<title>Hull Missiles Mark II* ‰</title> <!-- inj -->
 	<short>Hull M. II* ‰</short> <!-- inj -->
 	<tip>tip_hull_f6_b6</tip>
-	<desc>かなりまともな違反の可能性で良い船体ダメージを与えます。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
+	<desc>かなりまともな破壊の可能性で良い船体ダメージを与えます。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
 	<damage>2</damage>
 	<stun>4</stun>
 	<missiles>0</missiles>
@@ -80092,7 +80092,7 @@ TRAINING SHIPS
 	<title>Hull Missiles Mark II* €</title> <!-- inj -->
 	<short>Hull M. II* €</short> <!-- inj -->
 	<tip>tip_hull_f2_b10</tip>
-	<desc>かなりまともな違反の可能性で良い船体ダメージを与えます。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
+	<desc>かなりまともな破壊の可能性で良い船体ダメージを与えます。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
 	<damage>2</damage>
 	<stun>4</stun>
 	<missiles>0</missiles>
@@ -80129,7 +80129,7 @@ TRAINING SHIPS
 	<title>Hull Missiles Mark II* ‡</title> <!-- inj -->
 	<short>Hull M. II* ‡</short> <!-- inj -->
 	<tip>tip_hull_f2_b6</tip>
-	<desc>かなりまともな違反の可能性で良い船体ダメージを与えます。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
+	<desc>かなりまともな破壊の可能性で良い船体ダメージを与えます。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
 	<damage>2</damage>
 	<stun>4</stun>
 	<missiles>0</missiles>
@@ -80166,7 +80166,7 @@ TRAINING SHIPS
 	<title>Hull Missiles Mark II* †</title> <!-- inj -->
 	<short>Hull M. II* †</short> <!-- inj -->
 	<tip>tip_hull_f2_b6</tip>
-	<desc>かなりまともな違反の可能性で良い船体ダメージを与えます。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
+	<desc>かなりまともな破壊の可能性で良い船体ダメージを与えます。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
 	<damage>2</damage>
 	<stun>4</stun>
 	<missiles>0</missiles>
@@ -80203,7 +80203,7 @@ TRAINING SHIPS
 	<title>Hull Missiles Mark II* √</title> <!-- inj -->
 	<short>Hull M. II* √</short> <!-- inj -->
 	<tip>tip_hull_f2_b6</tip>
-	<desc>かなりまともな違反の可能性で良い船体ダメージを与えます。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
+	<desc>かなりまともな破壊の可能性で良い船体ダメージを与えます。オリジナルのこの複製バージョンは弾薬を必要としません。</desc>
 	<damage>3</damage> <!-- inj -->
 	<stun>4</stun>
 	<missiles>0</missiles>
@@ -94839,7 +94839,7 @@ TRAINING SHIPS
 	<title>Breach Pulse Blaster ™</title> <!-- inj -->
 	<short>Br-Pulse Blaster ™</short> <!-- inj -->
 
-	<desc>有害なイオンスタンパルスを発射します。違反を引き起こす可能性が高くなります。</desc>
+	<desc>有害なイオンスタンパルスを発射します。破損を引き起こす可能性が高くなります。</desc>
 	<damage>1</damage>
 	<ion>1</ion>
 	<speed>90</speed>
@@ -94879,7 +94879,7 @@ TRAINING SHIPS
 	<title>Breach Pulse Blaster ‰</title> <!-- inj -->
 	<short>Br-Pulse Blaster ‰</short> <!-- inj -->
 
-	<desc>有害なイオンスタンパルスを発射します。違反を引き起こす可能性が高くなります。</desc>
+	<desc>有害なイオンスタンパルスを発射します。破損を引き起こす可能性が高くなります。</desc>
 	<damage>1</damage>
 	<ion>1</ion>
 	<speed>90</speed>
@@ -94919,7 +94919,7 @@ TRAINING SHIPS
 	<title>Breach Pulse Blaster €</title> <!-- inj -->
 	<short>Br-Pulse Blaster €</short> <!-- inj -->
 
-	<desc>有害なイオンスタンパルスを発射します。違反を引き起こす可能性が高くなります。</desc>
+	<desc>有害なイオンスタンパルスを発射します。破損を引き起こす可能性が高くなります。</desc>
 	<damage>1</damage>
 	<ion>1</ion>
 	<speed>90</speed>
@@ -94959,7 +94959,7 @@ TRAINING SHIPS
 	<title>Breach Pulse Blaster ‡</title> <!-- inj -->
 	<short>Br-Pulse Blaster ‡</short> <!-- inj -->
 
-	<desc>有害なイオンスタンパルスを発射します。違反を引き起こす可能性が高くなります。</desc>
+	<desc>有害なイオンスタンパルスを発射します。破損を引き起こす可能性が高くなります。</desc>
 	<damage>1</damage>
 	<ion>1</ion>
 	<speed>90</speed>
@@ -94999,7 +94999,7 @@ TRAINING SHIPS
 	<title>Breach Pulse Blaster †</title> <!-- inj -->
 	<short>Br-Pulse Blaster †</short> <!-- inj -->
 
-	<desc>有害なイオンスタンパルスを発射します。違反を引き起こす可能性が高くなります。</desc>
+	<desc>有害なイオンスタンパルスを発射します。破損を引き起こす可能性が高くなります。</desc>
 	<damage>1</damage>
 	<ion>1</ion>
 	<speed>90</speed>
@@ -95039,7 +95039,7 @@ TRAINING SHIPS
 	<title>Breach Pulse Blaster √</title> <!-- inj -->
 	<short>Br-Pulse Blaster √</short> <!-- inj -->
 
-	<desc>有害なイオンスタンパルスを発射します。違反を引き起こす可能性が高くなります。</desc>
+	<desc>有害なイオンスタンパルスを発射します。破損を引き起こす可能性が高くなります。</desc>
 	<persDamage>1</persDamage> <!-- inj -->
 	<damage>1</damage>
 	<ion>1</ion>
@@ -95561,7 +95561,7 @@ TRAINING SHIPS
 	<title>Charge Breach Pulse Blaster ™</title> <!-- inj -->
 	<short>Br-Pulse* ™</short> <!-- inj -->
 
-	<desc>最大2つの有害なイオンスタンパルスを保存できます。違反を引き起こす可能性が高くなります。</desc>
+	<desc>最大2つの有害なイオンスタンパルスを保存できます。破損を引き起こす可能性が高くなります。</desc>
 	<damage>1</damage>
 	<ion>1</ion>
 	<speed>90</speed>
@@ -95601,7 +95601,7 @@ TRAINING SHIPS
 	<title>Charge Breach Pulse Blaster ‰</title> <!-- inj -->
 	<short>Br-Pulse* ‰</short> <!-- inj -->
 
-	<desc>最大2つの有害なイオンスタンパルスを保存できます。違反を引き起こす可能性が高くなります。</desc>
+	<desc>最大2つの有害なイオンスタンパルスを保存できます。破損を引き起こす可能性が高くなります。</desc>
 	<damage>1</damage>
 	<ion>1</ion>
 	<speed>90</speed>
@@ -95641,7 +95641,7 @@ TRAINING SHIPS
 	<title>Charge Breach Pulse Blaster €</title> <!-- inj -->
 	<short>Br-Pulse* €</short> <!-- inj -->
 
-	<desc>最大2つの有害なイオンスタンパルスを保存できます。違反を引き起こす可能性が高くなります。</desc>
+	<desc>最大2つの有害なイオンスタンパルスを保存できます。破損を引き起こす可能性が高くなります。</desc>
 	<damage>1</damage>
 	<ion>1</ion>
 	<speed>90</speed>
@@ -95681,7 +95681,7 @@ TRAINING SHIPS
 	<title>Charge Breach Pulse Blaster ‡</title> <!-- inj -->
 	<short>Br-Pulse* ‡</short> <!-- inj -->
 
-	<desc>最大2つの有害なイオンスタンパルスを保存できます。違反を引き起こす可能性が高くなります。</desc>
+	<desc>最大2つの有害なイオンスタンパルスを保存できます。破損を引き起こす可能性が高くなります。</desc>
 	<damage>1</damage>
 	<ion>1</ion>
 	<speed>90</speed>
@@ -95721,7 +95721,7 @@ TRAINING SHIPS
 	<title>Charge Breach Pulse Blaster †</title> <!-- inj -->
 	<short>Br-Pulse* †</short> <!-- inj -->
 
-	<desc>最大2つの有害なイオンスタンパルスを保存できます。違反を引き起こす可能性が高くなります。</desc>
+	<desc>最大2つの有害なイオンスタンパルスを保存できます。破損を引き起こす可能性が高くなります。</desc>
 	<damage>1</damage>
 	<ion>1</ion>
 	<speed>90</speed>
@@ -95761,7 +95761,7 @@ TRAINING SHIPS
 	<title>Charge Breach Pulse Blaster √</title> <!-- inj -->
 	<short>Br-Pulse* √</short> <!-- inj -->
 
-	<desc>最大2つの有害なイオンスタンパルスを保存できます。違反を引き起こす可能性が高くなります。</desc>
+	<desc>最大2つの有害なイオンスタンパルスを保存できます。破損を引き起こす可能性が高くなります。</desc>
 	<persDamage>1</persDamage> <!-- inj -->
 	<damage>1</damage>
 	<ion>1</ion>
@@ -96640,7 +96640,7 @@ TRAINING SHIPS
 	<short>Ion Blast+ ™</short> <!-- inj -->
 	<tip>tip_ion_f0_b1</tip>
 	<locked>1</locked>
-	<desc>イオン兵器は、船体に損傷を与えることなくシステムを無効にすることができます。イオンブラストマークのこの改善された変更は、違反を引き起こす可能性があります。</desc>
+	<desc>イオン兵器は、船体に損傷を与えることなくシステムを無効にすることができます。イオンブラストマークのこの改善された変更は、破損を引き起こす可能性があります。</desc>
 	<damage>0</damage>
 	<ion>1</ion>
 	<speed>30</speed>
@@ -96683,7 +96683,7 @@ TRAINING SHIPS
 	<short>Ion Blast+ €</short> <!-- inj -->
 	<tip>tip_ion_f0_b1</tip>
 	<locked>1</locked>
-	<desc>イオン兵器は、船体に損傷を与えることなくシステムを無効にすることができます。イオンブラストマークのこの改善された変更は、違反を引き起こす可能性があります。</desc>
+	<desc>イオン兵器は、船体に損傷を与えることなくシステムを無効にすることができます。イオンブラストマークのこの改善された変更は、破損を引き起こす可能性があります。</desc>
 	<damage>0</damage>
 	<ion>1</ion>
 	<speed>30</speed>
@@ -96726,7 +96726,7 @@ TRAINING SHIPS
 	<short>Ion Blast+ ‡</short> <!-- inj -->
 	<tip>tip_ion_f0_b1</tip>
 	<locked>1</locked>
-	<desc>イオン兵器は、船体に損傷を与えることなくシステムを無効にすることができます。イオンブラストマークのこの改善された変更は、違反を引き起こす可能性があります。</desc>
+	<desc>イオン兵器は、船体に損傷を与えることなくシステムを無効にすることができます。イオンブラストマークのこの改善された変更は、破損を引き起こす可能性があります。</desc>
 	<damage>0</damage>
 	<ion>1</ion>
 	<speed>30</speed>
@@ -96769,7 +96769,7 @@ TRAINING SHIPS
 	<short>Ion Blast+ √</short> <!-- inj -->
 	<tip>tip_ion_f0_b1</tip>
 	<locked>1</locked>
-	<desc>イオン兵器は、船体に損傷を与えることなくシステムを無効にすることができます。イオンブラストマークのこの改善された変更は、違反を引き起こす可能性があります。</desc>
+	<desc>イオン兵器は、船体に損傷を与えることなくシステムを無効にすることができます。イオンブラストマークのこの改善された変更は、破損を引き起こす可能性があります。</desc>
 	<persDamage>1</persDamage> <!-- inj -->
 	<damage>0</damage>
 	<ion>1</ion>
@@ -96904,7 +96904,7 @@ TRAINING SHIPS
 	<tip>ce_tip_mines_f1_b3</tip>
 	<title>Frigg Mine Launcher+ ‰</title> <!-- inj -->
 	<short>Frigg+ ‰</short> <!-- inj -->
-	<desc>ベースのフリッグマインランチャーの高度なバージョンで、より多くのダメージを与え、システムにもダメージを与えます。クールダウンが速く、違反が発生する可能性があります。</desc>
+	<desc>ベースのフリッグマインランチャーの高度なバージョンで、より多くのダメージを与え、システムにもダメージを与えます。クールダウンが速く、破損が発生する可能性があります。</desc>
 	<damage>3</damage>
 	<sysDamage>0</sysDamage>
 	<persDamage>-3</persDamage>
@@ -96941,7 +96941,7 @@ TRAINING SHIPS
 	<tip>ce_tip_mines_f1_b3</tip>
 	<title>Frigg Mine Launcher+ €</title> <!-- inj -->
 	<short>Frigg+ €</short> <!-- inj -->
-	<desc>ベースのフリッグマインランチャーの高度なバージョンで、より多くのダメージを与え、システムにもダメージを与えます。クールダウンが速く、違反が発生する可能性があります。</desc>
+	<desc>ベースのフリッグマインランチャーの高度なバージョンで、より多くのダメージを与え、システムにもダメージを与えます。クールダウンが速く、破損が発生する可能性があります。</desc>
 	<damage>3</damage>
 	<sysDamage>0</sysDamage>
 	<persDamage>-3</persDamage>
@@ -96978,7 +96978,7 @@ TRAINING SHIPS
 	<tip>ce_tip_mines_f1_b3</tip>
 	<title>Frigg Mine Launcher+ ‡</title> <!-- inj -->
 	<short>Frigg+ ‡</short> <!-- inj -->
-	<desc>ベースのフリッグマインランチャーの高度なバージョンで、より多くのダメージを与え、システムにもダメージを与えます。クールダウンが速く、違反が発生する可能性があります。</desc>
+	<desc>ベースのフリッグマインランチャーの高度なバージョンで、より多くのダメージを与え、システムにもダメージを与えます。クールダウンが速く、破損が発生する可能性があります。</desc>
 	<damage>3</damage>
 	<sysDamage>0</sysDamage>
 	<persDamage>-3</persDamage>
@@ -97015,7 +97015,7 @@ TRAINING SHIPS
 	<tip>ce_tip_mines_f1_b3</tip>
 	<title>Frigg Mine Launcher+ √</title> <!-- inj -->
 	<short>Frigg+ √</short> <!-- inj -->
-	<desc>ベースのフリッグマインランチャーの高度なバージョンで、より多くのダメージを与え、システムにもダメージを与えます。クールダウンが速く、違反が発生する可能性があります。</desc>
+	<desc>ベースのフリッグマインランチャーの高度なバージョンで、より多くのダメージを与え、システムにもダメージを与えます。クールダウンが速く、破損が発生する可能性があります。</desc>
 	<damage>4</damage> <!-- inj -->
 	<sysDamage>0</sysDamage>
 	<persDamage>-3</persDamage>
@@ -113489,7 +113489,7 @@ TRAINING SHIPS
 	<tip>tip_combat</tip>
 	<title>Flak Drone</title>
 	<short>Flak</short>
-	<desc>船体に深刻なダメージを与える大きな破片を発射しますが、ゆっくりと移動します。違反の可能性が高い。</desc>
+	<desc>船体に深刻なダメージを与える大きな破片を発射しますが、ゆっくりと移動します。破損の可能性が高い。</desc>
 	<power>3</power>
 	<cooldown>1000</cooldown>
 	<dodge>1</dodge>
@@ -113604,7 +113604,7 @@ TRAINING SHIPS
 	<tip>tip_combat</tip>
 	<title>Lockdown Drone Mark I</title>
 	<short>Lock I</short>
-	<desc>敵の部屋を2つのシールドバブルでロックし、乗組員を気絶させたり、違反を引き起こしたりする可能性があります。</desc>
+	<desc>敵の部屋を2つのシールドバブルでロックし、乗組員を気絶させたり、破壊を引き起こしたりする可能性があります。</desc>
 	<power>2</power> <!-- 1.25, was 3 -->
 	<cooldown>1000</cooldown>
 	<dodge>1</dodge>
@@ -113653,7 +113653,7 @@ TRAINING SHIPS
 	<tip>tip_combat</tip>
 	<title>Lockdown Drone Mark II</title>
 	<short>Lock II</short>
-	<desc>敵の部屋を2つのシールドバブルでロックし、乗組員を気絶させたり、違反を引き起こしたりする可能性があります。前任者よりも高速です。</desc>
+	<desc>敵の部屋を2つのシールドバブルでロックし、乗組員を気絶させたり、破壊を引き起こしたりする可能性があります。前任者よりも高速です。</desc>
 	<power>2</power> <!-- 1.25, was 3 -->
 	<cooldown>1500</cooldown>
 	<dodge>2</dodge>
@@ -116670,7 +116670,7 @@ TRAINING SHIPS
 	<tip>tip_combat_hal</tip>
 	<title>HAL Flak Drone</title>
 	<short>HAL Flak</short>
-	<desc>船体に深刻なダメージを与える大きな破片を発射しますが、ゆっくりと移動します。違反の可能性が高い。</desc>
+	<desc>船体に深刻なダメージを与える大きな破片を発射しますが、ゆっくりと移動します。破損の可能性が高い。</desc>
 	<power>3</power>
 	<cooldown>1000</cooldown>
 	<dodge>1</dodge>
@@ -116688,7 +116688,7 @@ TRAINING SHIPS
 	<tip>tip_combat_hal</tip>
 	<title>HAL Lockdown Drone Mark I</title>
 	<short>HAL Locker I</short>
-	<desc>敵の部屋を3つのシールドバブルでロックし、乗組員を気絶させたり、違反を引き起こしたりする可能性があります。</desc>
+	<desc>敵の部屋を3つのシールドバブルでロックし、乗組員を気絶させたり、破壊を引き起こしたりする可能性があります。</desc>
 	<power>2</power> <!-- 1.25, was 3 -->
 	<cooldown>1000</cooldown>
 	<dodge>2</dodge> <!-- 1 -->
@@ -116737,7 +116737,7 @@ TRAINING SHIPS
 	<tip>tip_combat_hal</tip>
 	<title>HAL Lockdown Drone Mark II</title>
 	<short>HAL Locker II</short>
-	<desc>敵の部屋を3つのシールドバブルでロックし、乗組員を気絶させたり、違反を引き起こしたりする可能性があります。前任者よりも高速です。</desc>
+	<desc>敵の部屋を3つのシールドバブルでロックし、乗組員を気絶させたり、破壊を引き起こしたりする可能性があります。前任者よりも高速です。</desc>
 	<power>2</power> <!-- 1.25, was 3 -->
 	<cooldown>1500</cooldown>
 	<dodge>3</dodge> <!-- 2 -->
@@ -118266,7 +118266,7 @@ TRAINING SHIPS
 	<tip>tip_combat</tip>
 	<title>Lockdown Drone Mark I</title>
 	<short>Locker I</short>
-	<desc>敵の部屋を2つのシールドバブルでロックし、乗組員を気絶させたり、違反を引き起こしたりする可能性があります。</desc>
+	<desc>敵の部屋を2つのシールドバブルでロックし、乗組員を気絶させたり、破壊を引き起こしたりする可能性があります。</desc>
 	<power>2</power> <!-- 1.25, was 3 -->
 	<cooldown>1000</cooldown>
 	<dodge>1</dodge>
@@ -118282,7 +118282,7 @@ TRAINING SHIPS
 	<tip>tip_combat</tip>
 	<title>Lockdown Drone Mark II</title>
 	<short>Locker II</short>
-	<desc>敵の部屋を2つのシールドバブルでロックし、乗組員を気絶させたり、違反を引き起こしたりする可能性があります。前任者よりも高速です。</desc>
+	<desc>敵の部屋を2つのシールドバブルでロックし、乗組員を気絶させたり、破壊を引き起こしたりする可能性があります。前任者よりも高速です。</desc>
 	<power>2</power> <!-- 1.25, was 3 -->
 	<cooldown>1500</cooldown>
 	<dodge>2</dodge>

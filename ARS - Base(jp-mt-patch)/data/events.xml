@@ -1644,7 +1644,7 @@ High Average =	140%
 			</event>
 		</choice>
 		<choice hidden="true">
-			<textいいえ。</text>
+			<text>いいえ。</text>
 			<event/>
 		</choice>
 	</event>
@@ -3264,7 +3264,7 @@ High Average =	140%
 	<choice hidden="true" req="DRONES_BOARDER">
 		<text>(Boarding Drone) 搭乗ドローンをステーションに発射します。</text>
 		<event>
-			<text>あなたはドローンを発射し、それは彼らの船体を突き破り、大きな違反を残します。破片や死体が破片から飛び出す間、ドローンが生き物を引き裂くのを見る。駅の所有者は、彼らがあなたに感謝するとき、あまり熱狂的ではなく、わずかな支払いしか提供しません。多分それは去るのに良い時期です...</text>
+			<text>あなたはドローンを発射し、それは彼らの船体を突き破り、大きな破損を残します。破片や死体が破片から飛び出す間、ドローンが生き物を引き裂くのを見る。駅の所有者は、彼らがあなたに感謝するとき、あまり熱狂的ではなく、わずかな支払いしか提供しません。多分それは去るのに良い時期です...</text>
 			<item_modify>
 				<item type="drones" min="-1" max="-1"/>
 			</item_modify>
@@ -3533,7 +3533,7 @@ High Average =	140%
 	</choice>
 </event>
 <event name="DISTRESS_STATION_FIRE_CREW_DEATH">
-	<text>あなたはあなたの乗組員を駅に送ります。残念ながら、彼らが火に入るとすぐに、ステーションの燃料電池の封じ込めに違反します。あなたはすぐに乗組員をドッキングして回収しようとしますが、不幸な魂が地獄で失われる前ではありません。</text>
+	<text>あなたはあなたの乗組員を駅に送ります。彼らがステーションに入った途端、火災が燃料電池の格納装置を破壊してしまいました。あなたはすぐに乗組員をドッキングして回収しようとしますが、不幸な魂が地獄で失われる前ではありません。</text>
 	<choice req="CREW_ALL" hidden="true" blue="false"><!-- 1.24 -->
 		<text id="continue" />
 		<event>
@@ -29547,7 +29547,7 @@ High Average =	140%
 		</choice>
 	</event>
 	<event>
-		<text>スラッグキャプテンはあなたに彼らの製品を見せます：「今日、我々は標的のシステムを修理することを不可能にする違反爆弾と、sssuper-fasstバーストレーザーを持っています。」</text>
+		<text>スラッグキャプテンはあなたに彼らの製品を見せます：「今日、我々は標的のシステムを修理することを不可能にするブリーチボムと、超高速バーストレーザーを持っています。」</text>
 		<choice hidden="false">
 			<text>このアイテムを購入します。</text>
 			<event>
@@ -29968,7 +29968,7 @@ High Average =	140%
 
 <!-- 1.21 -->
 <event name="ENGI_ARTILLERY_EVENT" unique="true">
-	<text>近くのエンギ船が連絡を取ります：「エンギは砲兵内のウイルスシグネチャを検出します。認識システムの再起動：友人/敵。神経通信の違反。武器がアクティブになりました！」</text>
+	<text>近くのエンギ船が連絡を取ります：「エンギは砲兵内のウイルスシグネチャを検出します。認識システムの再起動：友人/敵。神経通信の破損。武器がアクティブになりました！」</text>
 	<ship load="CIRCLE_ART_SHIPS_PARAMETERS" hostile="false"/>
 	<choice hidden="true">
 		<text>戦う準備をしなさい。</text>
@@ -41480,25 +41480,25 @@ High Average =	140%
 </eventList>
 <eventList name="EVENT_ROCKSLUG_CRASH_ENGI">
 	<event>
-		<text>エンギは損傷した船のシステムを巧みに修理し、違反があったものをつなぎ合わせます。感謝の気持ちで、あなたはいくつかの有用な機器を与えられます。</text>
+		<text>エンギは損傷した船のシステムを巧みに修理し、破損があったものをつなぎ合わせます。感謝の気持ちで、あなたはいくつかの有用な機器を与えられます。</text>
 		<autoReward level="MED">stuff</autoReward>
 	</event>
 	<event>
-		<text>エンギは損傷した船のシステムを巧みに修理し、違反があったものをつなぎ合わせます。感謝の気持ちであなたは便利な装備を与えられます。</text>
+		<text>エンギは損傷した船のシステムを巧みに修理し、破損があったものをつなぎ合わせます。感謝の気持ちであなたは便利な装備を与えられます。</text>
 		<autoReward level="MED">standard</autoReward>
 	</event>
 	<event>
-		<text>エンギは損傷した船のシステムを巧みに修理し、違反があったものをつなぎ合わせます。感謝の気持ちで、ロックキャプテンはあなたの任務であなたを助けるために彼らの中尉に命じます。</text>
+		<text>エンギは損傷した船のシステムを巧みに修理し、破損があったものをつなぎ合わせます。感謝の気持ちで、ロックキャプテンはあなたの任務であなたを助けるために彼らの中尉に命じます。</text>
 		<crewMember combat="1" class="rock" amount="1"/>
 		<autoReward level="LOW">scrap_only</autoReward>
 	</event>
 	<event>
-		<text>エンギは損傷した船のシステムを巧みに修理し、違反があったものをつなぎ合わせます。感謝の気持ちから、スラッグの1人があなたの乗組員に加わるように頼みます。</text>
+		<text>エンギは損傷した船のシステムを巧みに修理し、破損があったものをつなぎ合わせます。感謝の気持ちから、スラッグの1人があなたの乗組員に加わるように頼みます。</text>
 		<crewMember class="slug" amount="1"/>
 		<autoReward level="LOW">scrap_only</autoReward>
 	</event>
 	<event>
-		<text>エンギは損傷した船のシステムを巧みに修理し、違反があったものをつなぎ合わせますが、突然、2つの船の間の金属片のブロックがエンギを押しつぶします...事故にもかかわらず、あなたはいくつかの便利な機器を与えられます。</text>
+		<text>エンギは損傷した船のシステムを巧みに修理し、破損があったものをつなぎ合わせますが、突然、2つの船の間の金属片のブロックがエンギを押しつぶします...事故にもかかわらず、あなたはいくつかの便利な機器を与えられます。</text>
 		<autoReward level="MED">stuff</autoReward>
 		<removeCrew class="engi">
 			<clone>true</clone>
@@ -41506,7 +41506,7 @@ High Average =	140%
 		</removeCrew>
 	</event>
 	<event>
-		<text>エンギは損傷した船のシステムを巧みに修理し、違反があったものを縫い合わせますが、スラッグ船の一部を溶接しているときに誤って発火し、その後の混乱の中であなたのエンギは殺されます...</text>
+		<text>エンギは損傷した船のシステムを巧みに修理し、破損があったものを縫い合わせますが、スラッグ船の一部を溶接しているときに誤って発火し、その後の混乱の中であなたのエンギは殺されます...</text>
 		<removeCrew class="engi">
 			<clone>true</clone>
 			<text>エンギは何も起こらなかったかのようにクローンベイから出てきます。</text>

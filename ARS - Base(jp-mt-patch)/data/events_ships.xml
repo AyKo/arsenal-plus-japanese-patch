@@ -1102,13 +1102,13 @@ Special:
 		<text>インターセプターは、巡洋艦がFTL署名にリンクされた状態でジャンプします。あなたはとても近かった...</text>
 	</gotaway>
 	<destroyed>
-		<text>護衛が破壊された状態で、あなたはあなたの印象的な賞品を見てください。あなたの任務は、テスト飛行をするのにあまりにも差し迫っています。船のコンピューターを装備してメインの連邦格納庫に戻す前に、スラグの違反を癒す能力を複製するユニークな増強物を発見します！</text>
+		<text>護衛が破壊された状態で、あなたはあなたの印象的な賞品を見てください。あなたの任務は、テスト飛行をするのにあまりにも差し迫っています。船のコンピューターを装備してメインの連邦格納庫に戻す前に、スラグの破損を癒す能力を複製するユニークな増強物を発見します！</text>
 		<unlockShip id="5">The Slug cruiser has been unlocked and added to the hangar!</unlockShip>
 		<autoReward level="HIGH">standard</autoReward>
 		<augment name="SLUG_GEL"/>
 	</destroyed>
 	<deadCrew>
-		<text>護衛が破壊された状態で、あなたはあなたの印象的な賞品を見てください。あなたの任務は、テスト飛行をするのにあまりにも差し迫っています。船のコンピューターを装備してメインの連邦格納庫に戻す前に、スラグの違反を癒す能力を複製するユニークな増強物を発見します！</text>
+		<text>護衛が破壊された状態で、あなたはあなたの印象的な賞品を見てください。あなたの任務は、テスト飛行をするのにあまりにも差し迫っています。船のコンピューターを装備してメインの連邦格納庫に戻す前に、スラグの破損を癒す能力を複製するユニークな増強物を発見します！</text>
 		<unlockShip id="5">The Slug cruiser has been unlocked and added to the hangar!</unlockShip>
 		<autoReward level="HIGH">standard</autoReward>
 		<augment name="SLUG_GEL"/>

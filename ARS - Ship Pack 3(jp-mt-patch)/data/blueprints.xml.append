@@ -2268,7 +2268,7 @@ This custom-built version is slightly faster and requires only 1 power.</desc>
 	<type>BOMB</type>
 	<title>Avatar Crystal</title>
 	<short>Avatar Crystal</short>
-	<desc>敵の乗組員を深い眠りに誘う3つの爆弾をテレポートします。各爆弾はまた、システムと乗組員に甚大な損害を与え、かなりの違反の可能性があります。 [40‡]</desc> <!-- 1.26 | 1.2 was (see stats) -->
+	<desc>敵の乗組員を深い眠りに誘う3つの爆弾をテレポートします。各爆弾はまた、システムと乗組員に甚大な損害を与え、かなりの破損の可能性があります。 [40‡]</desc> <!-- 1.26 | 1.2 was (see stats) -->
 	<tooltip>Teleports 3 bombs which stun enemy crew for a long time. Each bomb also deals 60 crew damage and 4 system damage, with decent breach chance. [40 ‡]</tooltip><!-- 1.26 | 1.2 was (see stats) -->
 	<damage>0</damage>
 	<stun>25</stun>

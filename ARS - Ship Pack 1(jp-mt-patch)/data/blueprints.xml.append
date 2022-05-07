@@ -267,7 +267,7 @@
 	<short>Ion Blast+</short>
 	<tip>tip_ion_f0_b1</tip>
 	<locked>1</locked>
-	<desc>イオン兵器は、船体に損傷を与えることなくシステムを無効にすることができます。イオンブラストマークのこの改善された変更は、違反を引き起こす可能性があります。</desc>
+	<desc>イオン兵器は、船体に損傷を与えることなくシステムを無効にすることができます。イオンブラストマークのこの改善された変更は、破損を引き起こす可能性があります。</desc>
 	<damage>0</damage>
 	<ion>1</ion>
 	<speed>30</speed>
@@ -1039,7 +1039,7 @@
 	<tip>ce_tip_mines_f1_b3</tip>
 	<title>Frigg Mine Launcher+</title>
 	<short>Frigg+</short>
-	<desc>ベースのフリッグマインランチャーの高度なバージョンで、より多くのダメージを与え、システムにもダメージを与えます。クールダウンが速く、違反が発生する可能性があります。</desc>
+	<desc>ベースのフリッグマインランチャーの高度なバージョンで、より多くのダメージを与え、システムにもダメージを与えます。クールダウンが速く、破損が発生する可能性があります。</desc>
 	<damage>3</damage>
 	<sysDamage>0</sysDamage><!-- lack of system damage reduction is on purpose -->
 	<persDamage>-3</persDamage>
