@@ -3,7 +3,7 @@
 FTL: Faster Than Light の overhaul mod である [Arsenal+ English Translation](https://subsetgames.com/forum/viewtopic.php?t=29891) Version 1.27.1 への日本語パッチ(機械翻訳)です。
 英語だとしんどくて機械翻訳で雰囲気だけでも・・と思って作りました。
 
-Arsenal+ English Translation 自体が、ロシア語で作成された Arsenal+ の英語翻訳版なので、ロシア語→英語→日本語(機械翻訳) となります。
+Arsenal+ English Translation 自体がロシア語で作成された Arsenal+ の英語翻訳版なので、ロシア語→英語→日本語(機械翻訳) となります。
 
 ## インストールに必要なもの
 * FTL: Faster Than Light 本体
@@ -15,7 +15,7 @@ Arsenal+ English Translation 自体が、ロシア語で作成された Arsenal+
 * [本パッチ](https://github.com/AyKo/arsenal-plus-japanese-patch/releases/download/v0.1/Arsenal+.English.Japanese.Machine.Translation.Patch.zip)
 
 ## インストール
-当方の環境がWindows/Steamですので、その環境を前提に書いています。違う環境の場合は違うところもあるかもしれませんが、適時置き換えて読んでください。
+当方の環境がWindows/Steamですので、その環境を前提に書いています。違う環境の場合は異なる部分があると思いますが、適時置き換えて読んでください。
 
 #### 1. FTLのインストール
 
