@@ -12,7 +12,7 @@ Arsenal+ English Translation 自体が、ロシア語で作成された Arsenal+
       (動作には Java (JRE) が必要。Windows なら [こちら](https://www.java.com/ja/download/ie_manual.jsp) ）
     * [Arsenal+ Base Resources v1.27.1](https://www.dropbox.com/s/ze6hw5x53g5hi6c/ARS%20-%20Base%20Resources%20v1.27.1.ftl?dl=0)
     * [Arsenal+ Base v1.27.1](https://www.dropbox.com/s/po2fjvhu6tvap8x/Arsenal%2B%20English.zip?dl=0)
-* 本パッチ
+* [本パッチ](https://github.com/AyKo/arsenal-plus-japanese-patch/releases/download/v0.1/Arsenal+.English.Japanese.Machine.Translation.Patch.zip)
 
 ## インストール
 当方の環境がWindows/Steamですので、その環境を前提に書いています。違う環境の場合は違うところもあるかもしれませんが、適時置き換えて読んでください。
@@ -51,7 +51,7 @@ Base はいくつかの .ftl ファイルをまとめた zip ファイルがダ�
 
 
 #### 4. 日本語パッチ(機械翻訳) の入手と格納
-本ページから 「Arsenal+ English Translation」の日本語パッチ(機械翻訳) をダウンロードします。
+本ページから 「Arsenal+ English Translation」の[日本語パッチ(機械翻訳)](https://github.com/AyKo/arsenal-plus-japanese-patch/releases/download/v0.1/Arsenal+.English.Japanese.Machine.Translation.Patch.zip) をダウンロードします。
 こちらも zip ファイルを解凍すると、いくつかの .ftl ファイルができますので同じく mods フォルダに格納します。
 
 
@@ -60,19 +60,25 @@ Slipstream Mod Manager の初回起動時は、FTLのインストール先の指
 環境に合わせて問いに答えます。
 
 * 「FTL のインストール先にある ftl.dat を指定せよ」を指示されます。 Steam であれば ＜Steamのインストール先＞\steamapps\common\FTL Faster Than Light\ にあります。 私の環境の場合、C:\Steam\steamapps\common\FTL Faster Than Light\ にありました。
+
    ![Slipstream-FirstStep-1](doc/SlipstreamModManager-FirstSetting-1.png)
+
    ![Slipstream-FirstStep-2](doc/SlipstreamModManager-FirstSetting-2.png)
 
 * 「Steam からインストールした？」私の場合は YES。
+  
    ![Slipstream-FirstStep-3](doc/SlipstreamModManager-FirstSetting-3.png)
 
 * 「Steam はここであってる？」 YES。
+
    ![Slipstream-FirstStep-4](doc/SlipstreamModManager-FirstSetting-4.png)
 
 * 「FTLを直接起動する？ それともSteamから？」私の場合は Steam。
+
    ![Slipstream-FirstStep-5](doc/SlipstreamModManager-FirstSetting-5.png)
 
 * 「Slipstream のアップデートの定期確認はする？」しない。
+
    ![Slipstream-FirstStep-6](doc/SlipstreamModManager-FirstSetting-6.png)
 
 
@@ -99,6 +105,7 @@ Slipstream Mod Manager が起動できると、あらかじめ mods フォルダ
 必要な項目にチェックをしたら Patch ボタンをクリックします。クリックするとパッチの適用が始まります。うまくいくと、今すぐ起動するか？と問い合わせが表示されます。ここまでくればOKです。
 
 ![Slipstream-Patching](doc/Slipstream-Patching.png)
+
 ![Slipstream-ReadyToPlay](doc/Slipstream-ReadyToPaly.png)
 
 
