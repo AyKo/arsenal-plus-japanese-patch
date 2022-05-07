@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--     ' ,  " " "
+			SUMMARY  —
+A list of all main events to be called by lists
+	does not include sub-events)
+
+Structure:
+	START_BEACON_MANTIS
+	STORE_MANTIS
+	NOTHING_MANTIS
+
+Items:
+	MANTIS_CAPTURE_COMMANDO			NEW!!
+	MANTIS_GAMBLE					NEW!!
+
+Hostile:
+	MANTIS_FIGHT
+
+Neutral:
+	MANTIS_FIGHT_CHOICE
+	MANTIS_CIVILIAN
+	MANTIS_CREW
+
+Environment:
+						???	MANTIS_NEBULA_FIGHT
+	MANTIS_SUN_FIGHT
+
+Boarders:
+	MANTIS_BOARDERS
+
+Special
+	MANTIS_NAMED_THIEF
+-->
+
+
+
+
+
+
+
+
+<!--
+	MANTIS EVENTLISTS
+-->
+
+
+<eventList name="HOSTILE_MANTIS">
+	<event load="MANTIS_FIGHT"/>
+	<event load="MANTIS_FIGHT"/>
+	<event load="MANTIS_SUN_FIGHT"/>
+	<event load="DONOR_MANTIS_CHASE"/>
+	<event load="MANTIS_HUNTER_PIRATE_EVENT"/>
+	<!-- <event load="MANTIS_BOSS_FIRST"/> --><!-- 1.22 -->
+	<event load="MANTIS_TEST_15_DEADROCK"/>
+
+	<event load="REBEL"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_WARNING"/>
+	<event load="MOTILEK_EVENT"/><!-- 1.26 -->
+</eventList>
+
+
+<eventList name="NEUTRAL_MANTIS">
+	<event load="MANTIS_FIGHT_CHOICE"/>
+	<event load="MANTIS_CIVILIAN"/>
+	<event load="MANTIS_CREW"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="BROKEN_REBEL_DRONE"/>
+	<event load="ALISON_MANTIS_CREW"/> <!-- new alison written event -->
+	<event load="MANTIS_CAPTURE_COMMANDO"/>
+	<event load="MANTIS_GAMBLE"/>
+	<event load="SHIPS_MANTIS_PRO_FIGHTSTATION_EVENT"/>
+	<event load="MANTIS_QUEST_HUNT_ENGI_EVENT"/>
+	<event load="MANTIS_FED_TRANSPORT_FREON"/>
+	<event load="MANTIS_X20_ON_ENGI_SHIP"/>
+	<event load="ENGI_HATER"/>
+</eventList>
+
+
+<eventList name="DISTRESS_BEACON_MANTIS">
+	<event load="ESCORT_BEACON"/>
+	<event load="FRIENDLY_BEACON"/>
+	<event load="TRAP_BEACON"/>
+	<event load="DISTRESS_TRAPPED_MINER"/>
+	<event load="DISTRESS_INFESTATION"/>
+	<event load="DISTRESS_SATELLITE_DEFENSE"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="DISTRESS_STATION_DISEASE"/>
+</eventList>
+
+<eventList name="BOARDERS_MANTIS">
+	<event load="MANTIS_BOARDERS"/>
+	<event load="MANTIS_BOARDERS"/>
+	<event load="BOARDERS_SUN"/>
+</eventList>
+
+
+
+<!--
+		STRUCTURE!!!
+	Others events necessary for strucrtural stuff
+-->
+
+<event name="START_BEACON_MANTIS">
+	<text load="START_BEACON_MANTIS"/>
+	<choice hidden="true">
+		<text id="continue" />
+		<event load="AUGMENTS_ON_START_BEACON"/>
+	</choice>
+</event>
+
+<textList name="START_BEACON_MANTIS">
+	<text>マンティスの本拠地として知られている、チャートが不十分なスペースのエリアに入りました。船体のメッキに傷が付いていることと、タンク内に十分な燃料があることを確認してください。</text>
+	<text>あなたはカマキリのセクターに到着しました。目立ったダメージなしにこの場所を去ったことを自慢できる幸運な人はほとんどいません。あなたの目をむき出しにして、あなたについて知恵を出してください。</text>
+	<text>スペースバミューダトライアングルの評判のあるセクターに到着しました。過去のサイクルでのみ、100隻以上の船がこの地域で行方不明になっています。昆虫のような種族に捕らえられたという噂があります...</text>
+	<text>このセクターにはインテリジェントなカマキリが生息しており、彼らの船にはテレポート技術が装備されています。あなたの医療機器があなたのドアを引っかいて強化するまでであることを確認するのがおそらく最善でしょう。</text>
+	<text>セクターに到着すると、近くの小惑星帯からの交渉通信のクリック音を傍受します。カマキリは何かをしているように見えます。気をつけて。</text>
+	<text>あなたは巨大なカマキリの無愛想な種族のセクターに到着します。おそらくここにジャンプするのは最善のアイデアではなかったかもしれません...</text>
+	<text>このセクターの開始ビーコンで、エンギがその側に固定されているのがわかります。カマキリの血の渇きは、彼らの攻撃性によってのみ匹敵することができます。</text>
+	<text>旧戦争では、連邦はマンティスを打ち負かしました。台所にいるゴキブリに靴を履いて思い出させる時が来ました！</text>
+	<text>あなたはカマキリのセクターに到着しました。快適な散歩と比較して、それが何かになる可能性は低いです。これらの大きな知的な昆虫は、その残忍さで有名です。後悔するよりも安全であり、すべてのシステムが戦闘任務の準備ができていることを確認することをお勧めします。</text>
+	<text>あなたはカマキリの領土に到着しました。すべての船長が、船を無傷でこのセクターを離れたことを自慢できるわけではありません。少なくとも、そもそもこのセクターを離れただけです。</text>
+</textList>
+
+<event name="STORE_MANTIS">
+	<text load="STORE_MANTIS"/>
+	<store/>
+</event>
+<textList name="STORE_MANTIS">
+	<text>ビーコンに到着すると、よく話されているカマキリに「あられ、旅行者。今は危険な時期です。おそらく私たちのサービスが必要だと思いますか？」と歓迎されます。彼はトレーダーのようです。</text>
+	<text>このビーコンで何を発見するかわからない場合は、周囲をスキャンします。保護された貿易空間での暴力を思いとどまらせる広帯域チャネルでいくつかの警告を検出します。おそらくあなたは近くにいくつかの製品を見つけることができます。</text>
+	<text>商人はカマキリの種族の間であまり尊敬されていないので、職業を引き受ける人はほとんどいません。近くの宇宙ドックから広告を受け取って少し驚いています。あなたは彼らが何を提供しなければならないかを見ることにしました。</text>
+	<text>先にカマキリの取引所を特定し、あなたのアプローチが脅威と見なされないように彼らに合図します。リーダーはあなたを歓迎します：「あなたはスクラップを持っていますか？すぐに、戦士があなたに会う前にドックに来てください。」</text>
+	<text>ノードに向かう苦労しているマンティスの貨物船は、飛び込むときに盾の残りを持ち上げます。あなたは力のショーとして武器をパワーアップし、彼らはしぶしぶ貨物の一部をあなたにオフロードすることに同意します-価格で。</text>
+	<text>反乱軍はすでにここにいます！乗組員は衝撃に備えますが、誰も来ません。センサーは、無人の反乱軍の補給船が誤動作していて、自動販売モードでスタックしていることを報告します—少しのスクラップのためにあなたはあなたの選択をすることができます。</text>
+</textList>
+
+<event name="NOTHING_MANTIS">
+	<text load="NOTHING_MANTIS"/>
+	<choice hidden="true">
+		<text id="continue" />
+		<event load="TALK_WITH_CREW_MANTIS"/>
+	</choice>
+</event>
+<textList name="NOTHING_MANTIS">
+	<text>この時点で、マンティスとの戦いをほぼ期待していますが、このビーコンには他の船がまったくないようです。時間をかけて息を止め、船のシステムを再確認してください。</text>
+	<text>このビーコンが提供する唯一のものは、深宇宙の眺めと戦いからの短い休息です。一部の人にとって、これは歓迎すべき避難所であるに違いありません。</text>
+	<text>近くのカマキリの採掘作業は明らかにエンギの奴隷労働を多用しています。あなたは奴隷を解放する可能性を簡単に考えますが、マンティスの存在はあまりにも手ごわいです。あなたは低く横たわることに決めました。</text>
+	<text>過去の戦いの残骸が点在していないマンティススペースの部分はそれほど多くありませんが、これはそのうちの1つです。あなたは深呼吸をして、先に進む準備をします。</text>
+	<text>ここにはスペースデブリと住めない小惑星以外は何もありません。</text>
+	<text>ビーコンの影で何かが動いているのを見るのが好きですが、すべてが静止したままです。</text>
+</textList>
+
+
+
+<!--
+		ITEMS!!!
+	Events that give items
+-->
+
+<event name="MANTIS_CAPTURE_COMMANDO" unique="true">
+	<text>ライフサインが1つ乗っているエンギの難破船に出くわします。それは船の乗組員を一掃したマンティス搭乗パーティーの唯一の生存者であることが判明しました。彼は戦う状態になく、乗船しました。</text>
+	<ship load="ENGI_SHIP" hostile="false"/>
+	<choice hidden="true">
+		<text>彼を解放します。</text>
+		<event load="MANTIS_CAPTURE_COMMANDO_RELEASE"/>
+	</choice>
+	<choice hidden="true">
+		<text>彼を殺せ。</text>
+		<event load="MANTIS_CAPTURE_COMMANDO_KILL"/>
+	</choice>
+	<choice req="mantis" hidden="true">
+		<text>(Mantis Crewmember) 彼に尋問します。</text>
+		<event load="MANTIS_CAPTURE_COMMANDO_TALK"/>
+	</choice>
+	<choice req="mind" hidden="true"> <!--DLC-->
+		<text>(Mind Control) 彼に尋問する。</text>
+		<event><!-- for some reason in vanilla it says "an weapon". must be a typo -->
+			<text>あなたのマインドコントロールデバイスはあなたが抵抗することなく彼の話を素早く得ることを可能にします。搭乗隊がエンギ船が輸送していた武器を盗もうとしていたようです。しかし、彼らのチームはドローンによって一掃されました。</text>
+			<choice hidden="true">
+				<text id="continue" />
+				<event>
+					<text>あなたは隠された貯蔵庫に武器を見つけ、マンティスが去るのに十分なほど船にパッチを当てることに決めました。</text>
+					<autoReward level="LOW">weapon</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="MANTIS_CAPTURE_COMMANDO_RELEASE">
+	<event><!-- russian version added in "the Mantis" in between "help get" -->
+		<text>あなたはマンティスがエンギの船を稼働させるのを手伝いますが、彼らの物資のいくつかを取ります。彼は一言も言わずに離陸する。</text>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+	<event>
+		<text>彼はあなたの憐れみを弱さのしるしとしてとらえ、エンギ船で離陸する前に小さな時限爆薬を装備します。</text>
+		<damage amount="2"/>
+		<damage amount="1" system="random" effect="fire"/>  <!--DLC-->
+	</event>
+</eventList>
+<eventList name="MANTIS_CAPTURE_COMMANDO_KILL">
+	<event>
+		<text>マンティスのコマンドーは、エアロックの内側のドアが密閉されており、スペースが彼を連れて行く準備をしているので、恐れることはありません。あなたがスイッチを押すと、彼は去り、大きな黒に泡だて器で出ました。</text>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+	<event>
+		<text>マンティスに対処する準備をする前に、エンギ船を剥ぎ取ります。しかし、コマンドーはすぐにあなたの意図と攻撃を認識します！</text>
+		<autoReward level="MED">stuff</autoReward>
+		<boarders min="1" max="1" class="mantis"/>
+	</event>
+</eventList>
+<eventList name="MANTIS_CAPTURE_COMMANDO_TALK">
+	<event>
+		<text>鍵のかかったドアの後ろにいる2つのカマキリの間で何が起こっているのかは明らかではありませんが、カマキリが出現すると、コマンドーはローカルセクターでテレメトリを提供する準備ができています。その後、彼はエンギ船に出発します。マップが更新されました。</text>
+		<reveal_map/>
+	</event>
+	<event><!-- added an apostrophe in "commandos" because grammar -->
+		<text>コマンドーとの短い時間の後、あなたは彼が乗組員に加わりたいと言われます。あなたは忠誠を交換するコマンドーの意欲に驚いていますが、あなたは彼についてのあなたの乗組員の判断を信頼しています。</text>
+		<crewMember amount="1" class="mantis"/>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+</eventList>
+
+
+<event name="MANTIS_GAMBLE" unique="true">
+	<text>このノードには現在、カマキリのレジャー船があります。戦士が蒸気を放出するための売春宿と戦闘アリーナの場所です。彼らがあなたの在庫をスキャンするとき、彼らはあなたがチャンスの壮大なゲームに従事する資格があることを示します。</text>
+	<choice hidden="true">
+		<text>青い絵の具で戦士に50個のスクラップを賭けます。</text>
+		<event>
+			<text>2人のカマキリの少年が戦闘中に互いに投げ合うとき、あなたはビュースクリーンを見守っています。</text>
+			<item_modify>
+				<item type="scrap" min="-50" max="-50"/>
+			</item_modify>
+			<choice hidden="true">
+				<text id="continue" />
+				<event load="MANTIS_GAMBLE_BLUE"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>赤いペンキで戦士に50スクラップを賭けます。</text>
+		<event>
+			<text>2人のカマキリの少年が戦闘中に互いに投げ合うとき、あなたはビュースクリーンを見守っています。</text>
+			<item_modify>
+				<item type="scrap" min="-50" max="-50"/>
+			</item_modify>
+			<choice hidden="true">
+				<text id="continue" />
+				<event load="MANTIS_GAMBLE_RED"/>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>あなたは詐欺師とギャンブルをしません。ジャンプする準備をします。</text>
+		<event/>
+	</choice>
+</event>
+<eventList name="MANTIS_GAMBLE_BLUE">
+	<event>
+		<text>青いものは隅に押し込まれますが、彼は最後の瞬間に打ちのめされ、相手を斬首します。あなたはあなたの賞金を請求します！</text>
+		<item_modify>
+			<item type="scrap" min="100" max="100"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>青いマンティスは確実に勝ち、敵に多数のヒットを記録しているようです。ただし、赤の1つは、キーを1回スワイプするだけで戦闘を終了します。</text>
+		<choice hidden="true">
+			<text>あなたが借りているものを支払います。</text>
+			<event>
+				<text>出航する船がまだある間に、賭けたスクラップを転送して終了します。</text>
+			</event>
+		</choice>
+		<choice req="engines" lvl="4" hidden="true">
+			<text>(Improved Engines) 借金をかわし、エンジンをパワーアップします。</text>
+			<event>
+				<text>あなたはあなたが送る準備をしたスクラップを思い出し、彼らが反応する前に巡洋艦の射撃場から出ることができます。しかし、小さな船がパトロールから離脱し、交戦するために移動します。</text>
+				<ship load="MANTIS_FIGHT" hostile="true"/>
+				<item_modify>
+					<item type="scrap" min="50" max="50"/>
+				</item_modify>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<eventList name="MANTIS_GAMBLE_RED">
+	<event>
+		<text>青いマンティスは確実に勝ち、敵に多数のヒットを記録しているようです。ただし、赤の1つは、キーを1回スワイプするだけで戦闘を終了します。あなたはあなたの賞金を請求します！</text>
+		<item_modify>
+			<item type="scrap" min="100" max="100"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>青いものは隅に押し込まれますが、彼は最後の瞬間に打ちのめされ、相手を斬首します。</text>
+		<choice hidden="true">
+			<text>あなたが借りているものを支払います。</text>
+			<event>
+				<text>出航する船がまだある間に、賭けたスクラップを転送して終了します。</text>
+			</event>
+		</choice>
+		<choice req="engines" lvl="4" hidden="true">
+			<text>(Improved Engines) 借金をかわし、エンジンをパワーアップします。</text>
+			<event>
+				<text>あなたはあなたが送る準備をしたスクラップを思い出し、彼らが反応する前に巡洋艦の射撃場から出ることができます。しかし、小さな船がパトロールから離脱し、交戦するために移動します。</text>
+				<ship load="MANTIS_FIGHT" hostile="true"/>
+				<item_modify>
+					<item type="scrap" min="50" max="50"/>
+				</item_modify>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+
+
+<!--
+		HOSTILE!!!
+	Events that call up a fight for sure
+-->
+
+<event name="MANTIS_FIGHT" unique="false">
+	<text load="MANTIS_FIGHT"/>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+</event>
+<textList name="MANTIS_FIGHT">
+	<!-- These are the ones that I had written-->
+	<text>カマキリの軍艦が、人間の貨物船の残骸と並んで地元のレーダーに現れます。敵対的な出会いに備えましょう！</text>
+	<text>カマキリの軍事スカウトがあなたの船を歓迎します。 「愚かなエイリアン！あなたの種類は私たちの偉大さをあまりにも長い間抑圧してきました！あなたは連邦を支持した日を台無しにするでしょう！」</text>
+	<text>小さなカマキリ巡洋艦が広帯域周波数で繰り返しメッセージを放送しています。「私たちの領土に入るカマキリ以外の船はすべて没収されます。命を大切にするなら、盾を下げて降伏してください。」</text>
+	<text planet="PLANET_POPULATED_SMALL">あなたは小さな軍の前哨基地と近くの数隻の貨物船を発見しました。孤立した場所にあるこのミネラル豊富な惑星は、違法なカマキリの採掘作業に最適です。あなたがあなたの選択肢を考えるとき、船は前哨基地から発進します。戦いの準備をしなさい。</text>
+	<text>あなたはさらに別の無免許で未知のマンティスコロニーを発見します。彼らは確かに彼らの主張を拡大する時間を無駄にしません。あなたが飛び去る前に、カマキリの船があなたを迎撃するために動きます。</text>
+	<text>カマキリの軍事スカウトは、近くの難破船でサルベージ作戦を終えたばかりのようです。彼らは警告で無駄にする時間がなく、戦いたいと思っているようです。</text>
+	<text>小さな軍用機があなたを歓迎し、カマキリの船長があなたの受信機に現れます。 「すべての地元の人間の植民地は、連邦の違反のために罰せられました。処理に提出してください。」</text>
+	<!-- These are the ones by tom-->
+	<text>近くのマンティス船が攻撃的な機動を開始します。あなたは最悪の事態に備えます。</text>
+	<text>クリックとゴロゴロの流れは、敵対的なマンティススカウトからの通信に来ます。万能翻訳機は瞬く間にいるかもしれませんが、彼の意図は明らかです。</text>
+	<text>マンティスの船はあなたに会えてうれしく思い、武器システムを始動させます。</text>
+	<text>あなたは暗闇に対するカマキリの船の輪郭を認識しています。従事！</text>
+	<text>何か赤いものが迫っています。それはマンティスです。</text>
+	<text>カマキリの器があなたを歓迎します。 「この呼びかけはただ気を散らすものです！」あなたは彼らの盾と武器がオンラインになっていることに気づきます。</text>
+	<text>あなたは港の窓のそばでレーザーの火のちらつきに気づきます。カマキリがあなたの上にいます。</text>
+	<text>マンティスはあなたを歓迎します。彼らの船長は、「私はこの船を私の氏族のために主張します。良い狩りをします！」と言います。</text>
+	<text>カマキリの女性がvidscreenに登場します。彼らが特に悪質でない限り、女性は権威にそれをしません。あなたは武器に動力を与えます。</text>
+	<text>戦士の部族のマークが付いたカマキリの船が位置を壊して攻撃します！</text>
+	<text>カマキリの船は、「ああ！素晴らしい獲物。素晴らしい獲物！私たちの最も精巧な武器であなたを称えます！」と呼びかけます。あなたはこの銀色の裏地に雲を感じ、武器に動力を与えます。</text>
+	<text>地球上の子供たちは、かつて惑星を脅かしていた真っ赤なマンティスの侵略船の恐ろしい話を聞かされます。あなたは武器を無料で注文します！</text>
+	<text>若々しいマンティスの船長が呼びかけを降らせます。 「あなた、獲物、知っておく必要があります。あなたの死、Kaaazthwakの成熟前の最後の殺害。Kaaazthwakは敬意を払います。」カマキリ文化への敬意はレーザーで支払われているようです。</text>
+</textList>
+
+
+
+
+<!--
+		NEUTRAL!!!
+	Events that could have a fight
+-->
+
+<event name="MANTIS_FIGHT_CHOICE" unique="false">
+	<text load="MANTIS_FIGHT_CHOICE"/>
+	<ship load="MANTIS_FIGHT" hostile="false"/>
+	<choice hidden="true">
+		<text>船を攻撃します。</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>隠されたままにしようとします。</text>
+		<event load="MANTIS_FIGHT_CHOICE_AVOID"/>
+	</choice>
+	<choice hidden="true" req="cloaking" lvl="1">
+		<text>(Cloaking) 隠れたままにするマント。</text>
+		<event load="MANTIS_FIGHT_CHOICE_CLOAK"/>
+	</choice>
+</event>
+<textList name="MANTIS_FIGHT_CHOICE">
+	<text>あなたは珍しい光景に迎えられます：あなたに気づいていないように見えるカマキリの船。</text>
+	<text>一度、彼らがあなたに会う前に、あなたはマンティスに会います。</text>
+	<text>彼らがあなたの意図した座標で待ち伏せで待っているマンティス軍艦を見るとき、あなたの乗組員はあなたがマークからどこかでジャンプしたことに気付くと安心します。</text>
+	<text>あなたはマンティスのコミュニケーションのおしゃべりを耳にします：「否定的です、私はより多くの人間を殺しました！」あなたは目立ってゴロゴロしますが、幸いなことに彼らはまだあなたに会っていません。</text>
+	<text>あなたはカマキリのコミュニケーションのおしゃべりを耳にします：「右側のものは腐り始めています。彼を降ろしてください。彼の指を離してください。彼をエアロックから外してください。」彼らは確かに友好的ではないようです...</text>
+	<text>あなたはマンティスのコミュニケーションのおしゃべりを耳にします：「同意しました。次の船はあなたの番です。良い狩猟です。」彼らはまだあなたに会っていません。</text>
+</textList>
+<eventList name="MANTIS_FIGHT_CHOICE_AVOID">
+	<event>
+		<text>重要でないシステムの電源を切り、FTLドライブが充電されるのを待ちます。彼らは戦うことを望まないか、あなたの船に気づかなかったかのどちらかであり、後者の可能性が高いです。</text>
+	</event>
+	<event>
+		<text>あなたが離れるチャンスがある前に、マンティスの船はあなたに気づき、彼らの武器をパワーアップします。</text>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>見過ごされないように、重要でないシステムの電源を切ります。彼らが突然向きを変えて、武器を動力源としてあなたに向かって進路を設定したとき、彼らは去ろうとしているように見えます。</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+<eventList name="MANTIS_FIGHT_CHOICE_CLOAK">
+	<event>
+		<text>あなたはすぐに船を覆い、即時のスキャン範囲から移動します。あなたは気づかれずに逃げ出したようです。</text>
+	</event>
+	<event>
+		<text>不要なシステムをクロークしてシャットダウンします。すぐにマンティスの船が飛び去り、獲物を探していることは間違いありません。</text>
+	</event>
+	<event>
+		<text>あなたはすぐに船を覆い隠しますが、十分な速さではありません。彼らはあなたを見つけて、従事するために移動します。</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+
+<event name="MANTIS_CIVILIAN" unique="false">
+	<text load="MANTIS_CIVILIAN"/>
+	<ship load="MANTIS_CIVILIAN" hostile="false"/>
+	<choice hidden="true">
+		<text>民間船を助けてください。</text>
+		<event>
+			<text>あなたは眉をひそめ、武器の電源を入れ、マンティスの船と交戦する準備をします。今日ではありません。</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>それを避けてください。</text>
+		<event>
+			<text load="MANTIS_CIVILIAN_AVOID"/>
+		</event>
+	</choice>
+</event>
+<textList name="MANTIS_CIVILIAN">
+	<text>カマキリの船があなたのビュースクリーン、武器、エンジンを完全に通り過ぎて点滅します。センサーの読み取り値の小さなブリップは、採石場を示します。</text>
+	<text>あなたは遠くでカマキリの船の狩猟を見つけます。</text>
+	<text>民間人と交戦するカマキリの船があなたを歓迎します。彼が「この人間に近づかないでください！そうでなければあなたは次です！」と叫ぶと、火花が彼のコックピットの周りを飛び回ります。</text>
+	<text>ローカルセンサーは、激しい戦闘に従事している2隻の船を検出します。マンティス軍艦は確実に獲物を打ち負かすようです。</text>
+	<text>あなたは民間船から遭難信号を受信します。カマキリの船に追われています！</text>
+
+	<text>カマキリの船があなたのビュースクリーン、武器、エンジンを完全に通り過ぎて点滅します。センサーの読み取り値の小さなブリップは、採石場を示します。</text>
+	<text>あなたは遠くでカマキリの船の狩猟を見つけます。</text>
+	<text>民間人と交戦するカマキリの船があなたを歓迎します。彼が「この人間に近づかないでください！そうでなければあなたは次です！」と叫ぶと、火花が彼のコックピットの周りを飛び回ります。</text>
+	<text>ローカルセンサーは、激しい戦闘に従事している2隻の船を検出します。マンティス軍艦は確実に獲物を打ち負かすようです。</text>
+	<text>あなたは民間船から遭難信号を受信します。カマキリの船に追われています！</text>
+</textList>
+<textList name="MANTIS_CIVILIAN_AVOID">
+	<text>喫煙すると、民間船は足を引きずります。あなたは未来に目を向けます。</text>
+	<text>FTLが回転する音は、爆発をほとんどかき消します。ほとんど。</text>
+	<text>あなたは彼らを通過させ、それについて考えないようにします。</text>
+
+	<text>喫煙すると、民間船は足を引きずります。あなたは未来に目を向けます。</text>
+	<text>FTLが回転する音は、爆発をほとんどかき消します。ほとんど。</text>
+	<text>あなたは彼らを通過させ、それについて考えないようにします。</text>
+</textList>
+
+<event name="MANTIS_CREW" unique="true">
+	<text>近くに浮かんでいる脱出ポッドを検出して回収します。あなたはそれがカマキリであることを知ったときにそれを宇宙に戻すことを検討します。</text>
+	<choice hidden="true">
+		<text>それをこじ開けます。</text>
+		<event load="MANTIS_CREW_LIST"/>
+	</choice>
+	<choice>
+		<text>ポッドのジェティソン。</text>
+		<event>
+			<text>ポッドをエアロックから送り返します。あなたは愚かではありません。</text>
+		</event>
+	</choice>
+	<choice req="LIFE_SCANNER" hidden="true"><!-- 1.21 -->
+		<text>(Lifeform Scanner) 中身をスキャンします。</text>
+		<event load="MANTIS_SCAN_CREW_LIST"/>
+	</choice>
+</event>
+<eventList name="MANTIS_SCAN_CREW_LIST">
+	<event>
+		<text>スキャナーはカマキリが中にいることを示しています。その場合、おそらく私たちはそれを出すべきではありません。</text>
+		<choice hidden="true">
+			<text>ポッドを開きます。</text>
+			<event load="MANTIS_CREW_LIST_2"/>
+		</choice>
+		<choice>
+			<text>ポッドのジェティソン。</text>
+			<event>
+				<text>ポッドをエアロックから送り返します。あなたは愚かではありません。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>スキャナーはカマキリが中にいることを示しています。その場合、おそらく私たちはそれを出すべきではありません。</text>
+		<choice hidden="true">
+			<text>ポッドを開きます。</text>
+			<event load="MANTIS_CREW_LIST_2"/>
+		</choice>
+		<choice>
+			<text>ポッドのジェティソン。</text>
+			<event>
+				<text>ポッドをエアロックから送り返します。あなたは愚かではありません。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>スキャナーは内部に人間を示しているので、カプセルを開けます。男がライフポッドの叫び声から飛び出し、隅に向かって爪を立てます。カマキリの飼育下の珍しい生存者。落ち着いたら、生存者はしばらくの間あなたの乗組員に加わることを申し出ます。</text>
+		<crewMember amount="1" class="human"/>
+	</event>
+</eventList>
+<eventList name="MANTIS_CREW_LIST">
+	<event>
+		<text>中のマンティスは激怒しています。彼は1回のスワイプで最も近い人を半分にカットします。誰かが怪我をする前にそれを殺しなさい。</text>
+		<boarders min="1" max="1" class="mantis"/>
+		<choice req="CREW_ALL" hidden="true" blue="false"><!-- 1.24 -->
+			<text id="continue" />
+			<event>
+				<removeCrew>
+					<clone>true</clone>
+					<text>マンティスは、クローンベイから出て行ったばかりの乗組員を見てショックを受けました。</text>
+				</removeCrew>
+			</event>
+		</choice>
+		<choice req="CREW_ALL" lvl="0" max_lvl="0" hidden="true" blue="false">
+			<text id="continue" />
+			<event>
+				<text>あなたの船はAIの管理下にあるだけなので、乗組員の死を恐れる必要はありません。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>内部のマンティスはあなたを慈悲の神からのメッセンジャーと見なし、あなたの乗組員に加わることを要求します。</text>
+		<crewMember amount="1" class="mantis"/>
+	</event>
+	<event>
+		<text>男がライフポッドの叫び声から飛び出し、隅に向かって爪を立てます。カマキリの飼育下の珍しい生存者。落ち着いたら、生存者はしばらくの間あなたの乗組員に加わることを申し出ます。</text>
+		<crewMember amount="1" class="human"/>
+	</event>
+</eventList>
+<eventList name="MANTIS_CREW_LIST_2">
+	<event>
+		<text>中のマンティスは激怒しています。彼は1回のスワイプで最も近い人を半分にカットします。誰かが怪我をする前にそれを殺しなさい。</text>
+		<boarders min="1" max="1" class="mantis"/>
+		<choice req="CREW_ALL" hidden="true" blue="false"><!-- 1.24 -->
+			<text id="continue" />
+			<event>
+				<removeCrew>
+					<clone>true</clone>
+					<text>マンティスは、クローンベイから出て行ったばかりの乗組員を見てショックを受けました。</text>
+				</removeCrew>
+			</event>
+		</choice>
+		<choice req="CREW_ALL" lvl="0" max_lvl="0" hidden="true" blue="false">
+			<text id="continue" />
+			<event>
+				<text>あなたの船はAIの管理下にあるので、乗組員全員の死を恐れる必要はありません。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>内部のマンティスはあなたを慈悲の神からのメッセンジャーと見なし、あなたの乗組員に加わることを要求します。</text>
+		<crewMember amount="1" class="mantis"/>
+	</event>
+</eventList>
+
+<!--
+		ENVIRONMENT!!!
+	Events with unique environments
+-->
+
+
+<event name="MANTIS_SUN_FIGHT" unique="false">
+	<text>マンティスが太陽の近くで冒険する理由を誰が知っていますか。おそらくそれはより多くの挑戦になりますか？</text>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+	<environment type="sun"/>
+</event>
+
+
+
+
+
+<!--
+		BOARDERS!!!
+	Events with boarders
+-->
+
+<event name="MANTIS_BOARDERS" unique="true">
+	<text load="MANTIS_BOARDERS"/>
+	<boarders min="2" max="4" class="mantis"/>
+</event>
+<textList name="MANTIS_BOARDERS">
+	<text>遺棄されたまま喫煙しているマンティスの船が浮かんでいます。戦いは最近のものだったに違いありません。その生き残った乗組員は乗船しました。戦いの準備を！</text>
+	<text>あなたの世界は突然変わります。カマキリはあなたの船に乗っています。</text>
+	<text>グレーティングのガタガタとソフトカチッという音が聞こえます。あなたはあなたのピストルに手を伸ばします。</text>
+</textList>
+
+
+
+
+
+<!--
+		SPECIAL!!!
+	Unique events
+-->
+
+<event name="MANTIS_NAMED_THIEF" unique="true"> <!-- 1.21 -->
+	<ship load="MANTIS_NAMED_THIEF" hostile="false"/>
+	<text>あなたは、100年のキャリアであったに違いない数十層の装甲メッキが追加されたように見えるカマキリの船で道を渡ります。その船長は伝説の泥棒KazaaakplethKilikです。あなたの乗組員はおびえているように見えます。</text>
+	<choice hidden="true" req="mantis">
+		<text>(Mantis Crewmember) 彼を呼んでみてください。</text>
+		<event>
+			<text>Mantisの乗組員が前進します。彼とKazaaakplethKilikは奇妙な種類のエイリアンハカを演じます。あなたの船のマンティスへの敬意から、KazaaakplethKilikは彼のすべての武器を含まないことを約束します。その間、あなたは戦闘システムを充電します。</text>
+			<status type="divide" target="enemy" system="weapons" amount="2"/>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>戦う準備をしなさい。</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</event>
+<event name="MANTIS_NAMED_THIEF_DEFEAT">
+	<text>彼らの船に乗って生命の兆候はこれ以上検出されません。あなたは勝ったようです。</text>
+	<choice hidden="true">
+		<text>彼らの船を取り除くために移動します。</text>
+		<event>
+			<text>そのような激しい敵がそのような反気候的な方法で死ぬことはほとんど無駄のようです。あなたはそれを肩をすくめて、あなたができることを取ります。</text>
+			<autoReward level="HIGH">standard</autoReward>
+		</event>
+	</choice>
+	<choice hidden="true" req="teleporter">
+		<text>(Teleporter) 追加の乗組員をすばやくテレポートし、生存者を確認します。</text>
+		<event>
+			<text>あなたはKazaaakplethKilikが死にかけているコーナーで落ち込んでいるのを見つけます。</text>
+			<choice hidden="true">
+				<text>彼を彼の惨めさから解放しなさい。</text>
+				<event>
+					<text>このようにして、有名な船長、KazaaakplethKilikの人生は終わります...あなたが彼の船を徹底的に略奪するとき、あなたは彼と一緒に墓にどんな秘密があったのか疑問に思います。</text>
+					<autoReward level="HIGH">standard</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>彼の言うことを聞いてください。</text>
+				<event>
+					<text>彼の死にかけている瞬間に、彼は彼の秘密の隠し場所の場所をあきらめます。あなたは他にどんな秘密が彼と一緒に墓に行ったのか疑問に思って船を剥ぎ取ります。</text>
+					<quest event="MANTIS_NAMED_THIEF_STASH"/>
+					<autoReward level="HIGH">standard</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true" req="medbay" lvl="2">
+				<text>(Improved Medbay) すぐに彼をメドベイにテレポートします。</text>
+				<event>
+					<text>あなたの速攻は報われ、あなたは彼を死の瀬戸際から連れ戻すことができます。彼の感覚が戻ったとき、彼は「私はこの日を見るとは思っていませんでした、しかし...私はあなた自身と私の船をあなたの大義に捧げるつもりです」と言います。</text>
+					<choice hidden="true">  <!-- NOTE  Add other options?-->
+						<text>承認。</text>
+						<event>
+							<text>KazaaakplethKilikがあなたの乗組員に加わり、盗まれた軍用品の近くの隠し場所の座標を提供し、彼が取り組んでいるカスタムクルーザーの座標を送信します。あなたはそれを連邦に転送し、彼らがそれをうまく利用できることを確認します。</text>
+							<augment name="CREW_STIMS"/>
+							<autoReward level="HIGH">scrap_only</autoReward>
+							<crewMember amount="1" class="mantis" all_skills="2">Kazaaak</crewMember>  <!-- NOTE  Make him a special unique character/color?  At least give him the right name? -->
+							<quest event="MANTIS_NAMED_THIEF_STASH"/>
+							<unlockShip id="2">A Mantis cruiser has been unlocked and added to the hangar!</unlockShip>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="clonebay" lvl="2">
+				<text>(Improved Clonebay) クローンベイをすばやく構成して、彼を保存します。</text>
+				<event>
+					<text>あなたの急いで報われ、あなたは彼をクローンベイのデータベースに登録します。彼が亡くなった後、彼はあなたの船に乗ってすぐに再建されます。彼の感覚が戻ったとき、彼は「私はこの日を見るとは思っていませんでした、しかし...私はあなた自身と私の船をあなたの大義に捧げるつもりです」と言います。</text>
+					<choice hidden="true">  <!-- NOTE  Add other options?-->
+						<text>承認。</text>
+						<event>
+							<text>KazaaakplethKilikがあなたの乗組員に加わり、盗まれた軍用品の近くの隠し場所の座標を提供し、彼が取り組んでいるカスタムクルーザーの座標を送信します。あなたはそれを連邦に転送し、彼らがそれをうまく利用できることを確認します。</text>
+							<augment name="CREW_STIMS"/>
+							<autoReward level="HIGH">scrap_only</autoReward>
+							<crewMember amount="1" class="mantis" all_skills="2">Kazaaak</crewMember>  <!-- NOTE  Make him a special unique character/color?  At least give him the right name? -->
+							<quest event="MANTIS_NAMED_THIEF_STASH"/>
+							<unlockShip id="2">A Mantis cruiser has been unlocked and added to the hangar!</unlockShip>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="sensors" lvl="3">
+		<text>(Advanced Sensors) 船をすばやくスキャンして生存者を探します。</text>
+		<event>
+			<text>KazaaakplethKilikがコーナーで倒れ死んでいるのを検出します。</text>
+			<choice hidden="true">
+				<text>彼を死なせてください。</text>
+				<event>
+					<text>このようにして、有名な船長、KazaaakplethKilikの人生は終わります...あなたが彼の船を徹底的に略奪するとき、あなたは彼と一緒に墓にどんな秘密があったのか疑問に思います。</text>
+					<autoReward level="HIGH">standard</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>ドッキングして、彼と話してみてください。</text>
+				<event>
+					<text>彼の死にかけている瞬間に、彼は彼の秘密の隠し場所の場所をあきらめます。あなたは他にどんな秘密が彼と一緒に墓に行ったのか疑問に思って船を剥ぎ取ります。</text>
+					<quest event="MANTIS_NAMED_THIEF_STASH"/>
+					<autoReward level="HIGH">standard</autoReward>
+				</event>
+			</choice>
+			<choice hidden="true" req="medbay" lvl="2">
+				<text>(Improved Medbay) ドッキングしてすぐにメドベイに戻します。</text>
+				<event>
+					<text>あなたの速攻は報われ、あなたは彼を死の瀬戸際から連れ戻すことができます。彼の感覚が戻ったとき、彼は「私はこの日を見るとは思っていませんでした、しかし...私はあなた自身と私の船をあなたの大義に捧げるつもりです」と言います。</text>
+					<choice hidden="true">  <!-- NOTE  Add other options?-->
+						<text>承認。</text>
+						<event>
+							<text>KazaaakplethKilikがあなたの乗組員に加わり、盗まれた軍用品の近くの隠し場所の座標を提供し、彼が取り組んでいるカスタムクルーザーの座標を送信します。あなたはそれを連邦に転送し、彼らがそれをうまく利用できることを確認します。</text>
+							<augment name="CREW_STIMS"/>
+							<autoReward level="HIGH">scrap_only</autoReward>
+							<crewMember amount="1" class="mantis" all_skills="2">Kazaaak</crewMember>  <!-- NOTE  Make him a special unique character/color?  At least give him the right name? -->
+							<quest event="MANTIS_NAMED_THIEF_STASH"/>
+							<unlockShip id="2">A Mantis cruiser has been unlocked and added to the hangar!</unlockShip>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="clonebay" lvl="2">
+				<text>(Improved Clonebay) クローンベイをすばやく構成して、彼を保存します。</text>
+				<event>
+					<text>あなたの急いで報われ、あなたは彼をクローンベイのデータベースに登録します。彼が亡くなった後、彼はあなたの船に乗ってすぐに再建されます。彼の感覚が戻ったとき、彼は「私はこの日を見るとは思っていませんでした、しかし...私はあなた自身と私の船をあなたの大義に捧げるつもりです」と言います。</text>
+					<choice hidden="true">  <!-- NOTE  Add other options?-->
+						<text>承認。</text>
+						<event>
+							<text>KazaaakplethKilikがあなたの乗組員に加わり、盗まれた軍用品の近くの隠し場所の座標を提供し、彼が取り組んでいるカスタムクルーザーの座標を送信します。あなたはそれを連邦に転送し、彼らがそれをうまく利用できることを確認します。</text>
+							<augment name="CREW_STIMS"/>
+							<autoReward level="HIGH">scrap_only</autoReward>
+							<crewMember amount="1" class="mantis" all_skills="2">Kazaaak</crewMember>  <!-- NOTE  Make him a special unique character/color?  At least give him the right name? -->
+							<quest event="MANTIS_NAMED_THIEF_STASH"/>
+							<unlockShip id="2">A Mantis cruiser has been unlocked and added to the hangar!</unlockShip>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
+
+
+<event name="MANTIS_NAMED_THIEF_STASH">
+	<text>あなたは小さな小惑星のフィールドに到着し、破片の中に隠されたキャッシュを発見します。 KazaaakplethKilikから渡されたコードを入力すると、中に武器が見つかります。</text>
+	<autoReward level="HIGH">weapon</autoReward>
+</event>
+
+
+<!-- <event name="MANTIS_FIGHT">
+	<text>バグ1。</text>
+</event> -->
+
+<!-- <event name="MANTIS_SUN_FIGHT">
+	<text>バグ2。</text>
+</event> -->
+
+<!-- <event name="DONOR_MANTIS_CHASE">
+	<text>バグ3。</text>
+</event> -->
+
+<!-- <event name="MANTIS_HUNTER_PIRATE_EVENT">
+	<text>バグ4。</text>
+</event> -->
+
+<!-- <event name="MANTIS_BOSS_FIRST">
+	<text>ビッグ5。</text>
+</event> -->
+
+<!-- <event name="REBEL">
+	<text>バグ6。</text>
+</event> -->
+
+<!-- <event name="AUTO_ASTEROID">
+	<text>バグ7。</text>
+</event> -->
+
+<!-- <event name="AUTO_WARNING">
+	<text>バグ8。</text>
+</event> -->
+
+<!-- <event name="MANTIS_FIGHT_CHOICE">
+	<text>バグ9。</text>
+</event> -->
+
+<!-- <event name="MANTIS_CIVILIAN">
+	<text>ビッグ10。</text>
+</event> -->
+
+<!-- <event name="MANTIS_CREW">
+	<text>バグ11。</text>
+</event> -->
+
+<!-- <event name="REBEL_TRANSPORT">
+	<text>ビッグ12。</text>
+</event> -->
+
+<!-- <event name="BROKEN_REBEL_DRONE">
+	<text>バグ13。</text>
+</event> -->
+
+<!-- <event name="ALISON_MANTIS_CREW">
+	<text>バグ14。</text>
+</event> -->
+
+<!-- <event name="MANTIS_CAPTURE_COMMANDO">
+	<text>バグ15。</text>
+</event> -->
+
+<!-- <event name="MANTIS_GAMBLE">
+	<text>バグ16。</text>
+</event> -->
+
+<!-- <event name="SHIPS_MANTIS_PRO_FIGHTSTATION_EVENT">
+	<text>バグ17。</text>
+</event> -->
+
+<!-- <event name="MANTIS_QUEST_HUNT_ENGI_EVENT">
+	<text>バグ18。</text>
+</event> -->
+
+<!-- <event name="MANTIS_FED_TRANSPORT_FREON">
+	<text>バグ19。</text>
+</event> -->
+
+<!-- <event name="MANTIS_X20_ON_ENGI_SHIP">
+	<text>バグ20。</text>
+</event> -->
+
+<!-- <event name="ESCORT_BEACON">
+	<text>バグ21。</text>
+</event> -->
+
+<!-- <event name="FRIENDLY_BEACON">
+	<text>バグ22。</text>
+</event> -->
+
+<!-- <event name="TRAP_BEACON">
+	<text>バグ23。</text>
+</event> -->
+
+<!-- <event name="DISTRESS_TRAPPED_MINER">
+	<text>バグ24。</text>
+</event>
+ -->
+<!-- <event name="DISTRESS_INFESTATION">
+	<text>バグ25。</text>
+</event> -->
+
+<!-- <event name="DISTRESS_SATELLITE_DEFENSE">
+	<text>バグ26。</text>
+</event> -->
+
+<!-- <event name="DISTRESS_STATION_FIRE">
+	<text>バグ27。</text>
+</event> -->
+
+<!-- <event name="DISTRESS_STATION_DISEASE">
+	<text>バグ28。</text>
+</event> -->
+
+<!-- <event name="MANTIS_BOARDERS">
+	<text>バグ29。</text>
+</event> -->
+
+<!-- <event name="BOARDERS_SUN">
+	<text>バグ30。</text>
+</event> -->
+
+
+
+<!-- <event name="ZOLTAN_DISTRESS_SHELL">
+	<text>バグ31。</text>
+</event>
+
+<event name="REFUGEE_DISTRESS_ZOLTAN">
+	<text>バグ32。</text>
+</event>
+
+<event name="DISTRESS_SATELLITE_DEFENSE">
+	<text>バグ33。</text>
+</event>
+
+<event name="DISTRESS_STATION_FIRE">
+	<text>バグ34。</text>
+</event>
+
+<event name="FRIENDLY_BEACON">
+	<text>バグ35。</text>
+</event>
+
+<event name="TRAP_BEACON">
+	<text>バグ36。</text>
+</event>
+
+<event name="STRANDED_BEACON">
+	<text>バグ37。</text>
+</event>
+
+<event name="ZOLTAN_TRADE_HUB">
+	<text>バグ38。</text>
+</event>
+
+<event name="ZOLTAN_QUEST_PRIMITIVES">
+	<text>バグ39。</text>
+</event>
+
+<event name="FEDERATION_PLANET_SIGNAL">
+	<text>バグ40。</text>
+</event>
+
+<event name="QUEST_MANTIS_INVASION_START">
+	<text>バグ41。</text>
+</event>
+
+<event name="QUEST_CREWDEAD_START">
+	<text>バグ42。</text>
+</event>
+
+<event name="ZOLTAN_SCI_QUEST">
+	<text>バグ43。</text>
+</event>
+
+<event name="NEBULA_ZOLTAN_ROCK">
+	<text>バグ44。</text>
+</event>
+
+<event name="ZOLTAN_EYE">
+	<text>バグ45。</text>
+</event>
+
+<event name="NEBULA_STORM_ZOLTAN_SUPPLY_CHOICE">
+	<text>バグ46。</text>
+</event>
+
+<event name="NEBULA_EMPTY">
+	<text>バグ47。</text>
+</event>
+
+<event name="NEBULA_REBEL">
+	<text>バグ48。</text>
+</event>
+
+<event name="NEBULA_AUTO">
+	<text>バグ49。</text>
+</event> -->

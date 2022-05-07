@@ -1,0 +1,1805 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--     ' " "
+			SUMMARY  —
+A list of all main events to be called by lists
+	(does not include sub-events)
+
+
+
+	NOTE: we need to make all lists with "NEBULA_" in it trigger the creation of a nebula
+
+
+Structure:
+	FLEET_EASY_NEBULA
+	NEBULA_EMPTY
+
+Hostile:
+	NEBULA_REBEL
+	NEBULA_AUTO
+	NEBULA_AUTO_WARNING
+	NEBULA_PIRATE    				NEW
+	NEBULA_MANTIS_FIGHT				NEW
+
+Neutral:
+	NEBULA_REBEL_UNDETECTED
+	NEBULA_PIRATE_SMUGGLE
+	NEBULA_AUTO_DEFENSE_ITEM
+	NEBULA_LOST_SHIP
+	NEBULA_WEAPONS_TRADER			NEW
+	NEBULA_ROCK_RACIST				NEW
+	NEBULA_MANTIS_CHOICE			NEW
+	NEBULA_REBEL_CHASE				NEW
+
+Boarders:
+	NEBULA_BOARDING
+
+Items:
+	NEBULA_TRADER
+
+Storm Environment:
+	NEBULA_STORM_AUTO
+	NEBULA_STORM_REBEL
+	NEBULA_STORM_BOARDING
+	NEBULA_STORM_ITEMS
+
+-->
+
+
+<eventList name="NEBULA_HOSTILE">
+	<event load="NEBULA_REBEL"/>
+	<event load="NEBULA_AUTO"/>
+	<event load="NEBULA_AUTO_WARNING"/>
+	<event load="NEBULA_PIRATE"/>
+	<event load="NEBULA_MANTIS_FIGHT"/>
+	<event load="NEBULA_STORM_AUTO"/> <!-- replaced "STORM_ -> "NEBULA_STORM_ (106 hits in 9 files) --> <!-- 1.27 -->
+	<event load="NEBULA_STORM_REBEL"/>
+	<event load="NEBULA_BOARDING"/>
+	<!-- <event load="PRIZRAK_SHIP_EVENT"/> --><!-- 1.21 -->
+	<!-- <event load="BOARDERS_ASTEROID_PRIZRAK"/> --><!-- 1.21 -->
+	<event load="NEBULA_DRONEQUEEN_EVENT"/>
+	<event load="NEBULA_AUTO_CLOUDER_EVENT"/><!-- 1.27 -->
+</eventList>
+
+<eventList name="NEBULA_NEUTRAL">
+	<event load="NEBULA_REBEL_UNDETECTED"/>
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
+	<event load="NEBULA_LOST_SHIP"/>
+	<event load="NEBULA_WEAPONS_TRADER"/>
+	<event load="NEBULA_ROCK_RACIST"/>
+	<event load="NEBULA_MANTIS_CHOICE"/>
+	<event load="NEBULA_REBEL_CHASE"/>
+	<event load="NEBULA_SLUG_BURST_QUEST"/>
+	<event load="NEBULA_DEVIL_EVENT"/><!-- 1.27 -->
+</eventList>
+
+
+
+
+<!--
+		STRUCTURE!!!
+	Others events necessary for strucrtural stuff
+-->
+
+<event name="START_BEACON_NEBULA">
+	<text load="START_BEACON_NEBULA"/>
+	<choice hidden="true">
+		<text id="continue" />
+		<event load="AUGMENTS_ON_START_BEACON"/>
+	</choice>
+</event>
+<textList name="START_BEACON_NEBULA">
+	<text>この星雲は、ある時点で重要なハブだったに違いありません。これらのジャンプビーコンをすべて配置するのは簡単な作業ではありません。しかし、今ではほとんどナビゲートできません。</text>
+	<text>星雲は常に危険な場所でした。多くの電子機器はこれらの雲の中で失敗します。軽く踏む必要があります。</text>
+	<text>あなたは星雲で厚いセクターに入りました。あなたは本能でナビゲートする必要があります。</text>
+	<text>あなたは星雲が豊富なセクターに入りました。あなたは艦隊に数光年を置くかもしれません、しかしそれはあなたがそれを反対側に出す場合にのみ役に立ちます。</text>
+	<text>このセクターの高い星雲密度のおかげで、ほとんどチャート化されておらず、深部に潜んでいるものについての噂がたくさんあります。</text>
+	<text>このセクターの星雲を構成するガスは、システムを損なう恐れがあります。しかし、あなたは押す必要があります。</text>
+	<text>未知の星雲に到達しました。外の環境は、艦隊を追跡するのにそれほど快適ではありませんが、まだ喜んではいけません—これはあなたにも当てはまります。オンボードセンサーをアクティブにせずに、次のエリアへの出口に到達するようにしてください。</text>
+	<text>このセクターの唯一の基準点は、ジャンプビーコンの高周波電磁パルスです。これらのビーコンが他に誰を引き付けることができるか誰が知っていますか？..</text>
+	<text>この星雲には強い磁気嵐が吹き荒れています。敏感なセンサーシステムをオフにするのがおそらく最善でしょう。そうしないと、ミッションの最後までそれらを失うリスクがあります。</text>
+	<text>このコースでは、電子機器の故障、センサーの故障など、さまざまなことがあなたを待っています...</text>
+	<text>このセクターは星雲が密集しています。まあ、少なくともこれはあなたにもっと多くの資源を集める良い機会を与えるでしょう。反乱軍のことを忘れないでください...</text>
+	<text>良いニュースは、星雲で反乱軍を簡単に失う可能性があるということです。悪いニュースは、あなたが同じように簡単にトラブルに巻き込まれる可能性があるということです...</text>
+	<text>星雲に入るとすぐに、センサーシステムは故障します。ここで反乱軍の追跡が遅くなることは心強いことです。しかし、それはそれについてです...あなたはここから抜け出す方法を見つけようとしなければならないでしょう。</text>
+	<text>未知の星雲はあなたが長く滞在したい場所ではありません。できるだけ早くここから抜け出す方法を見つけてください。</text>
+</textList>
+
+<!-- for when the fleet takes over a nebula beacon -->
+<event name = "FLEET_EASY_NEBULA">
+	<text>高度な反乱軍のハンターがあなたの船を簡単に見つけました。星雲を通してそれを見ることができませんが、艦隊があなたの真上にあると仮定することができます。あなたはすぐに脱出する必要があります。</text>
+	<ship load = "LONG_FLEET" hostile ="true"/>
+	<environment type="storm"/>
+</event>
+
+<event name="NEBULA_STORE">
+	<text load="NEBULA_STORE"/>
+	<environment type="nebula"/>
+	<store/>
+</event>
+<textList name="NEBULA_STORE">
+	<text>一部の勇敢な起業家は、星雲から元素を抽出するためにここにステーションを設置しました。ここにも公共の造船所と休憩所があるようです。</text>
+	<text>ビーコンの近くに貿易基地が設置されているのを見ると、近くの岩の上にエイリアンの集落があることを意味します。あなたは彼らの製品をチェックすることにしました。</text>
+	<text>水素雲の中心は、お店にとってはごく普通の場所ではないようですが、エンギは普通の種ではありません。見ても痛くないでしょう。</text>
+	<text>エンギの貨物船は、「相互に有益な財産の交換を提案する」と呼びかけています。それは掘り出し物のようなにおいがします。</text>
+	<text>あなたは、星雲のひだに避難している連邦難民船の群れを発見します。 「申し訳ありませんが、何もお伝えすることはできませんが、エンジンを稼働させ続けるにはスクラップが必要です。」あなたは彼らが取引をするだろうと感じます。</text>
+</textList>
+
+<event name="NEBULA_EMPTY">
+	<text load = "NEBULA_EMPTY_LIST"/>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text id="continue" />
+		<event load="TALK_WITH_CREW_GHOST"/>
+	</choice>
+</event>
+<textList name ="NEBULA_EMPTY_LIST">
+	<text>あなたはあなたの船を取り巻く厚いガスを通して何も見ることができません。そこに何があるのかわからなくても、FTLが充電されるのを待つだけです。</text>
+	<text>アクティブなセンサーがなければ、不安の中でビューポートの外を見る以外に選択肢はありません。不気味に静かです。</text>
+	<text>FTLドライブが充電されるのを待つ間、あなたの半分はいつでも待ち伏せされることを期待しています。しかし、攻撃は来ません...</text>
+	<text>センサーが機能していなくても裸になります。あなたの半分は、反乱軍の船がいつでも雲の後ろから現れることを期待していますが、誰も来ません。</text>
+	<text>あなたの乗組員は常に窓の外を見て、敵対者をチェックしています。彼らは船のあらゆるきしみとうめき声でジャンプします。緊張はほとんど明白です...</text>
+	<text>あなたは神経質に窓の外をちらりと見ますが、あなたに挨拶する唯一のことはより多くの雲と沈黙です。</text>
+	<text>到着するとすぐに、広帯域通信チャネルを循環します。静的なだけです。</text>
+	<text>センサーを下げた状態で、窓の外を見つめるのにかなりの時間を費やします。それは、あなたが認めなければならない、ここではかなり美しいです。</text>
+	<text>遠くの太陽からの光線を反射するガスの巨大な渦巻きを除いて、ここには何もありません。</text>
+</textList>
+
+
+
+<!--
+		HOSTILE!!!
+	Events that call up a fight for sure
+-->
+
+<event name="NEBULA_REBEL">
+	<text load="NEBULA_REBEL_LIST"/>
+	<ship load="REBEL" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<textList name="NEBULA_REBEL_LIST">
+	<text>あなたは、星雲のこのセクションであなたの船を探している反乱軍艦隊の事前偵察隊と一緒に道を渡ります。</text>
+	<text>ビーコンの近くで、反乱軍の色をした船が待っているのが見えます。彼らはすぐに従事するので、彼らはあなたを待っていたに違いありません。</text>
+	<text>反乱軍は、あなたが星雲の中でそれらを失おうとするだろうと予想していたに違いありません。スカウトがビーコンであなたを待っています。</text>
+	<text>星雲を旅して反乱軍を回避することはできないようです。反乱軍の船がビーコンの近くであなたを待っています。</text>
+	<text>到着後すぐに、反乱軍の船が近くにジャンプします。逃げ場はないようです。戦いの準備を！</text>
+	<text>ニュートン-この反乱軍の船がこれまでに何をもたらしたのかを知っています。その船長は歓声を上げますが、彼があなたの船を特定するときにダブルテイクをします。彼らは発砲します。</text>
+	<text>反乱軍の船が呼び寄せますが、このような状況ではチャンスはありません。あなたは周波数をブロックし、従事する準備をします。</text>
+</textList>
+
+
+<event name="NEBULA_AUTO">
+	<text load="NEBULA_AUTO_LIST"/>
+	<ship load="REBEL_AUTO" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<textList name="NEBULA_AUTO_LIST">
+	<text>あなたは、星雲のこのセクションであなたの船を探している反乱軍艦隊の事前偵察隊と一緒に道を渡ります。</text>
+	<text>あなたは星雲のより穏やかな部分に飛び込みます。ただし、反乱軍のスカウトがビーコンにジャンプして攻撃に移動すると、安心感は薄れます。</text>
+	<text>多くの船のもつれた残骸がここで休眠状態で待っています。デブリのように見えるものにライトがちらつくのがわかります。反乱軍のスカウトが残骸から飛び出しました！</text>
+	<text>このドローンはあなたを探していません。おそらくそれは反乱軍の拡大を前に偵察しているのか、あるいは彼らはこの星雲を覆いに使用しようとしているのかもしれません。とにかく、それはあなたを敵対的であると識別します。</text>
+	<text>無人宇宙船であったとしても、反乱軍が未知の空間に深く浸透しているのではないかと心配しています。それは武器を武装させます。あなたは同じことをするべきです。</text>
+</textList>
+
+
+<event name="NEBULA_AUTO_WARNING" unique = "true">
+	<text>自動化された反乱軍の偵察者があなたの通過を警告するために星雲内に配置されたようです。</text>
+	<ship load="REBEL_AUTO_WARNING" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+
+<event name="NEBULA_PIRATE">
+	<text load="NEBULA_PIRATE"/>
+	<ship load="PIRATE" hostile="true"/>
+</event>
+<textList name="NEBULA_PIRATE">	<!-- JUSTIN — ADD MORE -->
+	<text>星雲の中を漂流すると、マークのない船が雲から降りてきて、あなたの航跡に入ります。彼らの武器はオンラインになります。</text>
+	<text>海賊船がエーテルから引き抜かれ、「銀河のこの部分について私が何を愛しているのか知っていますか？探検家たち！あなたはいつもそのような素晴らしい戦利品を運んでいます。」彼らは武器をロックします。</text>
+	<text>星雲の中を惰性で進むと、海賊船があなたの進路に一致し、距離を縮めます。戦場を選ぶ方が良いですが、物乞いは選択者にはなれません。</text>
+	<text>敵対的な船が星雲から降りてきます。戦闘ステーション！</text>
+	<text>霧の中で前方の船のIDを読み取ろうとしましたが、厚すぎて侵入できません。船が曲がるとき、あなたはあなたの答えを持っています、武器は熱いです！</text>
+</textList>
+
+<event name="NEBULA_MANTIS_FIGHT" unique="false">
+	<text load="NEBULA_MANTIS_FIGHT"/>
+	<ship load="MANTIS_FIGHT" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<textList name="NEBULA_MANTIS_FIGHT">
+	<text>星雲は、人気のあるカマキリの狩猟場として知られています。ここで注意するためにあなたがうまくやったであろう情報。</text>
+	<text>あなたは、カマキリの遠征船がその運搬で帰宅しているのを発見しました。実際、彼らはあなたが敵対的であるかどうかを確認するのを待たずに発砲することを決意しています。</text>
+	<text>嵐の中で失われたカマキリの船があなたを歓迎します。 「センサーが出ています。ローカルテレメトリはありません。あなたのものを取ります。」あなたは彼らの武器システムのパワーの増加を検出します。</text>
+	<text>カマキリの船が嵐の中をあなたを歓迎します：「これらは神聖なUrggghtnag一族の狩猟場です。あなたは獲物です。」シールドアップ！</text>
+	<text>渦巻く宇宙の雲の間にカマキリの攻撃船が潜んでいるのに気づきました。それはあなたを狩っています。あなたはジャンプを取得し、攻撃するために移動しようとします。</text>
+
+</textList>
+
+
+
+
+
+
+
+
+
+
+<!--
+		NEUTRAL!!!
+	Events that could have a fight
+-->
+
+<event name="NEBULA_REBEL_UNDETECTED" unique="true">  <!-- give player option to hide, -->
+	<text>あなたの船はビーコンからかなり遠くに現れます。あなたは反乱軍の船が近くで待っているのを見て、間違いなくあなたを探すために駐留しています。</text>
+	<ship load="REBEL" hostile="false"/>
+	<environment type="nebula"/>
+	<choice>
+		<text>船を攻撃します。</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>隠されたままにしようとします。</text>
+		<event load="NEBULA_REBEL_UNDETECTED_LIST"/>
+	</choice>
+	<choice req="cloaking" hidden="true">
+		<text>(Cloaking) 隠れたままにするマント。</text>
+		<event>
+			<text>クローキングシステムを使用して、検出されないまま星雲にさらに滑り込みます。</text>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_REBEL_UNDETECTED_LIST">
+	<event>
+		<text>あなたはすぐに雲の中にさらに滑り込みますが、十分な速さではありません。反逆者はあなたを見つけて、従事するために動きます！</text>
+		<choice>
+			<text>戦う準備をしなさい。</text>
+			<event>
+				<ship hostile="true"/>
+			</event>
+		</choice>
+		<choice req="engines" lvl="4" hidden="true">
+			<text>(Improved Engines) エンジンを完全にパワーアップして、エンジンを追い越します。</text>
+			<event>
+				<text>あなたの強力なエンジンはあなたが船を遠ざけて、最終的に星雲の中でそれを失うことを可能にします。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>不要なシステムの電源を切り、クラウドに滑り込みます。船はあなたに気づかなかった。</text>
+	</event>
+	<event>
+		<text>船はあなたを見つけて追いかけます。いくつかの迅速な操作の後、あなたは雲の中で追跡者を失うことができました。しかし、あなたは彼らがあなたの立場について艦隊に警告したことを期待しています。</text>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+
+<event name="NEBULA_PIRATE_SMUGGLE" unique="true"> <!-- 1.26 now unique -->   <!-- TO DO - NEED TO MAKE A NEW PIRATE SHIP THAT ATTEMPTS TO BRIBE YOU WHEN SURRENDERING-->
+	<text>海賊船があなたのすぐ後に到着します。それがあなたの船を避けようとしているという事実から判断すると、あなたはそれがビーコンから離れようとしている密輸業者であると思います。</text>
+	<environment type="nebula"/>
+	<choice>
+		<text>海賊を攻撃します。</text>
+		<event>
+			<text>あなたは武器をパワーアップし、エンゲージするために移動します。</text>
+			<ship load="PIRATE_SMUGGLE" hostile ="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>船は無視してください。</text>
+		<event>
+			<text>しばらくすると飛び去ります。</text>
+		</event>
+	</choice>
+	<choice req="weapons" lvl="6" hidden="true">
+		<text>(Advanced Weapons) 高度な武器を威嚇するようにアクティブにします。</text>
+		<event>
+			<text>彼らはあなたを歓迎します、「攻撃の必要はありません...多分これはあなたに他の見方をするように説得するでしょう？」</text>
+			<choice>
+				<text>彼らの賄賂を取りなさい。</text>
+				<event>
+					<autoReward level="MED">fuel</autoReward>
+				</event>
+			</choice>
+			<choice>
+				<text>彼らの賄賂と攻撃を無視してください。</text>
+				<event>
+					<ship load="PIRATE_SMUGGLE" hostile ="true"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
+<event name="NEBULA_AUTO_DEFENSE_ITEM" unique="true">
+	<text>事前の反乱軍の自動化された船は、小さな反乱軍の宇宙ステーションの近くに配置されたままです。しかし、センサーが機能していなければ、中に何が入っているのかを知ることは不可能です。</text>
+	<ship load="REBEL_AUTO_ITEM" hostile="false"/>  <!-- ship is in other xmls -->
+	<choice>
+		<text>自動化された船を攻撃して駅に到着します。</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>船を挑発することは避けてください。</text>
+		<event/>
+	</choice>
+	<choice req="cloaking" lvl="1" max_group="0" hidden="true">
+		<text>(Cloaking) 宇宙ステーションにこっそりアクセスしようとします。</text>
+		<event load="NEBULA_AUTO_DEFENSE_ITEM_CLOAK"/>
+	</choice>
+	<choice req="cloaking" lvl="2" max_group="0" hidden="true">
+		<text>(Improved Cloaking) 宇宙ステーションへのステルスアクセスを試みます。</text>
+			<event>
+			<text>あなたは首尾よく船に忍び込み、気付かれずに駅にアクセスしました。</text>
+			<choice hidden="true">
+				<text id="continue" />
+				<event load="DEFENSE_ITEM_LIST"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="hacking" lvl="1" max_group="1" hidden="false"><!--DLC-->
+		<text>(Hacking) アラートを防ぐためにステーションをハッキングしてみてください。</text>
+		<event load="NEBULA_AUTO_DEFENSE_ITEM_HACK"/>
+	</choice>
+	<choice req="hacking" lvl="2" max_group="1" hidden="false"><!--DLC-->
+		<text>(Improved Hacking) アラートを防ぐためにステーションをハッキングします。</text>
+		<event>
+			<text>ステーションへのハッキングに成功し、自動化された船への接続を切断し、ステーションに完全に検出されずにアクセスします。</text>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/>
+			</item_modify>
+			<choice hidden="true">
+				<text id="continue" />
+				<event load="DEFENSE_ITEM_LIST"/>
+			</choice>
+		</event>
+	</choice>
+	<environment type="nebula"/>
+</event>
+<eventList name="NEBULA_AUTO_DEFENSE_ITEM_CLOAK"> <!--DLC EVENTLIST-->
+	<event>
+		<text>あなたは首尾よく船に忍び込み、気付かれずに駅にアクセスしました。</text>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="DEFENSE_ITEM_LIST"/>
+		</choice>
+	</event>
+	<event>
+		<text>あなたは自動化された船をこっそり通り過ぎようとしますが、それはすぐに向きを変えて攻撃します！</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+<eventList name="NEBULA_AUTO_DEFENSE_ITEM_HACK"> <!--DLC EVENTLIST-->
+	<event>
+		<text>ステーションへのハッキングに成功し、自動化された船への接続を切断します。検出されずにステーションにアクセスします。</text>
+		<item_modify>
+			<item type="drones" min="-1" max="-1"/>
+		</item_modify>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="DEFENSE_ITEM_LIST"/>
+		</choice>
+	</event>
+	<event>
+		<text>あなたはステーションをハックするためにドローンを送りますが、自動化された船はそれに気づき、攻撃に変わります！</text>
+		<item_modify>
+			<item type="drones" min="-1" max="-1"/>
+		</item_modify>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+
+
+
+<event name="NEBULA_LOST_SHIP" unique="true">
+	<text>ひどく損傷した連邦船がこのビーコンの星雲に隠れています。あなたが彼らと接触する時間がある前に、彼らは星雲に消えていきます。</text>
+	<environment type="nebula"/>
+	<choice hidden="true">
+		<text>彼らをフォローして助けてみてください。</text>
+		<event load="NEBULA_LOST_SHIP_LIST"/>
+	</choice>
+	<choice>
+		<text>あなたの立場を保ちなさい、彼らは彼ら自身を扱うことができます。</text>
+		<event/>
+	</choice>
+	<choice req="teleporter" hidden="true">
+		<text>(Teleporter) テレポーターで彼らのライフサインをロックします。</text>
+		<event load="NEBULA_LOST_SHIP_LIST3"/><!-- 1.26 -->
+	</choice>
+	<choice req="ADV_SCANNERS" hidden="true">
+		<text>(Long-Ranged Scanners) センサーに余分な電力を送り込み、それらを追跡してみてください。</text>
+		<event load="NEBULA_LOST_SHIP_LIST2"/>
+	</choice>
+</event>
+<eventList name="NEBULA_LOST_SHIP_LIST">
+	<event>
+		<text>あなたの検索は絶望的です。あなたのセンサーは星雲の中の何も拾うことができません。</text>
+	</event>
+	<event>
+		<text>星雲を無益に探している間、あなたは連邦の支持者が隠れていたと思われる反乱軍の船に出くわしました。あなたは戦いの準備をします。</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+	<event>
+		<text>あなたは幸運になり、それらが星雲の奥深くに浮かんでいないことに気づきます。友だちに見つけられることに興奮して、彼らは船に乗り込み、難破した船を放棄します。</text>
+		<crewMember amount="1"/>
+	</event>
+</eventList>
+<eventList name="NEBULA_LOST_SHIP_LIST2">
+	<event>
+		<text>ローカルレーダーがちらつき、近くの雲の中に大きな物体の兆候が定期的に表示されます。しかし、座標を取得するだけで十分であり、船を見つけることができます...機能しているコンポーネントが取り除かれてから長い間、空の船体です。</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>あなたはかすかな署名に従い、それらが星雲にそれほど遠くないところに浮かんでいるのを見つけます。友だちに見つけられることに興奮して、彼らは船に乗り込み、難破した船を放棄します。</text>
+		<crewMember amount="1"/>
+	</event>
+	<event><!-- 1.26.4 -->
+		<text>あなたはかすかな署名に従い、それらが星雲にそれほど遠くないところに浮かんでいるのを見つけます。友だちに見つけられることに興奮して、彼らは船に乗り込み、難破した船を放棄します。</text>
+		<crewMember amount="1"/>
+	</event>
+</eventList>
+<eventList name="NEBULA_LOST_SHIP_LIST3"><!-- 1.26 -->
+	<event>
+		<text>あなたは連邦の乗組員を乗せます。 1人は喜んで乗組員に加わり、残りは次の駅に降ろされるのを待ちます。</text>
+		<crewMember amount="1"/>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event><!-- 1.26.4 -->
+		<text>あなたは連邦の乗組員を乗せます。 1人は喜んで乗組員に加わり、残りは次の駅に降ろされるのを待ちます。</text>
+		<crewMember amount="1"/>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>テレポーターを準備するとすぐに、センサーは信号を失い、厚い星雲の中を一人で飛ぶことに戻ります...</text>
+	</event>
+</eventList>
+
+<event name="NEBULA_WEAPONS_TRADER" unique="true">
+	<text>闇市場の武器商人は、あなたの前に彼の製品を押す前に、星雲に潜んでいる危険について理解できない何かをあなたに回します。</text><!-- not exactly vanilla -->
+	<environment type="nebula"/>
+	<ship load="PIRATE_NEIZ" hostile="false"/>
+	<choice>
+		<text>船を攻撃します。</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true" req="slug" lvl="0" max_group="0" blue="false"><!-- 1.25 -->
+		<text>未知の武器を35スクラップで購入します。</text> <!-- 1.22, was 45 scrap -->
+		<event load="NEBULA_WEAPONS_TRADER_LIST"/>
+	</choice>
+	<choice hidden="false" req="slug" lvl="1" max_group="0" blue="true"><!-- 1.25 -->
+		<text>(Slug Crewmember) あなたのSlugはトランザクションの結果を予測しています...</text>
+		<event load="NEBULA_WEAPONS_TRADER_LIST"/>
+	</choice>
+	<choice> <!-- 1.22 -->
+		<text>船は無視してください。</text>
+		<event/>
+	</choice>
+	<choice req="mind" hidden="true"> <!--DLC-->
+		<text>(Mind Control) それをより良い取引にするように彼を説得します。</text>
+		<event load="NEBULA_WEAPONS_TRADER_LIST2"/>
+	</choice>
+</event>
+<eventList name="NEBULA_WEAPONS_TRADER_LIST">
+	<event>
+		<text>あなたはスクラップを転送し、見返りに武器を受け取ります。それが価値があることを願いましょう。</text>
+		<item_modify>
+			<item type="scrap" min="-35" max="-35"/><!-- 1.21 +below --> <!-- was 45 -->
+		</item_modify>
+		<weapon name="RANDOM"/>
+	</event>
+	<event>
+		<text>あなたはスクラップを転送し、見返りに武器を受け取ります。それが価値があることを願いましょう。</text>
+		<item_modify>
+			<item type="scrap" min="-35" max="-35"/> <!-- was 45 -->
+		</item_modify>
+		<weapon name="RANDOM"/>
+	</event>
+	<event>
+		<text>あなたはスクラップを譲渡しますが、彼は合意に同意します。 「ここは危険な場所だと言ったよ！」</text>
+		<item_modify>
+			<item type="scrap" min="-35" max="-35"/> <!-- was 45 -->
+		</item_modify>
+		<choice>
+			<text>船を攻撃せよ！</text>
+			<event>
+				<ship hostile="true"/>
+			</event>
+		</choice>
+		<choice>
+			<text>貴重な教訓を学んだので、次に進んでください。</text><!-- vanilla is Learn a valuable lesson and move on. -->
+			<event/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="NEBULA_WEAPONS_TRADER_LIST2"> <!--DLC-->
+	<event>
+		<text>一度「確信」して彼は価格を下げ、武器について説明します。しかし、彼は最終的に彼の感覚になり、混乱して彼の割引を取り戻します。そもそもなぜそれを提供したのか、彼は明らかに確信が持てない。</text>
+		<choice>
+			<text>武器を購入します。</text>
+			<event>
+				<text>あなたは武器を購入し、彼の助けに感謝します。</text>
+				<item_modify>
+					<item type="scrap" min="-35" max="-35"/> <!-- was 45 -->
+				</item_modify>
+				<weapon name="RANDOM"/>
+			</event>
+		</choice>
+		<choice>
+			<text>却下。</text>
+			<event>
+				<text>あなたは彼の申し出に感謝し、先に進む準備をします。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>助けを「確信」すると、彼は彼の申し出は実際には嘘であり、彼らはあなたの船を攻撃することを計画していると何気なく述べています。彼が彼の感覚に戻る時までに、あなたはすでにあなたの船が戦う準備をしている。</text>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>助けを「確信」すると、彼はわずかな割引をすることに同意し、あなたに武器を見せます。</text>
+		<choice>
+			<text>武器を購入します。</text>
+			<event>
+				<text>あなたは武器を購入し、彼の助けに感謝します。</text>
+				<item_modify>
+					<item type="scrap" min="-25" max="-25"/> <!-- was 35 -->
+				</item_modify>
+				<weapon name="RANDOM"/>
+			</event>
+		</choice>
+		<choice>
+			<text>却下。</text>
+			<event>
+				<text>あなたは彼の申し出に感謝し、先に進む準備をします。</text>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+<ship name="PIRATE_NEIZ" auto_blueprint="SHIPS_PIRATE">
+	<surrender  chance="0.5" min="3" max="4" load="PIRATE_SURRENDER"/>
+	<escape  chance="0.5" min="2" max="4" load="PIRATE_ESCAPE"/>
+	<destroyed load="DESTROYED_DEFAULT"/>
+	<gotaway>
+		<text>海賊船が飛び去った。</text>
+	</gotaway>
+	<deadCrew load="DEAD_CREW_DEFAULT"/>
+	<deadCrew>
+		<text>あなたは船から価値のあるものをすべて集め、同じ「未知の武器」を探します。</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="NEIZ_END"/>
+		</choice>
+	</deadCrew>
+</ship>
+
+<eventList name="NEIZ_END">
+	<event>
+		<text>そのような武器は搭載されていません。海賊はただあなたをだまそうとしていました。</text><!-- cheat, con, or trick instead of deceive? -->
+	</event>
+	<event>
+		<text>しばらくすると、あなたは武器を見つけました、そしてそれはであることがわかりました...</text>
+		<weapon name="RANDOM"/>
+	</event>
+</eventList>
+
+<event name="NEBULA_ROCK_RACIST" unique="true">
+	<text>近くのロック装甲輸送機はその方向性を失ったように見えますが、あなたが呼びかけを降らせると、彼らは疑わしくなります。</text>
+	<ship load="ROCK_SHIP" hostile="false"/>
+	<environment type="storm"/>
+	<choice><!-- moved to 1st choice, was 2nd choice -->
+		<text>嫌な？！武器を武装させろ！</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice><!-- moved to 2nd choice, was 1st choice -->
+		<text>この場所を離れます。</text>
+		<event/>
+	</choice>
+	<choice hidden="true" req="rock">
+		<text>(Rock Crewmember) 彼らを星雲から導き出すことを申し出てください。</text>
+		<event>
+			<text>ロックは彼らの舵の制御をあなたに惜しみなく移し、あなたは彼らを星雲のより薄い部分に操縦します。彼らは何を考えるべきかわからないが、いくつかの物資をすべて同じように移す。</text>
+			<autoReward level="HIGH">standard</autoReward>
+		</event>
+	</choice>
+</event>
+
+<event name="NEBULA_MANTIS_CHOICE" unique="true">
+	<text>フォグブラインドをナビゲートすると、実際にはカマキリの船で船体をぶつけます。彼らはあなたを歓迎します：「パ！この違反は見過ごされます。星雲、非常に危険です。次回、人間はすべて死にます。」</text>
+	<ship load="MANTIS_FIGHT" hostile="false"/>
+	<environment type="nebula"/>
+	<choice>
+		<text>次回はありません。火！</text>
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>この場所は十分に危険です。進む。</text>
+		<event/>
+	</choice>
+</event>
+
+<event name="NEBULA_REBEL_CHASE" unique="true">
+	<text>あなたは前方の星雲で反乱軍の船を見つけ、彼らのレーダーから離れたままです。従事してみませんか？</text>
+	<ship load="REBEL" hostile="false"/>
+	<environment type="nebula"/>
+	<choice><!-- moved to 1st choice, was 2nd choice -->
+		<text>それらを追いかける準備をしてください！</text>
+		<event load="NEBULA_REBEL_CHASE_LIST"/>
+	</choice>
+	<choice><!-- moved to 2nd choice, was 1st choice -->
+		<text>隠れたまま。</text>
+		<event>
+			<text>あなたは見えないようにしようとします。あなたは彼らがあなたを見たのではないかと疑っています。</text>
+		</event>
+	</choice>
+	<choice req="sensors" lvl="3">
+		<text>(Advanced Sensors) エンゲージするために移動するときに、それらを追跡してみてください。</text>
+		<event>
+			<text>彼らはあなたに会うとすぐにそれを実行します。誤動作しているセンサーからできることを絞り出し、射撃場に入るのに十分な時間、センサーを追跡することができます。</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice req="ADV_SCANNERS" hidden="true">
+		<text>(Long-Ranged Scanners) エンゲージするために移動するときにそれらを追跡してみてください。</text>
+		<event>
+			<text>彼らはあなたに会うとすぐにそれを実行します。誤動作しているセンサーからできることを絞り出し、射撃場に入るのに十分な時間、センサーを追跡することができます。</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice req="LIFE_SCANNER" hidden="true"><!--DLC-->
+		<text>(Lifeform Scanner) ライフシグネチャーを使用してフォローします。</text>
+		<event>
+			<text>星雲内で彼らの生命のサインを追跡するあなたの増強の能力は有用であることがわかります。あなたは船に追いつき、戦いの準備をします。</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_REBEL_CHASE_LIST">
+	<event>
+		<text>あなたは彼らの蒸気の道をたどり、彼らの6時、武器を熱くしてサーフィンします。</text>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>センサーがないと、ロックを長期間維持することはできません。反乱軍は逃げる。</text>
+	</event>
+	<event><!-- flagged: see last sentence for generic modifyPursuit text -->
+		<text>あなたは星雲の中で混乱し、あなたの方位を完全に失います。ビーコンに戻るには少し時間がかかります。艦隊があなたの位置に近づく時間があった可能性があります。</text>
+		<modifyPursuit amount="1"/>
+	</event>
+</eventList>
+
+
+
+<!--
+		ITEMS!!!
+	Events that give items
+-->
+
+<event name="NEBULA_TRADER" unique="true"><!-- 1.21 -->
+	<text>理由はわかりませんが、このビーコンはどうやら観光地です。小さな駅の船の1つが取引を提供しています。</text>
+	<environment type="nebula"/>
+	<ship load="JELLY" hostile="false"/>
+	<choice>
+		<text>トレード。</text>
+		<event load="NEB_TRADER_LIST_1"/>
+	</choice>
+	<choice>
+		<text>トレード。</text>
+		<event load="NEB_TRADER_LIST_2"/>
+	</choice>
+	<choice>
+		<text>トレード。</text>
+		<event load="NEB_TRADER_LIST_3"/>
+	</choice>
+	<choice hidden="true">
+		<text>それらを攻撃します。</text>
+		<event load="NEB_TRADER_FIGHT"/>
+	</choice>
+	<choice><!-- 1.25 --> <!-- moved down -->
+		<text>無視。</text>
+		<event/>
+	</choice>
+</event>
+
+<eventList name="NEB_TRADER_FIGHT">
+	<event>
+		<text>あなたはそれらを攻撃し、武器を充電するように命令することにしました。しかし、彼らが攻撃する準備ができているかどうかにかかわらず、彼らは武器を事前に点火していました—あなたはすぐに彼らのボレーがあなたの船を叩くのを受け取ります。</text>
+		<damage amount="3" system="random" effect="random"/>
+		<ship hostile="true"/>
+	</event>
+	<event><!-- flagged: wording feels a little off, but will do for now -->
+		<text>戦闘のためにすべてのシステムをオンラインにし始めるとすぐに、それらは同じことをします。</text>
+		<ship hostile="true"/>
+	</event>
+	<event> <!-- 1.23 -->
+		<text>戦闘のためにすべてのシステムをオンラインにし始めるとすぐに、それらは同じことをします。</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+
+<eventList name="NEB_TRADER_LIST_1">
+	<event>
+		<text>あなたは取引をします。</text>
+		<item_modify>
+			<item type="drones" min="3" max="10"/>
+			<item type="fuel" min="-4" max="-1"/>
+		</item_modify>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="NEB_TRADER_NEXT"/>
+		</choice>
+	</event>
+	<event>
+		<text>あなたは取引をします。</text>
+		<item_modify>
+			<item type="fuel" min="1" max="8"/>
+			<item type="missiles" min="-8" max="-3"/>
+		</item_modify>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="NEB_TRADER_NEXT"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="NEB_TRADER_LIST_2">
+	<event>
+		<text>あなたは取引をします。</text>
+		<item_modify>
+			<item type="fuel" min="1" max="10"/>
+			<item type="drones" min="-5" max="-1"/>
+		</item_modify>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="NEB_TRADER_NEXT"/>
+		</choice>
+	</event>
+	<event>
+		<text>あなたは取引をします。</text>
+		<item_modify>
+			<item type="missiles" min="4" max="12"/>
+			<item type="fuel" min="-4" max="-1"/>
+		</item_modify>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="NEB_TRADER_NEXT"/>
+		</choice>
+	</event>
+</eventList>
+<eventList name="NEB_TRADER_LIST_3">
+	<event>
+		<text>あなたは取引をします。</text>
+		<item_modify>
+			<item type="drones" min="2" max="8"/>
+			<item type="missiles" min="-8" max="-2"/>
+		</item_modify>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="NEB_TRADER_NEXT"/>
+		</choice>
+	</event>
+	<event>
+		<text>あなたは取引をします。</text>
+		<item_modify>
+			<item type="missiles" min="2" max="8"/>
+			<item type="drones" min="-8" max="-2"/>
+		</item_modify>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="NEB_TRADER_NEXT"/>
+		</choice>
+	</event>
+</eventList>
+
+<eventList name="NEB_TRADER_NEXT">
+	<event>
+		<text>船内の物資と一緒に「サプライズ」もお届けしました！それは罠でした、しかしあなたはナメクジが信頼できないトレーダーであることを知っています...</text>
+		<ship hostile="true"/>
+		<boarders min="1" max="4" class="slug"/>
+	</event>
+	<event>
+		<text>交換が終わったら、ジャンプする準備をします。</text>
+	</event>
+</eventList>
+
+
+
+<!--
+		BOARDERS!!!
+	Events with boarder calls
+-->
+
+<event name="NEBULA_BOARDING" unique="true">
+	<text load="NEBULA_BOARDING_TEXT"/>
+	<environment type="nebula"/>
+	<boarders min="2" max="4" class="human"/>
+</event>
+<textList name="NEBULA_BOARDING_TEXT">
+	<text>近くに小さな駅があり、船の中でショットの震えが鳴っているのを感じます。センサーなしではわかりませんが、船内に侵入者がいる可能性があります！</text>
+	<text>あなたは星雲に到着し、すぐに未知のソースから「搭乗する準備をしてください！」というメッセージを受け取ります。星雲からの静電気では、それらがどこから来たのかを知る方法はありませんが、船上で発射されたショットが聞こえます。</text>
+	<text>このビーコンの近くに多くの遺棄された船が見えます。しばらくすると、船内からテレポーターの物語のような音と叫び声が聞こえます。搭乗しました！</text>
+</textList>
+
+
+
+
+
+
+<!--
+		STORM!!!
+	Events with storm
+-->
+
+<!-- BAG?? -->
+
+<event name="NEBULA_STORM_AUTO" unique = "true"><!-- original russian says "cosmic storm" for events. I suppose this is a Russian exclusive reason -->
+	<text>あなたはプラズマ嵐に悩まされている星雲のセクターに飛び込みます。ビーコンに配置された自動化された反乱軍の偵察隊が攻撃に参加します。</text>
+	<environment type="storm"/>
+	<choice>
+		<text>戦う準備をしなさい。</text>
+		<event>
+			<ship load = "REBEL_AUTO" hostile="true"/>
+		</event>
+	</choice>
+	<choice req="engines" lvl="3" max_group="0" hidden="true">
+		<text>(Improved Engines) それを追い越そうとします。</text>
+		<event load="NEBULA_STORM_AUTO_ESCAPE"/>
+	</choice>
+	<choice req="engines" lvl="6" max_group="0" hidden="true">
+		<text>(Advanced Engines) それを追い越そうとします。</text>
+		<event>
+			<text>あなたは嵐の中で船を無事に失いました。</text>
+		</event>
+	</choice>
+	<choice req="cloaking" hidden="true">
+		<text>(Cloaking) クローキングを使用して脱出します。</text>
+		<event>
+			<text>高度なクローキングシステムを使用することで、嵐の中で追跡者を簡単に失うことになります。</text>
+		</event>
+	</choice>
+</event>
+<eventList name="NEBULA_STORM_AUTO_ESCAPE">
+	<event>
+		<text>あなたは嵐の中で船を無事に失いました。</text>
+	</event>
+	<event><!-- changed vanilla "advanced" to "improved" since that's what the blue option says -->
+		<text>あなたの改良されたエンジンにもかかわらず、あなたはそれらを振ることができません。あなたは向きを変えて戦いの準備をします。</text>
+		<ship load = "REBEL_AUTO" hostile="true"/>
+	</event>
+</eventList>
+
+<event name="NEBULA_STORM_REBEL" unique = "true">
+	<text>あなたはプラズマ嵐の真っ只中に到着します。過酷な状況にもかかわらず、反乱軍のスカウトがあなたを待っているようです。</text>
+	<ship load = "REBEL" hostile = "true"/>
+	<environment type="storm"/>
+</event>
+
+
+<event name="NEBULA_STORM_BOARDING" unique="true"> <!--DLC — Kinda-->
+	<text>あなたは2隻のひどく損傷した船が近くに浮かんでいるのを見つけます。それは戦いの残骸です。誰かが搭乗している音に続いて搭乗パーティーの叫び声が聞こえると、使用可能な破片を収穫し始めます。</text>
+	<environment type="storm"/>
+	<boarders min="3" max="4" class="human"/>
+	<autoReward level="MED">standard</autoReward>
+</event>
+
+<event name="NEBULA_STORM_ITEMS" unique = "true">
+	<text>あなたはプラズマ嵐の真っ只中に飛び込みます。最近無力化された複数の船が影に迫り、稲妻に短時間照らされます。</text>
+	<choice hidden="true">
+		<text>残骸を手動で検索して、生存者と装備を探します。</text>
+		<event load="NEBULA_STORM_ITEMS_LIST"/>
+	</choice>
+	<choice>
+		<text>リスクを回避し、無傷で飛び降りるのを待ちます。</text>
+		<event/>
+	</choice>
+	<choice req="pilot" lvl="2" hidden="true" max_group="0">
+		<text>(Improved Piloting) パイロットに残骸を注意深く探索してもらいます。</text>
+		<event load="NEBULA_STORM_ITEMS_PILOTING"/>
+	</choice>
+	<choice req="pilot" lvl="3" hidden="true" max_group="0">
+		<text>(Advanced Piloting) パイロットに残骸を注意深く探索してもらいます。</text>
+		<event load="NEBULA_STORM_ITEMS_PILOTING2"/>
+	</choice>
+	<environment type="storm"/>
+</event>
+<eventList name="NEBULA_STORM_ITEMS_LIST">
+	<event>
+		<text>注意が必要ですが、検出装置がないため、破片が船に衝突して船体に損傷を与える可能性があります。あなたはできることを救い、何か悪いことが起こる前にジャンプする準備をします。</text>
+		<damage amount="4"/>
+		<damage amount="0" system="random" effect="breach"/>  <!--DLC-->
+		<autoReward level="HIGH">stuff</autoReward>
+	</event>
+	<event>
+		<text>船の墓場の中には、比較的手つかずの船が1隻あります。船上で無意識の乗客を見つけ、船に戻します。目が覚めると、彼らはあなたの乗組員に感謝の気持ちで参加することを申し出ます。</text>
+		<crewMember amount="1"/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>乗組員が難破船を探して船から離れている間、2つの船体が互いに衝突し、乗組員のつなぎ綱を壊します。誰かがノックアウトされ、ガス状の雲に無力に浮かんでいるので、あなたは反応する時間がありません...</text>
+		<choice req="CREW_ALL" hidden="true" blue="false"><!-- 1.24 -->
+			<text id="continue" />
+			<event>
+				<removeCrew>
+					<clone>true</clone>
+					<text>幸いなことに、あなたの乗組員はクローンベイが彼らを復活させるのに十分なほど船の近くにいました。</text>
+				</removeCrew>
+			</event>
+		</choice>
+		<choice req="CREW_ALL" lvl="0" max_lvl="0" hidden="true" blue="false">
+			<text id="continue" />
+			<event>
+				<text>あなたの船はAIの管理下にあるだけなので、乗組員の死を恐れる必要はありません。</text>
+			</event>
+		</choice>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>がらくたやスクラップの中には、回収可能なドローンの概略図があります。あなたは先にいる間にやめて、最近の発見でジャンプする準備をすることにしました。</text>
+		<autoReward level="MED">drone</autoReward>
+	</event>
+	<event>
+		<text>がれきのほとんどは、スクラップとしてもほとんど使用できません。しかし、最終的には、船に搭載できる無傷の武器を見つけることができます。</text>
+		<autoReward level="MED">weapon</autoReward>
+	</event>
+</eventList>
+<eventList name="NEBULA_STORM_ITEMS_PILOTING">
+	<event>
+		<text>船の墓場の中には、比較的手つかずの船が1隻あります。船上で無意識の乗客を見つけ、船に連れ戻します。目が覚めると、彼らはあなたの乗組員に感謝の気持ちで参加することを申し出ます。</text>
+		<crewMember amount="1"/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>がらくたやスクラップの中には、回収可能なドローンの概略図があります。あなたは先にいる間にやめて、最近の発見でジャンプする準備をすることにしました。</text>
+		<autoReward level="MED">drone</autoReward>
+	</event>
+	<event>
+		<text>がれきのほとんどは、スクラップとしてもほとんど使用できません。しかし、最終的には、船に搭載できる無傷の武器を見つけることができます。</text>
+		<autoReward level="LOW">weapon</autoReward>
+	</event>
+	<event>
+		<text>あなたのパイロットは慎重に残骸を探検します、しかし嵐はその犠牲を払っています。乗組員は誰もが死んでから長い間、浮遊している破片は修理できないほど焦げています。</text>
+	</event>
+</eventList>
+<eventList name="NEBULA_STORM_ITEMS_PILOTING2">
+	<event>
+		<text>船の墓場の中には、比較的手つかずの船が1隻あります。船上で無意識の乗客を見つけ、船に連れ戻します。目が覚めると、彼らはあなたの乗組員に感謝の気持ちで参加することを申し出ます。</text>
+		<crewMember amount="1"/>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>がらくたやスクラップの中には、回収可能なドローンの概略図があります。あなたは先にいる間にやめて、最近の発見でジャンプする準備をすることにしました。</text>
+		<autoReward level="MED">drone</autoReward>
+	</event>
+	<event>
+		<text>がれきのほとんどは、スクラップとしてもほとんど使用できません。しかし、最終的には、船に搭載できる無傷の武器を見つけることができます。</text>
+		<autoReward level="LOW">weapon</autoReward>
+	</event>
+</eventList>
+
+
+<!-- Burst Lasers Production Station -->
+
+<event name="NEBULA_SLUG_BURST_QUEST" unique="true">
+	<distressBeacon/>
+	<img planet="NONE"/>
+	<environment type="nebula"/>
+	<text>遭難信号は老朽化した局から発せられ、ビーコンからそれほど遠くないところにぶら下がっています。ナメクジのギャングがここで働いていたようですが、生存者がいる可能性は低いです。破片がいたるところにぶら下がっています。</text>
+	<choice hidden="true">
+		<text>近くのがれきを集めて飛び去ります。</text>
+		<event>
+			<text>駅に近づく危険はなく、近くのスクラップを集めるだけで、次のジャンプの準備をします。</text>
+			<autoReward level="LOW">scrap_only</autoReward>
+		</event>
+	</choice>
+	<choice req="sensors" lvl="1" max_group="0" hidden="true">
+		<text>(Sensors) ステーションをスキャンします。</text>
+		<event load="BURST_LOW_SCAN"/>
+	</choice>
+	<choice req="sensors" lvl="2" max_group="0" hidden="true">
+		<text>(Improved Sensors) ステーションをスキャンします。</text>
+		<event load="BURST_MED_SCAN"/>
+	</choice>
+	<choice req="sensors" lvl="3" max_group="0" hidden="true">
+		<text>(Advanced Sensors) ステーションをスキャンします。</text>
+		<event load="BURST_HIGH_SCAN"/>
+	</choice>
+	<choice req="SHIPRADAR" hidden="true"><!-- 1.25.1 -->
+		<text>(Directional Scanner) ステーションをスキャンします。</text>
+		<event load="BURST_HIGH_SCAN"/>
+	</choice>
+	<choice hidden="true" req="SHIPRADAR2"><!-- 1.27.1 -->
+		<text>(Morph Analyzer) ステーションをスキャンします。</text>
+		<event load="BURST_HIGH_SCAN"/>
+	</choice>
+</event>
+<eventList name="BURST_LOW_SCAN">
+	<event>
+		<text>フルパワーでセンサーをオンにしましたが、画像が表示されません—ここの星雲は密度が高すぎます。スクラップを少し集めたら、飛び去ります。</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>フルパワーでセンサーをオンにしましたが、画像が表示されません—ここの星雲は密度が高すぎます。スクラップを集めたら、飛び去ります。</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>センサーをステーションの方向に向けます。その瞬間、近くの破片の1つが全速力で飛び込み、船の船体に衝突します。ログブックに「センサーシステムを改善することを忘れないでください」とメモします。</text>
+		<damage amount="2" system="engines" effect="random"/>
+	</event>
+</eventList>
+<eventList name="BURST_MED_SCAN">
+	<event>
+		<text>フルパワーでセンサーをオンにすると、部屋の1つで生命の兆候と交差します。あなたはすぐに乗組員を駅に送り、しばらくすると人が乗船します。彼らはエンジニアとして働き、彼らと彼らの仲間の科学者がスラッグによる予期せぬ攻撃にさらされたとき、バーストレーザーのための最新の低消費電力技術を生み出しました。彼らは変装して忍び寄っていたようです。ステーションへの襲撃後、すべての動作中の武器が盗まれましたが、内蔵のマイクロチップで追跡することができます。</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+		<crewMember amount="1" class="human"/>
+		<quest event="BURST_SLUG"/>
+	</event>
+	<event>
+		<text>フルパワーでセンサーをオンにすると、部屋の1つで生命の兆候と交差します。あなたはすぐに乗組員を駅に送り、しばらくすると人が乗船します。残念ながら、彼らは完全に記憶を失い、ここで何が起こったのかについてあなたに何も話すことができません。</text><!-- replace "whatever" with "the misfortune that" ? -->
+		<autoReward level="LOW">scrap_only</autoReward>
+		<choice hidden="true">
+			<text>あなたの乗組員にそれらを受け入れます。</text>
+			<event>
+				<text>生存者はあなたの乗組員に加わって喜んでいます。</text>
+				<crewMember amount="1" class="human"/>
+			</event>
+		</choice>
+		<choice req="medbay" lvl="3" hidden="true">
+			<text>(Advanced Medbay) それらをメドベイに転送します。</text>
+			<event>
+				<text>あなたのメドベイの高度なシステムは、犠牲者の記憶に責任がある脳の損傷した領域を回復することができました、そして、彼らはすべてを覚え始めます。彼らはエンジニアとして働き、彼らと彼らの仲間の科学者がスラッグによる予期せぬ攻撃にさらされたとき、バーストレーザーのための最新の低消費電力技術を生み出しました。彼らは変装して忍び寄っていたようです。ステーションへの襲撃後、すべての動作中の武器が盗まれましたが、内蔵のマイクロチップで追跡することができます。</text>
+				<crewMember amount="1" class="human"/>
+				<quest event="BURST_SLUG"/>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>フルパワーでセンサーをオンにしましたが、画像が表示されません—ここの星雲は密度が高すぎます。スクラップを集めたら、飛び去ります。</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+</eventList>
+<eventList name="BURST_HIGH_SCAN">
+	<event>
+		<text>フルパワーでセンサーをオンにすると、部屋の1つで生命の兆候と交差します。あなたはすぐに乗組員を駅に送り、しばらくすると人が乗船します。彼らはエンジニアとして働き、彼らと彼らの仲間の科学者がスラッグによる予期せぬ攻撃にさらされたとき、バーストレーザーのための最新の低消費電力技術を生み出しました。彼らは変装して忍び寄っていたようです。ステーションへの襲撃後、すべての動作中の武器が盗まれましたが、内蔵のマイクロチップで追跡することができます。</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+		<crewMember amount="1" class="human"/>
+		<quest event="BURST_SLUG"/>
+	</event>
+	<event>
+		<text>フルパワーでセンサーをオンにすると、部屋の1つで生命の兆候と交差します。あなたはすぐに乗組員を駅に送り、しばらくすると人が乗船します。残念ながら、彼らは完全に記憶を失い、ここで何が起こったのかについてあなたに何も話すことができません。</text><!-- replace "whatever" with "the misfortune that" ? -->
+		<autoReward level="LOW">scrap_only</autoReward>
+		<choice hidden="true">
+			<text>あなたの乗組員にそれらを受け入れます。</text>
+			<event>
+				<text>生存者はあなたの乗組員に加わって喜んでいます。</text>
+				<crewMember amount="1" class="human"/>
+			</event>
+		</choice>
+		<choice req="medbay" lvl="3" hidden="true">
+			<text>(Advanced Medbay) それらをメドベイに転送します。</text>
+			<event>
+				<text>あなたのメドベイの高度なシステムは、犠牲者の記憶に責任がある脳の損傷した領域を回復することができました、そして、彼らはすべてを覚え始めます。彼らはエンジニアとして働き、彼らと彼らの仲間の科学者がスラッグスによる予期せぬ攻撃にさらされたとき、バーストレーザーのための最新の低消費電力技術を生み出しました。彼らは変装して忍び寄っていたようです。ステーションへの襲撃後、すべての動作中の武器が盗まれましたが、内蔵のマイクロチップで追跡することができます。</text>
+				<crewMember amount="1" class="human"/>
+				<quest event="BURST_SLUG"/>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<event name="BURST_SLUG" unique="true">
+	<ship load="SLUG_HUNTER_FIGHT" hostile="true"/>
+	<text>ラベルの付いたバーストレーザーコンテナからの信号は、このビーコンにつながります。ナメクジの船がジャンプから出てきたように見えますが、その武器はすでに充電されており、あなたに直接向けられています！スクラップのためにできるだけ早く分解する必要があります。</text>
+</event>
+<ship name="SLUG_HUNTER_FIGHT" auto_blueprint="SLUG_HUNTER">
+	<destroyed>
+		<text>敵の船が爆発し、盗まれた武器の生き残ったコピーを見つけることができます。</text>
+		<autoReward level="MED">scrap_only</autoReward>
+		<weapon name="WEAPONS_BURST_PLUS"/>
+	</destroyed>
+	<deadCrew>
+		<text>敵の乗組員を殺した後、あなたは盗まれた武器の生き残ったコピーを見つけることができます。</text>
+		<autoReward level="HIGH">scrap_only</autoReward>
+		<weapon name="WEAPONS_BURST_PLUS"/>
+	</deadCrew>
+</ship>
+
+
+<!-- Avatar Nebula -->
+
+
+<eventList name="TUMAN_OFF_AVATAR">
+	<event load="FIND_STUFF_AVATAR"/>
+	<event load="FIND_STANDARD_AVATAR"/>
+	<event load="AVATAR_SHIPS"/>
+</eventList>
+
+<eventList name="NEBULA_ITEMS_AVATAR">
+	<event load="NEBULA_FIND_STUFF_AVATAR"/>
+	<event load="NEBULA_FIND_STANDARD_AVATAR"/>
+</eventList>
+
+<eventList name="NEBULA_HOSTILE_AVATAR">
+	<event load="NEBULA_AUTO"/>
+	<event load="NEBULA_AUTO_WARNING"/>
+	<event load="NEBULA_STORM_AUTO"/>
+	<event load="NEBULA_STORM_REBEL"/>
+	<event load="NEBULA_BOARDING_AVATAR"/>
+	<event load="NEBULA_AI_CORE"/>
+	<event load="NEBULA_AVATAR_SHIPS"/>
+	<event load="NEBULA_AVATAR_SHIPS"/>
+	<event load="NEBULA_AVATAR_SHIPS"/>
+	<event load="NEBULA_AVATAR_SHIPS"/>
+	<event load="NEBULA_AVATAR_SHIPS"/>
+	<event load="NEBULA_AUTO_CLOUDER_EVENT"/><!-- 1.27 -->
+</eventList>
+
+<eventList name="NEBULA_DISTRESS_BEACON_AVATAR"><!-- 1.22 -->
+	<event load="NEBULA_SLUG_HELP"/>
+	<event load="NEBULA_SLUG_HELP2"/>
+	<event load="NEBULA_REBEL_HELP"/>
+	<event load="NEBULA_REBEL_HELP2"/>
+	<event load="NEBULA_SLUG_DEAD"/>
+	<event load="NEBULA_AVATAR_HELP"/>
+	<event load="NEBULA_AVATAR_HELP2"/>
+	<event load="NEBULA_AVATAR_HELP3"/>
+	<event load="NEBULA_AI_KILLS_CIV"/>
+</eventList>
+
+<event name="START_BEACON_AVATAR">
+	<text load="START_BEACON_AVATAR"/>
+	<choice hidden="true">
+		<text id="continue" />
+		<event load="AUGMENTS_ON_START_BEACON"/>
+	</choice>
+</event>
+<textList name="START_BEACON_AVATAR">
+	<text>この星雲には生きている魂は一人もいませんが、どういうわけかあなたの神経をまったく落ち着かせません...</text>
+	<text>この星雲は、1つの機能がなければ、他の同様の星雲と変わらないでしょう。幽霊が住んでいます...</text>
+	<text>アバターはしばしば幽霊と呼ばれます。おそらく、彼らの半透明の性質は、宇宙のこの部分からの船を怖がらせます。</text>
+	<text>アバターはこの星雲に生息しています—人工知能、幽霊に似たホログラム。ナメクジでさえ、あえてこの場所に足を踏み入れません。</text>
+	<text>噂によると、幽霊はこれらの部分に生息しています。好むと好まざるとにかかわらず、すぐに自分で見つけることができます。</text>
+	<text>この星雲は、星雲であっても、疑わしいほど静かに見えます。警戒を怠らないでください。</text>
+	<text>あなたは時々この場所で聞こえる音が好きではありません...乗組員はそれらのために絶え間ない頭痛を訴えます。</text>
+	<text>ナメクジの船だけが、この危険な星雲に飛び込む危険を冒すことがあります。しかし、反乱軍は何も止まらないでしょう。</text>
+</textList>
+
+<event name="FIND_STUFF_AVATAR">
+	<text load="FIND_STUFF_AVATAR"/>
+	<autoReward level="LOW">stuff</autoReward>
+</event>
+<textList name="FIND_STUFF_AVATAR">
+	<text>小さな船の残骸がビーコンに沿ってゆっくりと漂っています。中にはいくつかの物資があります。</text>
+	<text>あなたは大きな小惑星の軌道上に放棄された宇宙ステーションを見つけます。あなたの乗組員は中にいくつかの物資を見つけます。</text>
+	<text>あなたがスラッグ巡洋艦の残骸である直前。がれきを集めて、あなたは思わずこのセクターの危険性について考えます。</text>
+	<text>あなたは小さな自動スカウトに出くわしました、しかし、その船体は完全に粉々になりました。どうやら、それは深刻な混乱に陥ったに違いありません。スペアパーツのために分解します。</text>
+</textList>
+
+<event name="NEBULA_FIND_STUFF_AVATAR">
+	<text load="NEBULA_FIND_STUFF_AVATAR"/>
+	<autoReward level="LOW">stuff</autoReward>
+	<environment type="nebula"/>
+</event>
+<textList name="NEBULA_FIND_STUFF_AVATAR">
+	<text>小さな船の残骸がビーコンに沿ってゆっくりと漂っています。中にはいくつかの物資があります。</text>
+	<text>あなたは大きな小惑星の軌道上に放棄された宇宙ステーションを見つけます。あなたの乗組員は中にいくつかの物資を見つけます。</text>
+	<text>あなたがスラッグ巡洋艦の残骸である直前。がれきを集めて、あなたは思わずこのセクターの危険性について考えます。</text>
+	<text>星雲が密集しているため、ナメクジ巡洋艦の残骸がゆっくりと流れていきます。あなたはそれの残りすべてを集めます。</text>
+	<text>あなたは小さな自動スカウトに出くわしました、しかし、その船体は完全に粉々になりました。どうやら、それは深刻な混乱に陥ったに違いありません。スペアパーツのために分解します。</text>
+</textList>
+
+<event name="NEBULA_FIND_STANDARD_AVATAR">
+	<text load="NEBULA_FIND_STUFF_AVATAR"/>
+	<autoReward level="LOW">standard</autoReward>
+	<environment type="nebula"/>
+</event>
+
+<event name="FIND_STANDARD_AVATAR">
+	<text load="FIND_STUFF_AVATAR"/>
+	<autoReward level="LOW">standard</autoReward>
+</event>
+
+<event name="NEBULA_STORE_AVATAR">
+	<text load="NEBULA_STORE_AVATAR"/>
+	<environment type="nebula"/>
+	<store/>
+</event>
+<textList name="NEBULA_STORE_AVATAR">
+	<text>誰かがここに自動化されたトレードステーションを去りました。奇妙なことに、それは問題なく機能します。</text>
+	<text>星雲のこの雲にある自動化されたトレードステーションは、その商品を提供します。</text>
+	<text>自動化されたトレードステーションをこの星雲に誰が配置したかは不明ですが、それでも機能します。</text>
+	<text>小さなナメクジの船が彼らの商品を見てくれます。アバターが制御する星雲は、誰かをだます危険を冒す場所ではありません。ここでは、常に味方がいるほうがよいでしょう。</text>
+</textList>
+
+<event name="NEBULA_BOARDING_AVATAR" unique="true">
+	<text load="NEBULA_BOARDING_AVATAR_TEXT"/>
+	<environment type="nebula"/>
+	<boarders min="4" max="8" class="ghost"/>
+	<autoReward level="LOW">scrap_only</autoReward>
+</event>
+<textList name="NEBULA_BOARDING_AVATAR_TEXT">
+	<text>いくつかのアバターがひどい音であなたの船に現れたとき、あなたは小さな宇宙探査機の破片を集めます。乗組員は急いで彼らをかわす準備をしています。</text>
+	<text>この星雲の中には、壊れた鉱山労働者の船があり、スクラップが少し残っています。抽出して戻ってみると、突然、いくつかのアバターを持ってきたことに気づきました。</text>
+	<text>アバターでは、ビーコンの周りにぶら下がっているすべての金属を集めることはできません。あなたの乗組員は恐怖に取り残されました—幽霊が船に乗っています！</text>
+</textList>
+
+<event name="AVATAR_SHIPS">
+	<text load="AVATAR_SHIPS_LIST"/>
+	<ship load="SHIPS_AI_FIGHT" hostile="true"/>
+</event>
+<textList name="AVATAR_SHIPS_LIST">
+	<text>理由はわかりませんが、アバターの船には常にサイレンの音が聞こえます。それをもう一度聞くと、あなたのチームは戦う準備ができています。</text>
+	<text>不気味な音が突然宇宙の沈黙を遮ります—アバターがあなたを攻撃しています！敵の耳を引き裂くためにサイレンを放送することは彼らのお気に入りの戦術です。</text>
+	<text>あなたの直前—アバター戦闘艦。状況を平和的に解決しようとする試みはすべて役に立たず、他の種族とコミュニケーションをとることができません。</text>
+	<text>サイレンの警報があなたの船で聞こえます—アバターはスペアパーツのためにそれを分解する準備をしています。武器を戦闘に備えましょう！</text>
+	<text>アバター戦艦は、このビーコンで不注意な旅行者を待ち伏せするのを待っています。防御の準備をするしかない。</text>
+	<text>「もう一つのひどいサイレンではありません！」 —部屋の隅で乗組員を恐怖で怒鳴ります。あなたは乗組員を落ち着かせ、戦う準備をするように命令します。</text>
+	<text>ビーコンの近くには、AIの制御下にあるパトロール船があります。あなたに気づいて、それはすぐに攻撃を続けます。</text>
+	<text>"キャプテン！" —乗組員がレポートを持ってあなたに急いでいます。 「私たちはそれらの気の毒な幽霊に襲われています！」あなたはすでに船全体に響き渡るひどい遠吠えによってこれを知っていました。</text>
+	<text>目の前のビーコンは目立たず、AI船が真正面に現れたときにすでにビーコンを残すように命令しています。戦う準備を！</text>
+	<text>このビーコンにいるアバターはすでにサイレンをオンにしており、攻撃の準備をしています。あなたの乗組員は、耳をつんざくような音を遮断し、目の前の戦いに集中するために一生懸命努力します。</text>
+</textList>
+
+<event name="NEBULA_AVATAR_SHIPS">
+	<text load="NEBULA_AVATAR_SHIPS_LIST"/>
+	<ship load="SHIPS_AI_FIGHT" hostile="true"/>
+	<environment type="nebula"/>
+</event>
+<textList name="NEBULA_AVATAR_SHIPS_LIST">
+	<text>理由はわかりませんが、アバターの船には常にサイレンの音が聞こえます。それをもう一度聞くと、あなたのチームは戦う準備ができています。</text>
+	<text>不気味な音が突然宇宙の沈黙を遮ります—アバターがあなたを攻撃しています！敵の耳を引き裂くためにサイレンを放送することは彼らのお気に入りの戦術です。</text>
+	<text>別のアバター船が星雲から現れ、あなたに向かって直接進んでいます。あなたは戦いをする方法を理解するしかない。</text>
+	<text>あなたの直前—アバター戦闘艦。状況を平和的に解決しようとする試みはすべて役に立たず、他の種族とコミュニケーションをとることができません。</text>
+	<text>サイレンの警報があなたの船で聞こえます—アバターはスペアパーツのためにそれを分解する準備をしています。武器を戦闘に備えましょう！</text>
+	<text>アバター戦艦は、このビーコンで不注意な旅行者を待ち伏せするのを待っています。防御の準備をするしかない。</text>
+	<text>「もう一つのひどいサイレンではありません！」 —部屋の隅で乗組員を恐怖で怒鳴ります。あなたは乗組員を落ち着かせ、戦う準備をするように命令します。</text>
+	<text>空のビーコンの横にジャンプします。周りには何も興味がなく、アバタークルーザーが星雲から出てきて計画を変更したときに、ジャンプするように命令します。</text>
+	<text>ビーコンの近くには、AIの制御下にあるパトロール船があります。あなたに気づいて、それはすぐに攻撃を続けます。</text>
+	<text>星雲があなたの前でわずかに消散し、そこであなたは正面攻撃であなたに向かってくるアバター船を見る。</text>
+	<text>突然サイレンが船のいたるところに聞こえたとき、あなたはあなたの前の星雲で何も理解することができません。あなたはアバターの攻撃を受けました！</text>
+	<text>"キャプテン！" —乗組員がレポートを持ってあなたに急いでいます。 「私たちはそれらの気の毒な幽霊に襲われています！」あなたはすでに船全体に響き渡るひどい遠吠えによってこれを知っていました。</text>
+	<text>目の前のビーコンは目立たず、AI船が真正面に現れたときにすでにビーコンを残すように命令しています。戦う準備を！</text>
+	<text>さらに別のアバター船が星雲の雲から出現すると、乗組員の神経がガタガタ鳴ります。乗組員は涙ながらに彼らのポストから逃げます。あなたはどういうわけか乗組員を落ち着かせることができます。</text>
+	<text>このビーコンにいるアバターはすでにサイレンをオンにしており、攻撃の準備をしています。あなたの乗組員は、耳をつんざくような音を遮断し、目の前の戦いに集中するために一生懸命努力します。</text>
+</textList>
+<ship name="SHIPS_AI_FIGHT" auto_blueprint="SHIPS_AI">
+	<destroyed load="DESTROYED_DEFAULT"/>
+	<deadCrew load="DEAD_CREW_AVATAR"/>
+	<weaponOverride count="1">
+		<name>LASER_PRISM</name>
+		<name>LASER_PRISM_2</name>
+	</weaponOverride>
+</ship>
+<eventList name="DEAD_CREW_AVATAR">
+	<event>
+		<text>船にはアバターが1人も残っていません。役に立つ資料を集めます。</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>船にはアバターが1人も残っていません。あなたは有用に見えるすべての材料を取ります。</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</event>
+	<event>
+		<text>アバターがなくなったら、ストレージから燃料を取り出し、利用可能なすべてのスクラップ材料を収集することもできます。</text>
+		<autoReward level="MED">fuel</autoReward>
+	</event>
+	<event>
+		<text>アバターがなくなったら、ストレージからすべての燃料を取り出し、利用可能なすべてのスクラップ材料を収集することもできます。</text>
+		<autoReward level="HIGH">fuel</autoReward>
+	</event>
+	<event>
+		<text>あなたはなんとかアバターの乗組員全員を殺すことができます。それらの1つを生き返らせ、あなたの側で戦うように再プログラムすることができます。</text>
+		<crewMember amount="1" class="ghost"/>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>あなたは彼らの船にユニークなアバター武器を見つけます。あなたを止める人がいないので、あなたはそれを自分で安全に取ることができます。</text>
+		<weapon name="WEAPONS_AI_PRISM"/>
+		<autoReward level="LOW">scrap_only</autoReward><!-- 1.26 -->
+	</event>
+</eventList>
+
+<event name="NEBULA_SLUG_HELP" unique="true">
+	<distressBeacon/>
+	<environment type="nebula"/>
+	<ship load="JELLY2" hostile="false"/>
+	<status type="limit" target="enemy" system="teleporter" amount="0"/>
+	<text>遭難信号は、アバターの攻撃を受けたナメクジ船によって送信されたことが判明しました。彼らは彼らの船が穴でぽっかりと開いていると言い、彼らの船体を修理するためにスクラップをあなたに頼みます、彼らはどれだけ気にしません。</text>
+	<choice hidden="true">
+		<text>それらに15のスクラップを与えます。</text>
+		<event load="SLUG_SCRAP_HELP_15"/>
+	</choice>
+	<choice hidden="true">
+		<text>それらに45のスクラップを与えます。</text>
+		<event load="SLUG_SCRAP_HELP"/>
+	</choice>
+	<choice hidden="true">
+		<text>これらの敗者を終わらせる。</text>
+		<event load="SLUG_KILL_THEM"/><!-- 1.26.3 -->
+	</choice>
+	<choice hidden="true">
+		<text>拒否して先に進みます。</text>
+		<event>
+			<text>もちろん、スラッグスがリペアジェルで穴を修復することはご存知でしょう。今回は彼らはあなたをだましません。</text>
+		</event>
+	</choice>
+	<choice req="sensors" lvl="3" hidden="true">
+		<text>(Advanced Sensors) 船に損傷がないかスキャンします。</text>
+		<event>
+			<text>センサーは船の損傷を検出しません。彼らの欺瞞が明らかにされたことに気づき、スラッグスは攻撃を続けます。</text>
+			<ship hostile="true"/>
+			<status type="clear" target="enemy" system="teleporter" amount="100"/>
+		</event>
+	</choice>
+	<choice hidden="true" req="SLUG_GEL"> <!-- 1.26.4 -->
+		<text>(Slug Repair Gel) あなたのジェルを彼らと共有して、彼らの船の穴を塞ぎます。</text>
+		<event>
+			<text>彼らは自分たちのジェルがどこに行ったのか言いたくありませんが、あなたの助けに感謝しています。</text>
+			<choice hidden="true">
+				<text id="continue"/>
+				<event>
+					<text>すぐに、彼らの船はまるで新品のように見えます。ナメクジの1人が、いくつかの燃料電池を背負って乗組員に加わりたいと考えています。</text>
+					<item_modify>
+						<item type="fuel" min="2" max="4"/>
+					</item_modify>
+					<crewMember amount="1" class="slug"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<eventList name="SLUG_KILL_THEM"><!-- 1.26.3 -->
+	<event> <!-- old event -->
+		<text>結局のところ、彼らの船はそれほどひどく損傷していません。彼らはあなたにボレーを発射することによってあなたの攻撃性に答えます。</text>
+		<ship hostile="true"/>
+		<status type="clear" target="enemy" system="teleporter" amount="100"/>
+		<damage amount="1" system="random" effect="breach"/>
+		<damage amount="0" system="random" effect="breach"/>
+	</event>
+	<event>
+		<text>結局のところ、彼らの船はそれほどひどく損傷していません。彼らは武器を充電しています。</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+
+<eventList name="SLUG_SCRAP_HELP_15">
+	<event>
+		<text>あなたが彼らにスクラップを与えるとすぐに、彼らは星雲の最も近い雲の中に隠れます。だまされたようです。</text>
+		<item_modify>
+			<item type="scrap" min="-15" max="-15"/>
+		</item_modify>
+	</event>
+	<event load="SLUG_SCRAP_HELP_2"/>
+</eventList>
+
+<eventList name="SLUG_SCRAP_HELP">
+	<event>
+		<text>ナメクジはスクラップを取り、静かに星雲の中に消えます。いつ彼らを信用しないことを学びますか？</text>
+		<item_modify>
+			<item type="scrap" min="-45" max="-45"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>彼らはあなたに感謝し、それに応じてあなたに船の増強を与えます。</text>
+		<augment name="SLUG_GEL"/>
+		<item_modify>
+			<item type="scrap" min="-45" max="-45"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>彼らはあなたに感謝し、その見返りにあなたに船の増強といくらかの燃料を与えます。</text>
+		<augment name="SLUG_GEL"/>
+		<item_modify>
+			<item type="fuel" min="1" max="5"/>
+			<item type="scrap" min="-45" max="-45"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>彼らはあなたに感謝し、その見返りにあなたに船の増強といくつかのミサイルを与えます。</text>
+		<augment name="SLUG_GEL"/>
+		<item_modify>
+			<item type="missiles" min="1" max="5"/>
+			<item type="scrap" min="-45" max="-45"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>彼らはあなたに感謝し、その見返りにあなたに船の増強といくつかのドローン部品を与えます。</text>
+		<augment name="SLUG_GEL"/>
+		<item_modify>
+			<item type="drones" min="1" max="5"/>
+			<item type="scrap" min="-45" max="-45"/>
+		</item_modify>
+	</event>
+</eventList>
+
+<eventList name="SLUG_SCRAP_HELP_2">
+	<event>
+		<text>ナメクジはスクラップを取り、静かに星雲の中に消えます。いつ彼らを信用しないことを学びますか？</text>
+		<item_modify>
+			<item type="scrap" min="-15" max="-15"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>彼らはあなたに感謝し、それに応じてあなたに船の増強を与えます。</text>
+		<augment name="SLUG_GEL"/>
+		<item_modify>
+			<item type="scrap" min="-15" max="-15"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>彼らはあなたに感謝し、その見返りにあなたに船の増強といくらかの燃料を与えます。</text>
+		<augment name="SLUG_GEL"/>
+		<item_modify>
+			<item type="fuel" min="1" max="5"/>
+			<item type="scrap" min="-15" max="-15"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>彼らはあなたに感謝し、その見返りにあなたに船の増強といくつかのミサイルを与えます。</text>
+		<augment name="SLUG_GEL"/>
+		<item_modify>
+			<item type="missiles" min="1" max="5"/>
+			<item type="scrap" min="-15" max="-15"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>彼らはあなたに感謝し、その見返りにあなたに船の増強といくつかのドローン部品を与えます。</text>
+		<augment name="SLUG_GEL"/>
+		<item_modify>
+			<item type="drones" min="1" max="5"/>
+			<item type="scrap" min="-15" max="-15"/>
+		</item_modify>
+	</event>
+</eventList>
+
+<event name="NEBULA_REBEL_HELP">
+	<distressBeacon/>
+	<environment type="nebula"/>
+	<ship load="REBEL" hostile="true"/>
+	<text load="NEBULA_REBEL_HELP_LIST"/>
+</event>
+<textList name="NEBULA_REBEL_HELP_LIST">
+	<text>災害は反乱軍の船を襲ったが、彼らは連邦の誰かが遭難信号に応答することをほとんど期待していなかった。彼らに何が起こったのかは不明ですが、彼らはすでに武器を充電しています。</text>
+	<text>この反乱軍の船は実際に助けを必要としているか、それは罠でした—いずれにせよ、彼らは死以外の何物にも値しません。</text>
+	<text>信号は罠でした—反乱軍の巡洋艦がこの星雲であなたを待っています！</text>
+	<text>遭難信号は反乱軍の巡洋艦によって送信され、あなたは彼らの罠に飛び込んだ。戦う準備を！</text>
+	<text>すべての遭難信号に応答する必要はありません—これは反乱軍の待ち伏せであり、彼らはすでに攻撃に動いています。</text>
+</textList>
+
+<event name="NEBULA_REBEL_HELP2" unique="true">
+	<distressBeacon/>
+	<environment type="nebula"/>
+	<ship load="REBEL" hostile="false"/>
+	<status type="limit" target="enemy" system="teleporter" amount="0"/>
+	<text>あなたが反乱軍の罠に直接着陸したように見えます—遭難信号は彼らの巡洋戦艦によって送信されています！しかし、彼らは「どうぞ、私たちをここから出してください！私たちは星雲で迷子になり、これらの忌まわしき幽霊が乗組員を狂わせています！」と呼びかけます。</text>
+	<choice hidden="true">
+		<text>それらを最も近い安全なビーコンにエスコートします。</text>
+		<event load="NEBULA_REBEL_HELP22"/>
+	</choice>
+	<choice hidden="true">
+		<text>それらを攻撃します。</text>
+		<event>
+			<text>あなたは反乱軍と短い会話をしています—彼らの方向への数発のショットは彼らにあなたがどちらの側で戦っているのかを思い出させます。</text>
+			<ship hostile="true"/>
+			<status type="clear" target="enemy" system="teleporter" amount="100"/>
+		</event>
+	</choice>
+</event>
+
+<eventList name="NEBULA_REBEL_HELP22">
+	<event>
+		<text>彼らはあなたを次のビーコンに追いかけ、その星雲から安全に移動します。そのうちの1人があなたの乗組員に加わりたいと思っています。</text>
+		<crewMember amount="1" class="human"/>
+	</event>
+	<event>
+		<text>あなたが彼らに道を示すために彼らに向かって飛ぶとすぐに、彼らの武器からのボレーが船尾から到着します。危険な反乱軍はあなたをだましました！</text>
+		<damage amount="3"/>
+		<ship hostile="true"/>
+		<status type="clear" target="enemy" system="teleporter" amount="100"/>
+	</event>
+	<event><!-- to shreds you say? -->
+		<text>あなたはそれらをその星雲から取り出し、安心した反乱軍はあなたに報酬を送ります。彼らが再びあなたに出会ったら、あなたは彼らを細かく裂くという約束で飛び去ります。</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</event>
+</eventList>
+
+<event name="NEBULA_SLUG_HELP2" unique="true">
+	<distressBeacon/>
+	<environment type="nebula"/>
+	<ship load="JELLY2" hostile="false"/>
+	<status type="limit" target="enemy" system="teleporter" amount="0"/>
+	<text>いくつかのナメクジは、どうやってここにたどり着いたのかは不明ですが、燃料なしでこのビーコンに引っかかってしまいました。あなたが彼らがここから抜け出すのを手伝うならば、彼らはスクラップで支払うことを約束します。</text>
+	<choice hidden="true">
+		<text>それらに1つの燃料を与えます。</text>
+		<event>
+			<text>あなたは彼らに燃料を送ります、そして彼らはすぐに飛び去ります！もう一度、あなたは古典的なナメクジの餌に落ちました...</text>
+			<item_modify>
+				<item type="fuel" min="-1" max="-1"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>彼らに5つの燃料を与えます。</text>
+		<event>
+			<text>あなたは彼らに燃料を送ります、そして彼らはあなたにスクラップを与えます。</text>
+			<item_modify>
+				<item type="fuel" min="-5" max="-5"/>
+				<item type="scrap" min="5" max="65"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>彼らに10個の燃料を与えます。</text>
+		<event>
+			<text>あなたは彼らに燃料を送ります、そして彼らはあなたにスクラップを与えます。</text>
+			<item_modify>
+				<item type="fuel" min="-10" max="-10"/>
+				<item type="scrap" min="10" max="130"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>それらを攻撃します。</text>
+		<event>
+			<text>「あなたはそれを後悔するでしょう...」—彼らがコミュニケーションを切る前にあなたが聞く最後のこと。</text>
+			<ship hostile="true"/>
+			<status type="clear" target="enemy" system="teleporter" amount="100"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>辞退し、先に進む準備をします。</text><!-- Refuse and continue the flight. -->
+		<event>
+			<text>あなたはスラッグを信頼したことがなく、今は信頼する理由がないので、次のジャンプをするように命令します。</text>
+		</event>
+	</choice>
+</event>
+
+<event name="NEBULA_SLUG_DEAD" unique="true">
+	<distressBeacon/>
+	<environment type="nebula"/>
+	<text>あなたがビーコンにジャンプしている間、遭難信号は中断されました。周りに星雲が密集しているため、その源を特定することはできません。</text>
+	<choice hidden="true">
+		<text>進む。</text>
+		<event>
+			<text>ここでできることはこれ以上ないので、ジャンプする準備をします。</text><!-- 1.25 reworded slightly -->
+			<choice hidden="true"><!-- 1.25 -->
+				<text id="continue" />
+				<event load="TALK_WITH_CREW_GHOST"/>
+			</choice>
+		</event>
+	</choice>
+	<choice req="sensors" lvl="2" max_group="0" hidden="true">
+		<text>(Improved Sensors) 周囲をスキャンします。</text>
+		<event load="DEAD_SLUG_LOW"/>
+	</choice>
+	<choice req="sensors" lvl="3" max_group="0" hidden="true">
+		<text>(Advanced Sensors) 周囲をスキャンします。</text>
+		<event load="DEAD_SLUG_HIGH"/>
+	</choice>
+</event>
+
+<eventList name="DEAD_SLUG_LOW">
+	<event>
+		<text>あなたのセンサーはここで何かを見つけるのに十分強力ではありません。あなたの使命を続けて先に進むことを除いて、何も残っていません。</text>
+	</event>
+	<event>
+		<text>数分のスキャンの後、あなたはついに難破したスラッグ船を見つけました。中には、誰もいません。違反が多発しているttは、船体が減圧されてオープンスペースに吹き飛ばされたように見えます。あなたは壊れた船からあなたができるすべてを取ります。</text>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>数分のスキャンの後、あなたはついに難破したスラッグ船を見つけました。中には、誰もいません。違反が多発しているttは、船体が減圧されてオープンスペースに吹き飛ばされたように見えます。あなたは壊れた船からあなたができるすべてを取ります。</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+</eventList>
+
+<eventList name="DEAD_SLUG_HIGH">
+	<event>
+		<text>数分のスキャンの後、あなたはついに難破したスラッグ船を見つけました。中には、誰もいません。違反が多発しているttは、船体が減圧されてオープンスペースに吹き飛ばされたように見えます。あなたは壊れた船からあなたができるすべてを取ります。</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</event>
+	<event>
+		<text>数分のスキャンの後、あなたはついに難破したスラッグ船を見つけました。中には、誰もいません。違反が多発しているttは、船体が減圧されてオープンスペースに吹き飛ばされたように見えます。あなたは壊れた船からあなたができるすべてを取ります。</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>数分のスキャンの後、あなたはついに難破したスラッグ船を見つけました。生き残った唯一のスラッグが乗組員に加わり、壊れた船からできる限りのことをします。</text>
+		<autoReward level="MED">standard</autoReward>
+		<crewMember amount="1" class="slug"/>
+	</event>
+</eventList>
+
+<event name="NEBULA_AVATAR_HELP" unique="true">
+	<distressBeacon/>
+	<ship load="SHIPS_AI_FIGHT" hostile="false"/>
+	<status type="limit" target="enemy" system="teleporter" amount="0"/>
+	<environment type="nebula"/>
+	<text>驚いたことに、遭難信号はアバター船によって送信されます！彼らはあなたを攻撃するために急いでいませんが、あなたの呼びかけにも答えません。</text>
+	<choice hidden="true">
+		<text>それらを攻撃します！</text>
+		<event>
+			<text>武器をアクティブにすると、アバターの船が生き返り、自力で充電を開始します。</text>
+			<ship hostile="true"/>
+			<status type="clear" target="enemy" system="teleporter" amount="100"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>放っておけ。</text>
+		<event>
+			<text>あなたはトラブルにぶつからないことを決心し、飛び去る準備をします。</text>
+		</event>
+	</choice>
+	<choice req="ghost" hidden="true">
+		<text>(Avatar Crewmember) あなたのアバターに彼らを呼んでもらいます。</text>
+		<event load="AVATAR_HELP_REWARD"/>
+	</choice>
+</event>
+
+<eventList name="AVATAR_HELP_REWARD"><!-- 1.21 -->
+	<event>
+		<text>あなたのアバターはあなたと通信することはできませんが、それでも彼らは彼らに何が必要かを理解しています。しばらくの間、それらは消えてAI船に再び現れます。彼らがそこで何をしたのかはよくわかりませんが、船は感謝の気持ちを込めて武器を入れたカプセルを送ります。ただし、「感謝」は、人工知能を指すときに使用するのに適切な言葉ではない場合があります。</text>
+		<weapon name="WEAPONS_AI_PRISM"/>
+	</event>
+	<event>
+		<text>あなたのアバターはあなたと通信することはできませんが、それでも彼らは彼らに何が必要かを理解しています。しばらくの間、それらは消えてAI船に再び現れます。あなたは彼らがそこで何をしたのか本当に理解していませんが、船は感謝の気持ちを込めて内部に増強物が入ったカプセルを送ります。ただし、「感謝」は、人工知能を指すときに使用するのに適切な言葉ではない場合があります。</text>
+		<augment name="ION_ARMOR"/> <!-- 1.22.2 -->
+	</event>
+</eventList>
+
+<event name="NEBULA_AVATAR_HELP2" unique="true">
+	<distressBeacon/>
+	<ship load="SHIPS_AI_FIGHT" hostile="true"/>
+	<environment type="storm"/>
+	<text>遭難信号は罠であることが判明しました—プラズマ嵐の真っ只中にAI船と戦わなければなりません！</text>
+</event>
+
+<event name="NEBULA_AVATAR_HELP3" unique="true">
+	<distressBeacon/>
+	<ship load="SHIPS_AI_FIGHT" hostile="true"/>
+	<environment type="pulsar"/>
+	<text>遭難信号はあなたをパルサーにまっすぐに導き、その近くでAI船があなたを待っています。それは罠だ！</text>
+</event>
+
+<event name="NEBULA_MOTHERSHIP" unique="true">
+	<distressBeacon/>
+	<ship load="MOTHERSHIP_AI_FIGHT" hostile="true"/>
+	<environment type="nebula"/>
+	<text>今日、あなたの船はかなり不運です。あなたは幻のドレッドノートによって設置された罠にまっすぐ飛んだ！すべての遭難信号に答える必要はありません...</text>
+</event>
+<ship name="MOTHERSHIP_AI_FIGHT" auto_blueprint="1_MOTHERSHIP">
+	<destroyed>
+		<text>幽霊の弩級戦艦が破壊されました。あなたはその断片を集め、その中に生き残ったアバターの武器を見つけます。</text>
+		<autoReward level="MED">standard</autoReward>
+		<weapon name="WEAPONS_AI_PRISM2"/>
+	</destroyed>
+	<deadCrew>
+		<text>幽霊の弩級戦艦の乗組員は全滅しました。あなたは生き残ったアバターの武器を含め、船からすべての価値のあるものを取ります。</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<weapon name="WEAPONS_AI_PRISM2"/>
+	</deadCrew>
+</ship>
+
+
+
+<event name="NEBULA_AI_KILLS_CIV" unique="true">
+	<environment type="nebula"/>
+	<distressBeacon/>
+	<text>遭難信号は、ひどくボロボロになった民間船によって送信されました。幽霊が彼らの貿易船団を攻撃し、民間人はなんとか逃げることができましたが、船の1つで、内蔵の人工知能システムが狂気になり、船の制御を奪い、彼らを制御することで自分の乗組員を殺そうとしました。船のAIに非常に強いダメージを与えることができれば、乗組員が死ぬ前に、彼らはあなたに感謝することを約束します。</text>
+	<choice hidden="true">
+		<text>このセクターの貿易護送船団？それは真実からかけ離れているように聞こえます、彼らを攻撃してください！</text>
+		<event>
+			<text>民間人はあなたの方法で呪いを送りますが、彼らの損害にもかかわらず、彼ら自身を守る準備をしています。</text>
+			<ship load="DAMAGED_CIV_EVENT" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>捕獲された船に行き、いくつかのボレーの助けを借りてAIを無効にしてみてください。</text>
+		<event>
+			<text>あなたのアプローチで、船はその兵器を作動させ、生命維持システムを切断します！彼らの船がまだ酸素を持っている間、あなたは急いでそれを止める必要があるでしょう。</text>
+			<ship load="AI_CIV_EVENT" hostile="true"/>
+			<status type="limit" target="enemy" system="oxygen" amount="0"/>
+			<choice hidden="true">
+				<text id="continue" />
+				<event>
+					<text>民間人は窒息し始めます...</text> <!-- 1.25 -->
+					<status type="limit" target="enemy" system="medbay" amount="0"/>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>邪魔しないで、飛び立つ準備をしてください。</text>
+		<event>
+			<text>人工知能によって捕らえられた船はすぐに星雲のどこかに飛び込み、あなたのそばの民間人は彼らの船体の穴を埋めます。</text>
+		</event>
+	</choice>
+</event>
+<ship name="AI_CIV_EVENT" auto_blueprint="SHIPS_FED_SPECIAL">
+	<surrender chance="0" min="1" max="5">
+		<text>どうやら、船のAIは切断され、船のシステムと乗組員に対する制御を失いました。</text>
+		<status type="clear" target="enemy" system="oxygen" amount="100"/>
+		<choice hidden="true">
+			<text>停戦。</text>
+			<event>
+				<text>あなたはちょうど間に合うように立ち止まり、マインドコントロールから解放された人々はすぐに酸素マスクを着用するために急いでいます。近づいて、民間人は彼らの仲間を救ったことへの感謝の気持ちであなたにシャワーを浴びて、あなたに彼らのホールドから武器を与えます。</text>
+				<ship hostile="false"/>
+				<autoReward level="MED">weapon</autoReward>
+				<status type="clear" target="enemy" system="oxygen" amount="100"/><!-- 1.25 -->
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>発射を続けます。</text>
+			<event>
+				<text>金属くずのためにそれらを分解します—この状況に対する唯一の真の解決策です。</text>
+				<status type="clear" target="enemy" system="oxygen" amount="100"/><!-- 1.25 -->
+			</event>
+		</choice>
+	</surrender>
+	<destroyed>
+		<text>あなたは民間船を完全に破壊します、そして彼らの仲間は明らかにその抹消についてあなたに感謝しません。しかし、あなたがその残骸から利益を得ている間、誰もあなたを悩ませません。</text>
+		<autoReward level="LOW">stuff</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>標的の乗組員は死亡しており、船のAIは、明らかにその目的を果たしたために切断されました。あなたは民間人にあなたができることをすべてやったことを納得させます—明らかに十分ではありませんが—そして彼らは憤慨して飛び去り、捕らえられた船から価値のあるものすべてを集めることをあなたに任せます。</text>
+		<autoReward level="MED">stuff</autoReward>
+	</deadCrew>
+</ship>
+
+<ship name="DAMAGED_CIV_EVENT" auto_blueprint="SHIPS_FED">
+	<surrender chance="0" min="1" max="3">
+		<text>民間人は連絡を取ります：「お願いします、やめてください！私たちはあなたに私たちが持っているすべてを与えます！」</text>
+		<choice hidden="true">
+			<text>停戦。</text>
+			<event>
+				<text>彼らはあなたに貨物の入ったコンテナを送ります。</text>
+				<autoReward level="LOW">standard</autoReward>
+				<choice hidden="true">
+					<text>これは十分ではありません、もっと要求してください。</text>
+					<event>
+						<text>再びあなたをのろい、彼らは少しのスクラップを送ります。彼らはあなたが取るものが何もないようです、それであなたは飛び去る準備をします。</text>
+						<autoReward level="LOW">scrap_only</autoReward>
+						<ship hostile="false"/>
+					</event>
+				</choice>
+				<choice hidden="true">
+					<text>それらを終了します。</text>
+					<event>
+						<text>「どうして、攻撃しないと約束したの？！」彼らの船長は、ほとんど泣きながら言います。さて、あなたは何ができますか、これらの困難な時代にあなたは他の選択肢がありません。</text>
+					</event>
+				</choice>
+				<choice hidden="true">
+					<text>それらを解放し、飛び去ります。</text>
+					<event>
+						<ship hostile="false"/>
+					</event>
+				</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>発射を続けます。</text>
+			<event/>
+		</choice>
+	</surrender>
+	<escape timer="55" min="30" max="30">
+		<text>あなたは彼らの船が彼らのFTLドライブを充電していることを登録します。</text>
+	</escape>
+	<gotaway>
+		<text>船は星雲の深さのどこかに飛び込んだので、あなたはそれらを追いかける危険はありません。</text>
+	</gotaway>
+	<destroyed>
+		<text>民間船が爆発し、あなたはその残骸から破片を集めます。</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>彼らの乗組員が死んだ状態で、あなたは彼らの船倉を一掃します。</text>
+		<autoReward level="MED">stuff</autoReward>
+	</deadCrew>
+</ship>

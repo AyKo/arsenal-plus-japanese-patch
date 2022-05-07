@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--
+			SUMMARY  —
+A list of all main events to be called by lists
+	(does not include sub-events)
+
+Structure:
+	START_BEACON_BOSS
+	FEDERATION_BASE
+	BOSS_AUTOMATED
+	BOSS_DESTROYED
+	BOSS_ESCAPED
+	BOSS_TEXT_1
+	BOSS_TEXT_2
+	BOSS_TEXT_3
+
+Hostile:
+	BOSS_SCOUT
+	BOSS_FLEETS_REBEL   (also used for structure of !!! events)
+
+Neutral:
+	BOSS_SCOUT_RESCUE
+
+Boarders:
+
+Empty:
+	BOSS_FLEETS_FED
+	BOSS_FLEETS_BOTH    (sometimes in !!! events)
+
+Items:
+	BOSS_REPAIR_STATION
+
+
+
+<fleet>rebel</fleet>
+<fleet>fed</fleet>
+<fleet>battle</fleet>
+-->
+
+
+
+
+<eventList name="BOSS_HOSTILE">
+	<event load="BOSS_SCOUT"/>
+	<event load="BOSS_SCOUT"/>
+	<event load="BOSS_SCOUT"/>
+	<event load="BOSS_FLEETS_BLACK_REBEL"/><!-- 1.25 -->
+	<event load="ELITE_AUTOMATED_EVENT"/><!-- 1.25 -->
+	<event load="BOSS_FLEETS_BOTH_FIGHT"/><!-- 1.25 -->
+</eventList>
+
+<eventList name="BOSS_NEUTRAL">
+	<event load="BOSS_SCOUT_RESCUE"/>
+	<!-- <event load="BOSS_FLEETS_BOTH_FIGHT"/> --><!-- 1.25 -->
+	<event load="BOSS_FLEETS_FED"/>
+	<event load="BOSS_FLEETS_BOTH"/> <!-- 1.26 -->
+	<event load="SQUAT_REFUEL_STATION"/>
+	<event load="REBEL"/>
+</eventList>
+
+
+<eventList name="BOSS_WARNING_NODE">
+	<event load="BOSS_FLEETS_REBEL"/>
+	<event load="BOSS_FLEETS_BOTH_FIGHT"/>
+</eventList>
+
+
+<event name="FEDERATION_BASE">
+	<img back="BG_BASE_FEDER" planet="NONE"/>
+	<fleet>fed</fleet>
+	<text>あなたは連邦基地の近くに到着し、彼らの艦隊の大部分が反乱軍と小競り合いをしているのを見つけます。あなたは衝突を避けるために月の裏側の近くでぶらぶらします。その戦いを助けるためにあなたができることはあまりありません、そしてあなたの使命は戦争の流れを変える鍵を握っています。あなたは旗艦に立ち向かう準備をします。</text>
+	<choice hidden="true">
+		<text id="continue" />
+		<event load="FEDERATION_BASE_CONT_LIST"/>
+	</choice>
+</event>
+
+<eventList name="FEDERATION_BASE_CONT_LIST">
+	<event>
+		<text>月はあなたの船を安全に隠します。</text>
+	</event>
+	<event>
+		<text>月はあなたの船を安全に隠します。</text>
+	</event>
+	<!-- 1.25 removed 4 events same as above -->
+	<event><!-- maybe this should be the text for the one below? who knows with these translations omg -->
+		<text>反乱軍の船はまだあなたを追い詰めます！戦う準備を！</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+	<event><!-- The insurgents' pilotless secret-service agent tracked down nevertheless you! To stand by for battle! -->
+		<text>無人の反乱軍のスカウトはあなたの追跡に飽きることはありません！戦う準備を！</text>
+		<ship load="REBEL_AUTO" hostile="true"/>
+	</event>
+	<event><!-- 1.26 -->
+		<text>エリート反乱軍の船はまだあなたを追跡します！戦う準備を！</text>
+		<ship load ="BOSS_BASE_REBEL" hostile ="true"/>
+	</event>
+	<event>
+		<text>基地から小さなシャトルが近づき、すぐに「私たちはあなたの使命を知っています、そして私たちの船長はあなたを助けたいと思っています！」と呼びかけます。</text>
+		<crewMember amount="1" class="human" all_skills="2">Luminis</crewMember><!-- 1.25.1 all_skills was 1 -->
+	</event>
+	<event>
+		<text>基地から小さな修理ドローンがあなたの船に近づいて修理し、終了後、短いメッセージを送信します：「これで私たちがあなたを助けるためにできることはすべてです。頑張ってください！」</text>
+		<damage amount="-6"/>
+	</event>
+	<event>
+		<text>基地からの小さなシャトルがあなたにいくつかの物資を送ります。今、彼らがあなたを助けるためにできることはそれだけです。</text> <!-- 1.23 -->
+		<item_modify>
+			<item type="missiles" min="5" max="7"/>
+			<item type="drones" min="3" max="5"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>基地から輸送船が近づき、追加の武器が送られてきます！</text> <!-- 1.23 -->
+		<weapon name="RANDOM"/>
+	</event>
+</eventList>
+
+<ship name="BOSS_BASE_REBEL" auto_blueprint="SHIPS_REBEL_ELITE"><!-- 1.26 -->
+	<destroyed>
+		<text>あなたは反乱軍の船の残骸を集め、基地を守る準備をします。</text>
+		<autoReward level="MED">standard</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>あなたは反乱軍の船の船倉を略奪し、基地を守る準備をします。</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</deadCrew>
+</ship>
+
+<!-- the first time you arrive at the base, before the rebel fleet arrives -->
+
+<!-- mr_easy_money says:
+] I changed the tully box stuff to reflect the new blueprint removal.
+	note that I split the event in two because the augment is removed from inventory by the next event, not before then,
+	otherwise you get an 'over capacity' prompt, one augment in the discard area, but only two in the regular slots.
+	results in weird empty discard area if you move the augment that's there to the last open regular slot.
+] I changed 'thoroughly prepared' to 'thoroughly yet quickly prepared'
+] I figured out the right idiom and capitalized 'base':
+changed 'at any price to defend the Federation base' to 'defend the Federation Base at all costs' -->
+<event name="LAST_STAND_START">
+	<text>連邦基地近くの前哨基地に到着します。あなたのアクセスコードはあなたに最初のセキュリティを通過させ、警官は連邦基地の戦争室への直接フィードを設定します。タリー提督は最初に「これはどういう意味ですか？！あなたは誰ですか？」と話します。</text>
+	<choice hidden="true" req="human" lvl="0" max_group="1" blue="false"> <!-- 1.25.1 -->
+		<text>あなたの使命を説明してください。</text>
+		<event>
+			<text>あなたの説明は、役員の間で冷笑主義と不信のつぶやきに出会う。エンギ旅団のトゥルジル将軍は、「インテルは反乱軍の技術に対抗する可能性を示唆している。すべてを危険にさらすか、何も救わない」と語った。</text>
+			<choice hidden="true" req="TULLY_BOX" lvl="0" max_lvl="0" blue="false">
+				<text>敵艦隊、反乱軍の旗艦の弱点を説明してください。</text>
+				<event>
+					<text>タリーは、「解決しました。反乱軍はすぐにここに来るでしょう。私たちは彼らの軍艦を阻止するためにできることをしますが、あなたはこの旗艦を破壊することに成功しなければなりません」と答えます。</text>
+					<choice hidden="true">
+						<text id="continue" />
+						<event load="LAST_STAND_START_RANDOOM_III"/>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="TULLY_BOX" blue="false">
+				<text>あなたが彼らのためのパッケージを持っていることを提督に知らせてください。</text>
+				<event>
+					<text>あなたは提督宛てのコンテナを持っていると言います。タリー提督の顔には感情が表れていませんが、提督は前哨基地にコンテナを置いたままにして、上級将校に指示を出します。</text>
+					<remove name="TULLY_BOX" />
+					<choice hidden="true">
+						<text id="continue" />
+						<event>
+							<text>しばらくすると、タリー提督はあなたを隠された修理ドックに連れて行きます。そこであなたの船はあなたの最終目標に向けて徹底的かつ迅速に準備されます—どんな犠牲を払っても連邦基地を守るためです。</text>
+							<item_modify>
+								<item type="fuel" min="10" max="10"/>
+								<item type="missiles" min="15" max="15"/>
+								<item type="drones" min="10" max="10"/>
+								<item type="scrap" min="75" max="75"/>
+							</item_modify>
+							<augment name="TULLY_AUG"/><!-- 1.23 see autoBlueprints.xml -->
+							<damage amount="-30"/>
+							<reveal_map/>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="human" lvl="1" max_group="1" blue="false"> <!-- 1.25.1 -->
+		<text>あなたの使命を説明してください。</text>
+		<event load="FEDERATION_BASE_RANDDD"/>
+	</choice>
+	<fleet>fed</fleet>
+</event>
+<eventList name="FEDERATION_BASE_RANDDD"> <!-- 1.25.1 -->
+	<event> <!-- standard event -->
+		<text>あなたの説明は、役員の間で冷笑主義と不信のつぶやきに出会う。エンギ旅団のトゥルジル将軍は、「インテルは反乱軍の技術に対抗する可能性を示唆している。すべてを危険にさらすか、何も救わない」と語った。</text>
+		<choice hidden="true" req="TULLY_BOX" lvl="0" max_lvl="0" blue="false">
+			<text>敵艦隊、反乱軍の旗艦の弱点を説明してください。</text>
+			<event>
+				<text>タリーは、「解決しました。反乱軍はすぐにここに来るでしょう。私たちは彼らの軍艦を阻止するためにできることをしますが、あなたはこの旗艦を破壊することに成功しなければなりません」と答えます。</text>
+				<choice hidden="true">
+					<text id="continue" />
+					<event load="LAST_STAND_START_RANDOOM_III"/>
+				</choice>
+			</event>
+		</choice>
+		<choice hidden="true" req="TULLY_BOX" blue="false">
+			<text>あなたが彼らのためのパッケージを持っていることを提督に知らせてください。</text>
+			<event>
+				<text>あなたは提督宛てのコンテナを持っていると言います。タリー提督の顔には感情が表れていませんが、提督は前哨基地にコンテナを置いたままにして、上級将校に指示を出します。</text>
+				<remove name="TULLY_BOX" />
+				<choice hidden="true">
+					<text id="continue" />
+					<event>
+						<text>しばらくすると、タリー提督はあなたを隠された修理ドックに連れて行きます。そこであなたの船はあなたの最終目標に向けて徹底的かつ迅速に準備されます—どんな犠牲を払っても連邦基地を守るためです。</text>
+						<item_modify>
+							<item type="fuel" min="10" max="10"/>
+							<item type="missiles" min="15" max="15"/>
+							<item type="drones" min="10" max="10"/>
+							<item type="scrap" min="75" max="75"/>
+						</item_modify>
+						<augment name="TULLY_AUG"/><!-- 1.23 see autoBlueprints.xml -->
+						<damage amount="-30"/>
+						<reveal_map/>
+					</event>
+				</choice>
+			</event>
+		</choice>
+	</event>
+	<event> <!-- event with store -->
+		<text>あなたの説明は、役員の間で冷笑主義と不信のつぶやきに出会う。エンギ旅団のトゥルジル将軍は突然あなたの乗組員に人間がいることに気づきました—「私たちは彼らを信じなければなりません。この人間はエンギゾルタン連合に素晴らしい奉仕をしました。」タリーはあなたにフロアを返し、あなたのために店を開くように命令します。</text> <!-- 1.25.1 -->
+		<store/>
+		<choice hidden="true" req="TULLY_BOX" lvl="0" max_lvl="0" blue="false">
+			<text>敵艦隊、反乱軍の旗艦の弱点を説明してください。</text>
+			<event>
+				<text>タリーは、「解決しました。反乱軍はすぐにここに来るでしょう。私たちは彼らの軍艦を阻止するためにできることをしますが、あなたはこの旗艦を破壊することに成功しなければなりません」と答えます。</text>
+				<choice hidden="true">
+					<text id="continue" />
+					<event load="LAST_STAND_START_RANDOOM_III"/>
+				</choice>
+			</event>
+		</choice>
+		<choice hidden="true" req="TULLY_BOX" blue="false">
+			<text>あなたが彼らのためのパッケージを持っていることを提督に知らせてください。</text>
+			<event>
+				<text>あなたは提督宛てのコンテナを持っていると言います。タリー提督の顔には感情が表れていませんが、提督は前哨基地にコンテナを置いたままにして、上級将校に指示を出します。</text>
+				<remove name="TULLY_BOX" />
+				<choice hidden="true">
+					<text id="continue" />
+					<event>
+						<text>しばらくすると、タリー提督はあなたを隠された修理ドックに連れて行きます。そこであなたの船はあなたの最終目標に向けて徹底的かつ迅速に準備されます—どんな犠牲を払っても連邦基地を守るためです。</text>
+						<item_modify>
+							<item type="fuel" min="10" max="10"/>
+							<item type="missiles" min="15" max="15"/>
+							<item type="drones" min="10" max="10"/>
+							<item type="scrap" min="75" max="75"/>
+						</item_modify>
+						<augment name="TULLY_AUG"/><!-- 1.23 see autoBlueprints.xml -->
+						<damage amount="-30"/>
+						<reveal_map/>
+					</event>
+				</choice>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<eventList name="LAST_STAND_START_RANDOOM_III">  <!-- what the player gets for rescuing the ship-->
+	<event>
+		<text>「あなたの現在の前哨基地はいくつかの修理や物資を提供することができ、他の修理ステーションも同様に援助を提供することができます。頑張ってください。」</text>
+		<choice hidden="false">
+			<text>燃料と部分的な修理を依頼してください。 [10 $]</text><!-- 1.26 now hull symbol | 1.21 +below-->
+			<event>
+				<text>前哨基地のエンジニアが燃料タンクを満タンにし、船体の損傷を修理します。</text>
+				<item_modify>
+					<item type="fuel" min="9" max="11"/>
+				</item_modify>
+				<damage amount="-10"/>
+			</event>
+		</choice>
+		<choice hidden="false">
+			<text>燃料と弾薬を要求します。</text>
+			<event>
+				<text>前哨基地のエンジニアが弾薬のキットを提供し、燃料タンクを満タンにします。</text>
+				<item_modify>
+					<item type="missiles" min="12" max="18"/>
+					<item type="fuel" min="9" max="11"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="false">
+			<text>燃料とドローンの部品をリクエストしてください。</text>
+			<event>
+				<text>前哨基地のエンジニアがドローン部品のキットを提供し、燃料タンクを満タンにします。</text>
+				<item_modify>
+					<item type="drones" min="8" max="12"/>
+					<item type="fuel" min="9" max="11"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="false">
+			<text>完全な修理を依頼してください。 [30ドル]</text><!-- 1.26 now hull symbol -->
+			<event>
+				<text>前哨基地のエンジニアは、船体の完全な修理作業を行います。</text>
+				<damage amount="-30"/>
+			</event>
+		</choice>
+	</event>
+
+	<event>
+		<text>「あなたの現在の前哨基地はいくつかの修理や物資を提供することができ、他の修理ステーションも同様に援助を提供することができます。頑張ってください。」</text>
+		<choice hidden="false">
+			<text>燃料とドローンの部品をリクエストしてください。</text>
+			<event>
+				<text>前哨基地のエンジニアがドローン部品のキットを提供し、燃料タンクを満タンにします。</text>
+				<item_modify>
+					<item type="drones" min="8" max="12"/>
+					<item type="fuel" min="9" max="11"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="false">
+			<text>完全な修理を依頼してください。 [30ドル]</text><!-- 1.26 now hull symbol -->
+			<event>
+				<text>前哨基地のエンジニアは、船体の完全な修理作業を行います。</text>
+				<damage amount="-30"/>
+			</event>
+		</choice>
+		<choice hidden="false">
+			<text>船のアップグレードのためにスクラップを要求します。</text>
+			<event>
+				<text>前哨基地はあなたに見つけることができるスクラップのすべての在庫を与えます。</text>
+				<item_modify>
+					<item type="scrap" min="45" max="55"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="false">
+			<text>各タイプの供給のいくつかを要求します。</text>
+			<event>
+				<text>前哨基地はあなたに幸運を祈り、あなたに供給パッケージを与えます。</text>
+				<item_modify>
+					<item type="fuel" min="4" max="6"/>
+					<item type="missiles" min="2" max="8"/>
+					<item type="drones" min="3" max="7"/>
+					<item type="scrap" min="20" max="30"/>
+				</item_modify>
+			</event>
+		</choice>
+	</event>
+
+	<event>
+		<text>「あなたの現在の前哨基地はいくつかの修理や物資を提供することができ、他の修理ステーションも同様に援助を提供することができます。頑張ってください。」</text>
+		<choice hidden="false">
+			<text>船のアップグレードのためにスクラップを要求します。</text>
+			<event>
+				<text>前哨基地はあなたに見つけることができるスクラップのすべての在庫を与えます。</text>
+				<item_modify>
+					<item type="scrap" min="45" max="55"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="false">
+			<text>各タイプの供給のいくつかを要求します。</text>
+			<event>
+				<text>前哨基地はあなたに幸運を祈り、あなたに供給パッケージを与えます。</text>
+				<item_modify>
+					<item type="fuel" min="4" max="6"/>
+					<item type="missiles" min="2" max="8"/>
+					<item type="drones" min="3" max="7"/>
+					<item type="scrap" min="20" max="30"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="false">
+			<text>燃料と部分的な修理を依頼してください。 [10 $]</text><!-- 1.26 now hull symbol -->
+			<event>
+				<text>前哨基地のエンジニアが燃料タンクを満タンにし、船体の損傷を修理します。</text>
+				<item_modify>
+					<item type="fuel" min="9" max="11"/>
+				</item_modify>
+				<damage amount="-10"/>
+			</event>
+		</choice>
+		<choice hidden="false">
+			<text>燃料と弾薬を要求します。</text>
+			<event>
+				<text>前哨基地のエンジニアが弾薬のキットを提供し、燃料タンクを満タンにします。</text>
+				<item_modify>
+					<item type="missiles" min="12" max="18"/>
+					<item type="fuel" min="9" max="11"/>
+				</item_modify>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+
+
+<event name="BOSS_AUTOMATED">
+	<text>この船には高度な人工知能も搭載されているようです。乗組員が死んだので、それは支配権を握りました！</text>
+	<status type="limit" target="enemy" system="medbay" amount="0"/>
+	<choice req="sensors" lvl="0" max_lvl="0" blue="false"><!-- english v1.8 -->
+		<text id="continue" />
+		<event>
+			<text>フラッグシップAIは生命維持システムを遮断し、以前は隠されていた妨害装置を有効にして、原子炉を弱体化させます！</text>
+			<status type="limit" target="enemy" system="oxygen" amount="0"/>
+			<status type="loss" target="player" system="reactor" amount="2" /> <!-- 1.26... text updated too -->
+		</event>
+	</choice>
+	<choice req="sensors" lvl="1" blue="false"><!-- english v1.8 -->
+		<text id="continue" />
+		<event>
+			<text>Flagship AIは生命維持システムを遮断し、以前は隠されていた妨害装置を有効にして、センサーを無効にし、原子炉を弱体化します！</text>
+			<status type="limit" target="enemy" system="oxygen" amount="0"/>
+			<status type="limit" target="player" system="sensors" amount="0"/>
+			<status type="loss" target="player" system="reactor" amount="2" /> <!-- 1.26... text updated too -->
+		</event>
+	</choice>
+</event>
+
+<event name="BOSS_DESTROYED">
+	<text>その爆発はあなたの船を揺さぶり、あなたは安心して身震いします。できたね。連盟は救われる…。</text>
+	<choice>
+		<text id="continue" />
+		<event>
+			<text>遊んでくれてありがとう！これはまだベータ版であり、ゲームに満足のいく結論を出していないことに注意してください。フォーラムにアクセスしてフィードバックを提供し、あなたがそれを打ち負かしたことを知らせてください。ありがとう！</text>
+		</event>
+	</choice>
+	<status type="clear" target="player" system="sensors" amount="100"/>
+</event>
+
+<event name="BOSS_ESCAPED">
+	<text>あなたが最終的に優位に立つのと同じように、それはFTLジャンプをする方法を見つけます。あなたは暴行を続けなければなりません！</text>
+	<autoReward level="HIGH">standard</autoReward>
+	<status type="clear" target="player" system="sensors" amount="100"/>
+</event>
+
+
+<event name="BOSS_TEXT_1">
+	<text>これはそれです...反乱軍の旗艦。この怪物を破壊することができれば、連邦艦隊は生き残るチャンスがあります。後戻りはありません！</text>
+</event>
+
+<event name="BOSS_TEXT_2">
+	<text>あなたは旗艦を追いかけ、それが前の戦いからひどく損傷していることを発見します。スキャンは、それがかなりの力をそのドローンに向け直したことを示しています。戦いの準備をしなさい。</text>
+</event>
+
+<event name="BOSS_TEXT_3">
+	<text>あなたはそれが受けたダメージの量と戦い続けることができる方法がわかりません。テレポーターと…ある種の超兵器に力が移ったようです。準備してください...これで終わりです！</text>
+</event>
+
+
+<eventList name="BOSS_REPAIR_STATION_REBEL"><!-- 1.21 -->
+	<event>
+		<text>待つ時間はありません—反乱軍はいつでもここにいます！あなたはジャンプする準備をします。</text>
+	</event>
+	<event>
+		<!-- <fleet>rebel</fleet> --> <!-- 1.23 --> <!-- bug with triangle on the map after win -->
+		<text>あなたは修理に多くの時間を失ったので、反乱軍はあなたに追いつきました！あなたはできるだけ早くここから出なければなりません！現場の担当者はあなたを支援することができますが、アンチシップバッテリーを介して敵に向かって発砲します。</text><!-- 1.23 -->
+		<ship load = "LONG_FLEET" hostile ="true"/>
+		<environment type="PDS" target="enemy"/> <!-- 1.23 -->
+	</event>
+</eventList>
+
+
+<event name="BOSS_REPAIR_STATION">  <!-- the various stations that heal you around the map-->
+	<text load="BOSS_REPAIR_STATION"/>
+	<damage amount="-15"/>
+	<repair/>
+	<item_modify>
+		<item type="missiles" min="1" max="9"/>
+		<item type="fuel" min="1" max="5"/><!-- 1.25, max was 9 -->
+		<item type="drones" min="1" max="7"/><!-- 1.25, max was 9 -->
+		<item type="scrap" min="1" max="99"/>
+	</item_modify>
+	<choice><!-- 1.21 -->
+		<text id="continue" />
+		<event load="BOSS_REPAIR_STATION_REBEL"/>
+	</choice>
+</event>
+<textList name="BOSS_REPAIR_STATION">
+	<text>このビーコンには、移動式の造船プラットフォームが配置されています。簡単な交換の後、彼らはあなたに緊急修理と軍事物資を受け取る許可を与えます。</text>
+	<text>エンギの民間造船所は、軍の給油所に改造されました。彼らはあなたにあなたの船にパッチを当てていくつかの物資をリフレッシュする機会を提供します。</text>
+	<text>通信上のおしゃべりは、近くの連邦基地に修理ステーションが装備されていることを示唆しています。あなたがあなたの任務の優先順位を転送するとき、彼らはあなたの船を修理してあなたにいくつかの物資を与えるのをすぐに助けます。</text>
+	<text>前方建設ステーションは、損傷した軍艦を修理中です。あなたのコマンドコードは彼らにあなたの船で迅速なパッチ作業をするように説得します。</text>
+	<text>近くにトレードステーションが放棄されました。一部の連邦エンジニアは、軍事修理を行うために造船所を転用しました。彼らはあなたの船を修理するのを手伝うことを申し出ます。</text>
+</textList>
+
+
+
+<!--
+Neutral
+-->
+
+<event name="BOSS_SCOUT" unique="false"> <!-- player discovers scout attacking or scouting. basic fight -->
+	<text load="BOSS_SCOUT"/>
+	<ship load="REBEL_AND_AUTO" hostile="true"/>
+</event>
+<textList name="BOSS_SCOUT">
+	<text>このセクターはまだ連邦の管理下にありますが、小さなスカウトが艦隊にすり抜けました。あなたは従事するために移動します。</text>  <!--image- Fleet background-->
+	<text>長距離スキャナーは、このシステムに主力艦がないことを示しています。明らかにそれは戦略的価値がありません。待ってください... FTLの署名は、反乱軍のスカウトがすぐ近くにジャンプしたことを示しています！</text> <!--image-no fleets-->
+	<text planet="PLANET_POPULATED_SMALL">センサーは近くで大規模な戦闘の証拠を示していますが、すぐ近くは静かなようです。あなたは低く横たわり、戦いを避けようとします。</text> <!-- image- no fleet, empty planet-->
+	<text>民間の宇宙ステーションが多数あるにもかかわらず、この宇宙地域では連邦船はほとんどありません。あなたは小さな爆撃機の戦隊がいくつかの連邦スカウトと交戦しているのを見て、すぐに助けに移動します。</text>
+	<text>ビーコンに到着するとすぐに、反乱軍のスカウトが交戦します。武器をパワーアップ！</text>
+	<text>あなたはその地域をスキャンし、小さな貿易船だけの署名を見つけます。しかし、近づくと反乱軍のスカウトのシルエットが見えます！スキャナーを再度実行すると、スキャナーの登録が偽物であることがわかります。あなたは攻撃するために移動します。</text>
+</textList>
+
+<event name="BOSS_SCOUT_RESCUE">  <!-- player rescues weakened fed/civilian ship from a rebel scout — fight with rescue-->
+	<text load="BOSS_SCOUT_RESCUE"/>
+	<choice>
+		<text>反乱軍の船と戦う準備をしてください！</text>
+		<event>
+			<text>あなたは傍受するために移動します。</text>
+			<ship load="BOSS_SCOUT_RESCUE" hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>時間がない、ジャンプする準備をしなさい。</text>
+		<event>
+			<text>あなたは戦争の恐怖を阻止し、あなたの使命に集中しようとします。</text>
+		</event>
+	</choice>
+</event>
+<textList name="BOSS_SCOUT_RESCUE">
+	<text>ショットはポートウィンドウのそばを飛んでいき、その後、損傷した巡洋艦を追跡する反乱軍のスカウトが続きます。私たちは従事するために移動する必要がありますか？</text>
+	<text>反乱軍の前方偵察隊による攻撃を受けている小さな連邦植民地があるようです。それらを保護しますか？</text>
+	<text>多くの大規模な輸送機関が反乱軍の爆撃飛行隊によって追跡されています。ある爆撃機はなんとか防御的な火をすり抜けて、巨大であるが脆弱な輸送機関の間で大混乱を引き起こす準備ができています。あなたが前進してそれを取り出す時間がある！</text>
+	<text>近くで小さな戦闘機の間で戦いが激化しています。どうやら宇宙ステーションをめぐって争っている。連邦は船を急速に失っているようです。彼らを助けましょうか。</text>
+	<text>民間船が安全な連邦チャネルで支援要請を放送しています。彼らは反乱軍のスカウトから嫌がらせを受けています。返答してくれませんか？</text>
+	<text>多くの大規模な輸送機関が反乱軍の爆撃飛行隊によって追跡されています。ある爆撃機はなんとか防御的な火をすり抜けて、巨大であるが脆弱な輸送機関の間で大混乱を引き起こす準備ができています。あなたが前進してそれを取り出す時間がある！</text>
+	<text>近くで小さな戦闘機の間で戦いが激化しています。どうやら宇宙ステーションをめぐって争っている。連邦は船を急速に失っているようです。彼らを助けましょうか。</text>
+	<text>民間船が安全な連邦チャネルで支援要請を放送しています。彼らは反乱軍のスカウトから嫌がらせを受けています。返答してくれませんか？</text>
+</textList>
+<eventList name="BOSS_SCOUT_RESCUE_LIST">  <!-- what the player gets for rescuing the ship-->
+	<event>
+		<text>あなたが救出した人々は主に紛争から逃れた難民でした。彼らはあなたに彼らの心からの感謝を提供します。</text>
+	</event>
+	<event>
+		<text>「ありがとうございます。それほど多くはありませんが、戦争に飛び込む前に少しの損傷を修復することができます。頑張ってください！」とあなたは歓迎されます。</text>
+		<damage amount="-8"/>
+	</event>
+	<event>
+		<text>生存者は、「支援のおかげで、どれだけ長く持ちこたえることができたのかわかりません。いくつかの物資を持っていってください。おそらく現時点では必要ないでしょう」とメッセージを送ります。</text>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+	<event> <!-- 1.25 -->
+		<text>暗号化されたフェデレーションチャネルでメッセージを受信します。 「キャプテン、私たちを助けてくれてありがとう。私たちはあなたのためにここに別の緊急修理ステーションを設置しています。」と書かれています。</text>
+		<damage amount="-5"/>
+		<item_modify>
+			<item type="missiles" min="1" max="3"/>
+			<item type="fuel" min="1" max="3"/>
+			<item type="drones" min="1" max="3"/>
+			<item type="scrap" min="1" max="33"/>
+		</item_modify>
+	</event>
+	<!-- <event>   Gives new repair station (not)
+		<text>暗号化されたフェデレーションチャネルでメッセージを受信します。 「キャプテン、私たちを助けてくれてありがとう。私たちは別の緊急修理ステーションを設置しているところです。現在座標を送信しています。」</text>
+		<quest event="BOSS_REPAIR_STATION"/>  1.23 | JUSTIN — your code does not work
+	</event> -->
+</eventList>
+<ship name="BOSS_SCOUT_RESCUE" auto_blueprint="SHIPS_REBEL">
+	<escape  chance="0.5" min="4" max="8" load="PIRATE_ESCAPE"/>
+	<gotaway> <!-- 1.25.2 -->
+		<text>敵はFTLジャンプをしましたが、あなたはそれでも彼らの犠牲者を救うことができたので、あなたは彼らに連絡することを急いでいます。</text>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="BOSS_SCOUT_RESCUE_LIST"/>
+		</choice>
+	</gotaway>
+	<destroyed>
+		<text>反乱軍の船が破壊されたので、あなたは彼らの犠牲者になる可能性のある人に自由に連絡することができます。</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>生存者に連絡してください。</text>
+			<event load="BOSS_SCOUT_RESCUE_LIST"/>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>反乱軍の船が敗北すると、あなたはすぐにあなたができることを救い、彼らの獲物に連絡するために移動します。</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<choice hidden="true">
+			<text>生存者に連絡してください。</text>
+			<event load="BOSS_SCOUT_RESCUE_LIST"/>
+		</choice>
+	</deadCrew>
+</ship>
+
+
+
+
+
+
+
+<!--
+Fleets — some with minor fights
+-->
+
+
+<event name="BOSS_FLEETS_FED">  <!-- empty nodes that the Rebels have not reached yet.-->
+	<fleet>fed</fleet>
+	<text load="BOSS_FLEETS_FED"/>
+</event>
+<textList name="BOSS_FLEETS_FED">
+	<text>あなたは多くの連邦のフォワードキャリアとドレッドノートを見るために到着します。これは、そのような艦隊を保証するために非常に重要なシステムでなければなりません。</text> <!-- large fed fleet-->
+	<text>近くの地域にはいくつかの連邦艦隊があり、多くの残骸があります。その地域では小さな小競り合いがあったに違いありません。</text> <!-- small fed fleet - debris-->
+	<text>近くの連邦集落を守るために、散在する数隻の大型船が残されています。彼らは避難の過程にあるようです。</text> <!-- small fed fleet - populated planet-->
+	<text>連邦の大型船の大規模なホストがビーコンの周りに形成されています。センサーはミサイルロックで熱くなりますが、船の署名を送信すると、センサーはあなたを放っておいてくれます。</text> <!--large fed fleet-->
+	<text>連邦戦闘機の大隊が近くの月の周りで戦っていて、彼らの空母は遠くで待っています。彼らは反乱軍の偵察隊に遭遇したに違いありません。</text><!-- small fed fleet - planet-->
+</textList>
+
+
+
+<event name="BOSS_FLEETS_BOTH">  <!-- nodes that have ships fighting  —  unique background -->
+	<fleet>battle</fleet>
+	<text load="BOSS_FLEETS_BOTH"/>
+</event>
+<textList name="BOSS_FLEETS_BOTH">
+	<text>センサーは近くで大規模な戦闘の証拠を示していますが、すぐ近くは静かなようです。あなたは低く横たわり、戦いを避けようとします。</text>
+	<text>あなたは2つの艦隊が互いに衝突しているのを見つけるために到着します。センサーは大虐殺の範囲を追跡しています。あなたは、FTLドライブが充電されるのを静かに待ちます。あなたが助けることができる唯一の方法は、あなたの任務を完了することであることを知っています。</text>
+	<text>遠くで戦いが激化する。センサーは多くの脆弱な脱出ポッドの存在を示唆していますが、あなたは助けるのをやめることはできないことを知っています。使命は最も重要です。</text>
+	<text>遠くで戦いが激化する。あなたが戦いを助けたいと思う限り、あなたはあなたの使命の重要性を知っています。</text>
+	<text>戦闘が進行中であることを知らせるために高度なセンサーは必要ありません。あなたはジャンプするのを待って、静かに窓の外を見ます。あなたがこの戦いを助けることができる方法はありません。</text>
+	<text>2つの艦隊がお互いにボレーショットをしています。幸いなことに、誰もあなたの船に興味を持っていないようです。あなたは別のジャンプをする準備をします。</text>
+</textList>
+
+
+
+
+
+
+<event name="BOSS_FLEETS_BOTH_FIGHT">  <!-- nodes that have ships fighting  —  also inside the /!\ symbol but can be elswhere too. -->
+	<fleet>battle</fleet>
+	<text load="BOSS_FLEETS_BOTH_FIGHT"/> <!-- 1.26 uses correct textList now -->
+	<ship load="BOSS_FLEETS_REBEL" hostile="true"/>
+</event>
+<textList name="BOSS_FLEETS_BOTH_FIGHT"><!-- 1.26 was BOSS_FLEETS_BOTH which overwrites previous textList -->
+	<text>あなたは激しい戦いの真っ只中に到着します。双方は大きな損失を被っています。小さな戦隊が飛んで行き、戦闘機が壊れてあなたの位置に向かって移動します。</text>
+	<text>2つの艦隊が近くで戦う。あなたは戦闘の端をスカートで囲み、武器の射程に入らないようにしようとしますが、反乱軍のスカウトがあなたを見つけて移動します。</text>
+	<text>誰が近くの戦いに勝っているのか見分けるのは難しい。あなたがそれを理解する機会を得る前に、戦闘機は攻撃するために移動します。</text>
+	<text>遠くの破壊の規模は息を呑むほどです。残念ながら、独立したオブザーバーとしてのあなたの立場は長くは続きません！</text>
+	<text>遠くの破壊はほとんど畏敬の念を起こさせます。ただし、センサーが攻撃を受けていることを示しているため、現実に引き戻されます。</text>
+	<text>遠くでの戦いを心配する時間はありません。戦いは本当にすぐにあなたに来ています！</text>
+</textList>
+
+
+
+
+
+
+<event name="BOSS_FLEETS_REBEL"> <!-- areas that the fleet took over (or will take over soon) have the /!\ symbol on the map-->
+	<fleet>rebel</fleet>
+	<text load="BOSS_FLEETS_REBEL"/>
+	<ship load="BOSS_FLEETS_REBEL" hostile="true"/>
+</event>
+<textList name="BOSS_FLEETS_REBEL">
+	<text>あなたは反乱軍を期待していましたが、彼らの艦隊がこれほど速く成長したとは想像もしていませんでした。近くに駐留している戦闘機が攻撃に入る前に、スキャナーがそれらすべてを登録することはほとんどできません。</text>
+	<text>このシステムは反乱軍の軍艦で溢れています。幸いなことに、あなたの船の署名は民間輸送機関に偽装されています。ほとんどの重い船はあなたを無視しますが、小さな戦闘機が熱い武器で近づいています！</text> <!-- no environment?-->
+	<text planet="PLANET_POPULATED">あなたは近くの惑星を取り囲み、上陸部隊を立ち上げる反乱軍大隊を見つけるために到着します。小さなスカウトがあなたの位置に向かって移動します。戦いの準備を！</text>
+	<text>到着するとすぐに、激しい戦いの残骸の中にいることに気づきます。しかし、反乱軍の軍艦だけが残っており、すぐに攻撃を受けます。</text>
+	<text>ショットが飛んでくると、到着するとすぐにコンピュータが複数の武器ロックを登録します。回避行動！</text>
+	<text planet="PLANET_POPULATED">かつては素晴らしい一連の宇宙ステーションでしたが、今では近くの月の周りの小さな破片の輪に他なりません。死者を悼む時間はありません。敵が近づいてくる！</text>
+	<text>連盟は良い戦いをしたようです。多くの反乱軍の船が壊れたり負傷したりしています。しかし、彼らの圧倒的な数は残りの連邦軍を撤退させます。うまくいけば、あなたも時間内に逃げることができます。</text>
+
+	<text>あなたは反乱軍を期待していましたが、彼らの艦隊がこれほど速く成長したとは想像もしていませんでした。近くに駐留している戦闘機が攻撃に入る前に、スキャナーがそれらすべてを登録することはほとんどできません。</text>
+	<text>このシステムは反乱軍の軍艦で溢れています。幸いなことに、あなたの船の署名は民間輸送機関に偽装されています。ほとんどの重い船はあなたを無視しますが、小さな戦闘機が熱い武器で近づいています！</text> <!-- no environment?-->
+	<text planet="PLANET_POPULATED">あなたは近くの惑星を取り囲み、上陸部隊を立ち上げる反乱軍大隊を見つけるために到着します。小さなスカウトがあなたの位置に向かって移動します。戦いの準備を！</text>
+	<text>到着するとすぐに、激しい戦いの残骸の中にいることに気づきます。しかし、反乱軍の軍艦だけが残っており、すぐに攻撃を受けます。</text>
+	<text>ショットが飛んでくると、到着するとすぐにコンピュータが複数の武器ロックを登録します。回避行動！</text>
+	<text planet="PLANET_POPULATED">かつては素晴らしい一連の宇宙ステーションでしたが、今では近くの月の周りの小さな破片の輪に他なりません。死者を悼む時間はありません。敵が近づいてくる！</text>
+	<text>連盟は良い戦いをしたようです。多くの反乱軍の船が壊れたり負傷したりしています。しかし、彼らの圧倒的な数は残りの連邦軍を撤退させます。うまくいけば、あなたも時間内に逃げることができます。</text>
+</textList>
+<ship name="BOSS_FLEETS_REBEL" auto_blueprint="SHIPS_REBEL">
+	<destroyed>
+		<text>すべての難破船を救助する時間はありません、艦隊はまだ近くにあります。ジャンプする準備をしなさい！</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>敵の船を救助する時間はありませんが、あなたの乗組員はいくつかの近くの材料で出発しました。ジャンプする準備をします。</text>
+		<autoReward level="MED">standard</autoReward>
+	</deadCrew>
+</ship>
+
+
+<!-- 1.25 -->
+<event name="BOSS_FLEETS_BLACK_REBEL">
+	<text load="BOSS_FLEETS_BLACK_REBEL"/>
+	<ship load="BOSS_FLEETS_BLACK_REBEL" hostile="true"/>
+</event>
+<textList name="BOSS_FLEETS_BLACK_REBEL">
+	<text>奇妙な色の反乱軍の船がこのビーコンであなたを迎撃します。あなたはそれがどれほどうまく武装しているかに気づきます...そして彼らの武器システムはチタンコーティングを強化したようです！</text>
+</textList>
+<ship name="BOSS_FLEETS_BLACK_REBEL" auto_blueprint="REBEL_SKINNY_ELITE_X_SHIPS">
+	<destroyed>
+		<text>船はバラバラになり、あなたはすぐに生き残った装備を手に入れます。</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>船の乗組員が死んだ状態で、あなたはすぐに生き残った装備をつかみます。</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</deadCrew>
+</ship>

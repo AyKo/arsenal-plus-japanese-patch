@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+
+<!--
+			SUMMARY â€”
+A list of all main events to be called by lists
+	does not include sub-events)
+
+Structure:
+START_BEACON_PIRATE
+	STORE_PIRATE
+	NOTHING_PIRATE
+
+Hostile:
+	PIRATE
+	PIRATE_NO_ESCAPE
+
+Neutral:
+	PIRATE_CIVILIAN (with commly used SAVE_CIVILIAN_LIST)
+	PIRATE_BRIBER
+	PIRATE_CHOICE
+	PIRATE_SLAVER
+	FRIENDLY_SLAVER
+
+Environment:
+	PIRATE_SUN
+	PIRATE_ASTEROID
+
+Boarders:
+	BOARDERS_SUN
+	BOARDERS_ASTEROID
+	FLOATING_CARGO
+-->
+
+
+
+<eventList name="HOSTILE_PIRATE">
+	<event load="PIRATE"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_ASTEROID"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_SUN"/>
+	<event load="PRIZRAK_SHIP_EVENT"/>
+	<event load="BOARDERS_ASTEROID_PRIZRAK"/>
+	<event load="SLUG_DEPRESSER_EVENT"/>
+	<event load="MOTILEK_EVENT"/><!-- 1.26 -->
+	<event load="TUCO_EVENT"/><!-- 1.27 -->
+</eventList>
+
+
+<eventList name="NEUTRAL_PIRATE">
+	<event load="PIRATE_CHOICE"/>
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="MERCENARY"/>
+	<event load="DISTRESS_BEACON"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="ASTEROID_EXPLORE"/>
+
+	<event load="ASTEROID_DERELICT_SHIP"/> <!-- CRYSTAL UNLOCK-->
+
+	<event load="REFUGEE_NO_DISTRESS_PIRATE"/>
+	<event load="PIRATE_STATION_ASTEROID"/>
+	<event load="PIRATE_CHICKEN"/>
+	<event load="PSEVDO_NOTHING"/><!-- 1.26 -->
+	<event load="EVENT_TRADE_FUMIDR"/><!-- 1.26 -->
+
+	<event load="RETRANSLATOR"/><!-- 1.27.1 -->
+
+</eventList>
+
+
+<eventList name="BOARDERS_PIRATE">
+	<event load="BOARDERS"/>
+	<event load="STATION_SICK"/>
+	<event load="BOARDERS_SUN"/>
+	<event load="BOARDERS_HACKING"/>
+	<event load="FLOATING_CARGO"/>
+</eventList>
+
+
+<eventList name="DISTRESS_BEACON_PIRATE">
+	<!-- <event load="STRANDED_BEACON"/> -->
+	<event load="CIVILIAN_ASTEROIDS_BEACON"/>
+	<event load="ESCORT_BEACON"/>
+	<event load="PIRATE_CIVILIAN_BEACON"/>
+	<event load="FRIENDLY_BEACON"/>
+	<event load="FRIENDLY_BEACON_BAD"/> <!-- 1.25 -->
+	<event load="TRAP_BEACON"/>
+	<event load="DISTRESS_TRAPPED_MINER"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="DISTRESS_STATION_DISEASE"/>
+	<event load="ODIN_PIRAT_QUEST"/>
+	<event load="REFUGEE_DISTRESS_PIRATE"/> <!--DLC — In newEvents-->
+</eventList>
+
+<eventList name="NEBULA_PIRATE">
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/>
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_TRADER"/>
+	<event load="NEBULA_LOST_SHIP"/>
+	<event load="NEBULA_BOARDING"/>
+	<event load="NEBULA_REBEL_UNDETECTED"/>
+	<event load="NEBULA_LOST_SHIP"/>
+	<event load="NEBULA_REBEL_BOARDING"/>
+	<event load="NEBULA_STORM_ITEMS"/>
+	<!--<event load="NEBULA_STORM_BOARDING"/> -->
+	<event load="NEBULA_STORM_ITEMS"/>
+</eventList>
+
+<eventList name="QUESTS_PIRATE">
+	<event load="MERCHANT_REQUEST"/>
+	<event load="MERCENARY_WORK_START"/>
+	<event load="QUEST_ESCORT"/>
+</eventList>
+
+
+
+<!--
+		STRUCTURE!!!
+	Necessary events
+-->
+
+<event name="START_BEACON_PIRATE">
+	<text load="START_BEACON_PIRATE"/>
+	<choice hidden="true">
+		<text id="continue" />
+		<event load="AUGMENTS_ON_START_BEACON"/>
+	</choice>
+</event>
+<textList name="START_BEACON_PIRATE">
+	<text>数年前、この地域は貿易活動でにぎわっていました。今では盗賊や略奪者で溢れています。ここを軽く踏む必要があります。</text>
+	<text>このやや孤立した地域は、反乱の開始時に混乱に陥りました。平時でも常に海賊に悩まされていましたが、今では無数の海賊艦隊の活動拠点となっています。</text>
+	<text>報告が真実である場合、この地域はかなり長い間海賊の管理下にありました。一部のトレーダーはまだ残っているいくつかの和解で取引しようとしますが、彼らは大きなリスクでそうします。</text>
+	<text>このセクターにはまだいくつかの連邦に優しい惑星が存在しますが、それらは常に海賊の襲撃による攻撃を受けています。これは危険なセクターですので、注意してください。</text>
+	<text>あなたは海賊スペースに到着しました。反乱軍の乗っ取り後、このセクターは残酷な襲撃の舞台となり、今日も海賊の手に渡っています。気をつけて。</text>
+	<text>このセクターは、通過する船への絶え間ない略奪と襲撃で知られています。あなたの乗組員は、あなたが海賊のように振る舞うなら、彼らはあなたを彼ら自身のものとして扱い、あなたの通過を妨げないだろうと信じたいと思っています。</text>
+	<text>以前は、このセクターは重要な交易路の交差点にありましたが、現在、海賊の数が急増しているため、トレーダーはそれを避けることを好みます。</text>
+	<text>このセクターの入り口のビーコンには、「ジョリーロジャー」という言葉が刻まれています。おそらく、これらの野蛮人に連邦が実際に何であるかを思い出させる価値があります。</text>
+	<text>このセクターは内戦前はすでに落ち着きがありませんでしたが、今ではあらゆる種類の海賊で溢れています。最悪の事態に備えるのが最善です。</text>
+	<text>このセクターは、海賊や略奪者の本拠地と安全に呼ぶことができます。対向船が「誤って」あなたに興味を持った場合に備えて、シールドと武器が同等になっていることを確認してください。</text>
+	<text>強盗はこのセクターを掌握しました。ここでは、平和な商船に向かって離陸する可能性は低いですが、スペアパーツのために自分の船を解体したいと思う人はたくさんいます。</text>
+</textList>
+
+<event name="STORE_PIRATE">
+	<text load="STORE_PIRATE"/>
+	<store/>
+</event>
+<textList name="STORE_PIRATE">
+	<text>いくつかの小さな船がvidscreenに表示され、武器のターゲティングをほぼアクティブにします。ただし、センサーは、それらが単に正直な商人であることを示します。海賊はあなたをびくびくさせているに違いありません。あなたは彼らに彼らの製品について尋ねるメッセージを送ります。</text>
+	<text>近くの活動のハブを検出します。大企業が貿易基地を設立し、多くの武装した船が巡視しています。これは、修理を受けるのに比較的安全な場所のようです。</text>
+	<text>「私たちの謙虚な貿易基地と造船所へようこそ！すべての人を歓迎しますが、面白いビジネスを試してみてください。152個の自動タレット衛星があなたの船を細かく裂きます！」という広帯域の自動メッセージを受け取ります。</text>
+	<text>武装した輸送船と戦闘機の戦隊が近くの軌道上にあります。あなたは彼らの信頼性に警戒していますが、物乞いは選択者になることはできません。</text>
+</textList>
+
+
+<event name="NOTHING_PIRATE">
+	<text load="NOTHING_PIRATE"/>
+	<choice hidden="true">
+		<text id="continue" />
+		<event load="TALK_WITH_CREW"/>
+	</choice>
+</event>
+<textList name="NOTHING_PIRATE">
+	<text>あなたが到着するとすぐに、小さな船があなたの後ろのマントを脱ぎます。あなたはすぐに盾と武器の電源を入れますが、それらは感動せずに軌道を続けます。あなたはあなたの神経を落ち着かせようとします。</text>
+	<text>小さな海賊船があなたにメッセージを送ります、「それはあなたがそこに着いた光沢のある船です」。あなたは彼らの弓を横切って警告ショットを発射し、彼らは「ねえ！暴力の必要はありません！それはただのコメントでした...」と答えます。</text>
+	<text>スキャン範囲内にあるのは、古い廃鉱山構造と補給ステーションだけです。彼らは略奪者によってきれいに選ばれたようです。</text>
+	<text>エンギ船の小さな艦隊が「海賊行為は社会に悪影響を及ぼします。許可されていません」というメッセージであなたを標的にするために到着します。あなたは彼らにあなたの正直な意図を保証し、彼らはあなたが通過することを可能にします。</text>
+</textList>
+
+
+
+
+<!--
+		HOSTILE!!!
+	Events that call up a fight for sure
+-->
+
+
+<event name="PIRATE">
+	<text load="PIRATE"/>
+	<ship load="PIRATE" hostile="true"/>
+</event>
+<textList name="PIRATE">
+	<text>あなたがシステムに飛び込むと、海賊はあなたの位置に進みます。彼らはすべての呼びかけを拒否しています。戦いの準備をしなさい。</text>
+	<text>システムに到着するとすぐに、小さな巡洋艦に迎えられます。 「私たちが偶然出会った幸運は何でしょう。個人的なことは何もありませんが、あなたは私たちが必要とするいくつかの情報を持っています！」</text>
+	<!-- <text planet="PLANET_POPULATED_SMALL">最初は空のシステムに到着したように見えますが、惑星の後ろから船が現れ、「ハハ！私は恐ろしい海賊トゥコです、死ぬ準備をしてください！」と呼びかけます。</text> --> <!-- 1.27 -->
+	<text>このビーコンにいる他の唯一の船はあなたにメッセージを送ります：「ついに、何ヶ月も待った後、誰かが私たちの罠に陥った！」</text>
+	<text>あなたの船が武器が熱い状態で入ってくる船について警告する前に、ジャンプの完了を登録する時間はほとんどありません。</text>
+</textList>
+
+
+<event name="PIRATE_NO_ESCAPE" unique="true">
+	<text>到着すると、画面が点灯して警告が表示されます。近くの海賊は高度なハッキングツールを持っているようで、彼らはあなたのエンジンをシャットダウンしようとしました。あなたの乗組員はなんとか彼らをかろうじて操作可能に保つことができ、あなたは攻撃に移ります。</text>
+	<ship load="PIRATE_NO_ESCAPE" hostile="true"/>
+	<choice hidden="true">
+		<text id="continue" />
+		<event>
+			<status type="limit" target="player" system="engines" amount="1"/>
+		</event>
+	</choice>
+	<choice hidden="true" req="hacking"> <!-- CHANGED — added -->
+		<text>(Hacking) リモートハッキングに対抗します。</text>
+		<event>
+			<text>あなたのハッキングシステムは自動的にデジタル攻撃に対抗し、あなたは船と戦うために移動します。</text>
+			<status type="limit" target="player" system="hacking" amount="0"/>
+		</event>
+	</choice>
+</event>
+
+
+
+
+
+<!--
+		NEUTRAL!!!
+	Events that could have a fight
+-->
+
+
+
+<event name="PIRATE_CIVILIAN" unique="false">
+	<text load="PIRATE_CIVILIAN"/>
+	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
+	<choice>
+		<text>民間船を助けてください。</text>
+		<event>
+			<text>あなたは武器をパワーアップし、海賊船と交戦します。</text>
+			<ship load="PIRATE_CIVILIAN" hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>それを避けてください。</text>
+		<event>
+			<text>戦いはそれらをあなたの直接のスキャン範囲から外します。しばらくすると、遭難信号は停止します。</text>
+		</event>
+	</choice>
+</event>
+<textList name="PIRATE_CIVILIAN">
+	<text planet="PLANET_POPULATED_SMALL">あなたはシステムに到着し、海賊船が民間船を追跡しているのを見ます。あなたは苦痛の頻度で民間船からのメッセージを検出します。</text>
+	<text>スキャナーは、戦闘が近くで行われていることを示しています。誰かが宇宙海賊に襲われているようです。</text>
+	<text>あなたは2隻の船を検出し、一方が他方を追いかけています...スキャナーは追跡者が海賊であることを示しています！</text>
+	<text>範囲内には2隻の船しかなく、戦闘に従事しているようです。そのうちの1つには宇宙海賊のマークが付いています。</text>
+	<text>次のビーコンに到着すると、小さなシャトルですぐに迎えられます。 「助けて！海賊に襲われている！」</text>
+	<text>ジャンプから出て、ビーコンの反対側からレーザーブラストが来るのを確認します。誰かが海賊から攻撃を受けているようです。</text>
+</textList>
+<eventList name="SAVE_CIVILIAN_LIST">
+	<event>
+		<text>あなたが救った船は戦闘でひどく損傷した。ほとんどの乗組員は、近くの駅に降車するというあなたの申し出を受け入れます。 1つはあなたの乗組員に加わることを申し出ます。</text>
+		<choice>
+			<text>ようこそ！</text>
+			<event>
+				<text>生存者は船に乗り込みます。</text>
+				<crewMember amount="1"/>
+			</event>
+		</choice>
+		<choice><!-- 1.26 -->
+			<text>却下;代わりに、スクラップがあるかどうかを尋ねます。</text>
+			<event>
+				<text>彼らはあなたに彼らが持っているすべてのスクラップを与えます。</text>
+				<autoReward level="LOW">scrap_only</autoReward>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>どうやら暴行されていた船は科学船だったようです。彼らは彼らを救ってくれてありがとう、そして小さな報酬を提供します。</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>乗組員は暴行を生き延びなかったようです。あなたは船の残骸からあなたができることを取ります。</text>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>彼らは、「あなたが行ったときにあなたが来たのは良いことです。そうでなければ、私たちは今死んでいるでしょう。私は船長です。あなたが私を助けてくれたようにあなたを助けたいです。」</text>
+		<choice>
+			<text>船長はあなたの船に機器を設置することを申し出ます。</text>
+			<event>
+				<autoReward level="LOW">weapon</autoReward>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>「このセクターは、連盟の友人にとってますます危険になっています。私の乗組員は、おかげであなたの船体の損傷の一部を修正できると思います。」</text>
+		<damage amount="-5"/>
+	</event>
+	<event>
+		<text>あなたが敵の船の気をそらしている間、民間の船は賢明に速い後退をしました。</text>
+	</event>
+</eventList>
+<eventList name="SAVE_CIVILIAN_LIST_NO_ESCAPE"><!-- 1.27 -->
+	<event>
+		<text>あなたが救った船は戦闘でひどく損傷した。ほとんどの乗組員は、近くの駅に降車するというあなたの申し出を受け入れます。 1つはあなたの乗組員に加わることを申し出ます。</text>
+		<choice>
+			<text>ようこそ！</text>
+			<event>
+				<text>生存者は船に乗り込みます。</text>
+				<crewMember amount="1"/>
+			</event>
+		</choice>
+		<choice><!-- 1.26 -->
+			<text>却下;代わりに、スクラップがあるかどうかを尋ねます。</text>
+			<event>
+				<text>彼らはあなたに彼らが持っているすべてのスクラップを与えます。</text>
+				<autoReward level="LOW">scrap_only</autoReward>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>どうやら暴行されていた船は科学船だったようです。彼らは彼らを救ってくれてありがとう、そして小さな報酬を提供します。</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>乗組員は暴行を生き延びなかったようです。あなたは船の残骸からあなたができることを取ります。</text>
+		<autoReward level="LOW">standard</autoReward>
+	</event>
+	<event>
+		<text>彼らは、「あなたが行ったときにあなたが来たのは良いことです。そうでなければ、私たちは今死んでいるでしょう。私は船長です。あなたが私を助けてくれたようにあなたを助けたいです。」</text>
+		<choice>
+			<text>船長はあなたの船に機器を設置することを申し出ます。</text>
+			<event>
+				<autoReward level="LOW">weapon</autoReward>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>「このセクターは、連盟の友人にとってますます危険になっています。私の乗組員は、おかげであなたの船体の損傷の一部を修正できると思います。」</text>
+		<damage amount="-5"/>
+	</event>
+</eventList>
+
+
+
+<event name="PIRATE_BRIBER" unique="true">
+	<text load="PIRATE_BRIBER"/>
+	<ship load="PIRATE_BRIBER" hostile="false"/>
+	<choice>
+		<text>彼らの賄賂を受け入れます。</text>
+		<event>
+			<text>「良い選択だ、息子。私たちは両方ともこのより豊かなものから出てきた。」</text>
+			<autoReward level="LOW">standard</autoReward>
+		</event>
+	</choice>
+	<choice>
+		<text>ヒーローになろう。海賊を攻撃します。</text>
+		<event>
+			<text>海賊船は追跡を停止し、武器を船に固定します。</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+</event>
+<eventList name="PIRATE_BRIBER_WIN">
+	<event>
+		<text>よく調べてみると、攻撃を受けている船は反乱軍の偵察船だったことがわかります。ダメージが大きすぎて、多くの戦いに耐えられません。</text>
+		<choice hidden="true">
+			<text>船を破壊し、救助します。</text>
+			<event>
+				<text>あなたは船から有用なものをすべて取り除き、助けが到着することを期待するためにその乗組員を残します。</text>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+		<choice>
+			<text>彼らの命を救うことによって得たレバレッジを使用して、追跡する艦隊を遅らせるように説得します。</text>
+			<event>
+				<text>うまくいけば、それはあなたに次のセクターに到達するためのより多くの時間を買うでしょう。</text>
+				<modifyPursuit amount="-2"/> <!-- 1.21 --> <!-- was -1 -->
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>あなたは遅すぎた。船体の破損により、海賊との戦闘中に乗組員の酸素が奪われました。あなたはあなたができることを救います。</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>あなたが彼らと話す機会を得る前に、海賊の犠牲者はすぐに飛び去ります。</text>
+	</event>
+	<event>
+		<text>「助けてくれてありがとう！私は通常反乱軍としか仕事をしないトレーダーですが、状況を考慮して例外を設けます。」</text><!-- 1.27 changed 'arms dealer' to 'trader' -->
+		<store/>
+	</event>
+	<event>
+		<text>「あなたが現れた天に感謝します！私たちは報酬として提供するものはあまりありませんが、私たちのエンジニアはその厄介な戦いの後にあなたの船に少しパッチを当てるのに十分熟練している必要があります。」</text>
+		<damage amount="-15"/>
+	</event>
+</eventList>
+<textList name="PIRATE_BRIBER">
+	<text>あなたは正体不明の船を熱心に追跡している海賊に出くわします。あなたはすぐに海賊からの送信を受け取ります：「この戦いに近づかないでください、そして私たちはあなたの価値があるようにします。」</text>
+	<text>身元不明の船はひどく損傷していて、まだ宇宙海賊に襲われています。被害者は、海賊が割り込んで、きつく座っている場合に報奨金を分割することを申し出るまで、遭難信号を開始します。</text>
+	<text>ジャンプが完了すると、ミサイルが弓を横切って発射します。スキャンすると、未知の船を追跡している海賊のマークが付いた船がすぐにわかります。海賊はあなたを歓迎します：「くそー、私たちは会社を期待していませんでした。これに近づかないでください、そしてあなたは利益を得ることができます。」</text>
+</textList>
+
+
+
+
+<event name="PIRATE_CHOICE" unique="false">
+	<img planet="NONE"/>
+	<text>ジャンプが完了すると、近くの船からメッセージが届きます。 「ご挨拶と私たちのビーコンへようこそ！少額の料金で、私たちはあなたがあなたの道を続けることを可能にします。」</text>
+	<ship load="PIRATE" hostile="false"/>
+	<choice><!-- moved to 1st position from 2nd -->
+		<text>彼らの「申し出」を拒否します。</text>
+		<event>
+			<text>「ひどい…この決断を後悔するだろう！」</text>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>彼らの通行料を支払う。</text>
+		<event>
+			<text>「あなたは正しい決断をしました、友よ。」</text>
+			<item_modify>
+				<item type="scrap" min="-25" max="-15"/>
+			</item_modify>
+		</event>
+	</choice>
+</event>
+
+
+
+
+<event name="PIRATE_SLAVER" unique="true">
+	<text>特に武装した海賊船があなたに近づきます。 「乗組員の1人を引き渡せば、残りの人は無傷で自由に行くことができます。」</text>
+	<ship load="PIRATE_SLAVER" hostile="false"/>
+	<status type="limit" target="enemy" system="teleporter" amount="0"/><!-- 1.27.1 -->
+	<choice req="CREW_ALL" hidden="true" blue="false"><!-- 1.25 -->
+		<text>彼らを武装させた後、海賊にあなたの乗組員の誰かを与えてください。</text>
+		<event load="PIRATE_SLAVER_RAB"/>
+	</choice>
+	<choice req="CREW_ALL" lvl="0" max_lvl="0" hidden="true" blue="false"><!-- 1.25 -->
+		<text id="continue" />
+		<event>
+			<text>彼らは突然、彼らの前にドローンがあることに気づき、あなたの船を攻撃します。</text>
+			<ship hostile="true"/>
+			<status type="clear" target="enemy" system="teleporter" amount="100"/><!-- 1.27.1 -->
+		</event>
+	</choice>
+	<choice req="CREW_ALL" hidden="true" blue="false"><!-- 1.25 -->
+		<text>それを危険にさらさないで、正面攻撃に行きなさい。</text>
+		<event>
+			<ship hostile="true"/>
+			<status type="clear" target="enemy" system="teleporter" amount="100"/><!-- 1.27.1 -->
+		</event>
+	</choice>
+	<choice hidden="true" req="mantis">
+		<text>(Mantis Crewmember) 武装したカマキリを彼らに送ってください。</text>
+		<event load="PIRATE_SLAVER_MANTIS"/><!-- 1.22.2 -->
+	</choice>
+	<choice req="engines" lvl="6" hidden="true">
+		<text>(Advanced Engines) 奴隷船を追い越そうとします。</text>
+		<event load="PIRATE_SLAVER_RUN"/>
+	</choice>
+</event>
+<eventList name="PIRATE_SLAVER_RAB"><!-- 1.25 --> <!-- no crew code was removed -->
+	<event>
+		<text>残念ながら、海賊はあなたの妨害工作員と一緒に武器に気づき、使用する前にそれを持ち去ります。これ以上乗組員を危険にさらさないことを決定して、あなたはビーコンを去ります。</text>
+		<choice hidden="true">
+			<text id="continue" />
+			<event>
+				<removeCrew>
+					<clone>false</clone>
+					<text>置換のクローンを作成することを簡単に検討しますが、同時重複に関する連邦法を尊重することにしました。</text>
+				</removeCrew>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>残念ながら、海賊はあなたの妨害工作員と一緒に武器に気づき、使用する前にそれを持ち去ります。これ以上乗組員を危険にさらさないことを決定して、あなたはビーコンを去ります。</text>
+		<choice hidden="true">
+			<text id="continue" />
+			<event>
+				<removeCrew>
+					<clone>false</clone>
+					<text>置換のクローンを作成することを簡単に検討しますが、同時重複に関する連邦法を尊重することにしました。</text>
+				</removeCrew>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>あなたは海賊を静かに武装させた後、あなたの乗組員の1人を海賊に与えます。海賊船に乗ると、彼らはなんとかリーダーを殺し、残りの海賊は降伏します。あなたは海賊によって輸送された捕虜の奴隷を解放し、そのうちの1人があなたの乗組員に加わります。</text>
+		<crewMember amount="1"/>
+	</event>
+	<event>
+		<text>あなたは海賊を静かに武装させた後、あなたの乗組員の1人を海賊に与えます。海賊船に乗ると、彼らはなんとかリーダーを殺し、残りの海賊は降伏します。あなたは彼らの船から価値のあるものすべてを奪うように命令します。</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>あなたは海賊を静かに武装させた後、あなたの乗組員の1人を海賊に与えます。海賊船に乗ると、彼らはなんとかリーダーを殺し、残りの海賊は降伏します。あなたは彼らの船の武器の1つを取り除きます。</text>
+		<autoReward level="LOW">weapon</autoReward>
+	</event>
+	<event>
+		<text>静かに武装した後、海賊に乗組員の1人を渡しますが、海賊は何かがおかしいと感じ、注意深く検査します。武器を見つけて、彼らはその場で彼を処刑します。苦しんで、彼らはあなたの船を攻撃します。</text>
+		<ship hostile="true"/>
+		<status type="clear" target="enemy" system="teleporter" amount="100"/><!-- 1.27.1 -->
+		<choice hidden="true">
+			<text id="continue" />
+			<event>
+				<removeCrew>
+					<clone>true</clone><!-- probably can make it sound better... -->
+					<text>犠牲者のコマンドーはすでにクローンベイから出ており、海賊と戦う準備をしています。</text>
+				</removeCrew>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<eventList name="PIRATE_SLAVER_MANTIS"><!-- 1.22.2 -->
+	<event>
+		<text>あなたは彼らにあなたのカマキリを送り、静かに彼らを武装させます。海賊船に乗船すると、彼らは本物の虐殺を手配します！マンティスがリーダーの頭を撃ち落とした後、残りの海賊は降伏します。あなたは海賊が輸送した投獄された奴隷を解放し、そのうちの1人があなたの乗組員に加わりたいと望んでいます。</text>
+		<crewMember amount="1"/>
+	</event>
+	<event>
+		<text>あなたは彼らにあなたのカマキリを送り、静かに彼らを武装させます。海賊船に乗船すると、彼らは本物の虐殺を手配します！マンティスがリーダーの頭を撃ち落とした後、残りの海賊は降伏します。あなたは彼らの船から価値のあるものすべてを奪うように命令します。</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>あなたは彼らにあなたのカマキリを送り、静かに彼らを武装させます。海賊船に乗船すると、彼らは本物の虐殺を手配します！マンティスがリーダーの頭を撃ち落とした後、残りの海賊は降伏します。あなたは彼らの船から武器の1つを取り除きます。</text>
+		<autoReward level="LOW">weapon</autoReward>
+	</event>
+	<event><!-- 1.23 -->
+		<text>あなたの武装したカマキリは数人の海賊を殺し、盗まれたシャトルで戻ってきます。怒って、残りの海賊があなたを攻撃し始めます。</text>
+		<ship hostile="true"/>
+		<status type="clear" target="enemy" system="teleporter" amount="100"/><!-- 1.27.1 -->
+	</event>
+</eventList>
+<eventList name="PIRATE_SLAVER_RUN">
+	<event>
+		<text>あなたはすぐにあなたのエンジンを始動させて、それのために休憩を取ります。しかし、それは無駄のようです。彼らは楽にあなたに追いつき、武器をパワーアップします。</text>
+		<ship hostile="true"/>
+		<status type="clear" target="enemy" system="teleporter" amount="100"/><!-- 1.27.1 -->
+	</event>
+	<event>
+		<text>あなたはあなたのエンジンに利用可能なすべての力をそらして逃げます。あなたは彼らを不意を突かれたが、彼らはあなたに利益をもたらしているようだ。幸いなことに、FTLドライブを充電するのに十分な時間範囲外にとどまることができます。</text>
+	</event>
+	<event>
+		<text>あなたはエンジンを始動させて逃げようとします。彼らの遅い船はペースを保つことができません。最終的にそれはあきらめてビーコンに戻り、より簡単なターゲットを待ちます。</text>
+	</event>
+</eventList>
+
+
+
+<textList name="FRIENDLY_SLAVER_BUY_SLAVE">
+	<text>奴隷を購入し、彼らを解放してあなたの乗組員に加わってください。</text>
+	<text>奴隷を1人購入し、解放して乗組員に加わってください。</text>
+	<text>この奴隷を購入し、彼らを解放してあなたの乗組員に加わってください。</text>
+</textList>
+<textList name="FRIENDLY_SLAVER_ATTACK">
+	<text>奴隷のスカムを排除せよ！</text>
+	<text>奴隷のスカムを破壊せよ！</text>
+	<text>奴隷のスカムを攻撃せよ！</text>
+</textList>
+<event name="FRIENDLY_SLAVER" unique="true"> <!-- add an event if you kill the crew? -->
+	<ship load="PIRATE_SLAVER" hostile="false"/>
+	<text>あなたはその船を有名な奴隷貿易業者として認めています。彼はあなたを歓迎し、あなたに「労働者」を安く提供します。</text>
+	<choice>
+		<text load="FRIENDLY_SLAVER_BUY_SLAVE" />
+		<event>
+			<item_modify>
+				<item type="scrap" min="-50" max="-20"/>
+			</item_modify>
+			<crewMember amount="1"/>
+		</event>
+	</choice>
+	<choice>
+		<text load="FRIENDLY_SLAVER_BUY_SLAVE" />
+		<event>
+			<item_modify>
+				<item type="scrap" min="-45" max="-15"/>
+			</item_modify>
+			<crewMember amount="1"/>
+		</event>
+	</choice>
+	<choice>
+		<text load="FRIENDLY_SLAVER_ATTACK" />
+		<event>
+			<ship hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>奴隷制を無視して、あなたの道を続けてください。</text>
+		<event/>
+	</choice>
+	<choice req="teleporter" lvl="2" hidden="true">
+		<text>(Improved Teleporter) テレポーターを使用して、船に乗り込み、一部の奴隷を解放しようとします。</text>
+		<event load="FRIENDLY_SLAVER_TELEPORTER"/>
+	</choice>
+</event>
+<eventList name="FRIENDLY_SLAVER_TELEPORTER">
+	<event>
+		<text>あなたは小さなチームを彼らのホールドに向けます。彼らは素早く働き、奴隷を解放し、あなたの船にテレポートします。捕虜の一人は戦いに適しているようで、あなたは戦いの準備のために彼らに武器を投げます。</text>
+		<crewMember amount="1"/>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>あなたは彼らの囚人を解放することを試みるために彼らのホールドに離れたチームをテレポートします。彼らは、乗組員によって捕らえられて隅に追いやられる前に、一人の人に近づくことができます。あなたはすぐにチームと囚人をあなたの船にビームバックします。</text>
+		<crewMember amount="1"/>
+		<ship hostile="true"/>
+	</event>
+	<event>
+		<text>あなたはチームを彼らの船に向けます。しかし、彼らの囚人の場所のあなたの見積もりはずれていました。彼らが彼らの方位を得る時までに、奴隷制は彼らを見つけます。あなたは彼らを船に戻し、戦いの準備をします。</text>
+		<ship hostile="true"/>
+	</event>
+</eventList>
+
+
+
+
+<!--
+		ENVIRONMENT!!!
+	Events with unique environments
+-->
+
+
+
+<event name="PIRATE_SUN" unique="true">
+	<img back="BG_DARK"/>
+	<text>このビーコンは超巨星クラスMの星に近すぎます！あなたがここから出るか、死ぬまで、船は徐々に過熱します。明らかに太陽の危険に気づいていない海賊が、交戦するために移動します。</text>
+	<ship load="PIRATE" hostile="true"/>
+	<environment type="sun"/>
+</event>
+
+
+<event name="PIRATE_ASTEROID">
+	<img planet="NONE" back="BG_DARK"/>
+	<environment type="asteroid"/>
+	<text>この小惑星地帯の中で海賊船が待ち構えていた。それはすぐに攻撃に移ります。</text>
+	<ship load="PIRATE" hostile="true"/>
+	<choice>
+		<text>向きを変えて戦う。</text>
+		<event/>
+	</choice> <!--
+	<choice req="pilot" lvl="2" hidden="true">
+		<text>(Improved Piloting) 海賊と交戦する前に、小惑星のフィールドから移動しようとします。</text>
+		<event load="PIRATE_ASTEROID_PILOTING"/>
+	</choice> -->
+</event>
+<!-- No longer used
+<eventList name="PIRATE_ASTEROID_PILOTING">
+	<event>
+		<text>あなたのパイロットはあなたの船をダメージなしに小惑星フィールドから出すことに成功しました。あなたは海賊船と交戦するために向きを変えます。</text>
+	</event>
+	<event>
+		<text>いくつかの派手な飛行にもかかわらず、あなたが小惑星のフィールドを離れる前に、海賊はあなたに追いつきます。戦うしかない。</text>
+		<environment type="asteroid"/>
+	</event>
+</eventList>  -->
+
+
+
+
+
+<!--
+		BOARDERS!!!
+	Events with boarder calls
+-->
+
+
+
+<event name="BOARDERS_PIRATE">
+	<text load="BOARDERS_PIRATE"/>
+	<boarders min="2" max="4" class="random"/>
+</event>
+<textList name="BOARDERS_PIRATE" unique="false">
+	<text>SSSSSSSSSSSSSSSSS</text>
+</textList>
+
+
+<event name="BOARDERS_SUN" unique="true">
+	<text>あなたは自分が星に非常に近いことに気付くために到着します。海賊船から「到着してよかった。船が壊れて必死になっていた…。連れて行っても構わない」というメッセージが届きます。私たちの船で敵対者が検出されました！</text>
+	<boarders min="2" max="4" class="human"/>
+	<environment type="sun"/>
+</event>
+
+<event name="BOARDERS_ASTEROID" unique="true">
+	<img back="BG_DARK" planet="NONE"/>
+	<text>あなたは危険な小惑星のフィールドに飛び込みます。さらに悪いことに、センサーは海賊の拠点が私たちの船にロックされ、テレポーターをアクティブにしていることを示しています。戦いの準備を！</text>
+	<boarders min="2" max="4" class="human"/>
+	<environment type="asteroid"/>
+</event>
+
+<event name="FLOATING_CARGO" unique="true">
+	<text>ビーコンからそれほど遠くない場所で、貨物が近くに散らばっていて、無傷で破壊された貨物船を検出します。</text>
+	<choice hidden="true">
+		<text>乗せてください。</text>
+		<event load="FLOATING_CARGO_LIST"/>
+	</choice>
+	<choice hidden="true">
+		<text>商品を放っておいてください、これは疑わしいようです。</text>
+		<event>
+			<text>あなたは貨物を放っておいて、ジャンプする準備をします。</text>
+		</event>
+	</choice>
+	<choice req="sensors" lvl="2" hidden="true">
+		<text>(Improved Sensors) ボックスで高度なスキャンを実行します。</text>
+		<event load="FLOATING_CARGO_SCAN_LIST"/>
+	</choice>
+	<choice req="ADV_SCANNERS" hidden="true">
+		<text>(Long-Ranged Scanners) ボックスで高度なスキャンを実行します。</text>
+		<event load="FLOATING_CARGO_SCAN_LIST"/>
+	</choice>
+</event>
+<eventList name="FLOATING_CARGO_LIST">
+	<event>
+		<text>彼らは軍事物資で満たされているようです！あなたはあなたが使うことができるすべてを取り、残りを捨てます。</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>貨物は主に消費財と衣料品であり、特に有用なものはありませんでした。あなたはなんとかスクラップを集めることができます。</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>貨物を船に運ぶと、海賊が木枠の1つから飛び出し、「うーん...私はそこに窮屈になっていた。ああ、そうだ！死ぬ準備をしなさい！」と言った。この戦いの直後-あなたの船は木枠が割れる音で満たされています...</text>
+		<boarders min="2" max="4" class="human"/>
+	</event>
+	<event>
+		<text>あなたは貨物を乗せます。あなたがそれらを開く機会を得る前に、海賊船が隠れて突撃しているように見えます。同時に、木枠が飛んで開きます。船に乗った侵入者！</text>
+		<boarders min="2" max="4" class="human"/>
+		<ship load="JELLY_PIRATE_WITHBOARDERS" hostile="true"/>
+	</event>
+</eventList>
+<eventList name="FLOATING_CARGO_SCAN_LIST">
+	<event>
+		<text>貨物にはあまり関心のないものが含まれているようです。あなたは破壊された船からいくつかのスクラップを回収します。</text>
+		<item_modify>
+			<item type="scrap" min="20" max="35"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>高度なセンサーは、保護バリアを突破して貨物をスキャンすることができます。軍需品でいっぱいのようです！あなたはあなたが使うことができるすべてを取ります。</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>高度なセンサーは、貨物内のかすかな生命の痕跡を検出します。生命体は武装しているように見えます。これは計画された海賊の待ち伏せのように見えます。</text>
+		<choice hidden="true">
+			<text>別の船が犠牲になるのを防ぐために木枠を破壊します。</text>
+			<event>
+				<text>あなたは木枠に発砲し、木枠を壊して開け、海賊を空の空間に散乱させます。海賊船がどこからともなく現れ、「あなたはその代金を払うでしょう！」というメッセージが表示されます。</text>
+				<ship load="PIRATE" hostile="true"/>
+			</event>
+		</choice>
+		<choice>
+			<text>それを放っておいて、ジャンプする準備をしてください。</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>

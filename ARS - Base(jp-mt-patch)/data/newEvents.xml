@@ -1,0 +1,2522 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2012 by Subset Games. All rights reserved -->
+<!-- go to ROCK_SLUG_COMMAND and ROCK_SLUG_GRATEFUL for event chain ideas -->
+<!-- also important, the above events show the "hidden", "req", and "blue="false"" tags in use -->
+
+<eventCounts sector="0">
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="0" max="2"/>
+	<event name="HOSTILE1" min="5" max="6"/>
+	<event name="HOSTILE2" min="3" max="4"/>
+	<event name="NEBULA" min="0" max="2"/>
+	<event name="QUESTS" min="1" max="2"/>
+</eventCounts>
+<!-- Leftover events will be filled in with NEUTRAL -->
+
+<eventCounts sector="1">
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NEUTRAL2" min="2" max="4"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="1" max="1"/>
+	<event name="HOSTILE1" min="2" max="4"/>
+	<event name="HOSTILE2" min="2" max="4"/>
+	<event name="HOSTILE_BOARDING" min="1" max="2"/>
+	<event name="QUESTS" min="0" max="1"/>
+</eventCounts>
+<!-- Leftover events will be filled in with NEUTRAL -->
+
+<!-- PLANNING FOR the 3rd Sector-->
+<eventCounts sector="2">
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NEUTRAL2" min="2" max="4"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="1" max="1"/>
+	<event name="HOSTILE2" min="4" max="6"/>
+	<event name="NEBULA" min="3" max="7"/>
+	<event name="HOSTILE_BOARDING" min="1" max="2"/>
+	<event name="QUESTS" min="1" max="3"/>
+	<event name="HOSTILE1" min="2" max="2"/>
+</eventCounts>
+
+<eventCounts sector="3">
+	<event name="STORE" min="1" max="2"/>
+	<event name="ITEMS" min="1" max="2"/>
+	<event name="NEUTRAL2" min="2" max="4"/>
+	<event name="NOTHING" min="1" max="2"/>
+	<event name="DISTRESS_BEACON" min="1" max="2"/>
+	<event name="HOSTILE2" min="4" max="6"/>
+	<event name="NEBULA" min="0" max="4"/>
+	<event name="HOSTILE_BOARDING" min="1" max="2"/>
+	<event name="QUESTS" min="1" max="3"/>
+	<event name="HOSTILE1" min="2" max="2"/>
+</eventCounts>
+
+
+
+
+<eventList name="NON_HOSTILE">
+	<event load="NEUTRAL"/>
+	<event load="ITEMS"/>
+</eventList>
+
+<eventList name="HOSTILE1">
+	<!-- <event load="MARADERS1_EVENT"/> -->
+	<event load="SQUAT_WARNING"/>
+	<event load="AUTO_WARNING"/>
+	<!--<event load="AUTO_BAIT"/>-->
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_HACKER"/>
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_CIVILIAN"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="REBEL"/>
+	<event load="MANTIS_HOSTILE"/>
+</eventList>
+<eventList name="HOSTILE111"><!-- 1.26 -->
+	<!-- <event load="MARADERS1_EVENT"/> -->
+	<event load="SQUAT_WARNING"/>
+	<event load="AUTO_WARNING"/>
+	<!--<event load="AUTO_BAIT"/>-->
+	<!-- <event load="AUTO_ASTEROID"/> --><!-- 1.26.6 -->
+	<!-- <event load="AUTO_HACKER"/> --> <!-- 1.27 -->
+	<event load="REBEL_AUTO"/>
+	<event load="AUTO_CIVILIAN"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="REBEL"/>
+	<event load="MANTIS_HOSTILE"/>
+	<!-- 1.27 -->
+	<event load="MARADERS1_EVENT"/>
+	<event load="PIRATE"/>
+	<event load="SQUAT_REFUEL_STATION"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+</eventList>
+
+
+<eventList name="HOSTILE_CIVILIAN">
+<!--
+	<event load="AUTO_ASTEROID"/>
+	<event load="AUTO_HACKER"/> -->
+	<event load="MARADERS1_EVENT"/>
+	<event load="PIRATE"/>
+	<event load="PIRATE_CHOICE"/>
+	<event load="REBEL"/>
+	<event load="SQUAT_WARNING"/>
+	<event load="SQUAT_REFUEL_STATION"/>
+	<event load="PIRATE_ASTEROID"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="PIRATE_SLAVER"/>
+	<event load="PIRATE_SUN"/>
+	<event load="AUTO_SUN"/>
+	<event load="PIRATE_NO_ESCAPE"/>
+</eventList>
+
+
+<eventList name="NEUTRAL">  <!-- This event list is hardcoded to fill out a sector if it ran out of all other calls for that sector -->
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="BROKEN_REBEL_DRONE"/>
+	<event load="MERCENARY"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_ITEM"/>
+	<event load="DONOR_PONY"/>
+	<event load="DONOR_PLAGUE"/>
+	<event load="CRYST_LOB"/>
+	<event load="LOTEREYA"/>
+	<event load="SKUP"/>
+	<event load="PROTOTYPE_COLLECTIONER"/><!-- 1.23 -->
+	<event load="PSEVDO_NOTHING"/><!-- 1.26 -->
+	<event load="EVENT_TRADE_FUMIDR"/><!-- 1.26 -->
+
+	<event load="REFUGEE_NO_DISTRESS"/> <!--DLC — down below-->
+	<event load="WRECKAGE_EVENT"/> <!--DLC — down below-->
+	<event load="FUELING_STATION"/> <!--DLC — down below-->
+	<event load="PIRATE_SALESMAN"/>  <!--DLC matt — down below-->
+	<event load="TERRAFORMING_SCAN"/>  <!--DLC matt — down below-->
+	<event load="REBEL_CHECKPOINT"/>  <!--DLC matt — down below-->
+	<event load="REBEL_HELPERS"/>  <!--DLC matt — down below-->
+	<event load="ROGUE_REBEL"/><!--DLC matt — down below-->
+</eventList>
+
+
+
+<eventList name="EXIT_LIST">
+	<event load="NEUTRAL_EXIT"/>
+	<event load="ITEMS"/>
+</eventList>
+
+<eventList name="NEUTRAL_EXIT">  <!-- This event list is hardcoded to fill out a sector if it ran out of all other calls for that sector ... TECHNICALLY it uses the EXIT_LIST above us now-->
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="AUTO_REFUEL_STATION"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_ITEM"/>
+	<event load="DONOR_PONY"/>
+	<event load="DONOR_PLAGUE"/>
+
+	<event load="TRADER_UPGRADES"/> <!--DLC — down below-->
+	<event load="REFUGEE_NO_DISTRESS"/> <!--DLC — down below-->
+	<event load="WRECKAGE_EVENT"/> <!--DLC — down below-->
+	<event load="FUELING_STATION"/> <!--DLC — down below-->
+	<event load="PIRATE_SALESMAN"/> <!--DLC — down below-->
+	<event load="REBEL_CHECKPOINT"/>  <!--DLC matt — down below-->
+	<event load="REBEL_HELPERS"/>  <!--DLC matt — down below-->
+	<event load="ROGUE_REBEL"/><!--DLC matt — down below-->
+</eventList>
+
+
+
+<eventList name="NEUTRAL_CIVILIAN">  <!-- This list is specifcially for the civilian sectors and is called before NEUTRAL is -->
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="PIRATE_STATION_CROPS"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="MERCENARY"/>
+	<event load="DISTRESS_BEACON"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_MAP"/>
+	<event load="AUTO_DEFENSE_ITEM"/>
+	<event load="REBEL_STOPFLEET"/>
+	<event load="RUHLAD"/>
+	<event load="EVENT_TR_FED_MISSILES"/><!-- 1.25.1 -->
+	<event load="EVENT_TR_FED_FUEL"/><!-- 1.25.1 -->
+	<event load="PSEVDO_NOTHING"/><!-- 1.26 -->
+	<event load="EVENT_TRADE_FUMIDR"/><!-- 1.26 -->
+</eventList>
+
+
+<eventList name="NEBULA">
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/>
+	<event load="NEBULA_AUTO"/>
+	<event load="NEBULA_AUTO_WARNING"/>
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
+	<event load="NEBULA_TRADER"/>
+	<event load="NEBULA_STORM_REBEL"/>
+	<event load="NEBULA_STORM_AUTO"/>
+	<event load="NEBULA_STORM_ITEMS"/>
+	<event load="NEBULA_LOST_SHIP"/>
+	<event load="NEBULA_BOARDING"/>
+	<event load="NEBULA_STORM_BOARDING"/>    <!-- DLC re-added — was removed previously -->
+	<event load="NEBULA_MANTIS_FIGHT"/>
+	<event load="NEBULA_WEAPONS_TRADER"/>
+</eventList>
+
+<eventList name="NEBULA_FIRST_SECTOR"> <!-- 1.26 -->
+	<event load="NEBULA_EMPTY"/>
+	<event load="NEBULA_REBEL"/>
+	<event load="NEBULA_AUTO"/>
+	<event load="NEBULA_AUTO_WARNING"/>
+	<event load="NEBULA_PIRATE_SMUGGLE"/>
+	<event load="NEBULA_AUTO_DEFENSE_ITEM"/>
+	<event load="NEBULA_TRADER"/>
+	<event load="NEBULA_STORM_REBEL"/>
+	<event load="NEBULA_STORM_AUTO"/>
+	<event load="NEBULA_STORM_ITEMS"/>
+	<event load="NEBULA_LOST_SHIP"/>
+	<!-- <event load="NEBULA_BOARDING"/> -->
+	<!-- <event load="NEBULA_STORM_BOARDING"/> -->
+	<event load="NEBULA_MANTIS_FIGHT"/>
+	<event load="NEBULA_WEAPONS_TRADER"/>
+</eventList>
+
+
+<eventList name="ITEMS">
+	<event load="FIND_DRONE"/>
+	<event load="FIND_WEAPON"/>
+	<event load="FREE_ITEMS"/>
+	<event load="FUEL_FOR_DRONE"/>
+	<event load="REFUEL_STATION"/>
+	<event load="NEW_REPAIR_STATION"/><!-- "REPAIR_STATION"+ hardcoding and new code creates odd-looking choices -->
+	<event load="SELL_DRONES_STATION"/>
+	<event load="SELL_MISSILES_STATION"/>
+	<event load="TRADER_CIV"/>
+
+
+	<event load="TAVERN_HIRE"/> <!-- DLC — old event — down below-->
+	<event load="TRADER_UPGRADES"/> <!--DLC — down below-->
+	<event load="TRADER_UPGRADES_EXCHANGE"/><!--DLC — down below-->
+	<event load="HELP_MINERS"/><!--DLC — down below-->
+</eventList>
+
+<eventList name="DISTRESS_BEACON">
+	<event load="FRIENDLY_BEACON"/>
+	<event load="FRIENDLY_BEACON_BAD"/> <!-- 1.25 -->
+	<event load="TRAP_BEACON"/>
+	<event load="STRANDED_BEACON"/>
+	<event load="PIRATE_CIVILIAN_BEACON"/>
+	<event load="CIVILIAN_ASTEROIDS_BEACON"/>
+	<event load="REBEL_VS_FEDERATION"/>
+	<event load="ESCORT_BEACON"/>
+	<event load="DISTRESS_TRAPPED_MINER"/>
+	<event load="DISTRESS_INFESTATION"/>
+	<event load="ALIENS"/>
+	<event load="DISTRESS_SATELLITE_DEFENSE"/>
+	<event load="DISTRESS_STATION_FIRE"/>
+	<event load="DISTRESS_STATION_DISEASE"/>
+
+	<event load="REFUGEE_GHOST"/><!--DLC CHRIS — down below-->
+	<event load="REFUGEE_DISTRESS"/> <!--DLC — down below-->
+</eventList>
+
+<eventList name="QUESTS">
+	<event load="QUEST_ESCORT"/>
+	<event load="MERCHANT_REQUEST"/>
+	<event load="FEDERATION_PLANET_SIGNAL"/>
+	<event load="MERCENARY_WORK_START"/>
+	<event load="QUEST_MANTIS_INVASION_START"/>
+	<event load="QUEST_CREWDEAD_START"/>
+</eventList>
+
+<eventList name="HOSTILE_BOARDING">
+	<event load="STATION_SICK"/>
+	<event load="BOARDERS_SUN"/>
+	<event load="BOARDERS_ASTEROID"/>
+	<event load="BOARDERS"/>
+	<event load="FLOATING_CARGO"/>
+	<event load="BOARDERS_HACKING"/>
+</eventList>
+
+
+<eventList name="MANTIS_HOSTILE">
+	<event load="MANTIS_FIGHT"/>
+	<event load="MANTIS_FIGHT"/>
+</eventList>
+
+
+
+
+
+
+
+<!--
+	  ***********
+       TEXT LISTS
+	  ***********
+-->
+
+<textList name="TIPS_LIST">
+	<text>ヒント：死—失うことは楽しみの一部であることを忘れないでください！ ... いいえ私は真剣です...</text>
+	<text>ヒント：粉砕セクター—各セクターはますます困難になっているため、船を改善するためにできるだけ長くセクターにとどまることが有益な場合があります。</text>
+	<text>ヒント：出口—セクターの出口を急ぐのは魅力的ですが、船をアップグレードする唯一の方法は探索です。各セクターから可能な限り多くのことを試してみてください。</text>
+	<text>ヒント：ターゲット—戦闘でターゲットを優先します。通常、武器と盾が最良の選択ですが、逃げる場合は、逃げるのを防ぐためにエンジンまたはパイロットを叩いてください。</text>
+	<text>ヒント：非表示の選択肢—イベントで青色の選択肢が表示された場合、それは現在の機器で利用できるようになっている特別なオプションですが、常に最善または最も安全な方法であるとは限りません。</text><!-- 1.25 -->
+	<text>ヒント：システムの損傷—火災または寄宿生によりシステムが完全に破損した場合、船体にも1つの損傷が発生します。</text>
+	<text>ヒント：パワーバー—アップグレードされたシステムは、それらを使用するのに十分な原子炉出力がない場合でも役立つ場合があります。彼らはまだ1つのダメージを吸収します。</text>
+	<text>ヒント：武器—武器がチャージされる前に攻撃をキューに入れることができます。充電すると発火します。</text>
+	<text>ヒント：クローキング—クローキングは、敵が船に向かって発砲したり、武器を充電したりするのを防ぎます。また、基本回避が60増加します。</text>
+	<text>ヒント：搭乗—寄宿生に問題がある場合は、メドベイ内で戦ってください。他のすべてが失敗した場合は、残りの酸素を船から排出してください！</text>
+	<text>ヒント：酸素—船の部屋の色が黄褐色から赤に変わった場合は、酸素が失われていることを意味します。赤いハザードストライプのある部屋では、乗組員が損傷し、火が燃え尽きます。</text>
+	<text>ヒント：シールドピアス—ミサイルはシールドを無視します。ミサイルを使用して、強力な船のシールドシステムにダメージを与えます。防衛ドローンはミサイルを撃墜できることを忘れないでください！</text>
+	<text>ヒント：選択肢—ほとんどの選択肢の結果には複数の結果があります。何が起こるかを確信することはできません。</text>
+	<text>ヒント：オートファイア—オートファイアは武器にターゲットを維持させます。ミサイルの数に注意してください！</text>
+	<text>ヒント：回避—敵のショットを回避することは重要ですが、機能するエンジンとパイロットが必要です。誰かにエンジンを持ってもらうと、回避も増えます。</text>
+	<text>ヒント：センサー—船が暗くなっても、慌てないでください。センサーサブシステムを修正するだけです。</text>
+	<text>ヒント：ドローン—敵のドローンと戦っている場合は、ドローンシステムをターゲットにして一時的に無効にします。</text>
+	<text>ヒント：ビーム—ビーム武器は、ヒットした部屋の数に基づいてダメージを与えます。各シールドバブルは、ビームの1つのダメージをブロックします。敵の盾が下がっているときにビームを使用するのが最善です。</text>
+	<text>ヒント：火災—火災が拡大している場合は、エアロックとドアを開いて、船の一部から酸素を排出することを検討してください。火はO2なしですぐに消火されます。</text>
+	<text>ヒント：健康—乗組員の健康に注意してください！ Medbayを使用して、パッチを適用したままにします。</text>
+	<text>ヒント：アップグレード—船をアップグレードすることを忘れないでください！多くの場合、シールドが最優先事項ですが、サブシステムの有用性を過小評価しないでください。</text>
+	<text>ヒント：燃料—ジャンプごとに1単位の燃料が消費されるため、予備に注意してください。立ち往生しないように店で燃料を購入してください。</text>
+	<text>ヒント：サウンド—オプションメニューに移動して、効果音と音楽をオンまたはオフにします。</text>
+	<text>ヒント：小惑星—小惑星のフィールドでの戦闘は危険ですが、有利に使用してください。敵の盾を取り除いて、残りは岩に任せてください。</text>
+	<text>ヒント：星雲—星雲を通過すると、艦隊の前進を一時的に遅くすることができますが、それらには独自の危険があります。</text>
+	<text>ヒント：太陽フレア—太陽フレアは、発火に加えて船体の損傷を引き起こします。この影響を軽減するために、シールドが上がっていることを確認してください。</text>
+	<text>ヒント：スコア—スコアは、倒した船の数、探索されたビーコンの数、およびスクラップコレクションの合計に基づいています。</text>
+	<text>ヒント：増強—あなたの船は3つの増強しか保持できません。これらは、システム、乗組員、または船全体に独自のメリットをもたらします。</text>
+	<text>ヒント：違反—違反のある部屋に酸素がない場合は、周囲のすべてのドアを開いて危険を減らしてみてください。</text>
+	<text>ヒント：反乱軍の艦隊—反乱軍の艦隊（マップ上の赤い円で表されます）は、ジャンプするたびに自分の位置に近づきます。特定のイベントは、動きを遅くしたり速くしたりする可能性があります。</text>
+	<text>ヒント：イオン兵器—イオン兵器は、しばらくの間、システムの電源を切り、ロックします。彼らが敵の盾に当たった場合、彼らは盾システムに直接スタンダメージを与えます。</text>
+	<text>ヒント：爆弾兵器—爆弾はどちらかの船に直接テレポートします。彼らはシールドと防衛ドローンをバイパスします。ただし、それらは乗組員とシステムにのみ影響します。船体に損傷を与えることはありません。</text>
+	<text>ヒント：ドアサブシステム—ドアをアップグレードすると、部屋間で火が広がる可能性が大幅に減少し、寄宿生の動きが大幅に遅くなります。</text>
+	<!-- new! -->
+	<text>ヒント：乗組員の対話—あなたがいるセクターが乗組員のネイティブである場合、空のビーコンでの乗組員との対話は、何か有益なものを生み出す可能性が高くなります。人間には、民間および反乱軍のセクターに家族がいる可能性があります。</text><!-- 1.25, added sentence -->
+	<text>ヒント：ストアの可用性—セクター内のストアビーコンの数は、その色によって異なります。緑のセクターには2〜3店舗、赤のセクターには1〜2店舗、紫のセクターには1〜3店舗があります。開始セクターには1つの店舗しかありません。</text><!-- now one store | 1.25 added sentence about no stores -->
+	<text>ヒント：貿易セクター—貿易セクターには5つの店舗があり、危険なビーコンの数は他のセクターよりも少なくなっています。違法な機器が売られているという噂もあります。</text>
+	<text>ヒント：プロトタイプ—プロトタイプは入手できる最も強力な武器ですが、多くの場合、他の武器のサポートが必要です。プロトタイプを見つけるには、ネイティブの人種固有のセクターにアクセスしてください。</text>
+	<text>ヒント：Crystal Homeworlds —ネイティブのCrystal Homewordは、セクターマップの6番目または7番目のセクターにある場合があります。希少な種類の武器と、ユニークなクリスタルの武器とドローンのみが含まれています。</text>
+	<text>ヒント：AI船—アバターの船は、イオン兵器と独自のプリズムレーザーからの保護を備えており、通常のダメージとイオンダメージを同時に引き起こします。</text>
+	<text>ヒント：特別な機能の拡張—セクター2から7の開始ビーコンで、船の拡張の特別な機能を使用できます。それらの使用は常に成功または安全であるとは限らないので、注意してください。</text>
+	<text>ヒント：古代のラニウス兵器—ラニウスは古いフォトニック兵器に関する情報を保存しています。それほど正確ではありませんが、船と乗組員を同様に荒廃させる可能性があります。</text>
+	<text>ヒント：注文セクター—注文セクターを通過すると、船が発砲する可能性があります。消火システムが設置されていることを確認してください。</text>
+	<text>ヒント：注文船—注文船には、焼夷兵器と消火システムが装備されています。一部の船のクラスでは、エンジンもアップグレードされています。</text>
+	<text>ヒント：不安定なセクター—不安定なセクターは、銀河系で最も危険なセクターの1つとして知られています。ここでは、海賊とハッカーのグループが避難所を見つけました。</text>
+	<!-- 1.21 -->
+	<text>ヒント：エリート自動測量士—エリート自動測量士は反乱軍のセクターでのみ見られます。歯に武装し、違反を封印する能力を持っているので、通常のオートスカウトよりもはるかに危険ですが、それらを倒すと大きな報酬が得られます。</text>
+	<text>ヒント：HAL船— HAL船には武器システムはありませんが、乗組員に損害を与えるイオン相砲が装備されています。彼らの戦闘ドローンは防御スクランブラーによって保護されており、アンチドローンは役に立たなくなります。</text>
+	<text>ヒント：HALオンボードコンピューター— HAL船が損傷を受けると、バックアップ電源がオンになり、原子炉の電力が増加する場合があります。ただし、場合によっては、オンボードコンピューターに致命的な損傷を与える可能性があります。</text>
+	<text>ヒント：HALドローン— HALドローンは、銀河系で最も速く、最も破壊的です。別の言及は、ドローンシステムが破壊された場合でも機能することができるHALシステム修理ドローンです。</text>
+	<!-- 1.23 -->
+	<text>ヒント：シングルチャージインストール—これらの実験兵器プラットフォームは星雲セクターでのみ見つけることができます。パワーは必要ありませんが、1回の戦闘で1回しか発砲できません。</text>
+	<text>ヒント：国境セクター—国境セクターにはすべての人種の代表者がいます。反乱軍との戦争の最前線が行われるのはここです。</text>
+	<text>ヒント：ドローンシステム—ストアからドローンシステムを購入すると、ギフトとして、戦闘、防御、サポートの3つのカテゴリのいずれかからランダムなドローンを受け取ります。</text>
+	<!-- 1.25 -->
+	<text>ヒント：ブラックウィング—ブラックウィング巡洋艦は、破壊不可能な武器システムを備えた高度な反乱軍巡洋艦であり、ASB支援射撃なしで船を追跡しますが、それらを倒すと大きな報酬が得られます。</text>
+	<text>ヒント：Slig Ships — Slig Shipsは、クローンシステムが直接の損傷から保護されているため、乗船することはほとんど不可能です。ただし、それでも火災に対して脆弱です。</text>
+	<text>ヒント：エンギ修理ステーション—修理ステーションは、常に修理ステーションが存在するエンギの故郷を除いて、すべてのエンギセクターの半分にあります。ステーションは修理サービスを提供し、小額の料金で物資を提供します。</text>
+	<text>ヒント：反乱軍の旗艦—難易度が高いほど、旗艦の砲兵は強力になります。難易度が上がるごとに、イオン砲の再充電が速くなり、ミサイルとレーザーが発砲して違反を引き起こす頻度が高くなり、ビームのスパンが長くなります。旗艦の船体強度と色合いも難易度に応じて変化します。</text>
+	<!-- 1.25.2 | 1.26 added Auto-Destroyers -->
+	<text>ヒント：自動出荷—一部の自動ドローンには追加の拡張機能がインストールされています。自動ハッカーは敵をスタンハックし、自動攻撃者は1つの自動リローダーを使用し、自動駆逐艦は2つの自動リローダーを使用します。</text>
+	<!-- 1.26 -->
+	<text>ヒント：インジェクター—インジェクターは、武器の特性を増幅できる増強物です。セクターの開始時にそれらを使用しますが、インジェクターは合計で1つの武器しかアップグレードできないことに注意してください。インジェクターは、インジェクターがすでに使用されている武器、またはインジェクターが増幅する特性を持たない武器には使用できません。</text>
+	<text>ヒント：ゾルトンビーム—ゾルトンビームは通常の1.5倍の長さであり、火をつけたり、違反を引き起こしたりする可能性が高くなります。機能するには、30発のミサイルをホールドに保持する必要がありますが、ビームが発射されるたびにミサイルが消費されるわけではありません。敵船のそのようなビームはミサイルなしで機能することができます。</text>
+	<text>ヒント：ゾルトンイオン兵器—ゾルトンイオン兵器は、重イオン兵器とバーストイオン兵器の特性を組み合わせたものです。</text>
+	<text>ヒント：UWB-武器— UWB-武器は、密輸業者が実際に内部にある武器を隠すために使用するユニバーサルシェルです。 UWB-Weaponのシェルは、内部の武器のクールダウンを10％短縮するように特別に設計されています。ただし、UWB-Weaponのシェルは爆弾兵器を保持できません。</text>
+	<text>ヒント：ゾルトン船—ゾルタンとは異なり、ゾルトンには保護用のスーパーシールドがありません。代わりに、それらのシールドシステムは直接的なダメージの影響を受けませんが、火や重イオン兵器はそれでもそれらにダメージを与える可能性があります。ゾルトンの船には、弱い原子炉と予備電源が装備されています。</text>
+	<text>ヒント：Zoltanオートドローン—有人のZoltan船と同様に、Zoltonオートドローンには、無敵のシールドシステム、弱いリアクター、およびバックアップバッテリーがあります。彼らはゾルトンセクターの星雲を守っています。</text>
+	<text>ヒント：砲兵—店舗で砲兵システムを購入できます。砲兵が保持する武器は、船のクラスによって異なります。店で購入した砲兵システムには、すでに2つの電力容量があります。</text>
+	<!-- 1.26.3 -->
+	<text>TIP: Universal Injector — its bonus depends on the type of weapon to which the injector is applied:
+	Lasers, ions: 50% faster projectile speed, +15 crew damage.
+	Missiles, mines, crystal weapons, Star Crusher: +1 base damage.
+	Bombs, effectors: +1 bomb/shot.
+	AoE weapons: 30% smaller radius — less projectile spreading.
+	Long beams: 25% faster beam firing and 25% longer beam span.
+	Point beams: +1 system damage.</text>
+	<!-- 1.26.4 -->
+	<text>ヒント：伝説の武器—伝説の武器は、ユニークなセクター（貿易、国境、スリグアボードセクターを除く）でのみ見られるため、非常にまれです。これらの武器は信じられないほど強力です。</text>
+</textList>
+
+<textList name="TIPS_LIST_PC">
+	<text load="TIPS_LIST"/>
+	<text>ヒント：一時停止—いつでもスペースキーを押してゲームを一時停止します。一時停止中も、乗組員に命令を出したり、システムの電源を操作したりできます。</text>
+	<text>TOP：販売—武器、ドローン、オーグメントは店頭で購入価格の半分で販売できます。上部の[販売]タブをクリックします。</text>
+	<text>ヒント：ホットキー—番号ホットキーを使用して武器を充電または武装できます。キーボードの武器スロットは1〜4、ドローンは5〜7です（オプションでカスタマイズ可能）。</text>
+	<text>ヒント：フォントサイズ— +/-（オプションでカスタマイズ可能）を押すと、イベントのテキストサイズを変更できます。</text>
+	<text>ヒント：武器の順序—武器またはドローンの回路図を目的の位置にドラッグして再配置します。システムが損傷した場合、左端のスロットが最後に電源を切ります。</text>
+</textList>
+
+<textList name="TIPS_LIST_IPAD">
+	<text load="TIPS_LIST"/>
+	<text>ヒント：一時停止—いつでも[一時停止]ボタンをタップして、ゲームを一時停止します。一時停止中も、乗組員に命令を出したり、システムの電源を操作したりできます。</text>
+	<text>TOP：販売—武器、ドローン、オーグメントは店頭で購入価格の半分で販売できます。上部の[販売]タブをタップします。</text>
+	<text>ヒント：武器の順序—武器またはドローンの回路図を目的の位置にドラッグして再配置します。システムが損傷した場合、一番下のスロットが最後に電源を切ります。</text>
+</textList>
+
+<event name="TIPS_LIST_TEST">
+	<text load="TIPS_LIST_PC" />
+</event>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+	OUTDATED or TESTING events
+
+-->
+<event name="NEW" unique="true">
+	<ship load="NEW_TESTS" hostile="true"/>
+</event>
+<ship name="NEW_TESTS" auto_blueprint="REBEL_FAT">
+	<destroyed>
+		<text>あなたは船の残骸からスクラップを回収することができます。</text>
+	</destroyed>
+	<deadCrew load="DEAD_CREW_DEFAULT"/>
+</ship>
+
+<event name="DEATH_TEST">
+	<text>死亡テスト</text>
+	<crewMember amount="-1"/>
+</event>
+
+<event name="CREW_TEST">
+	<text>クルーテスト</text>
+	<crewMember amount="2"/>
+</event>
+
+
+
+
+<!--
+		DEMO
+		Old events for the Original Demo
+	-->
+<!--*******Cloaking-->
+<event name="STEALTH_1">
+	<text>これは、高度なクローキング技術を利用したプロトタイプ船です。トレードオフは、盾や武器の欠如です。クローキングデバイスの機能を利用して、敵のショットを逃します。</text>
+</event>
+<!--**********Armor/speed-->
+<event name="STEALTH_2">
+	<text>この船は、シールド技術がすべての船で標準になる前に存在していた設計に基づいていました。その装甲船体と機動性の向上が主な資産です。</text>
+</event>
+<!--*********Shielded-->
+<event name="STEALTH_3">
+	<text>この船は、連邦の新しい高度なシールド再充電技術をテストするように設計されています。残念ながら、あなたはそれを一人でテストすることを余儀なくされています。</text>
+</event>
+<!--*********Boarding-->
+<event name="STEALTH_4">
+	<text>この船は、敵の背後にいる軍隊輸送用に設計されました。そのため、デフォルトでは武器は装備されていませんが、最高の最高のものが搭乗しています。</text>
+</event>
+<!--**********Drones - space-->
+<event name="STEALTH_5">
+	<text>この船は、ドローン管理用の高度なAIを搭載した改造された採掘船です。戦闘準備は整っていませんが、ドローンがその欠点を補うことを願っています。</text>
+</event>
+<!--**********Drones - crew-->
+<event name="STEALTH_6">
+	<text>新しい船には、最先端のアンドロイドとビーム兵器が装備されています。アンドロイドはかなり恐ろしいので、完全な乗組員を見つけるのは困難でした。</text>
+</event>
+<!--*********Missile fun time-->
+<event name="STEALTH_7">
+	<text>この船を設計したエンジニアは明らかにミサイルを愛していました。この船のミサイル弾幕に耐えられる敵はほとんどいませんが、弾薬の備蓄に注意してください。</text>
+</event>
+<event name="DEMO_END">
+	<text>おめでとうございます、これでトレーニングシミュレーションは終了です。最後のレッスンとして、より強力な敵によって破壊されるのがどのようなものかを体験します。この海賊は、プロトタイプのクローキングデバイスを含む、最先端の武器とシステムを装備しています。それは銀河系で最高のエンジニアであることが知られているエイリアンによって配置されています。また、エンジンもシャットダウンしたので、逃げようとしても無駄です。</text>
+	<status type="limit" target="player" system="engines" amount="0"/>
+	<ship load="IMPOSSIBLE_PIRATE" hostile="true"/>
+</event>
+<ship name="IMPOSSIBLE_PIRATE" blueprint="IMPOSSIBLE_PIRATE">
+	<destroyed>
+		<text>不可能！彼は無敵のはずだった！シミュレーションの作成者でさえ、それを行っていません。続けて、あなたはそれを獲得しました。</text>
+		<item_modify>
+			<item type="scrap" min="100" max="100"/>
+		</item_modify>
+		<status type="limit" target="player" system="engines" amount="100"/>
+	</destroyed>
+	<deadCrew>
+		<text>見られるべきではない</text>
+	</deadCrew>
+</ship>
+
+
+
+<!--
+		SYSTEM
+	Some test/system events
+	-->
+<event name="ASTEROID_TEST">
+	<img back="BG_DARK" planet="NONE"/>
+	<text>小惑星帯に出てきました！ここから出る前に、FTLが充電されるのを待つ必要があります。船が持ちこたえることを願いましょう。</text>
+	<environment type="asteroid"/>
+</event>
+
+<event name="CASH_IN_DRONE">
+	<text>あなたの船は現在ドローンシステムを装備していません。ドローンの回路図をスクラップに減らします。</text>
+	<choice>
+		<text id="continue" />
+		<event/>
+	</choice>
+</event>
+
+<event name="UNLOCK_STEALTH">
+	<text>あなたは隠された連邦研究所に出くわしました！彼らはいくつかのユニークな船のデザインを実験してきました。あなたは将来の使用のために彼らの青写真をダウンロードします。</text>
+</event>
+
+
+
+
+
+
+
+<!--
+
+***************************************
+		DLC!!!
+	Events added with the DLC
+***************************************
+
+	-->
+
+
+	<!--
+	<<<===== ITEMS =====>>>
+	-->
+
+ <event name="TAVERN_HIRE" unique="true"><!-- 1.21 -->
+	<text load="TAVERN_HIRE_TEXT"/>
+	<choice>
+		<text>乗組員を雇う。</text>
+		<event>
+			<crewMember amount="1"/>
+			<item_modify>
+				<item type="scrap" min="-45" max="-25"/><!-- 1.25, min was -55 -->
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>乗組員を雇う。</text>
+		<event>
+			<crewMember amount="1"/>
+			<item_modify>
+				<item type="scrap" min="-50" max="-30"/><!-- 1.25, min was -60 -->
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>乗組員を雇う。</text>
+		<event>
+			<crewMember amount="1"/>
+			<item_modify>
+				<item type="scrap" min="-60" max="-20"/><!-- 1.25, min was -70 -->
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>誰も雇わないでください。</text>
+		<event/>
+	</choice>
+</event>
+<textList name="TAVERN_HIRE_TEXT">
+	<text>あなたは旅行者のために設置された宇宙ステーションを見つけます。そのリストを閲覧すると、雇う傭兵でいっぱいの居酒屋が見つかります。あなたは潜在的な乗組員を探します。</text>
+	<text>休憩所の周りにはたくさんの船が停泊しています。 「船を埋めるための遺体を探しているなら、あなたは正しい場所に来ました！」というメッセージをすぐに受け取ります。</text>
+	<text>このビーコンは、地元の交通の待ち合わせ場所として機能しているようです。ここであなたの船で戦うことをいとわない乗組員を見つけることができるようです...価格で。</text>
+</textList>
+
+
+<event name="TRADER_UPGRADES_EXCHANGE" unique="true">
+	<text load="TRADER_UPGRADES_EXCHANGE_TEXT"/>
+	<choice req="reactor" max_lvl="24" blue="false"> <!-- 1.27 -->
+		<text>貿易に同意します。</text>
+		<event load="TRADER_UPGRADES_EXCHANGE_LIST"/>
+	</choice>
+	<choice req="reactor" max_lvl="24" blue="false"> <!-- 1.27 -->
+		<text>敬意を表して辞退します。</text>
+		<event>
+			<text>あなたはあなたが持っている物資が必要だと決めます。</text>
+		</event>
+	</choice>
+	<choice req="reactor" lvl="25" blue="false"> <!-- 1.27 -->
+		<text>これは必要ありません、私たちの原子炉はすでに限界に達しています。</text>
+		<event/>
+	</choice>
+</event>
+
+<textList name="TRADER_UPGRADES_EXCHANGE_TEXT">
+	<text>「あなたは軍用船のように見えます。私たちは生きたまま家に帰ろうとしています。私は貿易エンジニアであり、追加の物資があれば原子炉を改善することができます。」</text>
+	<text>小さな船団からメッセージが届きます。彼らはいくつかの軍事物資を探しており、代わりにあなたの原子炉を改善しようと申し出ています。</text>
+</textList>
+
+<eventList name="TRADER_UPGRADES_EXCHANGE_LIST">
+	<event>
+		<text>あなたは交換を行い、彼らのチームがあなたの原子炉を改善しようと参加します。</text>
+		<item_modify>
+			<item type="missiles" min="-5" max="-3"/>
+			<item type="drones" min="-2" max="-0"/>
+		</item_modify>
+		<upgrade amount="1" system="reactor"/>
+	</event>
+	<event>
+		<text>あなたは交換を行い、彼らのチームがあなたの原子炉を改善しようと参加します。</text>
+		<item_modify>
+			<item type="missiles" min="-2" max="0"/>
+			<item type="drones" min="-3" max="-2"/>
+		</item_modify>
+		<upgrade amount="1" system="reactor"/>
+	</event>
+	<event>
+		<text>あなたは交換を行い、彼らのチームがあなたの原子炉を改善しようと参加します。</text>
+		<item_modify>
+			<item type="missiles" min="-2" max="0"/>
+			<item type="drones" min="-2" max="0"/>
+			<item type="fuel" min="-3" max="-2"/>
+		</item_modify>
+		<upgrade amount="1" system="reactor"/>
+	</event>
+</eventList>
+
+<event name="TRADER_UPGRADES" unique="true">
+	<text load="TRADER_UPGRADES_TEXT"/>
+	<choice hidden="true">
+		<text>彼らの専門についてお問い合わせください。</text>
+		<event load="TRADER_UPGRADES_LIST"/>
+	</choice>
+	<choice>
+		<text>却下。</text>
+		<event>
+			<text>あなたは彼らの申し出に感謝しますが、先に進む準備をします。</text>
+		</event>
+	</choice>
+</event>
+<textList name="TRADER_UPGRADES_TEXT">
+	<text>あなたは到着するとすぐにモバイルドッキングプラットフォームに歓迎されます。「ジョーおじさんのFix-itショップへようこそ！チューンナップが必要ですか？私たちはあなたをカバーしました！」</text>
+	<text>この地域には多くの個人所有の造船プラットフォームがあります。すぐに作業できるようにスロットが開いているものを見つけます。</text>
+	<text>近くの宇宙ステーションから自動メッセージを受け取ります。軍艦の緊急作業を行うことができる地元の船長がいるようです。</text>
+	<text>小さな難民の船団から、「あられ。私たちはあなたの任務を手伝いたいのですが、提供するものはあまりありません。余分な金属があれば、おそらくあなたの船で働くことができますか？」というメッセージを受け取ります。</text>
+</textList>
+<eventList name="TRADER_UPGRADES_LIST">
+	<event>
+		<text>彼らはいくつかのスクラップと引き換えにあなたの酸素システムをアップグレードすることを提案します。</text>
+		<choice req="oxygen" lvl="0" max_lvl="0" blue="false"><!-- 1.25.1 | 1.25.2 added lvl | 1.26.2 removed max_group -->
+			<text>あなたがこのシステムを持っていないのを見て、彼らはそれを割引価格でインストールすることを提案します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text>
+				<item_modify>
+					<item type="scrap" min="-15" max="-15"/>
+				</item_modify>
+				<system name="oxygen"/>
+			</event>
+		</choice>
+		<choice req="oxygen" lvl="1" max_lvl="1" blue="false">
+			<text>交換に同意します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text>
+				<item_modify>
+					<item type="scrap" min="-15" max="-5"/><!-- 1.22 -->
+				</item_modify>
+				<upgrade amount="1" system="oxygen"/>
+			</event>
+		</choice>
+		<choice req="oxygen" lvl="2" max_lvl="2" blue="false">
+			<text>交換に同意します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text>
+				<item_modify>
+					<item type="scrap" min="-20" max="-10"/><!-- 1.22 -->
+				</item_modify>
+				<upgrade amount="1" system="oxygen"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>却下。</text>
+			<event>
+				<text>あなたは彼らに感謝しますが、先に進む準備をします。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>彼らはいくつかのスクラップと引き換えにあなたのパイロットサブシステムをアップグレードすることを提案します。</text>
+		<choice req="pilot" lvl="1" max_lvl="1" blue="false">
+			<text>交換に同意します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text>
+				<item_modify>
+					<item type="scrap" min="-20" max="-10"/>
+				</item_modify>
+				<upgrade amount="1" system="pilot"/>
+			</event>
+		</choice>
+		<choice req="pilot" lvl="2" max_lvl="2" blue="false">
+			<text>交換に同意します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text>
+				<item_modify>
+					<item type="scrap" min="-25" max="-15"/>
+				</item_modify>
+				<upgrade amount="1" system="pilot"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>却下。</text>
+			<event>
+				<text>あなたは彼らに感謝しますが、先に進む準備をします。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>彼らはいくつかのスクラップと引き換えにあなたのドアサブシステムをアップグレードすることを提案します。</text>
+		<choice req="doors" lvl="0" max_lvl="0" blue="false"><!-- 1.25.1 | 1.25.2 added lvl | 1.26.2 removed max_group -->
+			<text>あなたがこのシステムを持っていないのを見て、彼らはそれを割引価格でインストールすることを提案します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text>
+				<item_modify>
+					<item type="scrap" min="-35" max="-35"/>
+				</item_modify>
+				<system name="doors"/>
+			</event>
+		</choice>
+		<choice req="doors" lvl="1" max_lvl="1"  blue="false">
+			<text>交換に同意します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text>
+				<item_modify>
+					<item type="scrap" min="-20" max="-10"/>
+				</item_modify>
+				<upgrade amount="1" system="doors"/>
+			</event>
+		</choice>
+		<choice req="doors" lvl="2" max_lvl="2"  blue="false">
+			<text>交換に同意します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text>
+				<item_modify>
+					<item type="scrap" min="-25" max="-15"/>
+				</item_modify>
+				<upgrade amount="1" system="doors"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>却下。</text>
+			<event>
+				<text>あなたは彼らに感謝しますが、先に進む準備をします。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>彼らはいくつかのスクラップと引き換えにあなたのセンサーサブシステムをアップグレードすることを提案します。</text>
+		<choice req="sensors" lvl="0" max_lvl="0" blue="false"><!-- 1.25.1 | 1.25.2 added lvl | 1.26.2 removed max_group -->
+			<text>あなたがこのシステムを持っていないのを見て、彼らはそれを割引価格でインストールすることを提案します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text>
+				<item_modify>
+					<item type="scrap" min="-25" max="-25"/>
+				</item_modify>
+				<system name="sensors"/>
+			</event>
+		</choice>
+		<choice req="sensors" lvl="1" max_lvl="1"  blue="false">
+			<text>交換に同意します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text>
+				<item_modify>
+					<item type="scrap" min="-20" max="-10"/>
+				</item_modify>
+				<upgrade amount="1" system="sensors"/>
+			</event>
+		</choice>
+		<choice req="sensors" lvl="2" max_lvl="2"  blue="false">
+			<text>交換に同意します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text>
+				<item_modify>
+					<item type="scrap" min="-25" max="-15"/>
+				</item_modify>
+				<upgrade amount="1" system="sensors"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>却下。</text>
+			<event>
+				<text>あなたは彼らに感謝しますが、先に進む準備をします。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>彼らはいくつかのスクラップと引き換えにあなたの原子炉をアップグレードすることを提案します。</text>
+		<choice req="reactor" max_lvl="24" blue="false">
+			<text>交換に同意します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text>
+				<item_modify>
+					<item type="scrap" min="-20" max="-5"/>
+				</item_modify>
+				<upgrade amount="1" system="reactor"/>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>却下。</text>
+			<event>
+				<text>あなたは彼らに感謝しますが、先に進む準備をします。</text>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+
+<event name="HELP_MINERS" unique="true">
+	<text>あなたは小惑星の採掘コロニーに出くわします。彼らはすぐにあなたにメッセージを送り、「ご挨拶。反乱軍がこのシステムを封鎖して以来、私たちの採掘用爆薬の供給は尽きました。追加の爆薬はありますか？」</text>
+	<choice hidden="true" req="WEAPONS_MISSILES_EVENTS">
+		<text>(Missile Weapon) ミサイルを発射して問題を解決することを申し出る。</text>
+		<event load="HELP_MINERS_RAK"/>
+	</choice>
+	<choice hidden="true" req="WEAPONS_BREACH_BOMBS"><!-- 1.22 -->
+		<text>(Breach Bomb) ブリーチボムでテレポートして問題を解決することを提案します。</text>
+		<event load="HELP_MINERS_BREACH"/>
+	</choice>
+	<choice hidden="true">
+		<text>要求された5発のミサイルを彼らに渡してください。</text>
+		<event load="HELP_MINERS_1"/>
+	</choice>
+	<choice hidden="true">
+		<text>彼らに15発のミサイルを与えます。</text>
+		<event load="HELP_MINERS_2"/>
+	</choice>
+	<choice hidden="true">
+		<text>却下。</text>
+		<event>
+			<text>「わかりました。頑張ってください。私たちは自分たちが持っているものでやり遂げようとします。」</text>
+		</event>
+	</choice>
+</event>
+<eventList name="HELP_MINERS_RAK">
+	<event>
+		<text>「あなたの熱意に感謝しますが、職場で爆発物を使用するための特定のプロトコルがあります。軍用グレードの武器を鉱山に発射することは、私が「組合に優しい」と呼ぶものではありません。」</text>
+		<choice hidden="true">
+			<text>要求された5発のミサイルを彼らに渡してください。</text>
+			<event load="HELP_MINERS_1"/>
+		</choice>
+		<choice hidden="true">
+			<text>彼らに15発のミサイルを与えます。</text>
+			<event load="HELP_MINERS_2"/>
+		</choice>
+		<choice hidden="true">
+			<text>却下。</text>
+			<event>
+				<text>「わかりました。頑張ってください。私たちは自分たちが持っているものでやり遂げようとします。」</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>躊躇して、彼らは同意するので、あなたは鉱山でミサイル一斉射撃を発射するように命じます。煙が消えると、鉱山が崩壊し、崩れかけた岩でいっぱいになるのを恐れて見守っています！あなたは鶏のように作り、鉱山労働者があなたがこれを引き起こしたことを思い出す前に逃げます。</text>
+		<item_modify>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>躊躇して、彼らは同意するので、あなたは鉱山でミサイル一斉射撃を発射するように命じます。煙が消えると、鉱山が崩壊し、崩れかけた岩でいっぱいになるのを恐れて見守っています！あなたは鶏のように作り、鉱山労働者があなたがこれを引き起こしたことを思い出す前に逃げます。</text>
+		<item_modify>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>躊躇して、彼らは同意するので、あなたは鉱山でミサイル一斉射撃を発射するように命じます。幸いなことに、あなたの計画は意図したとおりに機能し、あなたの「友好的な支援」の後、鉱山はかなり拡大しました。あなたの助けに感謝して、感謝している鉱夫はあなたに武器を送り、彼らのエンジニアはあなたの原子炉をアップグレードしようとします。</text>
+		<upgrade amount="1" system="reactor"/>
+		<weapon name="RANDOM"/>
+		<item_modify>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+</eventList>
+<eventList name="HELP_MINERS_BREACH"><!-- 1.22 -->
+	<event>
+		<text>「あなたの熱意に感謝しますが、職場で爆発物を使用するための特定のプロトコルがあります。軍用グレードの武器を鉱山に発射することは、私が「組合に優しい」と呼ぶものではありません。」</text>
+		<choice hidden="true">
+			<text>要求された5発のミサイルを彼らに渡してください。</text>
+			<event load="HELP_MINERS_1"/>
+		</choice>
+		<choice hidden="true">
+			<text>彼らに15発のミサイルを与えます。</text>
+			<event load="HELP_MINERS_2"/>
+		</choice>
+		<choice hidden="true">
+			<text>却下。</text>
+			<event>
+				<text>「わかりました。頑張ってください。私たちは自分たちが持っているものでやり遂げようとします。」</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>躊躇して、彼らは同意するので、あなたは突破爆弾を鉱山にテレポートするように命じます。煙が消えると、鉱山が崩壊し、崩れかけた岩でいっぱいになるのを恐れて見守っています！あなたは鶏のように作り、鉱山労働者があなたがこれを引き起こしたことを思い出す前に逃げます。</text>
+		<item_modify>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>躊躇して、彼らは同意するので、あなたは突破爆弾を鉱山にテレポートするように命じます。幸いなことに、あなたの計画は意図したとおりに機能し、あなたの「友好的な支援」の後、鉱山はかなり拡大しました。あなたの助けに感謝して、感謝している鉱夫はあなたに増補を送り、彼らのエンジニアはあなたの原子炉をアップグレードしようとします。</text>
+		<upgrade amount="1" system="reactor"/>
+		<augment name="RANDOM"/>
+		<item_modify>
+			<item type="missiles" min="-1" max="-1"/>
+		</item_modify>
+	</event>
+</eventList>
+<eventList name="HELP_MINERS_1">
+	<event>
+		<text>彼らはあなたの寛大さに感謝し、代わりにいくつかのスクラップを提供します。</text>
+		<item_modify>
+			<item type="scrap" min="15" max="25"/>
+			<item type="missiles" min="-5" max="-5"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>彼らはあなたに感謝し、彼らのエンジニアにあなたの船の船体のいくつかを修理してもらうことを申し出ます。</text>
+		<damage amount="-10"/>
+		<item_modify>
+			<item type="missiles" min="-5" max="-5"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>彼らはあなたに感謝し、彼らのエンジニアにあなたの原子炉をアップグレードさせようと申し出ます。</text>
+		<upgrade amount="1" system="reactor"/>
+		<item_modify>
+			<item type="missiles" min="-5" max="-5"/>
+		</item_modify>
+	</event>
+</eventList>
+<eventList name="HELP_MINERS_2">
+	<event>
+		<text>「うわー。これは私たちの努力をかなり助けるでしょう。私があなたに提供するために何を探すことができるか見てみましょう。」彼らはいくつかのスクラップを配達し、彼らのチームにあなたの船体の一部を修理させようとします。</text>
+		<damage amount="-10"/>
+		<item_modify>
+			<item type="scrap" min="30" max="40"/>
+			<item type="missiles" min="-15" max="-15"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>「うわー。これは私たちの努力をかなり助けるでしょう。」彼らは彼らのエンジニアにあなたの船を修理してあなたの原子炉をアップグレードさせることを申し出ます。</text>
+		<damage amount="-15"/>
+		<upgrade amount="1" system="reactor"/>
+		<item_modify>
+			<item type="missiles" min="-15" max="-15"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>「うわー。これは私たちの努力を大いに助けます。あなたのトラブルに何を提供できますか...」しばらくすると、彼らはあなたの船に取り付けるための船の増強物を届けます。</text>
+		<damage amount="-5"/>
+		<augment name="RANDOM"/>
+		<item_modify>
+			<item type="missiles" min="-15" max="-15"/>
+		</item_modify>
+	</event>
+</eventList>
+
+
+
+	<!--
+	<<<===== DISTRESS =====>>>
+	-->
+
+<event name="REFUGEE_GHOST">
+	<text>あなたは宇宙を漂う難民船に遭遇しました。それは反乱軍の前進から逃げていて、燃料を使い果たしたかのように見えます。その遭難ビーコンはアクティブですが、誰かが搭乗しているかどうかはわかりません。また、通信がダウンしているようです。</text>
+	<choice hidden="true">
+		<text>搭乗して調査する準備をします。</text>
+		<event load="REFUGEE_GHOST_LIST"/>
+	</choice>
+	<choice>
+		<text>船は無視してください。</text>
+		<event/>
+	</choice>
+	<distressBeacon/>
+</event>
+<eventList name="REFUGEE_GHOST_LIST">
+	<event>
+		<text>船は完全に放棄されています。乗組員や貨物の痕跡はありません。不思議なことに、あなたは幽霊船を離れて続行します。</text>
+	</event>
+	<event>
+		<text>船は完全に放棄されています。燃料がなくなったようです...そして乗組員は間もなく食料を使い果たしました。残された恐ろしい光景にもかかわらず、あなたは貨物倉からいくつかの物資を取り除くことができます。</text>
+		<autoReward level="MED">missiles</autoReward>
+	</event>
+	<event>
+		<text>船の燃料がなくなったようです...そして乗組員は間もなく食料を使い果たしました。残された恐ろしい光景にもかかわらず、あなたは一人の生き残った乗組員が冷凍庫に閉じ込められており、ほぼ完全に保存されており、飢えた乗組員によって見落とされているようです。</text>
+		<crewMember amount="1"/>
+	</event>
+	<event>
+		<text>あなたが船を調査するとき、あなたは今や共食いの乗組員に襲われます！食べ物の不足に腹を立てて、彼らはお互いに食事をするようになりました。あなたが船から離れる途中で戦うと、あなたの乗組員の1人が狂った攻撃者のところに落ち、あなたは彼らを置き去りにするか、船全体を失うことを余儀なくされます。</text>
+		<choice req="CREW_ALL" hidden="true" blue="false"><!-- 1.24 -->
+			<text id="continue" />
+			<event>
+				<removeCrew>
+					<clone>true</clone>
+					<text>あなたが戻ったとき、あなたの捨てられた乗組員は彼の前の化身の運命にこだわらないようにしようとして、船で待っています。</text>
+				</removeCrew>
+			</event>
+		</choice>
+		<choice req="CREW_ALL" lvl="0" max_lvl="0" hidden="true" blue="false">
+			<text id="continue" />
+			<event>
+				<text>あなたの船はAIの管理下にあるだけなので、乗組員の死を恐れる必要はありません。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>あなたが船に近づくと、他の船のトランスポーターが突然パワーアップし、あなたのデッキは今や共食いの難民で群がります！食べ物の不足に腹を立てて、彼らはお互いに食事をするようになりました—そして今あなたの乗組員は次です！</text>
+		<boarders min="2" max="4" class="human"/>
+	</event>
+</eventList>
+<!-- -->
+
+
+
+
+<!-- This main list is then copied into the different sector types - Have everything that uses it be sector specific so we don't get duplicates in one sector -->
+<event name="REFUGEE_DISTRESS">
+	<text>あなたは宇宙を漂う難民船に遭遇しました。それは反乱軍の前進から逃げていて、燃料を使い果たしたかのように見えます。その遭難ビーコンはアクティブですが、誰かが搭乗しているかどうかはわかりません。</text>
+	<choice>
+		<text>それらを歓迎します。</text>
+		<event load="REFUGEE_HAIL_LIST"/>
+	</choice>
+	<choice>
+		<text>難民を無視します。</text>
+		<event/>
+	</choice>
+	<distressBeacon/>
+</event>
+<event name="REFUGEE_NO_DISTRESS">  <!-- this is actually a NEUTRAL, I'm just leaving it here cause it's linked-->
+	<text>あなたのセンサーは、システムを漂流している難民船を拾い上げました。間違いなく、反乱軍の前進から逃げてきた多くの人の1人です。あなたを検出したようには見えません...そうでなければ、通知を回避しようとしています。</text>
+	<choice>
+		<text>それらを歓迎します。</text>
+		<event load="REFUGEE_HAIL_LIST"/>
+	</choice>
+	<choice>
+		<text>難民を無視します。</text>
+		<event/>
+	</choice>
+</event>
+<event name="REFUGEE_TRADER">
+	<text>船はあなたから聞いて安心しました！彼らは物資が不足しています。彼らは貿易を示唆している。</text>
+	<choice>
+		<text>彼らと取引してください。</text>
+		<event load="TRADER_LIST"/>
+	</choice>
+	<choice>
+		<text>お断りします。</text>
+		<event/>
+	</choice>
+</event>
+<eventList name="REFUGEE_HAIL_LIST">
+	<event load="REFUGEE_TRADER"/>
+	<event load="REFUGEE_TRADER"/>
+	<event load="REFUGEE_TRADER"/>
+	<event load="REFUGEE_TRADER"/>
+	<event>
+		<text>貨物船を呼ぶと、貨物船は前進し、武器が船体から飛び出します。海賊の待ち伏せです！</text>
+		<ship load="PIRATE" hostile="true"/>
+	</event>
+	<event>
+		<text>あなたが難民船を呼ぶと、ゾルタン船が突然システムに飛び込みます...それは難民が犯罪者であると主張し、逃亡者を護衛したと非難します！あなたが応答する前に、それは通信を切断し、その武器をパワーアップします！</text>
+		<ship load="ZOLTAN_REFUGEE" hostile="true"/>
+	</event>
+	<event>
+		<text>難民船を呼ぶと、海賊船がシステムに飛び込みます...それは難民船を餌として使っていました！</text>
+		<ship load="PIRATE_REFUGEE" hostile="true"/>
+	</event>
+	<event>
+		<text>あなたが難民船を呼ぶと、ナメクジ船がシステムに飛び込みます...それはスポーツのために難民船を探していました、そして今彼らは代わりにあなたを見つけました！</text>
+		<ship load="SLUG_REFUGEE" hostile="true"/>
+	</event>
+</eventList>
+<ship name="ZOLTAN_REFUGEE" auto_blueprint="SHIPS_ZOLTAN">
+	<destroyed>
+		<text>ゾルタンの船はバラバラになり、あなたはできることを救い出します。</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>難民船に連絡してください。</text>
+			<event>
+				<text>難民船はあなたの援助に感謝します。善意のしぐさとして（そしてあなたが敵の船をどれほど効果的に派遣したかを見て）、彼らは彼らが惜しまない物資を提供します。</text>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>生命体がなくなったゾルタン船は、簡単に救助できます。</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<choice hidden="true">
+			<text>難民船に連絡してください。</text>
+			<event>
+				<text>難民船はあなたの援助に感謝します。善意のしぐさとして（そしてあなたが敵の船をどれほど効果的に派遣したかを見て）、彼らは彼らが惜しまない物資を提供します。</text>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+	</deadCrew>
+</ship>
+<ship name="PIRATE_REFUGEE" auto_blueprint="SHIPS_PIRATE">
+	<destroyed>
+		<text>海賊船は崩壊し、あなたはできることを救い出します。</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>難民船に連絡してください。</text>
+			<event>
+				<text>難民船はあなたの援助に感謝します。善意のしぐさとして（そしてあなたが敵の船をどれほど効果的に派遣したかを見て）、彼らは彼らが惜しまない物資を提供します。</text>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>生命体がなくなった海賊船は、簡単に救助できます。</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<choice hidden="true">
+			<text>難民船に連絡してください。</text>
+			<event>
+				<text>難民船は、海賊が故郷を去ってから彼らの道をたどっていると主張している。善意のしぐさとして（そしてあなたが敵の船をどれほど効果的に派遣したかを見て）、彼らは彼らが惜しまない物資を提供します。</text>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+	</deadCrew>
+</ship>
+<ship name="SLUG_REFUGEE" auto_blueprint="SHIPS_JELLY">
+	<destroyed>
+		<text>ナメクジの船はバラバラになり、あなたはできることを救い出します。</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>難民船に連絡してください。</text>
+			<event>
+				<text>難民船は、彼らが故郷を去って以来、ナメクジが彼らを捕まえていると主張しています。善意のしぐさとして（そしてあなたが敵の船をどれほど効果的に派遣したかを見て）、彼らは彼らが惜しまない物資を提供します。</text>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>生命体がなくなったナメクジ船は、簡単に救助できます。</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<choice hidden="true">
+			<text>難民船に連絡してください。</text>
+			<event>
+				<text>難民船は、彼らが故郷を去って以来、ナメクジが彼らを捕まえていると主張しています。善意のしぐさとして（そしてあなたが敵の船をどれほど効果的に派遣したかを見て）、彼らは彼らが惜しまない物資を提供します。</text>
+				<autoReward level="LOW">standard</autoReward>
+			</event>
+		</choice>
+	</deadCrew>
+</ship>
+<!-- ZOLTAN SPECIFIC VERSIONS OF THE SAME EVENTS-->
+<event name="REFUGEE_DISTRESS_ZOLTAN">
+	<text>あなたは宇宙を漂う難民船に遭遇しました。それは反乱軍の前進から逃げていて、燃料を使い果たしたかのように見えます。その遭難ビーコンはアクティブですが、誰かが搭乗しているかどうかはわかりません。</text>
+	<choice>
+		<text>それらを歓迎します。</text>
+		<event load="REFUGEE_HAIL_LIST_ZOLTAN"/>
+	</choice>
+	<choice>
+		<text>難民を無視します。</text>
+		<event/>
+	</choice>
+	<distressBeacon/>
+</event>
+<event name="REFUGEE_NO_DISTRESS_ZOLTAN">
+	<text>あなたのセンサーは、システムを漂流している難民船を拾い上げました。間違いなく、反乱軍の前進から逃げてきた多くの人の1人です。あなたを検出したようには見えません...そうでなければ、通知を回避しようとしています。</text>
+	<choice>
+		<text>それらを歓迎します。</text>
+		<event load="REFUGEE_HAIL_LIST_ZOLTAN"/>
+	</choice>
+	<choice>
+		<text>難民を無視します。</text>
+		<event/>
+	</choice>
+</event>
+<eventList name="REFUGEE_HAIL_LIST_ZOLTAN">
+	<event load="REFUGEE_TRADER"/>
+	<event>
+		<text>あなたが難民船を呼ぶと、ゾルタン船が突然システムに飛び込みます...それは難民が犯罪者であると主張し、逃亡者を護衛したと非難します！あなたが応答する前に、それは通信を切断し、その武器をパワーアップします！</text>
+		<ship load="ZOLTAN_REFUGEE" hostile="true"/>
+	</event>
+</eventList>
+<!-- PIRATE SPECIFIC VERSIONS OF THE SAME EVENTS-->
+<event name="REFUGEE_DISTRESS_PIRATE">
+	<text>あなたは宇宙を漂う難民船に遭遇しました。それは反乱軍の前進から逃げていて、燃料を使い果たしたかのように見えます。その遭難ビーコンはアクティブですが、誰かが搭乗しているかどうかはわかりません。</text>
+	<choice>
+		<text>それらを歓迎します。</text>
+		<event load="REFUGEE_HAIL_LIST_PIRATE"/>
+	</choice>
+	<choice>
+		<text>難民を無視します。</text>
+		<event/>
+	</choice>
+	<distressBeacon/>
+</event>
+<event name="REFUGEE_NO_DISTRESS_PIRATE">
+	<text>あなたのセンサーは、システムを漂流している難民船を拾い上げました。間違いなく、反乱軍の前進から逃げてきた多くの人の1人です。あなたを検出したようには見えません...そうでなければ、通知を回避しようとしています。</text>
+	<choice>
+		<text>それらを歓迎します。</text>
+		<event load="REFUGEE_HAIL_LIST_PIRATE"/>
+	</choice>
+	<choice>
+		<text>難民を無視します。</text>
+		<event/>
+	</choice>
+</event>
+<eventList name="REFUGEE_HAIL_LIST_PIRATE">
+	<event load="REFUGEE_TRADER"/>
+	<event>
+		<text>難民船を呼ぶと、海賊船がシステムに飛び込みます...それは難民船を餌として使っていました！</text>
+		<ship load="PIRATE_REFUGEE" hostile="true"/>
+	</event>
+</eventList>
+<!-- SLUG SPECIFIC VERSIONS OF THE SAME EVENTS-->
+<event name="REFUGEE_DISTRESS_SLUG">
+	<text>あなたは宇宙を漂う難民船に遭遇しました。それは反乱軍の前進から逃げていて、燃料を使い果たしたかのように見えます。その遭難ビーコンはアクティブですが、誰かが搭乗しているかどうかはわかりません。</text>
+	<choice>
+		<text>それらを歓迎します。</text>
+		<event load="REFUGEE_HAIL_LIST_SLUG"/>
+	</choice>
+	<choice>
+		<text>難民を無視します。</text>
+		<event/>
+	</choice>
+	<distressBeacon/>
+</event>
+<event name="NEBULA_REFUGEE_NO_DISTRESS_SLUG">
+	<text>あなたのセンサーは、システムを漂流している難民船を拾い上げました。間違いなく、反乱軍の前進から逃げてきた多くの人の1人です。あなたを検出したようには見えません...そうでなければ、通知を回避しようとしています。</text>
+	<environment type="nebula"/>
+	<choice>
+		<text>それらを歓迎します。</text>
+		<event load="REFUGEE_HAIL_LIST_SLUG"/>
+	</choice>
+	<choice>
+		<text>難民を無視します。</text>
+		<event/>
+	</choice>
+</event>
+<eventList name="REFUGEE_HAIL_LIST_SLUG">
+	<event load="REFUGEE_TRADER"/>
+	<event>
+		<text>難民船を呼ぶと、海賊船がシステムに飛び込みます...それは難民船を餌として使っていました！</text>
+		<ship load="PIRATE_REFUGEE" hostile="true"/>
+	</event>
+</eventList>
+
+
+
+
+
+	<!--
+	<<<===== NEUTRAL! =====>>>
+	-->
+
+
+<event name="EMPTY_STATION2" unique="true"> <!--Neutrals-->
+	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
+	<text load="EMPTY_STATION2_TEXT"/>
+	<choice hidden="true">
+		<text>駅に移動して調べます。</text>
+		<event load="EMPTY_STATION2_LIST"/>
+	</choice>
+	<choice>
+		<text>ビーコンの近くにとどまります。</text>
+		<event>
+			<text>あなたはそれを調べる価値がないと判断します。</text>
+		</event>
+	</choice>
+</event>
+<textList name="EMPTY_STATION2_TEXT">
+	<text>見捨てられたように見える小さな宇宙ステーションを見つけます。</text>
+	<text>あなたは植民地化された月のように見えるものを見つけるために到着します、しかしスキャンはそれが放棄されたことを示します。また、ビーコンの近くにある放棄された宇宙ステーションを検出します。</text>
+	<text>このエリアは、しばらく前に戦いの兆候を示しています。船の残骸が散らばっていますが、1つの駅は無傷のようです。</text>
+</textList>
+<eventList name="EMPTY_STATION2_LIST">
+	<event>
+		<text>近づくと、ステーションは単に空のシェルであることが明らかになります。それはずっと前に有用な材料を剥ぎ取られました。</text>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="TALK_WITH_CREW" />
+		</choice>
+	</event>
+	<event>
+		<text>慎重にアプローチしますが、危険は検出されません。しばらく前に放棄された小さな休憩所だったようです。あなたはあなたが見つけることができるいくつかの物資を取ります。</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>よく調べてみると、船体の大部分が破壊されているようです。あなたはあなたが見つけることができるいくつかの物資を取ります。</text>
+		<autoReward level="LOW">stuff</autoReward>
+	</event>
+	<event>
+		<text>駅は混乱している。クローンベイは部分的に無傷ですが、他に何も機能していないようです。</text>
+		<choice hidden="true" req="clonebay">
+			<text>(Clonebay) 生き残ったDNAバンクを探します。</text>
+			<event>
+				<text>クローン作成機能が機能しなくなっている間に、誰かがクローン作成のキューに入れられていたことがわかります。あなたは彼らのデータをあなたのクローンベイに転送し、しばらくすると彼らの体が再構築されます。</text>
+				<choice hidden="true">
+					<text id="continue" />
+					<event load="EMPTY_STATION2_CLONE"/>
+				</choice>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>機械をスクラップします。</text>
+			<event>
+				<text>あなたはできることを取り、先に進む準備をします。</text>
+				<autoReward level="LOW">scrap_only</autoReward>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>駅にドッキングして中を見てみましょう。しかし、海賊が突入するよりも早くエアロックを開けます。その間、スキャナーは、攻撃のために移動する、以前は検出されなかった海賊船を拾い上げます！</text>
+		<boarders min="2" max="2"/>
+		<ship load="PIRATE" hostile="true"/>
+	</event>
+	<event>
+		<text>駅にドッキングして中を見てみましょう。しかし、海賊が突入するやいなやエアロックを開けます。その間、橋の上で複数の警告信号が鳴ります。海賊は遠隔惑星防衛システムを作動させ、それはあなたの船にロックされています！</text>
+		<boarders min="2" max="4"/>
+		<environment type="PDS" target="player"/>
+	</event>
+</eventList>
+<eventList name="EMPTY_STATION2_CLONE">
+	<event>
+		<text>クローンは非常に混乱していますが、状況を説明しようとすると落ち着きます。他のオプションがない場合、クローンはしばらくの間あなたの船で動作することを提案します。</text>
+		<crewMember amount="1"/>
+	</event>
+	<event>
+		<text>クローンは非常に混乱していますが、彼らの新しい状況を受け入れているようです。他のオプションがない場合、クローンはしばらくの間あなたの船で動作することを提案します。</text>
+		<crewMember amount="1"/>
+	</event>
+	<event>
+		<text>クローンは狂った狂乱の中で現れ、落ち着くことを拒否します。戦うしかない。</text>
+		<boarders min="1" max="1"/>
+	</event>
+</eventList>
+
+
+
+
+
+<event name="WRECKAGE_EVENT">
+	<text load="WRECKAGE_TEXT"/>
+	<choice hidden="true">
+		<text>戦場を調査します。</text>
+		<event load="WRECKAGE_INVESTIGATE"/>
+	</choice>
+	<choice>
+		<text>残骸を無視して続行します。</text>
+		<event/>
+	</choice>
+	<choice req="sensors" lvl="2" max_lvl="2" hidden="true">
+		<text>(Improved Sensors) 残骸をスキャンします。</text>
+		<event>
+			<text>戦場をスキャンし、センサーを使用して、残骸から適度な量の材料を回収することができます。あなたはジャンプする準備をします。</text>
+			<autoReward level="MED">stuff</autoReward>
+		</event>
+	</choice>
+	<choice req="sensors" lvl="3" hidden="true">
+		<text>(Advanced Sensors) 残骸をスキャンします。</text>
+		<event load="WRECKAGE_SCANNED"/>
+	</choice>
+	<choice req="SHIPRADAR" hidden="true"><!-- 1.26.3 -->
+		<text>(Directional Scanner) 残骸をスキャンします。</text>
+		<event load="WRECKAGE_SCANNED"/>
+	</choice>
+	<choice hidden="true" req="SHIPRADAR2"><!-- 1.27.1 -->
+		<text>(Morph Analyzer) 残骸をスキャンします。</text><!-- 1.27.1 -->
+		<event load="WRECKAGE_SCANNED"/>
+	</choice>
+</event>
+<textList name="WRECKAGE_TEXT">
+	<text>最初は単純な星雲のように見えますが、実際には、いくつかの船の間の残忍な交換からの大量の破片で満たされています。残骸は画面のそばを漂い、星雲の奥深くに転がり込んで見えなくなります。綿密な調査なしに戦闘員が誰であるかを決定することは困難です。</text>
+	<text>あなたは、いくつかの船の間の残忍な交換であったように思われるものの余波に飛び込みました。残骸が画面のそばに漂い、死にかけている船の残骸が火花を散らしてバラバラになっているのを今でも見ることができます。綿密な調査なしに戦闘員が誰であるかを決定することは困難です。</text>
+</textList>
+<eventList name="WRECKAGE_SCANNED">
+	<event>
+		<text>あなたは戦場をスキャンし、センサーの助けを借りて、残骸から大量の物質を回収することができます。品揃えが豊富で、ジャンプする準備をします。</text>
+		<autoReward level="HIGH">stuff</autoReward>
+	</event>
+	<event>
+		<text>あなたは戦場をスキャンし、破片の中にプロトタイプの軍用船を見つけます！乗組員は殺されましたが、彼らの作業中のプロトタイプの武器配列はまだ無傷です！あなたはそれを救い出し、船に乗せます。</text>
+		<autoReward level="LOW">weapon</autoReward>
+	</event>
+</eventList>
+
+<event name="WRECKAGE_INVESTIGATE_NOTHING">
+	<text>あなたは戦場をスキャンし、ほとんど残骸を見つけません。がっかりして、あなたはジャンプする準備をします。</text>
+	<item_modify> <!-- 1.26 -->
+		<item type="scrap" min="1" max="5"/>
+	</item_modify>
+</event>
+
+<eventList name="WRECKAGE_INVESTIGATE">
+	<event load="WRECKAGE_INVESTIGATE_NOTHING" />
+	<event load="WRECKAGE_INVESTIGATE_NOTHING" />
+	<event load="WRECKAGE_INVESTIGATE_NOTHING" />
+	<event load="WRECKAGE_INVESTIGATE_NOTHING" />
+	<event>
+		<text>あなたは戦場をスキャンし、残骸からいくつかの有用な材料を回収することができます。</text>
+		<autoReward level="MED">stuff</autoReward>
+	</event>
+	<event>
+		<text>あなたが残骸に近づくと、カマキリの船がシステムに向かって叫びます...獲物を感知するか、仲間が始めた仕事を終えるために。</text>
+		<ship load="MANTIS_FIGHT" hostile="true"/>
+	</event>
+	<event>
+		<text>残骸は連邦戦闘機と反乱軍巡洋艦の間の戦いのようです。数は多いものの、連盟は勇敢に戦ったようです。残骸のより詳細なスキャンを開始すると、反乱軍の援軍がシステムに到着し、船を標的にします！</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+	<event>
+		<text>残骸に近づくと、ゾルタン船が到着します。それはすぐにあなたを攻撃者の一人と間違え、あなたをゾルタン空間に違反する敵対的な侵略者として宣言し、発砲します！</text>
+		<ship load="ZOLTAN_SHIP" hostile="true"/>
+	</event>
+	<event>
+		<text>残骸に近づくと、ナメクジの船が到着します。誰かが残っているのを見て驚いたかのように一瞬躊躇し、一言も言わずに飛び去る。他の訪問者に注意して、システムのスキャンを再開します。</text>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="TALK_WITH_CREW" />
+		</choice>
+	</event>
+</eventList>
+
+
+
+
+
+<event name="FUELING_STATION" unique="true">
+	<text>小さなプラットフォームがこのビーコンの近くを周回しています。これはある種の給油所のように見え、さまざまな周波数と言語でリーズナブルな価格を陽気に放送しています。</text>
+	<choice hidden="true">
+		<text>給油プラットフォームとドッキングします。</text>
+		<event load="FUELING_STATION_LIST"/>
+	</choice>
+	<choice>
+		<text>給油プラットフォームは無視してください。</text>
+		<event load="FUELING_STATION_IGNORE"/>
+	</choice>
+</event>
+<eventList name="FUELING_STATION_IGNORE">
+	<event>
+		<text>システムを離れる準備をしていると、突然海賊船がスキャナーに現れます-プラットフォームを餌として使おうとしていたようです！</text>
+		<ship load="PIRATE" hostile="true"/>
+	</event>
+	<event/>
+	<event/>
+</eventList>
+<eventList name="FUELING_STATION_LIST">
+	<event load="FUELING_STATION_NORMAL_LIST"/>
+	<event load="FUELING_STATION_PIRATE_LIST"/>
+</eventList>
+<eventList name="FUELING_STATION_NORMAL_LIST">
+	<event>
+		<text>プラットフォームは申し出をします。</text>
+		<choice>
+			<text>受け入れ。</text>
+			<event>
+				<item_modify>
+					<item type="fuel" min="5" max="7"/> <!-- 1.25, max was same as min -->
+					<item type="scrap" min="-10" max="-5"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>それを拒否します。</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>自動化されたプラットフォームが破損しているようです。あなたはおそらく残っているのと同じくらい多くの燃料を盗むことができます。</text>
+		<choice hidden="true">
+			<text>それを盗みます。</text>
+			<event>
+				<text>あなたが少なくとも燃料を取るならば、それは反乱軍の手に渡らないでしょう。あなたは封じ込めに違反し、燃料備蓄の残りにアクセスします。</text>
+				<item_modify>
+					<item type="fuel" min="3" max="5"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>戦争は自分の価値観を放棄することを正当化するものではありません。あなたはそれを放っておいてください。</text>
+			<event/>
+		</choice>
+	</event>
+	<event>
+		<text>プラットフォームが誤動作しているようで、いつでも発火する可能性があります。</text>
+		<choice hidden="true">
+			<text>すばやくドッキングして給油します。</text>
+			<event name="FUELING_STATION_BLOW"/>
+		</choice>
+		<choice>
+			<text>駅に広い寝台を与えて続行します。</text>
+			<event>
+				<text load="FUELING_STATION_LEAVE"/> <!-- 1.24 -->
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+<textList name="FUELING_STATION_LEAVE"> <!-- 1.24 -->
+	<text>あなたは駅から離れます。しばらくすると、数回の無音の爆発により、減圧されたタンクが内破します。</text>
+	<text>あなたは駅から離れますが、すべてが順調に進んでいるようです。おそらくあなたは無料で埋めることができたでしょう...あなたは代替案を危険にさらさない方が良いと判断します。</text>
+</textList>
+
+<eventList name="FUELING_STATION_BLOW">
+	<event>
+		<text>ステーションが爆発する前に、安全に燃料を補給してクリアすることができます。</text>
+		<item_modify>
+			<item type="fuel" min="5" max="5"/>
+		</item_modify>
+	</event>
+	<event>
+		<text>給油するために接続すると、ステーションが点火して爆発します。あなた自身の燃料備蓄が発火し、あなたの貴重な燃料を失い、あなたの船に損害を与えます。</text>
+		<item_modify steal="true">
+			<item type="fuel" min="-3" max="-3"/>
+		</item_modify>
+		<damage amount="3" system="engines" effect="fire"/>
+	</event>
+</eventList>
+<eventList name="FUELING_STATION_PIRATE_LIST">
+	<event>
+		<text>燃料補給を開始するように、燃料ステーションのスタッフにドッキングして信号を送ります。</text>
+		<choice hidden="true">
+			<text>それらが終了するのを待ちます。</text>
+			<event>
+				<text>給油プラットフォームにドッキングすると、エンジンルームから爆発が発生します。駅からの海賊があなたの船に群がるとき、警告灯があなたの船の中で点滅します！</text>
+				<damage amount="3" system="engines"/>
+				<boarders min="2" max="4" class="random"/>
+			</event>
+		</choice>
+		<choice req="doors" lvl="2" hidden="true">
+			<text>(Blast Doors) ブラストドアを密閉します。ドッキングするときに注意しすぎることはありません。</text>
+			<event>
+				<text>駅に隠された海賊はあなたのセキュリティロックに混乱し、待ち伏せの試みを魚のバレルの銃撃戦に変えます。あなたは駅の支配権を握り、その燃料備蓄を取ります。</text>
+				<item_modify>
+					<item type="fuel" min="5" max="8"/><!-- 1.26 max was 5 -->
+				</item_modify>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>給油所はあなたをそのバースの1つに迎え入れます、そしてあなたがそれらを呼ぶとき、あなたのエンジンルームから爆発があります！被害を評価していると、海賊船が速く閉まっているのを発見しました！</text>
+		<ship load="PIRATE" hostile="true"/>
+		<damage amount="2" system="engines"/><!-- 1.25 damage was 3 -->
+	</event>
+</eventList>
+
+
+
+
+
+	<!--
+	<<<===== NEW QUESTS! =====>>>
+	-->
+
+
+<event name="QUEST_CONSTRUCTIONYARD" unique="true"> <!-- quest only meant for DLC cause of PDS -->
+	<text>あなたは建設中の宇宙ステーションに出くわします。彼らの司令部から「ご挨拶。最近、建設資材をさらに配達するように設定された貨物船との連絡が途絶えました。彼らに何が起こったのかを理解するのを手伝っていただけませんか」というメッセージが届きます。</text>
+	<choice hidden="true">
+		<text>あなたの助けを提供します。</text>
+		<event>
+			<text>「素晴らしい。あなたの助けに感謝します。私は彼らの最後の既知の座標をマークし、あなたがそこに着くのを助けるためにいくつかの物資を送りました。」</text>
+			<item_modify>
+				<item type="missiles" min="0" max="4"/>
+				<item type="drones" min="0" max="2"/>
+				<item type="fuel" min="2" max="4"/>
+			</item_modify>
+			<quest event="QUEST_CONSTRUCTIONYARD_LIST"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>却下。</text>
+		<event>
+			<text>"わかりました。"トランスミッションがカットされました。</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="anaerobic">
+		<text>(Lanius Crewmember) あなたの乗組員に助けを求めることを申し出てください。</text>
+		<event>
+			<text>「おもしろい。だから、この金属の男は、これらのユニークな部品のいくつかをスクラップから作るのを手伝ってくれるだろうか？それは大きな助けになるだろう。」乗組員は設計図を確認し、卑金属シートの一部を特殊な部品にすばやく変換します。</text>
+			<choice hidden="true">
+				<text id="continue" />
+				<event>
+					<text>「すごい！このロボットのことで、私たちの時間を大幅に節約できます。あなたから購入してもらえますか？」</text>
+					<choice hidden="true">
+						<text>彼らが同意するかどうかあなたの乗組員に尋ねてください。</text>
+						<event>
+							<text>Laniusの乗組員が状況を理解すると、深宇宙での建設を支援するというアイデアが気に入っているように見えます。はるかに危険が少ない。彼らはあなたにいくつかの商品を引き換えに提供します。</text>
+							<autoReward level="HIGH">augment</autoReward>
+							<removeCrew class="anaerobic">
+								<clone>false</clone>
+								<text>彼らが死ななかったのであなたのclonebayは明らかにあなたの乗組員を復活させません。</text>
+							</removeCrew>
+						</event>
+					</choice>
+					<choice hidden="true">
+						<text>私たちの乗組員は売り物ではありません。</text>
+						<event>
+							<text>「残念です。支払いに関しては、必要な部品が揃ったので、今は必要のない金属くずをいくつか紹介します。」</text>
+							<autoReward level="MED">scrap_only</autoReward>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+<eventList name="QUEST_CONSTRUCTIONYARD_LIST">
+	<event>
+		<text>あなたは行方不明の貨物船が反乱軍の駅に停泊しているのを見つけます。あなたは彼らに短帯域のメッセージを送り、彼らが彼らの意志に反して拘束され、「戦争努力のために彼らの物資に寄付する」ことを余儀なくされていることを発見します。</text>
+		<choice hidden="true">
+			<text>彼らが脱出するのを助けるために反乱軍を攻撃しなさい。</text>
+			<event>
+				<text>あなたは彼らを脅かしている反乱軍の船を攻撃するために移動し、スキャナーは近くのアンチシップバッテリーから武器のロックを検出します。慌ただしくなりそうです！</text>
+				<ship load="QUEST_CONSTRUCTIONYARD_SHIP" hostile="true"/>
+				<environment type="PDS" target="player"/>
+			</event>
+		</choice>
+		<choice>
+			<text>この場所を離れます。</text>
+			<event>
+				<text>あなたは謝罪しますが、反乱軍の基地を攻撃するリスクを冒す価値はありません。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>あなたは行方不明の貨物船が空の宇宙ステーションに停泊しているのを見つけます。しかし、彼らの船倉は空であるように見え、誰かが船や駅の中にいるという明白な兆候はありません。すべてが放棄されたように見えます。</text>
+		<choice hidden="true">
+			<text>駅に移動して調べます。</text>
+			<event load="EMPTY_STATION2_LIST"/>
+		</choice>
+		<choice>
+			<text>ビーコンの近くにとどまります。</text>
+			<event>
+				<text>あなたはそれを調べる価値がないと判断します。</text>
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>あなたは行方不明の貨物船がビーコンの近くに浮かんでいるのを見つけます。 「天に感謝します！海賊の襲撃から逃れるために最後の燃料を使用した後、私たちはここを漂流しています。」</text>
+		<choice hidden="true">
+			<text>彼らに要求された4つの燃料を与えます。</text>
+			<event>
+				<text>「素晴らしい、ありがとう。ここにあなたのトラブルのためのいくつかの金属くずがあります。そこに注意してください。」</text>
+				<autoReward level="HIGH">scrap_only</autoReward>
+				<item_modify>
+					<item type="fuel" min="-4" max="-4"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice hidden="true">
+			<text>それらに1つの燃料を与えます。</text>
+			<event><!-- vanilla is missing a 'k' in 'Thank you' -->
+				<text>「まあ、それは何もないよりはましだと思います。ありがとう。次のビーコンで駅を見つけることができればいいのですが。」</text>
+				<autoReward level="LOW">scrap_only</autoReward>
+				<item_modify>
+					<item type="fuel" min="-1" max="-1"/>
+				</item_modify>
+			</event>
+		</choice>
+		<choice>
+			<text>彼らに燃料を与えないでください。</text>
+			<event>
+				<text>"分かりました..."</text>
+			</event>
+		</choice>
+	</event>
+</eventList>
+<ship name="QUEST_CONSTRUCTIONYARD_SHIP" auto_blueprint="SHIPS_REBEL">
+	<destroyed>
+		<text>あなたは船からできることを素早く救い出します。</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>貨物船に連絡してください。</text>
+			<event>
+				<text>アンチシップバッテリーからの爆風の中で、貨物船は駅から脱出した。彼らは飛び去る前にあなたの船に向かっていくらかのスクラップを投棄しました。</text>
+				<autoReward level="MED">scrap_only</autoReward>
+			</event>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>あなたは船からできることを素早く救い出します。</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<choice hidden="true">
+			<text>貨物船に連絡してください。</text>
+			<event>
+				<text>アンチシップバッテリーからの爆風の中で、貨物船は駅から脱出した。彼らは飛び去る前にあなたの船に向かっていくらかのスクラップを投棄しました。</text>
+				<autoReward level="MED">scrap_only</autoReward>
+			</event>
+		</choice>
+	</deadCrew>
+</ship>
+
+
+<!-- New Matt Events - Starting event names:
+
+ROCK_SLUG_ARGUMENT
+TERRAFORMING_SCAN
+CONFUSED_MANTIS
+PIRATE_SALESMAN
+
+-->
+
+<event name="NEBULA_ROCK_SLUG_ARGUMENT" unique="true">
+	<text>近くで最大出力で走っている複数の船を検出しましたが、この厚い星雲を通しては何も見えません。</text>
+	<choice>
+		<text>接近する。</text>
+		<event load="ROCK_SLUG_ARGUMENT"/>
+	</choice>
+	<choice>
+		<text>それらを無視します。</text>
+		<event/>
+	</choice>
+	<environment type="nebula"/>
+</event>
+
+
+<event name="ROCK_SLUG_ARGUMENT" unique="true">  <!-- in slug and rock neutrals-->
+	<text>あなたは、武器が武装していて戦う準備ができている、スタンドオフにあるスラッグクルーザーとロック船を見つけます。これが手に負えなくなる前にあなたは介入することができます。</text>
+	<choice>
+		<text>何が悪いのかを見るために彼らを呼んでください。</text>
+		<event>
+			<text>スラッグ船長は、彼らがロック船の原子炉をアップグレードし、現在「厚いボルダーヘッド」が行われた作業の支払いを拒否していると説明しています。ロックキャプテンは、「スライムボール」は彼らの合意した価格の価値がない貧弱な仕事をしたと言います。</text>
+			<choice>
+				<text>ロックの借金を返済することを申し出る。</text>
+				<event>
+					<text>あなたは借金を返済します。ロックキャプテンは、スラッグが「不当な」スクラップを手に入れることにいらいらしているように見えますが、少なくとも状況は平和なままです。</text>
+					<item_modify>
+						<item type="scrap" min="-15" max="-10"/>
+					</item_modify>
+					<choice hidden="true">
+						<text id="continue" />
+						<event load="ROCK_SLUG_GRATEFUL"/>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>ロック船に合意した価格を支払うように要求します。</text>
+				<event load="ROCK_SLUG_COMMAND"/>
+			</choice>
+			<choice>
+				<text>あなたはもっと良いことに出席する必要があります、それらを残してください。</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>そのままにしておきます。</text>
+		<event/>
+	</choice>
+</event>
+
+<eventList name="ROCK_SLUG_COMMAND">
+	<event>
+		<text>どうやらロックキャプテンはあなたが思っていたよりもイライラしていたようです、彼らはすべての通信を遮断し、あなた、「スライムボール」の擁護者をオンにします。</text>
+		<ship load="ROCK_SLUG_REACTOR_SHIP" hostile="true"/>
+	</event>
+	<event>
+		<text>多くの不平を言って、ロックキャプテンは代金を支払うことに同意します。</text>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="ROCK_SLUG_GRATEFUL"/>
+		</choice>
+	</event>
+	<event>
+		<text>ロックシップから大規模な爆発が発生し、船体が粉砕され、避けられない衝突コースで破片が船に送られます。結局、原子炉のアップグレードはうまく行われなかったようで、スラッグスは飛び去る機会を得ました。</text>
+		<damage amount="3"/> <!-- slugs take an opportunity to jump away?? add in an option to pursue the slugs! No one escapes you! 5/7 engines (just like insurrection :P). you will take damage though, but you get to fight a slug ship. they hide in a...-->
+		<damage amount="1" system="random"/>
+		<damage amount="1" system="random"/>  <!--DLC-->
+	</event>
+</eventList>
+
+<ship name="ROCK_SLUG_REACTOR_SHIP" auto_blueprint="SHIPS_ROCK">
+	<destroyed>
+		<text>ロックシップが破壊された状態で、あなたは少しのスクラップが残っているものを集めるために時間をかけます。</text>
+		<autoReward level="LOW">standard</autoReward>
+		<choice hidden="true">
+			<text>スラッグに連絡してください。</text>
+			<event load="ROCK_SLUG_GRATEFUL"/>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>ロックの乗組員が死んだ状態で、あなたは物資のために船をスクラップします。</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>スラッグに連絡してください。</text>
+			<event load="ROCK_SLUG_GRATEFUL"/>
+		</choice>
+	</deadCrew>
+</ship>
+
+<eventList name="ROCK_SLUG_GRATEFUL">
+	<event>
+		<text>ナメクジはあなたの助けに感謝し、飛び去ります。彼らの真の感謝は疑わしいですが、少なくともあなたはあなたの使命に戻ることができます。</text>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="TALK_WITH_CREW" />
+		</choice>
+	</event>
+	<event>
+		<text>スラッグキャプテンはあなたの助けのために無料の原子炉アップグレードを提供します。少しパワーブーストを取得することは決して痛いことではありません！</text>
+		<upgrade amount="1" system="reactor"/>
+	</event>
+	<event>
+		<text>スラッグキャプテンはあなたの助けのために無料の原子炉アップグレードを提供します。少しパワーブーストを取得することは決して痛いことではありません！</text>
+		<upgrade amount="1" system="reactor"/>
+	</event>
+	<event>
+		<text>スラッグキャプテンは、あなたの助けに感謝し、あなたの船の原子炉のアップグレードを提供します...「公正な」価格で。</text>
+		<choice req="reactor" max_lvl="24" blue="false">
+			<text>価格に同意します。</text>
+			<event>
+				<text>あなたは彼らのチームを乗せ、しばらくして彼らは仕事を終えます。</text><!-- add in a "shoddy repair" event as a chance. then pursue the slugs where you take the role of the rock and some other faction interferes. wow! more chains! -->
+				<item_modify>
+					<item type="scrap" min="-15" max="-5"/> <!-- max was -10 -->
+				</item_modify>
+				<upgrade amount="1" system="reactor"/>
+			</event>
+		</choice>
+		<choice>
+			<text>申し出を断る。</text>
+			<event>
+				<text>あなたはコミュニケーションを断ち切り、先に進む準備をします。</text>
+			</event>
+		</choice>
+	</event>
+</eventList>
+
+
+<event name="TERRAFORMING_SCAN"  unique="true"> <!-- in neutral only-->
+	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
+	<text>あなたは近くの惑星を周回している駅から呼びかけを受け取ります。 「キャプテン、私たちはフェデレーションテラフォーミングチームC12であり、支援を必要としています。時間はありますか？」</text>
+	<choice>
+		<text>あなたの援助を提供します。</text>
+		<event>
+			<text>「ありがとう！テラフォーミングを開始する前に、この惑星を一生スキャンする必要がありますが、センサーはこの大気をスキャンするために必要な電力を取得できません。維持するスケジュールがあります。何かお手伝いできる機会はありますか？」</text>
+			<choice req="sensors" lvl="1" max_group="0" hidden="true">
+				<text>(Sensors) 惑星をスキャンしてみてください。</text>
+				<event load="NORMAL_SCAN_TERRAFORMING"/>
+			</choice>
+			<choice req="sensors" lvl="3" max_group="0" hidden="true"><!-- 1.21 -->
+				<text>(Advanced Sensors) センサーを最大に設定してスキャンします。</text>
+				<event load="HIGH_SCAN_TERRAFORMING"/>
+			</choice>
+			<choice req="SHIPRADAR" hidden="true"><!-- 1.21 -->
+				<text>(Directional Scanner) 指向性スキャナーを使用します。</text>
+				<event load="HIGH_SCAN_TERRAFORMING"/>
+			</choice>
+			<choice hidden="true" req="SHIPRADAR2"><!-- 1.27.1 -->
+				<text>(Morph Analyzer) モーフアナライザーを使用します。</text><!-- 1.27.1 -->
+				<event load="HIGH_SCAN_TERRAFORMING"/>
+			</choice>
+			<choice req="LIFE_SCANNER" hidden="true">
+				<text>(Lifeform Scanner) 惑星をスキャンして生命の存在を確認します。</text>
+				<event load="HIGH_SCAN_TERRAFORMING"/>
+			</choice>
+			<choice req="energy" hidden="true">
+				<text>(Zoltan Crew Member) Zoltanを送って、システムを過充電します。</text>
+				<event load="HIGH_SCAN_TERRAFORMING"/>
+			</choice>
+			<choice>
+				<text>適切な設備がありません。</text>
+				<event>
+					<text>「わかりました。あなたの使命に幸運を祈ります、サー！」</text>
+					<choice>
+						<text>ジャンプする準備をしなさい。</text>
+						<event/>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>あなたにはこれをする時間がありません。</text>
+		<event>
+			<text>「わかりました。あなたの使命に幸運を祈ります、サー！」</text>
+			<choice>
+				<text>ジャンプする準備をしなさい。</text>
+				<event/>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<eventList name="NORMAL_SCAN_TERRAFORMING">
+	<event>
+		<text>あなたのセンサーはテラフォーマーのものより強力ではないようです。あなたは謝罪し、あなたの道を続けます。</text>
+	</event>
+	<event>
+		<text>センサーのフィードバック信号を適切な周波数に変調すると、大気圏を通過して完全なスキャンを実行できることがわかります。</text>
+		<choice hidden="true">
+			<text id="continue" />
+			<event load="HIGH_SCAN_TERRAFORMING"/>
+		</choice>
+	</event>
+</eventList>
+
+<eventList name="HIGH_SCAN_TERRAFORMING">
+	<event>
+		<text>惑星を完全にスキャンした後、あなたは生命を見つけません。チームは感謝し、仕事に取り掛かる準備ができています。ステーションの科学者は、生命維持装置に独自の才能を持っており、感謝の気持ちとして酸素システムをアップグレードすることを提案しています。</text>
+		<upgrade amount="1" system="oxygen"/>
+	</event>
+	<event>
+		<text>惑星の完全なスキャンは、表面上の単一の船以外の生命の兆候を明らかにしません。テラフォーマーはあなたの助けに感謝し、船に連絡しようとします。あなたが飛び降りようとしているのと同じように、船は離陸して攻撃します、それは海賊です！</text>
+		<ship load="PIRATE" hostile="true"/>
+	</event>
+	<event>
+		<text>惑星を完全にスキャンすると、存在する唯一の生命として単純なカビが明らかになります。テラフォーミング担当者は、テラフォーミング計画は知的な生活によってのみ妨げられていると主張しています。彼らは仕事を始めることができます。</text>
+		<choice>
+			<text>彼らにやめるように言いなさい。どんな人生も貴重です。</text>
+			<event>
+				<text>「しかし、私たちの生計はこの仕事にかかっています！誰が愚かなカビを気にしますか？私たちはあなたに別の見方をするためにあなたに支払います！」</text>
+				<choice>
+					<text>賄賂を受け取り、去ります。</text>
+					<event>
+						<item_modify>
+							<item type="scrap" min="5" max="50"/>
+						</item_modify>
+					</event>
+				</choice>
+				<choice>
+					<text>カビが研究されるまで、少なくとも遅らせるために彼らに支払うことを申し出てください。</text>
+					<event>
+						<text>彼らは理由を見て、申し出を受け入れます。ステーションの科学者は生命維持ユニットにユニークな才能を持っており、彼らの行動に対する謝罪としてあなたの酸素システムをアップグレードすることを提案します。</text>
+						<upgrade amount="1" system="oxygen"/>
+						<item_modify>
+							<item type="scrap" min="-15" max="-5"/>
+						</item_modify>
+					</event>
+				</choice>
+				<choice>
+					<text>あなたの武器に力を与えて、彼らがすぐに去ることを要求してください。</text>
+					<event>
+						<text>彼らは通信を遮断しましたが、あなたは彼らが避難手続きを始めたと言うことができます。</text>
+					</event>
+				</choice>
+			</event>
+		</choice>
+		<choice>
+			<text>彼らを彼らの仕事に任せなさい。</text>
+			<event/>
+		</choice>
+	</event>
+</eventList>
+
+<event name="CONFUSED_MANTIS" unique="true"> <!-- in Engi Neutrals only-->
+	<text>システムに飛び込むとすぐに、近くの民間のエンギ船から呼びかけが降ります。彼らのキャプテンが画面に表示されます：「奇妙なバグ。デバッグを手伝ってくれませんか？」</text>
+	<choice>
+		<text>彼らの問題を聞いてください。</text>
+		<event>
+			<text>「機能不全のマンティスが見つかりました。それは人間であると信じています。人間からのみ入力を受け取ります。危険性評価：非常に高いです。支援を提供してください。」</text>
+			<choice>
+				<text>アウェイチームと一緒にシャトルを送ってください。</text>
+				<event load="CONFUSED_MANTIS_DEFAULT"/>
+			</choice>
+			<choice>
+				<text>それらを残してください、追い詰められたカマキリは危険すぎます。</text>
+				<event/>
+			</choice>
+			<choice req="human" hidden="true">
+				<text>(Human Crew Member) マンティスと通信するためにあなたのヒューマンクルーメンバーを送ってください。</text>
+				<event>
+					<text>カマキリは「別の人間」を見て感謝し、ロバート・スミスとして自己紹介します。彼は彼が近くの人間のコロニーから来たので、そこに戻されていただければ幸いであると説明します。</text>
+					<choice>
+						<text>彼を家に戻しなさい。</text>
+						<event load="CONFUSED_MANTIS_HOME"/>
+					</choice>
+				</event>
+			</choice>
+			<choice req="mantis" hidden="true">
+				<text>(Mantis Crew Member) マンティスの乗組員を派遣して、マンティスと通信します。</text>
+				<event>
+					<text>カマキリはあなたの乗組員を見ておびえています。彼はすぐに彼のエンギ救助者を攻撃し、あなたの乗組員は彼を殺すことを余儀なくされます。エンギはあなたの助けに感謝し、小さな報酬を提供します。</text>
+					<autoReward level="LOW">standard</autoReward>
+				</event>
+			</choice>
+			<choice req="mind" lvl="1" hidden="true">
+				<text>(Mind Control) マインドコントロールシステムを使って彼を落ち着かせましょう。</text>
+				<event><!-- added in "his" before thanks to read better. vanilla ain't perfect y'know! ("healty") -->
+					<text>マンティスは落ち着き、エンギとあなた自身の助けに感謝します。彼は、彼が育てられた人間のコロニーで、近くの惑星に降ろされることを要求します。彼らは彼の復帰に感謝し、報酬を提供します。</text>
+					<autoReward level="MED">standard</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>プログラミングをして去ることはできないことを説明します。</text>
+		<event/>
+	</choice>
+</event>
+
+<event name="CONFUSED_MANTIS_HOME">
+	<text>コロニーは、FTL燃料に特化した採掘事業です。ヘッドエンジニアであるロバートの家族は、彼に会うことに興奮しており、彼の復帰に非常に感謝しています。どうやら彼は兄のように「連邦に参加する」ために逃げたが、船に受け入れられることはなかった。</text>
+	<choice hidden="true">
+		<text>彼にあなたの船の位置を提供してください。</text>
+		<event>
+			<text>彼は常に連盟で奉仕したいと思っていたので、丁寧に受け入れました。</text>
+			<crewMember amount="1" class="mantis">Robert Smith</crewMember>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>彼らがあなたのエンジンを見ることができるかどうか尋ねてください。</text>
+		<event>
+			<text>彼らは喜んで見て、改善のためのいくつかの提案を提供することができます。</text>
+			<upgrade amount="1" system="engines"/>
+		</event>
+	</choice>
+</event>
+
+<eventList name="CONFUSED_MANTIS_DEFAULT">
+	<event>
+		<text>説得力のある1時間後、マンティスはついに落ち着き、ロバート・スミスとして自己紹介します。彼は彼が近くの人間のコロニーから来たので、そこに戻されていただければ幸いであると説明します。</text>
+		<choice>
+			<text id="continue" />
+			<event load="CONFUSED_MANTIS_HOME"/>
+		</choice>
+	</event>
+	<event>
+		<text>追い詰められて怯えたカマキリは、近づくとすぐに攻撃します。あなたの乗組員の1人は、残りの乗組員が彼を止めることができる前に、内臓摘出されます。エンギはあなたの損失をお詫びします。</text>
+		<choice req="CREW_ALL" hidden="true" blue="false"><!-- 1.24 -->
+			<text id="continue" />
+			<event>
+				<removeCrew>
+					<clone>true</clone>
+					<text>あなたが船に戻るとき、あなたの乗組員のクローンは待っています。</text>
+				</removeCrew>
+			</event>
+		</choice>
+		<choice req="CREW_ALL" lvl="0" max_lvl="0" hidden="true" blue="false">
+			<text id="continue" />
+			<event>
+				<text>あなたの船はAIの管理下にあるだけなので、乗組員の死を恐れる必要はありません。</text>
+			</event>
+		</choice>
+	</event>
+	<event><!-- not adding a talk with crew choice here... see last sentence -->
+		<text>追い詰められて怯えたカマキリは、近づくとすぐに攻撃します。あなたは彼を征服し、隣のシステムのマンティスコロニーに彼を残すことができます。彼らは彼の帰国に満足も感謝もしていないようです。</text>
+	</event>
+</eventList>
+
+
+
+<event name="PIRATE_SALESMAN" unique="true">  <!-- In NEUTRALS -->
+	<text>海賊の痕跡が目立つ船が近くの月を周回しており、機器の販売を主張する簡単なメッセージを放送しています。</text>
+	<choice>
+		<text>船を歓迎します。</text>
+		<event load="CONTACT_PIRATE_SALESMAN"/>
+	</choice>
+	<choice>
+		<text>彼が攻撃する前に彼を攻撃してください！</text>
+		<event>
+			<ship load="PIRATE" hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>すぐに飛び降りる準備をします。</text>
+		<event/>
+	</choice>
+</event>
+<event name="CONTACT_PIRATE_SALESMAN">
+	<text>船は「はい、在庫が豊富です！船に乗って私たちの商品を見てください！」と答えます。</text>
+	<choice>
+		<text>船とドッキングします。</text>
+		<event load="DOCK_PIRATE_SALESMAN"/>
+	</choice>
+	<choice>
+		<text>これは危険なようです、去ってください。</text>
+		<event>
+			<text>あなたが船を逆転させ始めるとすぐに、海賊は隠された武器を明らかにし、追跡に出発します。あなたは逃げるために彼らと戦わなければならないでしょう！</text>
+			<ship load="PIRATE" hostile="true"/>
+		</event>
+	</choice>
+	<choice req="slug" hidden="true"><!-- 1.26 now hidden... choice text is different too -->
+   <!-- <event load="DOCK_PIRATE_SALESMAN"/> -->
+		<text>(Slug Crew Member) 「船長：ドッキングはできますが、購入を計画したほうがいいと思います...」</text><!-- 1.26 text became a description, but vanilla is better -->
+		<event><!-- 1.26 -->
+			<text>あなたは詐欺師ですか？</text>
+			<item_modify>
+				<item type="scrap" min="-999" max="-999"/>
+				<item type="fuel" min="-999" max="-999"/>
+				<item type="drones" min="-999" max="-999"/>
+				<item type="missiles" min="-999" max="-999"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="hacking" hidden="true">
+		<text>(Hacking) ドッキングする前に武器システムを無効にします。</text>
+		<event>
+			<text>ハッキングシステムが終了するとすぐに、「何をしたのか！</text>
+			<autoReward level="RANDOM">scrap_only</autoReward> <!-- 1.25.1 was low -->
+		</event>
+	</choice>
+</event>
+<eventList name="DOCK_PIRATE_SALESMAN">
+	<event load="DOCK_BOMB_SALESMAN"/>
+	<event load="DOCK_DRONE_SALESMAN"/>
+	<event load="DOCK_WEAP_SALESMAN"/> <!-- 1.26 -->
+	<event load="DOCK_AUG_SALESMAN"/> <!-- 1.26 -->
+</eventList>
+<event name="DOCK_DRONE_SALESMAN">
+	<text>絶妙なスーツを着た人間が船上であなたに会います。 「私の船へようこそ！私たちはあらゆる種類のドローンを専門としていますが、興味を持ってもらえますか？」</text>
+	<choice>
+		<text>ドローンの部品を購入します。</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-20" max="-10"/>
+				<item type="drones" min="5" max="10"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>ドローンの回路図を購入します。</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-35" max="-25"/>
+			</item_modify>
+			<drone name="RANDOM"/>
+		</event>
+	</choice>
+	<!-- MATT TODO - make this work? -->
+	<choice req="drones" max_lvl="3" max_group="0" blue="false">
+		<text>ドローンシステムのアップグレードを購入します。</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-15" max="-5"/> <!-- 1.25, was -20 to -15 -->
+			</item_modify>
+			<upgrade system="drones" amount="1"/>
+		</event>
+	</choice>
+	<choice req="drones" min_level="4" max_lvl="5" max_group="0" blue="false">
+		<text>ドローンシステムのアップグレードを購入します。</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-30" max="-15"/> <!-- 1.25, was -33 to -25 -->
+			</item_modify>
+			<upgrade system="drones" amount="1"/>
+		</event>
+	</choice>
+	<choice req="drones" min_level="6" max_lvl="7" max_group="0" blue="false">
+		<text>ドローンシステムのアップグレードを購入します。</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-45" max="-30"/> <!-- 1.25, was -65 to -50 -->
+			</item_modify>
+			<upgrade system="drones" amount="1"/>
+		</event>
+	</choice>
+	<choice hidden="true"> <!-- 1.26 now hidden -->
+		<text>何も買わない。</text>
+		<event>
+			<text>「ああ、それを聞いてすみません！楽しい旅。」舵に戻ると、一連の爆発があなたの船を揺さぶる。海賊船はその武器に動力を与えました！ 「キャプテンの時間を無駄にしないでください！」というメッセージが表示されます。</text>
+			<ship load="PIRATE" hostile="true"/>
+			<damage amount="1" system="engines" effect="random"/>
+			<damage amount="1" system="room" effect="random"/>
+			<damage amount="1" system="room" effect="random"/>
+		</event>
+	</choice>
+</event>
+<event name="DOCK_BOMB_SALESMAN">
+	<text>絶妙なスーツを着た人間が船上であなたに会います。 「私の船へようこそ！私たちはあらゆる種類の爆発物を専門としていますが、何か興味がありますか？」</text>
+	<choice>
+		<text>ミサイルを購入します。</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-10" max="-5"/>
+				<item type="missiles" min="5" max="10"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice>
+		<text>爆弾発射装置を購入します。</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-60" max="-40"/>
+			</item_modify>
+			<weapon name="WEAPONS_BOMBS_CHEAP"/>
+		</event>
+	</choice>
+	<choice>
+		<text>ミサイルランチャーを購入します。</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-65" max="-45"/> <!-- commented out vanilla, was -60 to  -50 -->
+			</item_modify>
+			<weapon name="WEAPONS_MISSILES_EXPENSIVE"/>
+		</event>
+	</choice>
+	<choice hidden="true"> <!-- 1.26 now hidden -->
+		<text>何も買わない。</text>
+		<event>
+			<text>「ああ、それを聞いてすみません！楽しい旅。」舵に戻ると、一連の爆発があなたの船を揺さぶる。海賊船はその武器に動力を与えました！</text>
+			<ship load="PIRATE" hostile="true"/>
+			<damage amount="1" system="engines" effect="random"/>
+			<damage amount="1" system="room" effect="random"/>
+			<damage amount="1" system="room" effect="random"/>
+		</event>
+	</choice>
+</event>
+<event name="DOCK_WEAP_SALESMAN"> <!-- 1.26 -->
+	<text>絶妙なスーツを着た人間が船上であなたに会います。 「私の船へようこそ！私たちはいくつかの武器を販売していますが、何か興味がありますか？」</text>
+	<choice hidden="false">
+		<text>この武器を購入します。</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-80" max="-25"/>
+			</item_modify>
+			<weapon name="RANDOM"/>
+		</event>
+	</choice>
+	<choice hidden="false">
+		<text>この武器を購入します。</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-80" max="-25"/>
+			</item_modify>
+			<weapon name="RANDOM"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>何も買わない。</text>
+		<event>
+			<text>「ああ、それを聞いてすみません！楽しい旅。」舵に戻ると、一連の爆発があなたの船を揺さぶる。海賊船はその武器に動力を与えました！</text>
+			<ship load="PIRATE" hostile="true"/>
+			<damage amount="1" system="engines" effect="random"/>
+			<damage amount="1" system="room" effect="random"/>
+			<damage amount="1" system="room" effect="random"/>
+		</event>
+	</choice>
+</event>
+<event name="DOCK_AUG_SALESMAN">
+	<text>絶妙なスーツを着た人間が船上であなたに会います。 「私の船へようこそ！いくつかのオーグメントが販売されていますが、興味を持ってもらえますか？」</text>
+	<choice hidden="false">
+		<text>この拡張機能を購入します。</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-60" max="-25"/>
+			</item_modify>
+			<augment name="RANDOM"/>
+		</event>
+	</choice>
+	<choice hidden="false">
+		<text>この拡張機能を購入します。</text>
+		<event>
+			<item_modify>
+				<item type="scrap" min="-60" max="-25"/>
+			</item_modify>
+			<augment name="RANDOM"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>何も買わない。</text>
+		<event>
+			<text>「ああ、それを聞いてすみません！楽しい旅。」舵に戻ると、一連の爆発があなたの船を揺さぶる。海賊船はその武器に動力を与えました！</text>
+			<ship load="PIRATE" hostile="true"/>
+			<damage amount="1" system="engines" effect="random"/>
+			<damage amount="1" system="room" effect="random"/>
+			<damage amount="1" system="room" effect="random"/>
+		</event>
+	</choice>
+</event>
+
+
+
+<!-- boring neutral events
+
+REBEL_CHECKPOINT
+REBEL_HELPERS
+ROGUE_REBEL
+
+
+-->
+
+<textList name="REBEL_CHECKPOINT_TEXT">
+	<text>このビーコンには反乱軍の検問所があるようです。彼らは立ち止まって、通過する船を探しています。民間人は嫌がらせを受けており、連邦のメンバーは拘留されています。反乱軍はまだあなたに気づいていません。</text>
+	<text>別の反乱軍のチェックポイントがこの場所を監視しています。多くの民間船が検査を待っています、それらのどれもが連邦の支持者である可能性があります。反乱軍はまだあなたに気づいていません。</text>
+	<text>反乱軍の宇宙ステーションと1人の戦闘機が、このビーコンの連邦活動を監視しています。多くの民間船が停泊しており、反政府勢力による検査と、連邦の支持者である場合は拘留の可能性を待っています。反乱軍はまだあなたに気づいていません。</text>
+	<text>このビーコンには、かなり多くの民間船が停泊しています。それは反乱軍のチェックポイントのようです。誰もが連邦との関係の可能性について検査されています。まだ誰もあなたに気づいていません。</text>
+</textList>
+<textList name="REBEL_BRIBE_TEXT">
+	<text>これらの反乱軍は、追加のスクラップの可能性に簡単に左右されます。彼らは民間船を解放し、誰もが自由に行くことができます。</text>
+	<text>ほとんどの反乱軍のように、これらは荒れた銀河で通り抜けようとしているただの男性です。彼らはあなたのスクラップを受け取り、みんなに旅を続けさせます。</text>
+	<text>とにかく現在検査を待っている人は皆人間なので、反乱軍は彼らを手放しました。彼らはあなたのスクラップを取り、一緒に急ぐようにあなたに言います。</text>
+	<text>彼らはあなたの賄賂を熱心に受け入れます、明らかに革命家は支払われていません。民間船はすべて飛び出し始めます。</text>
+</textList>
+<textList name="GENERIC_HIDE_TEXT">
+	<text>月の後ろを飛んで、隠れたままにします。</text>
+	<text>重要でないシステムをすべてシャットダウンし、非表示のままにします。</text>
+	<text>静かにして、彼らがあなたに気づかないことを願っています。</text>
+	<text>邪魔にならないようにして、FTLドライブを充電してください。</text><!--translation is nonsense: stay out of their way AND get ready to jump? what?? -->
+</textList>
+<event name="REBEL_CHECKPOINT">
+	<text load="REBEL_CHECKPOINT_TEXT"/>
+	<choice>
+		<text>自分で身を守り、攻撃して脱出してください。</text>
+		<event>
+			<ship load="REBEL" hostile="true"/>
+		</event>
+	</choice>
+	<choice>
+		<text>反乱軍に賄賂を渡して民間船を解放します。</text>
+		<event>
+			<text load="REBEL_BRIBE_TEXT"/>
+			<item_modify>
+				<item type="scrap" min="-15" max="-5"/> <!-- 1.23, was 20, not so garbo anymore, eh? -->
+			</item_modify>
+			<choice hidden="true">
+				<text>民間船に連絡してください。</text>
+				<event load="REBEL_BRIBE_RESULT"/>
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text load="GENERIC_HIDE_TEXT"/>
+		<event/>
+	</choice>
+</event>
+<eventList name="REBEL_BRIBE_RESULT"><!-- as of 1.23, now you don't get garbo autorewards. still can get possible nothing or ship fight -->
+	<event>
+		<text>民間人は感謝しています。しかし、彼らの誰もが連邦の支持者と間違われることを熱望しているようには見えないので、彼らはすぐに飛び去ります。</text>
+	</event>
+	<!-- <event>
+		<text>民間人の何人かはあなたの助けに対してあなたに返済しようと試みるために彼らの余分なスクラップを一緒にプールします。</text>
+		<autoReward level="MED">scrap_only</autoReward>
+	</event> --> <!-- 1.23 -->
+	<event>
+		<text>民間人の何人かはあなたの助けに対してあなたに返済しようと試みるために彼らの余分なスクラップを一緒にプールします。</text>
+		<autoReward level="HIGH">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>民間船の1つは、連邦の軍事物資の箱の上を静かにテレポートします。</text>
+		<autoReward level="MED">standard</autoReward>
+	</event>
+	<event>
+		<text>民間船の1つは、連邦の軍事物資の大きなコンテナの上を静かにテレポートします。</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</event>
+	<event>
+		<text>民間船の1つは、連邦の軍事物資の大きなコンテナの上を静かにテレポートします。</text>
+		<autoReward level="HIGH">standard</autoReward>
+	</event>
+	<event>
+		<text>民間船の1つは、連邦の軍事物資の大きなコンテナの上を静かにテレポートします。中には武器があります。</text>
+		<autoReward level="HIGH">weapon</autoReward> <!-- 1.23 -->
+	</event>
+	<event><!-- 1.25 -->
+		<text>民間船の1つは、連邦の軍事物資の大きなコンテナの上を静かにテレポートします。中には武器があります。</text>
+		<autoReward level="RANDOM">weapon</autoReward>
+	</event>
+	<!-- <event>
+		<text>民間船の1つは、連邦の軍事物資の小さな木枠の上を静かにテレポートします。</text>
+		<autoReward level="LOW">standard</autoReward>
+	</event> --> <!-- 1.23 -->
+	<event>
+		<text>民間船の1つがあなたに連絡し、彼らが連邦の支持者であることを明らかにします。盗聴した反乱軍が急襲し、船を破壊し、あなたを攻撃するために向きを変えます！</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+</eventList>
+
+
+
+<textList name="REBEL_HELPERS_TEXT">
+	<text>あなたは地元の民間の植民地に物資を配っている反乱軍の船に出くわしました。おそらくミリタリーグレードではありませんが、少しでも役立ちます...</text>
+	<text>緊急補給船として再割り当てされた反乱軍の戦闘艦を見つけました。地元の民間人は明らかに助けを必要としており、反乱軍はその機会に立ち上がっています。</text>
+	<text>このシステムの反乱軍は、地元の宇宙ステーションへの補給を行っています。これらの民間人は、戦争のために何ヶ月も供給されていない可能性があり、切実に必要とされています。</text>
+	<text>反乱軍の大義に忠実な民間の入植者が近くの惑星にいます。彼らは現在、供給品の出荷を受けているようです。役に立つかもしれません。</text>
+	<text>戦争のために、何千人もの入植者が彼らの供給ラインを混乱させ、悲惨な状況に陥っています。このシステムでは、反乱軍は同情的であり、彼らが惜しまない限りの物資を分配しているようです。</text>
+</textList>
+<ship name="REBEL_HELPERS_SHIP" auto_blueprint="SHIPS_REBEL">
+	<destroyed>
+		<text>反乱軍の船が破壊されたので、あなたは少しのスクラップが残っているものを集めるのに時間をかけます。彼らはすでに民間人に配達をしていました。</text>
+		<autoReward level="LOW">standard</autoReward>
+		<choice hidden="true">
+			<text>民間の物資を盗む。</text>
+			<event load="REBEL_HELPERS_SUPPLIES"/>
+		</choice>
+		<choice hidden="true">
+			<text>民間人を放っておいてください。</text>
+			<event load="REBEL_HELPER_NO_SUPPLIES"/>
+		</choice>
+	</destroyed>
+	<deadCrew>
+		<text>反乱軍の乗組員が死んだ状態で、あなたは装備のために彼らの船を剥ぎ取ります。彼らはすでに民間人に配達をしていました。</text>
+		<autoReward level="MED">standard</autoReward>
+		<choice hidden="true">
+			<text>民間の物資を盗む。</text>
+			<event load="REBEL_HELPERS_SUPPLIES"/>
+		</choice>
+		<choice hidden="true">
+			<text>民間人を放っておいてください。</text>
+			<event load="REBEL_HELPER_NO_SUPPLIES"/>
+		</choice>
+	</deadCrew>
+</ship>
+
+<event name="REBEL_HELPER_NO_SUPPLIES">
+	<text load="REBEL_HELPER_NO_SUPPLIES_TEXT"/>
+</event>
+
+<textList name="REBEL_HELPER_NO_SUPPLIES_TEXT">
+	<text>あなたは去る準備をします。民間の指導者の一人があなたに連絡します：「その反逆者は私たちの唯一の物資源でした。あなたは私たち全員を運命づけました。」</text>
+	<text>あなたは民間人に物資を残しますが、彼らに物資を運んでいた反乱軍がいなければ、彼らが長生きする可能性は低いでしょう。</text>
+	<text>あなたは、これらの民間人をどこの端でも助けるために、これ以上の反乱軍が利用できるかどうか疑問に思います。まあ、あなたにとって、数千人の入植者の生活よりも、数人の死んだ反乱軍が重要です。</text>
+	<text>FTLの運転料金が請求される前に、「私の息子はその船に乗っていました。彼は私たちを助けるのに十分な配慮をしていたので、反乱軍を助けただけでした。彼が私たちの物資を見つけることができなければ、私たちは忘れられてここで死ぬでしょう。 「」</text>
+</textList>
+
+<event name="REBEL_HELPERS">
+	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
+	<text load="REBEL_HELPERS_TEXT"/>
+	<choice>
+		<text>反乱軍を攻撃します。</text>
+		<event>
+			<ship load="REBEL_HELPERS_SHIP" hostile="true"/>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>待って、民間人から物資を盗みます。</text>
+		<event load="REBEL_HELPERS_SUPPLIES"/>
+	</choice>
+	<choice>
+		<text>そのままにしておきます。</text>
+		<event/>
+	</choice>
+</event>
+
+<eventList name="REBEL_HELPERS_SUPPLIES">
+	<event>
+		<text>入植者は物資を手渡します。それは主に自動農業用の機器のようですが、あなたはそれを利用することができます。あなたが去るとき、あなたはメッセージを受け取ります：「これが反乱軍が常に支援を持っている理由です！」</text>
+		<autoReward level="LOW">droneparts</autoReward>
+	</event>
+	<event>
+		<text>入植者は物資を手渡し、あなたはそれをあなたの船に積み込みます。あなたが飛び去るとき、あなたはそれを割って開き、地元の疫病の予防接種以外の何物も発見しません。</text>
+	</event>
+	<event>
+		<text>あなたは入植者に物資をあなたの船にテレポートさせます。それは建設資材を作ることに他なりません。まあ、スクラップはスクラップです。</text>
+		<autoReward level="LOW">scrap_only</autoReward>
+	</event>
+	<event>
+		<text>入植者たちは喜んで彼らの物資をあきらめます。しかし、あなたが飛び去ろうとすると、爆発があなたの船を揺さぶる。貨物はブービートラップされました！</text>
+		<damage amount="2" system="room" effect="random"/>
+	</event>
+</eventList>
+
+
+
+<textList name="ROGUE_REBEL_TEXT">
+	<text>民間の星系にあるビーコンに到着します。近くの植民地から連絡がありました。「このシステムに嫌がらせをしている不正な反乱軍の船があります。それを見つける時間はありますか？」</text>
+	<text>到着するとすぐに、連邦の暗号化されたメッセージが届きます。反乱軍の船がこのシステムで地元の民間人を恐怖に陥れています。探して破壊してください。</text>
+	<text>FTLドライブの充電を開始し、ローカル惑星のクイックスキャンを実行します。最近破壊された連邦の植民地の廃墟が表面にあります。近くに反乱軍の船があるに違いない...</text>
+	<text>あなたは破片のフィールドに飛び込みます。最近ここで戦闘が行われたようで、敗者は民間船だったようです。それが破壊される前に、メッセージが繰り返されました：「反乱軍が攻撃しています、援助を送ってください！」責任ある反乱軍はまだ近くにいる可能性があります。</text>
+</textList>
+<event name="ROGUE_REBEL">
+	<img back="BACKGROUND" planet="PLANET_POPULATED"/>
+	<text load="ROGUE_REBEL_TEXT"/>
+	<choice>
+		<text>反乱軍の船を探しに行きます。</text>
+		<event load="ROGUE_REBEL_SEARCH"/>
+	</choice>
+	<choice>
+		<text>検索する時間がないので、飛び降りる準備をします。</text>
+		<event/>
+	</choice>
+	<choice req="sensors" lvl="2" max_group="0">
+		<text>(Improved Sensors) エリアのスキャンを実行します。</text>
+		<event>
+			<text>あなたはすぐに反乱軍の船の位置を見つけ、傍受するために移動します。</text>
+			<ship load="REBEL" hostile="true"/>
+		</event>
+	</choice>
+	<choice req="sensors" lvl="3" max_group="0" hidden="true">
+		<text>(Advanced Sensors) 反乱軍の位置を正確に特定します。</text>
+		<event>
+			<text>あなたは反乱軍の船が近くの小惑星に隠れているのを見つけます。彼らがあなたに気付く前に、あなたは撃ち落とされて彼らのエンジンを永久に無効にすることができます。</text>
+			<ship load="REBEL" hostile="true"/>
+			<status type="limit" target="enemy" system="engines" amount="0"/>
+		</event>
+	</choice>
+</event>
+<eventList name="ROGUE_REBEL_SEARCH">
+	<event>
+		<text>あなたは周りを見回すのに少し時間を費やしますが、あなたのスキャナーは反乱軍の船の痕跡を拾うことができません。あなたは先に進む準備をします。</text>
+	</event>
+	<event>
+		<text>少し検索すると、反乱軍の船が見つかります。彼が見つけたのと同じくらい簡単に戦闘で敗北できることを願いましょう。</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+	<event>
+		<text>反乱軍をすばやく追跡することができます。彼が見つけたのと同じくらい簡単に戦闘で敗北できることを願いましょう。</text>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+	<event>
+		<text>検索に非常に多くの時間を費やした後、あなたはついに彼を追跡することができます。あなたは反乱軍の艦隊でどれだけの有利なスタートを失ったかを考えて戦いに入ります...</text>
+		<modifyPursuit amount="1"/>
+		<ship load="REBEL" hostile="true"/>
+	</event>
+</eventList>
+
+
+
+
+
+
+
+
+
+	<!--
+	<<<===== SPECIAL! =====>>>
+	-->
+
+
+
+
+
+
+
+
+

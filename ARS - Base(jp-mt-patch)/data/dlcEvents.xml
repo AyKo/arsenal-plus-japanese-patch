@@ -1,0 +1,285 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!-- cryptic +same somewhere about -1 drones min max under rebel auto PDS hacking level 3 -->
+<!-- also not sure what " max_group="0" " means -->
+<!--
+-
+Events For Testing
+-
+-->
+<event name="FUEL_ESCAPE_PULSAR">
+	<text>最後の燃料備蓄を利用して、パルサーから安全な距離に移動することができました。</text>
+</event>
+
+<event name="PULSAR">
+	<text>なんてことだ！押す！</text>
+	<ship load="REBEL_AUTO" hostile="true"/>
+	<environment type="pulsar"/>
+</event>
+
+<event name="PDS_TEST">
+	<text>なんてことだ！この惑星は反乱軍に友好的で、私たちを撃っています！</text>
+	<environment type="PDS" target="all"/>
+	<ship load="REBEL_AUTO" hostile="true"/>
+</event>
+
+<event name="FUEL_ESCAPE_PDS">
+	<text>インパルスエンジンを使用して、敵対的な惑星から安全な距離まで引っ張ることができました。</text>
+</event>
+
+<event name="FUEL_ESCAPE_FLEET">
+	<text>あなたがあなたの計画が何であるかを正確に整理しようとしている間、あなたのパイロットは周囲の艦隊からの砲撃を巧みに避けます。</text>
+</event>
+
+<event name="NEWSHIP1">
+	<text>なんでもいい</text>
+	<ship load="NEWSHIP1" hostile="true"/>
+</event>
+
+<event name="NEWSHIP2">
+	<text>なんでもいい</text>
+	<ship load="NEWSHIP2" hostile="true"/>
+</event>
+
+<ship name="NEWSHIP1" auto_blueprint="ANAEROBIC_SCOUT">
+	<destroyed>
+		<text>夏！</text>
+	</destroyed>
+	<deadCrew>
+		<text>夏！</text>
+	</deadCrew>
+</ship>
+
+<ship name="NEWSHIP2" auto_blueprint="ANAEROBIC_BOMBER">
+	<destroyed>
+		<text>夏！</text>
+	</destroyed>
+	<deadCrew>
+		<text>夏！</text>
+	</deadCrew>
+	<surrender  chance="0.5" min="3" max="4" load="PIRATE_SURRENDER"/>
+</ship>
+
+
+
+
+
+
+<!--
+-
+New Item Events
+-
+-->
+
+
+<event name="STORE_REBELSIDE" unique="true">
+	<text>あなたは大きなトレードステーションに出くわします。しかし、近づくとすぐに、その地域のすべての船に警告が発せられます。「連邦の共感者と交際しないでください。反乱軍に反対する者はすべて罰せられます。」</text>
+	<choice hidden="true">
+		<text>店の中を検索して、誰かがあなたに売ってくれるかどうかを確認します。</text>
+		<event load="STORE_REBELSIDE_SEARCH"/>
+	</choice>
+	<choice hidden="true">
+		<text>この場所を離れます。</text>
+		<event>
+			<text>あなたは運を押し出さずに先に進む方が良いと判断します。</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="mind" lvl="1" max_group="0">
+		<text>(Mind Control) アナウンサーの意見を変える。</text>
+		<event>
+			<text>アナウンスのソースを見つけ、スピーカーに前のステートメントを取り消すように「説得」します。うまくいけば、彼が今何が起こったのかを理解する前に、買い物をするのに十分な時間があります。</text>
+			<store/>
+		</event>
+	</choice>
+	<choice hidden="true" req="mind" lvl="2" max_group="0">
+		<text>(Improved Mind Control) アナウンサーの意見を変更します。</text>
+		<event>
+			<text>アナウンスのソースを見つけ、スピーカーに前のステートメントを取り消すように「説得」します。さらに、彼は無料の物資を提供することによって謝罪します。うまくいけば、彼が今何が起こったのかを理解する前に、買い物をするのに十分な時間があります。</text>
+			<autoReward level="MED">standard</autoReward>
+			<store/>
+		</event>
+	</choice>
+	<choice hidden="true" req="mind" lvl="3" max_group="0">
+		<text>(Advanced Mind Control) アナウンサーの意見を変更します。</text>
+		<event>
+			<text>アナウンスのソースを見つけ、スピーカーに前のステートメントを取り消すように「説得」します。さらに、彼はかなりの無料の物資を提供することによって謝罪します。うまくいけば、彼が今何が起こったのかを理解する前に、買い物をするのに十分な時間があります。</text>
+			<autoReward level="HIGH">standard</autoReward>
+			<store/>
+		</event>
+	</choice>
+</event>
+<eventList name="STORE_REBELSIDE_SEARCH">
+	<event>
+		<text>あなたはあなたのあられに反応する単一の店を見つけます：「ワイドバンドチャンネルを開かないでください。私たちはあなたに売りますが、私たちは自分自身に注意を向けたくありません。」</text>
+		<store/>
+	</event>
+	<event>
+		<text>フレンドリーなマーケットプレイスを検索しても結果は得られませんが、しばらくすると小さなシャトルが近づきます。彼らは、「私たちは反乱軍の艦隊のすべての友人ではありません。強くあり続けてください」というメッセージとともに、あなたの方向にいくつかの物資を放出します。</text>
+		<autoReward level="RANDOM">standard</autoReward>
+	</event>
+	<event>
+		<text>あなたはどうやらあなたの店を探しているときに間違った人に話しかけたようです。警告が鳴り、自動化された反乱軍の船が攻撃のために移動しているのを検出します。</text>
+		<ship load="REBEL_AUTO" hostile="true"/>
+	</event>
+	<event>
+		<text>あなたはどうやらあなたの店を探しているときに間違った人に話しかけたようです。警告が鳴り、自動化された反乱軍の船が攻撃のために移動しているのを検出します。</text>
+		<ship load="REBEL_AUTO" hostile="true"/>
+	</event>
+</eventList>
+
+
+<!--
+-
+HOSTILE ENVIRONMENT!
+ Environment Events  Added into standard rotations
+-
+-->
+
+
+<event name="REBEL_PULSAR" unique="true">
+	<text load="REBEL_PULSAR_TEXT"/>
+	<ship load="REBEL" hostile="true"/>
+	<environment type="pulsar"/>
+</event>
+<textList name="REBEL_PULSAR_TEXT"> <!--DLC2-->
+	<text>反乱軍の船長が画面に表示されます。 「私たちは背水の任務に運命づけられていたと思っていました。これはコマンドの良い恵みに戻るチャンスです！武器を充電してください！」</text>
+	<text>小さな反乱軍の研究ステーションは、脈動する星を見下ろしています。あなたが反応する前に、反乱軍の船があなたを見つけて攻撃に移ります。</text>
+	<text>パルサーの近くで、使用頻度の低いビーコンに到達します。やがて反乱軍の船がたまたま近くにジャンプしました。あなたは戦わなければならないように見えます。</text>
+
+
+	<!-- NEEDS MORE-->
+	<text>反乱軍の船長が画面に表示されます。 「私たちは背水の任務に運命づけられていたと思っていました。これはコマンドの良い恵みに戻るチャンスです！武器を充電してください！」</text>
+	<text>小さな反乱軍の研究ステーションは、脈動する星を見下ろしています。あなたが反応する前に、反乱軍の船があなたを見つけて攻撃に移ります。</text>
+	<text>パルサーの近くで、使用頻度の低いビーコンに到達します。やがて反乱軍の船がたまたま近くにジャンプしました。あなたは戦わなければならないように見えます。</text>
+</textList>
+
+<event name="PIRATE_PULSAR" unique="true">
+	<text load="PIRATE_PULSAR_TEXT"/>
+	<ship load="PIRATE" hostile="true"/>
+	<environment type="pulsar"/>
+</event>
+<textList name="PIRATE_PULSAR_TEXT">
+	<text>近くのパルサーが検出されると、センサーが暴走します。 FTLドライブを再調整しようとしているときに、海賊が船に忍び寄り、武器を充電します。戦いの準備を！</text>
+	<text>ビュー画面を支配しているパルサーを見つけるために到着します。星の前に小さなシルエットの峠が見えます。それが何であるかを考える前に、警告信号が鳴ります。発射軌道に乗った船のようです！</text>
+	<text>小さな研究基地が近くのパルサーを周回しています。それは大部分が放棄されているように見えますが、スキャン距離に入るとすぐにパワーシグネチャが燃え上がるのを検出します。小さな戦闘艦が駅から進水します。パイレーツ！</text>
+
+
+	<!-- NEEDS MORE-->
+	<text>近くのパルサーが検出されると、センサーが暴走します。 FTLドライブを再調整しようとしているときに、海賊が船に忍び寄り、武器を充電します。戦いの準備を！</text>
+	<text>ビュー画面を支配しているパルサーを見つけるために到着します。星の前に小さなシルエットの峠が見えます。それが何であるかを考える前に、警告信号が鳴ります。発射軌道に乗った船のようです！</text>
+	<text>小さな研究基地が近くのパルサーを周回しています。それは大部分が放棄されているように見えますが、スキャン距離に入るとすぐにパワーシグネチャが燃え上がるのを検出します。小さな戦闘艦が駅から進水します。パイレーツ！</text>
+</textList>
+
+
+
+<event name="REBEL_PDS" unique="true">
+	<text load="REBEL_PDS_TEXT"/>
+	<environment type="PDS" target="player"/>
+	<ship load="REBEL" hostile="true"/>
+	<choice>
+		<text>戦う準備をしなさい。</text>
+		<event/>
+	</choice>
+	<choice req="hacking" lvl="1" max_group="0"> <!-- 1.21 -->
+		<text>(Simple Hacking) 対艦バッテリーのターゲットを混乱させます。</text>
+		<event>
+			<text>あなたは標的衛星の弱点を見つけます。乗組員はハッキングドローンを発射して、対艦バッテリーのターゲティングマトリックスを混乱させることができます。反乱軍の船にも発砲するはずです。</text>
+			<environment type="PDS" target="all"/>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="hacking" lvl="3" max_group="0"> <!-- 1.21 -->
+		<text>(Advanced Hacking) 対艦バッテリーのターゲットを上書きします。</text>
+		<event>
+			<text>あなたは標的衛星の弱点を見つけます。乗組員は、改良されたハッキングドローンを発射して、対艦バッテリーのターゲティングマトリックスを上書きすることができます。代わりに反乱軍の船に発砲します！</text>
+			<environment type="PDS" target="enemy"/>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/>
+			</item_modify>
+		</event>
+	</choice>
+</event>
+<textList name="REBEL_PDS_TEXT">
+	<text>あなたはこの惑星で反乱軍の前進基地を発見することにショックを受けました。巡視船が迎撃のために移動し、センサーが対艦バッテリーが発砲しようとしていることを示します。ここから出なければならない！</text>
+
+	<!-- NEEDS MORE-->
+	<text>あなたはこの惑星で反乱軍の前進基地を発見することにショックを受けました。巡視船が迎撃のために移動し、センサーが対艦バッテリーが発砲しようとしていることを示します。ここから出なければならない！</text>
+	<text>あなたはこの惑星で反乱軍の前進基地を発見することにショックを受けました。巡視船が迎撃のために移動し、センサーが対艦バッテリーが発砲しようとしていることを示します。ここから出なければならない！</text>
+	<text>あなたはこの惑星で反乱軍の前進基地を発見することにショックを受けました。巡視船が迎撃のために移動し、センサーが対艦バッテリーが発砲しようとしていることを示します。ここから出なければならない！</text>
+</textList>
+
+
+<event name="REBEL_AUTO_PDS" unique="true">
+	<text load="REBEL_AUTO_PDS_TEXT"/>
+	<environment type="PDS" target="player"/>
+	<ship load="REBEL_AUTO" hostile="true"/>
+	<choice>
+		<text>戦う準備をしなさい。</text>
+		<event/>
+	</choice>
+	<choice req="hacking" lvl="1" max_group="0"> <!-- 1.21 -->
+		<text>(Simple Hacking) 対艦バッテリーのターゲットを混乱させます。</text>
+		<event>
+			<text>あなたは標的衛星の弱点を見つけます。乗組員はハッキングドローンを発射して、ASBのロック信号を定期的に混乱させることができます。時々反乱軍の船に発砲するはずです。</text>
+			<environment type="PDS" target="all"/>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/>
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="hacking" lvl="3" max_group="0"> <!-- 1.21 -->
+		<text>(Advanced Hacking) ASBのターゲットを上書きします。</text>
+		<event>
+			<text>あなたは標的衛星の弱点を見つけます。あなたの乗組員は、ASBのターゲットロックを上書きするために改良されたハッキングドローンを発射することができます。代わりに反乱軍の船に発砲します！</text>
+			<environment type="PDS" target="enemy"/>
+			<item_modify>
+				<item type="drones" min="-1" max="-1"/> <!-- 1.21 + same somewhere... what does this mean???-->
+			</item_modify>
+		</event>
+	</choice>
+</event>
+<textList name="REBEL_AUTO_PDS_TEXT">
+	<text>到着するとすぐに、複数の警告が鳴ります。敵対的な自動船が検出され、対艦バッテリーが発射を開始します。これはよく見えません！</text>
+
+	<!-- NEEDS MORE-->
+	<text>到着するとすぐに、複数の警告が鳴ります。敵対的な自動船が検出され、対艦バッテリーが発射を開始します。これはよく見えません！</text>
+	<text>到着するとすぐに、複数の警告が鳴ります。敵対的な自動船が検出され、対艦バッテリーが発射を開始します。これはよく見えません！</text>
+	<text>到着するとすぐに、複数の警告が鳴ります。敵対的な自動船が検出され、対艦バッテリーが発射を開始します。これはよく見えません！</text>
+</textList>
+
+<!--
+-
+Standard Ships
+-
+-->
+
+
+
+
+
+<!--
+-
+New Rebel Fleet events
+-
+-->
+
+
+
+
+<!--
+-
+New Last-Stand Events
+-
+-->
+
+
+
+
+<!--
+-
+Lanius Sector Events
+-
+-->
+

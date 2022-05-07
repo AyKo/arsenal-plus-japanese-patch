@@ -1,0 +1,2305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<shipBlueprint name="PLAYER_SHIP_HARD" layout="p_old_pirate_transport" img="p_old_pirate_transport">
+	<class>Pirate Freighter</class>
+	<name>Blacksmith</name>
+	<desc>この海賊の凶悪犯のギャングは、どんな犠牲を払っても連邦を守る準備ができています。</desc>
+	<systemList>
+		<battery power="1" room="8" start="false" img="room_battery_70" />
+		<cloaking power="1" room="6" start="false" img="room_cloaking_60" />
+		<clonebay power="1" room="9" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="2" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="5" start="false" img="room_drones_6" />
+		<engines power="2" room="10" start="true" img="room_engines_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="13" start="false" img="room_hacking_2" />
+		<medbay power="1" room="9" start="true" img="room_medbay_6">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="12" start="false" img="room_mind_1" />
+		<oxygen power="1" room="4" start="true" img="room_oxygen_4" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2"> <!-- 1.25 --> <!-- rooms.xml.append updated -->
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="1" start="true" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="7" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="11" start="false" />
+		<weapons power="3" room="3" start="true" img="room_weapons_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="14" start="false" img="room_artillery_4" weapon="ARTILLERY_PL_HEAVY"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="LASER_CHARGEGUN_4" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="slug" />
+	<crewCount amount="1" class="mantis" /><!-- 1.25 -->
+	<crewCount amount="1" class="rock" /><!-- 1.25 -->
+	<aug name="ADV_SCANNERS" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_HARD_2" layout="pbs_outlaw_asteroid" img="pbs_outlaw_asteroid">
+	<class>Pirate Station</class>
+	<name>Immolate Improved</name>
+	<unlock>Complete 2/3 of the Pirate Freighter Achievements to unlock this ship.</unlock>
+	<desc>小惑星兵器を装備したこの伝説的な海賊ステーションは、今回は連邦側にあります。</desc>
+	<systemList>
+		<battery power="1" room="11" start="false" img="room_battery_10" />
+		<cloaking power="1" room="3" start="false" img="room_cloaking_3" />
+		<clonebay power="1" room="2" start="false">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="1" start="false" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="8" start="false" img="room_drones_15" />
+		<engines power="1" room="10" start="true" img="room_engines_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="7" start="false" img="room_hacking" />
+		<medbay power="1" room="2" start="true" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="5" start="false" img="room_mind_11" />
+		<oxygen power="1" room="13" start="true" img="room_oxygen_4" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="2" room="9" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="4" start="true" img="room_shields_2">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="12" start="false" />
+		<weapons power="4" room="6" start="true" img="room_weapons_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="14" start="false" img="room_artillery_4" weapon="ARTILLERY_PL_HEAVY"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="ASTEROID_GUN" />
+		<weapon name="ASTEROID_GUN" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="human" />
+	<crewCount amount="1" class="anaerobic" />
+	<crewCount amount="1" class="engi" />
+	<aug name="SHIELD_RECHARGE" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_HARD_3" layout="prebel_elite_cruiser" img="prebel_elite_cruiser">
+	<class>Rebel Dreadnought</class>
+	<name>Reinhard</name>
+	<unlock>Get to the 8th sector with the Pirate Station and Advanced Edition enabled to unlock this ship.</unlock>
+	<desc>このドレッドノートは反乱軍との激しい戦いで捕らえられ、修理によって元の栄光に戻った後、連邦に仕える準備ができています。</desc>
+	<systemList>
+		<battery power="1" room="15" start="false" img="room_battery_15" />
+		<cloaking power="1" room="11" start="false" img="room_cloaking_3" />
+		<clonebay power="1" room="4" start="true">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="13" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="9" start="false" img="room_drones_15" />
+		<engines power="2" room="6" start="true" img="room_engines_15">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="10" start="false" img="room_hacking_2" />
+		<medbay power="1" room="4" start="false" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="3" start="false" img="room_mind" />
+		<oxygen power="1" room="5" start="true" img="room_oxygen_18" />
+		<pilot power="1" room="14" start="true" img="room_pilot_5">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="16" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="2" start="true" img="room_shields_3">
+			<slot>
+				<direction>left</direction>
+				<number>2</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="7" start="false" />
+		<weapons power="4" room="0" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="8" start="false" img="room_artillery" weapon="ARTILLERY_PL_HEAVY"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="OMICRON_AEGON_ROCKET_1" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="9" />
+	<crewCount amount="1" class="crystal" />
+	<crewCount amount="1" class="human" />
+	<crewCount amount="1" class="human" />
+	<aug name="FLEET_DISTRACTION" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_CIRCLE" layout="p_circle_artillery" img="p_circle_artillery">
+	<class>Engi Artillery</class>
+	<name>Ficus Carica</name>
+	<desc>この小さな船はかなりまともなスタートを切っており、砲兵のサポートが装備されています。</desc>
+	<unlock>To unlock this ship, you need to get to the 5th sector with a Pirate Freighter or a Pirate Station.</unlock>
+	<systemList>
+		<artillery power="1" max="4" room="4" start="true" weapon="ENGI_ARTILLERY" img="room_artillery_3" /><!-- 1.26 added max -->
+		<battery power="1" room="3" start="false" img="room_battery_2" />
+		<clonebay power="1" room="11" start="false">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="5" start="false" img="room_doors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="7" start="true" img="room_drones_21" />
+		<engines power="1" room="0" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<!-- <hacking power="1" room="9" start="true" img="room_hacking_11" /> --><!-- 1.25.1 -->
+		<cloaking power="1" room="9" start="true" img="room_cloaking_3" /> <!-- 1.25.1 -->
+		<medbay power="1" room="11" start="true" img="room_medbay_50">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<oxygen power="1" room="8" start="true" img="room_oxygen_19" />
+		<pilot power="2" room="2" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="6" start="true" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="1" start="true" img="room_shields_14">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<weapons power="1" room="10" start="true" img="room_weapons_8">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="0" count="3">
+		<weapon name="LASER_STANDARD_1" />
+		<weapon name="LASER_TIRED" />
+	</weaponList>
+	<droneList drones="9" count="3">
+		<drone name="COMBAT_BEAM_OLD" />
+		<drone name="DE_BATTLE_3" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="engi" />
+	<crewCount amount="1" class="energy" />
+	<aug name="NANO_MEDBAY" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_CIRCLE_2" layout="p_sexship" img="p_sexship">
+	<class>Coupled Engi Cruiser</class>
+	<name>Dual</name>
+	<desc>この船は、実際には「特別な」目的のためにリンクされた2隻の船です。</desc>
+	<unlock>Complete 2/3 of the Engi Artillery Achievements to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="17" start="false" img="room_battery_12" />
+		<cloaking power="1" room="13" start="false" img="room_cloaking_120" />
+		<clonebay power="1" room="19" start="false">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="3" start="true" img="room_doors_5">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="1" start="true" img="room_drones_13" />
+		<engines power="1" room="8" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="16" start="false" img="room_hacking_10" />
+		<medbay power="1" room="19" start="true" img="room_medbay_50">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="4" start="false" img="room_mind_2" />
+		<oxygen power="1" room="7" start="true" img="room_oxygen" />
+		<pilot power="1" room="0" start="true" img="room_pilot_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="2" start="true" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="11" start="true" img="room_shields_14">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="18" start="false" />
+		<weapons power="2" room="5" start="true" img="room_weapons_8">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="14" start="false" img="room_artillery" weapon="ARTILLERY_PL_ION"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="0" count="3">
+		<weapon name="BEAM_1_2" /><!-- 1.25.1 -->
+		<weapon name="BEAM_1" /><!-- 1.25.1 -->
+	</weaponList>
+	<droneList drones="3" count="3">
+		<drone name="DE_DRONE_SCATTER" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="engi" />
+	<crewCount amount="1" class="engi" />
+	<crewCount amount="1" class="engi" />
+	<aug name="DRONE_RECOVERY" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_CIRCLE_3" layout="p_Engi_hunter" img="p_Engi_hunter">
+	<class>Engi Hunter</class>
+	<name>Mangi</name>
+	<desc>マンティスハンターとエンギスカウトの衝突によって形成されたこのゴミの山。</desc>
+	<unlock>Get to the 8th sector with the Coupled Engi Cruiser with Advanced Edition enabled to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="8" start="false" img="room_battery_7" />
+		<cloaking power="1" room="13" start="false" img="room_cloaking_120" />
+		<clonebay power="1" room="7" start="false">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="15" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="3" start="false" img="room_drones_2" /> <!-- 1.25 power was 4 -->
+		<engines power="1" room="5" start="true" img="room_engines_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="9" start="false" img="room_hacking_7" />
+		<medbay power="1" room="7" start="false" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="11" start="false" img="room_mind_1" />
+		<oxygen power="1" room="10" start="true" img="room_oxygen_2" /> <!-- bamalf was room_oxygen_5 -->
+		<pilot power="2" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="6" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="2" start="true" img="room_shields_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="4" start="true" />
+		<weapons power="3" room="14" start="true" img="room_weapons_12">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="12" start="false" img="room_artillery" weapon="ARTILLERY_PL_ION"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="HEAVY_PPL" />
+	</weaponList>
+	<droneList drones="5" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="engi" />
+	<crewCount amount="1" class="engi" />
+	<crewCount amount="1" class="engi" />
+	<crewCount amount="1" class="engi" />
+	<aug name="TELEPORT_HEAL" />
+</shipBlueprint>
+
+
+
+<shipBlueprint name="PLAYER_SHIP_FED" layout="p_fed_barge" img="p_fed_barge">
+	<class>Federation Transport</class>
+	<name>Flurry</name>
+	<desc>その適度なサイズにもかかわらず、この貨物船はどんな船もかなり粉砕することができます。つまり、十分な弾薬がある場合です。</desc>
+	<unlock>There have been rumors of advanced ship construction in the Rebel Stronghold...</unlock>
+	<systemList>
+		<battery power="1" room="6" start="false" img="room_battery_8" />
+		<cloaking power="1" room="10" start="false" img="room_cloaking_120" />
+		<clonebay power="1" room="8" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="7" start="true" img="room_doors_4">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="1" start="false" img="room_drones_140" />
+		<engines power="2" room="13" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="4" start="false" img="room_hacking_3" />
+		<medbay power="1" room="8" start="true" img="room_medbay_9">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="3" start="true" img="room_mind_1" />
+		<oxygen power="1" room="11" start="true" img="room_oxygen_5" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="5" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="2" start="true" img="room_shields_15">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="12" start="false" />
+		<weapons power="3" room="9" start="true" img="room_weapons_8">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="14" start="false" img="room_artillery" weapon="ARTILLERY_PL_BEAM_V"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="30" count="4">
+		<weapon name="MISSILES_2_PLAYER" />
+		<weapon name="MISSILES_1" />
+		<weapon name="BA_MISSILES_ASTERIA" />
+	</weaponList>
+	<droneList drones="5" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="human" />
+	<crewCount amount="1" class="human" />
+	<crewCount amount="1" class="energy" />
+	<aug name="EXPLOSIVE_REPLICATOR" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_FED_2" layout="p_tb_rebel_assault" img="p_tb_rebel_assault">
+	<class>Marauder</class>
+	<name>Outsider</name>
+	<desc>戦闘では、略奪者は彼らの速い武器に依存します。時々、敵は単一のボレーを発射する時間さえありません。</desc>
+	<unlock>Complete 2/3 of the Federation Transport Achievements to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="7" start="false" img="room_battery_11" />
+		<cloaking power="1" room="10" start="false" img="room_cloaking_5" />
+		<clonebay power="1" room="4" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="12" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="1" start="false" img="room_drones_14" />
+		<engines power="2" room="2" start="true" img="room_engines_2">
+			<slot>
+				<direction>down</direction>
+				<number>1</number><!-- was 2 - when did this change? -->
+			</slot>
+		</engines>
+		<hacking power="1" room="8" start="false" img="room_hacking_2" />
+		<medbay power="1" room="4" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="6" start="true" img="room_mind_3" />
+		<oxygen power="1" room="13" start="true" img="room_oxygen_13" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="11" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="3" start="true" img="room_shields_14">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="5" start="false" />
+		<weapons power="2" room="9" start="true" img="room_weapons_2">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="14" start="false" img="room_artillery_4" weapon="ARTILLERY_PL_BEAM_V"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="3">
+		<weapon name="BA_LASER_AUTO_2" />
+		<weapon name="PREIGNITE_SHOTGUN_IMPULSE_2" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<aug name="FTL_JAMMER" />
+	<crewCount amount="1" class="human" />
+	<crewCount amount="1" class="human" />
+	<crewCount amount="1" class="human" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_FED_3" layout="p_ordenboss" img="p_ordenboss">
+	<class>Order Flagship</class>
+	<name>Burn</name>
+	<desc>この船が捕獲されたとき、その砲兵の1つが誤って損傷し、現在は機能していません。</desc>
+	<unlock>Get to the 8th sector with the Marauder and Advanced Edition enabled to unlock this ship.</unlock>
+	<systemList>
+		<artillery power="4" max="4" room="2" start="true" weapon="ARTILLERY_CIVILIAN_PLUS" img="room_artillery" /><!-- 1.26 added max | 1.25 -->
+		<battery power="1" room="15" start="false" img="room_battery_16" />
+		<cloaking power="1" room="12" start="false" img="room_cloaking_3" />
+		<clonebay power="1" room="8" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="6" start="false" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="1" start="false" img="room_drones_16" />
+		<engines power="2" room="13" start="true" img="room_engines_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="5" start="false" img="room_hacking_18" />
+		<medbay power="2" room="8" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="4" start="false" img="room_mind_25" />
+		<oxygen power="1" room="14" start="true" img="room_oxygen_19" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="2" room="7" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="9" start="true" img="room_shields_9">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="11" start="false" />
+		<weapons power="1" room="10" start="true" img="room_weapons_6">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="3" />
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="9" />
+	<crewCount amount="1" class="human" />
+	<crewCount amount="1" class="human" />
+	<aug name="FIRE_EXTINGUISHERS" />
+</shipBlueprint>
+
+<weaponBlueprint name="ARTILLERY_CIVILIAN_PLUS"> <!-- 1.25 -->
+	<type>BEAM</type>
+	<title>Strengthened Order Beam</title>
+	<short>Strengthened Order Beam</short>
+	<desc>低速で強力なビームに電力を供給し、システムに1ダメージ、乗組員に30ダメージを与え、任意の数のシールド層を貫通します。部屋に火をつけることができます。 [33‡]</desc><!-- 1.26 -->
+	<tooltip>Artillery: Automatically firing all shield-piercing beam that does 1 system damage per room hit and 30 crew damage with a chance to light a fire per room tile. [33 ‡]</tooltip><!-- 1.26 -->
+	<damage>0</damage>
+	<sysDamage>2</sysDamage>
+	<persDamage>2</persDamage>
+	<sp>5</sp>
+	<fireChance>3</fireChance>
+	<breachChance>0</breachChance>
+	<speed>5</speed>
+	<cooldown>33</cooldown>
+	<color>
+		<r>255</r>
+		<g>75</g>
+		<b>0</b>
+	</color>
+	<power>1</power>
+	<cost>0</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>ba_beam_hit_artillery</image>
+	<length>250</length>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>artillery_civilian</weaponArt>
+</weaponBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ENERGY" layout="p_zoltan_artillery" img="p_zoltan_artillery">
+	<class>Energy Artillery</class>
+	<name>Pompous</name>
+	<desc>この船のゾルタンシールドは、チェーン兵器と砲兵の安全な分散とウォームアップを提供します。</desc>
+	<unlock>Learn from the Zoltan that sometimes diplomacy works.</unlock>
+	<systemList>
+		<artillery power="1" max="4" room="11" start="true" weapon="ARTILLERY_ZOLTAN_PLAYER" img="room_artillery" /><!-- 1.26 added max -->
+		<battery power="1" room="14" start="false" img="room_battery_10" />
+		<cloaking power="1" room="3" start="false" img="room_cloaking_3" />
+		<clonebay power="1" room="2" start="false">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="12" start="true" img="room_doors_8">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="7" start="false" img="room_drones_15" />
+		<engines power="1" room="4" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="0" start="false" img="room_hacking_4" />
+		<medbay power="1" room="2" start="true" img="room_medbay_50">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="13" start="false" img="room_mind_3" />
+		<oxygen power="1" room="5" start="true" img="room_oxygen_8" />
+		<pilot power="1" room="8" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="6" start="true" img="room_sensors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="9" start="true" img="room_shields_16">
+			<slot>
+				<direction>down</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="10" start="false" />
+		<weapons power="3" room="1" start="true" img="room_weapons_12">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="BEAM_DEEP_MINE" />
+		<weapon name="LASER_CHAIN_1" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="6" />
+	<crewCount amount="1" class="engi" />
+	<crewCount amount="1" class="energy" />
+	<crewCount amount="1" class="energy" />
+	<aug name="ENERGY_SHIELD" />
+</shipBlueprint>
+
+<weaponBlueprint name="ARTILLERY_ZOLTAN_PLAYER">
+	<type>BEAM</type>
+	<title>Artillery Beam</title>
+	<short>Artill. Beam</short>
+	<desc>部屋のヒットごとに1ダメージを与える、低速で強力なビームに電力を供給します。任意の数のシールドバブルを貫通します。 [40‡]</desc><!-- 1.26 -->
+	<tooltip>Artillery: Automatically firing beam that inflicts 1 damage per room hit, piercing all shields. [40 ‡]</tooltip><!-- 1.26 -->
+	<damage>1</damage>
+	<sp>5</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<speed>10</speed>
+	<cooldown>40.2</cooldown><!-- 1.27 was 40 -->
+	<power>1</power>
+	<cost>0</cost>
+	<bp>5</bp>
+	<rarity>0</rarity>
+	<image>ba_beam_hit_artillery</image>
+	<length>500</length>
+	<launchSounds>
+		<sound>beam1</sound>
+	</launchSounds>
+	<weaponArt>artillery_zoltan</weaponArt>
+</weaponBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ENERGY_2" layout="p_energy_boss" img="p_energy_boss">
+	<class>Zoltan Dreadnought</class>
+	<name>Composite</name>
+	<desc>このドレッドノートは強力な火力を持っていますが、防御力は弱いです。</desc>
+	<unlock>Complete 2/3 of the Energy Artillery Achievements to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="7" start="false" img="room_battery_16" />
+		<cloaking power="1" room="8" start="false" img="room_cloaking_3" />
+		<clonebay power="1" room="11" start="false">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="12" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="2" start="false" img="room_drones_14" />
+		<engines power="2" room="9" start="true" img="room_engines_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="13" start="false" img="room_hacking_7" />
+		<medbay power="1" room="11" start="false" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="6" start="false" img="room_mind_1" />
+		<oxygen power="2" room="4" start="true" img="room_oxygen_5" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="1" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="1" room="10" start="false" img="room_shields_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="3" start="false" />
+		<weapons power="2" room="5" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="14" start="false" img="room_artillery_4" weapon="ARTILLERY_PL_BEAM_K"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="BA_BEAM_ADAPTIVE_1" />
+		<weapon name="BA_BEAM_ADAPTIVE_1" />
+		<weapon name="PREIGNITE_ION_IMPULSE_1" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="4" />
+	<crewCount amount="1" class="energy" />
+	<crewCount amount="1" class="energy" />
+	<crewCount amount="1" class="energy" />
+	<aug name="ENERGY_SHIELD" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ENERGY_3" layout="p_tb_energy_barge" img="p_tb_energy_barge">
+	<class>Zoltan Laboratory</class>
+	<name>Crazy Lab</name>
+	<desc>狂ったゾルタンの科学者の研究室には、巨大な武器が装備されています。十分な弾薬が必要になることを事前に心配することは価値があります。</desc>
+	<unlock>Get to the 8th sector with the Zoltan Dreadnought and Advanced Edition enabled to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="1" start="true" img="room_battery_2" /><!-- 1.26 room was 5, battery_8 -->
+		<cloaking power="1" room="14" start="false" img="room_cloaking_3" />
+		<clonebay power="1" room="8" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="12" start="true" img="room_doors_4">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="7" start="false" img="room_drones_9" />
+		<engines power="2" room="13" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="4" start="false" img="room_hacking_3" />
+		<medbay power="1" room="8" start="true" img="room_medbay_5">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="6" start="false" img="room_mind_9" />
+		<oxygen power="1" room="2" start="true" img="room_oxygen_8" />
+		<pilot power="1" room="3" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="11" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="10" start="true" img="room_shields_11">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="9" start="false" /><!-- 1.26 room was 1 -->
+		<weapons power="4" room="0" start="true" img="room_weapons_12">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="5" start="false" img="room_artillery_4" weapon="ARTILLERY_PL_BEAM_K"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="99" count="3"> <!-- 1.25 was 66 -->
+		<weapon name="JADE_CANNON_PLAYER" />
+	</weaponList>
+	<health amount="30" />
+	<maxPower amount="3" />
+	<crewCount amount="1" class="energy" />
+	<crewCount amount="1" class="energy" />
+	<crewCount amount="1" class="energy" />
+	<aug name="ENERGY_SHIELD" />
+</shipBlueprint>
+
+<weaponBlueprint name="JADE_CANNON_PLAYER">
+	<type>BOMB</type>
+	<tip>tip_smasher_f4_b4</tip><!-- 1.26.3 -->
+	<title>Star Crusher</title>
+	<short>Star Crusher</short>
+	<flavorType>Star Crusher</flavorType>
+	<desc>この巨大な武器は、ボレーごとに3発のミサイル弾を消費します。すべてのシールドを無視します。</desc>
+	<damage>3</damage>
+	<ion>2</ion>
+	<sysDamage>1</sysDamage>
+	<persDamage>1</persDamage>
+	<missiles>3</missiles>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>4</fireChance>
+	<breachChance>4</breachChance>
+	<cooldown>8</cooldown>
+	<power>4</power>
+	<cost>0</cost>
+	<bp>12</bp>
+	<rarity>0</rarity>
+	<image>jade_blank</image>
+	<explosion>explosion_jade</explosion>
+	<launchSounds>
+		<sound>omicron_spatial_charges1</sound>
+		<sound>omicron_spatial_charges2</sound>
+		<sound>omicron_spatial_charges3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>omicron_spatial_charges_explosion</sound>
+	</hitShipSounds>
+	<weaponArt>jade_cannon</weaponArt>
+</weaponBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_MANTIS" layout="p_Mantis_hunter" img="p_Mantis_hunter">
+	<class>Mantis Hunter</class>
+	<name>Shikari</name>
+	<desc>この将来の搭乗船は、搭乗員が集まるまでピアスレーザーに依存しています。</desc>
+	<unlock>The famous Mantis thief, KazaaakplethKilik, owns this ship. You'll have to "convince" him to help you.</unlock>
+	<systemList>
+		<battery power="1" room="8" start="false" img="room_battery_13" />
+		<cloaking power="1" room="6" start="false" img="room_cloaking_8" />
+		<clonebay power="1" room="1" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="4" start="true" img="room_doors_5">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="9" start="false" img="room_drones_14" />
+		<engines power="1" room="13" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="12" start="false" img="room_hacking_9" />
+		<medbay power="1" room="1" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="11" start="true" img="room_mind_1" />
+		<oxygen power="1" room="15" start="true" img="room_oxygen" />
+		<pilot power="2" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="5" start="true" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="14" start="true" img="room_shields_16">
+			<slot>
+				<direction>down</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="2" start="true" />
+		<weapons power="2" room="10" start="true" img="room_weapons_11">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="3" start="false" img="room_artillery_2" weapon="ARTILLERY_PL_BOMB_TIMER"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="LIGHT_BREACH_LASER_2" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="engi" />
+	<crewCount amount="1" class="engi" />
+	<crewCount amount="1" class="mantis" />
+	<aug name="CREW_STIMS" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_MANTIS_2" layout="PMANTIS_HUNTER_PIRATE" img="PMANTIS_HUNTER_PIRATE">
+	<class>Pirate Hunter</class>
+	<name>Wild Hunter</name>
+	<desc>この船には、搭乗プロセスをスピードアップするための光散乱レーザーが装備されています。</desc>
+	<unlock>Complete 2/3 of the Mantis Hunter Achievements to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="12" start="false" img="room_battery_70" />
+		<cloaking power="1" room="10" start="false" img="room_cloaking_90" />
+		<clonebay power="1" room="9" start="true">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="2" start="true" img="room_doors_90">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="7" start="false" img="room_drones_8" />
+		<engines power="2" room="13" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="11" start="false" img="room_hacking_300" />
+		<medbay power="1" room="9" start="false" img="room_medbay_60">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="6" start="false" img="room_mind_6" />
+		<oxygen power="1" room="8" start="true" img="room_oxygen" />
+		<pilot power="2" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="1" start="true" img="room_sensors_30">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="3" room="3" start="true" img="room_shields_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="5" start="true" />
+		<weapons power="2" room="4" start="true" img="room_weapons_6">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="5" start="false" img="room_artillery_3" weapon="ARTILLERY_PL_BOMB_TIMER"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="LASER_LIGHT_SCATTER_2" /> <!-- 1.25 -->
+		<weapon name="LASER_LIGHT_SCATTER_1" /> <!-- 1.25 -->
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="mantis" />
+	<crewCount amount="1" class="mantis" />
+	<aug name="CREW_STIMS" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_MANTIS_3" layout="p_mantis_boss" img="p_mantis_boss">
+	<class>Royal Assault</class>
+	<name>KtsahkterKaatts</name>
+	<desc>この船はKazaaakplethKilikのいとこであるKtsahkterKaattsに属しており、強力な攻撃兵器を装備しています。</desc>
+	<unlock>Get to the 8th sector with the Pirate Hunter and Advanced Edition enabled to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="11" start="false" img="room_battery_70" />
+		<cloaking power="1" room="8" start="false" img="room_cloaking_120" />
+		<clonebay power="1" room="13" start="false">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="2" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="7" start="false" img="room_drones_14" />
+		<engines power="1" room="5" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="12" start="false" img="room_hacking_4" />
+		<medbay power="1" room="13" start="true" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="9" start="false" img="room_mind_1" />
+		<oxygen power="1" room="6" start="true" img="room_oxygen" />
+		<pilot power="2" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="1" start="false" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="3" start="true" img="room_shields_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="10" start="false" />
+		<weapons power="4" room="4" start="true" img="room_weapons_6">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="14" start="false" img="room_artillery" weapon="ARTILLERY_PL_BOMB_TIMER"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="SHTURM_LASER_2" />
+		<weapon name="SHTURM_LASER_1" />
+		<weapon name="SHIPRADAR"/>
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="mantis" />
+	<crewCount amount="1" class="mantis" />
+	<aug name="CREW_STIMS" />
+</shipBlueprint>
+
+
+<shipBlueprint name="PLAYER_SHIP_JELLY" layout="p_jelly_truffle_2" img="p_jelly_truffle_2">
+	<class>Slug Hunter</class>
+	<name>Black Raven</name>
+	<desc>これらのスラッグはかつてステーションを奪い、改良されたバーストレーザーを生成しました。</desc>
+	<unlock>One of the slug ships must know something about this advanced cruiser. Perhaps you can "convince" them to tell you.</unlock>
+	<systemList>
+		<battery power="1" room="9" start="false" img="room_battery_10" />
+		<cloaking power="1" room="8" start="true" img="room_cloaking_120" />
+		<clonebay power="1" room="1" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="4" start="true" img="room_doors_2">
+			<slot>
+				<direction>down</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="10" start="false" img="room_drones_139" />
+		<engines power="4" room="2" start="true" img="room_engines_20">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="7" start="false" img="room_hacking_3" />
+		<medbay power="1" room="1" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="13" start="false" img="room_mind_5" />
+		<oxygen power="1" room="12" start="true" img="room_oxygen" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="3" start="false" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="5" start="false" img="room_shields_11">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="11" start="false" />
+		<weapons power="2" room="6" start="true" img="room_weapons_8">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="1" start="false" img="room_artillery_4" weapon="ARTILLERY_PL_BOMB_BREACH"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="LASER_BURST_2P" />
+		<weapon name="LASER_BURST_1P" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="slug" />
+	<crewCount amount="1" class="slug" />
+	<crewCount amount="1" class="slug" />
+	<aug name="SLUG_GEL" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_JELLY_2" layout="p_jelly_art" img="p_jelly_art">
+	<class>Slug Artillery</class>
+	<name>Venomancer</name>
+	<desc>この船の砲兵支援は、敵の乗組員をすばやく破壊するように設計されています。</desc>
+	<unlock>Complete 2/3 of the Slug Hunter Achievements to unlock this ship.</unlock>
+	<systemList>
+		<artillery power="1" max="4" room="0" start="true" weapon="ARTILLERY_SLUG" img="room_artillery_kanpukter" /><!-- 1.26 added max -->
+		<battery power="1" room="14" start="false" img="room_battery_5" />
+		<cloaking power="1" room="8" start="false" img="room_cloaking_8" />
+		<clonebay power="1" room="4" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="5" start="true" img="room_doors_9">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="7" start="false" img="room_drones_14" />
+		<engines power="2" room="9" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="10" start="false" img="room_hacking_110" />
+		<medbay power="1" room="4" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="12" start="false" img="room_mind_3" />
+		<oxygen power="1" room="13" start="true" img="room_oxygen_2" />
+		<pilot power="1" room="2" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="6" start="false" img="room_sensors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="3" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="1" start="false" />
+		<weapons power="2" room="11" start="true" img="room_weapons_12">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="20" count="4">
+		<weapon name="MISSILES_HULL" />
+		<weapon name="PREIGNITE_PP_IMPULSE_2" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="slug" />
+	<crewCount amount="1" class="slug" />
+	<aug name="SLUG_GEL" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_JELLY_3" layout="p_Slug_depresser" img="p_Slug_depresser">
+	<class>Slug Suppressor</class>
+	<name>Tricolor</name>
+	<desc>システムをスクランブルし、敵の乗組員に幻覚を引き起こした巨大な破壊皿は、麻痺する大砲に変換されました。</desc>
+	<unlock>Get to the 8th sector with the Slug Artillery and Advanced Edition enabled to unlock this ship.</unlock>
+	<systemList>
+		<artillery power="1" max="4" room="15" start="true" weapon="TRICOLOR_ART" img="room_artillery_2" /><!-- 1.26 added max -->
+		<battery power="1" room="9" start="false" img="room_battery_15" />
+		<cloaking power="1" room="11" start="false" img="room_cloaking_9" />
+		<clonebay power="1" room="7" start="false">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="1" start="true" img="room_doors_9">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="3" start="false" img="room_drones_3" />
+		<engines power="1" room="14" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="12" start="false" img="room_hacking_300" />
+		<medbay power="1" room="7" start="true" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="2" start="true" img="room_mind_7" />
+		<oxygen power="1" room="13" start="true" img="room_oxygen_8" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="10" start="false" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="5" start="true" img="room_shields_14">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="6" start="false" />
+		<weapons power="2" room="8" start="true" img="room_weapons_11">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="BA_LASER_ADDFIRE" />
+		<weapon name="BA_LASER_ADDFIRE" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="slug" />
+	<crewCount amount="1" class="slug" />
+	<crewCount amount="1" class="slug" />
+	<crewCount amount="1" class="slug" />
+	<aug name="SLUG_GEL" />
+</shipBlueprint>
+
+<weaponBlueprint name="TRICOLOR_ART">
+	<type>BURST</type>
+	<title>Paralyzing Artillery</title>
+	<short>Paralyzing Artillery</short>
+	<desc>この砲兵は敵の乗組員全員を深いノックアウトに送ります。 [40‡]</desc><!-- 1.26 -->
+	<tooltip>This artillery sends the entire enemy crew into a deep knockout. [40 ‡]</tooltip><!-- 1.26 -->
+	<radius>250</radius>
+	<damage>0</damage>
+	<stun>20</stun>
+	<missiles>0</missiles>
+	<shots>1</shots>
+	<sp>5</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>40.2</cooldown><!-- 1.27 was 40 -->
+	<power>1</power>
+	<cost>100</cost>
+	<bp>10</bp>
+	<speed>300</speed>
+	<rarity>0</rarity>
+	<explosion>ba_explosion_stungun</explosion>
+	<projectiles>
+		<projectile count="100" fake="false">ba_effector_impact_1</projectile>
+	</projectiles>
+	<launchSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>silence</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>silence</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>silence</sound>
+	</missSounds>
+	<weaponArt>ba_stungun_2</weaponArt>
+</weaponBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ROCK" layout="p_rock_fight_2_pirate" img="p_rock_fight_2_pirate">
+	<class>Pirate Rock Ship</class>
+	<name>Smash</name>
+	<desc>ロックマンは常に激しい搭乗の戦術が好きでした、そしてこれらの海賊も例外ではありません。</desc>
+	<unlock>Prove yourself to the Rockmen to earn this powerful cruiser.</unlock>
+	<systemList>
+		<battery power="1" room="10" start="false" img="room_battery_13" />
+		<cloaking power="1" room="8" start="false" img="room_cloaking_3" />
+		<clonebay power="1" room="9" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="3" start="true" img="room_doors_60">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="2" start="false" img="room_drones_14" />
+		<engines power="1" room="12" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="7" start="false" img="room_hacking_3" />
+		<medbay power="1" room="9" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="6" start="false" img="room_mind_1" />
+		<oxygen power="1" room="13" start="true" img="room_oxygen" />
+		<pilot power="1" room="0" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="4" start="true" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="11" start="true" img="room_shields_16">
+			<slot>
+				<direction>down</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="5" start="true" />
+		<weapons power="2" room="1" start="true" img="room_weapons_2">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="9" start="false" img="room_artillery_4" weapon="ARTILLERY_PL_PLASMA"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="10" count="4">
+		<weapon name="MISSILES_V3" />
+		<weapon name="PREIGNITE_PLASMA_IMPULSE_2" />
+	</weaponList>
+	<droneList drones="5" count="2" />
+	<health amount="30" />
+	<maxPower amount="7" />
+	<crewCount amount="1" class="rock" />
+	<crewCount amount="1" class="rock" />
+	<crewCount amount="1" class="rock" />
+	<aug name="ROCK_ARMOR" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ROCK_2" layout="p_rock_armored" img="p_rock_armored">
+	<class>Rock Escort Ship</class>
+	<name>Stealthy</name>
+	<desc>この強力な船は、その珍しい武器が充電されている間、マントに隠れることを好みます。</desc>
+	<unlock>Complete 2/3 of the Pirate Rock Ship Achievements to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="16" start="false" img="room_battery_150" />
+		<cloaking power="1" room="19" start="true" img="room_cloaking_3" />
+		<clonebay power="1" room="13" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="4" start="false" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="3" start="false" img="room_drones_16" />
+		<engines power="1" room="17" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="1" start="false" img="room_hacking_8" />
+		<medbay power="1" room="13" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="20" start="false" img="room_mind_3" />
+		<oxygen power="1" room="15" start="true" img="room_oxygen_3" />
+		<pilot power="2" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="5" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="14" start="true" img="room_shields_4">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="10" start="false" />
+		<weapons power="3" room="2" start="true" img="room_weapons_7">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="7" start="false" img="room_artillery_3" weapon="ARTILLERY_PL_PLASMA"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="10" count="4">
+		<weapon name="BEAM_GUISARME" />
+		<weapon name="BA_MINE_ION" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="rock" />
+	<crewCount amount="1" class="rock" />
+	<crewCount amount="1" class="rock" />
+	<aug name="ROCK_ARMOR" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ROCK_3" layout="p_ce_asteroid" img="p_ce_asteroid">
+	<class>Asteroid Cruiser</class>
+	<name>Adjusted</name>
+	<desc>小惑星の内部で作られたこの船は、乗組員の生活には適していませんが、十分に強化され、武装しています。</desc>
+	<unlock>Get to the 8th sector with the Rock Escort Ship and Advanced Edition enabled to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="11" start="false" img="room_battery_14" />
+		<cloaking power="1" room="17" start="false" img="room_cloaking_3" />
+		<clonebay power="1" room="5" start="false">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="7" start="false" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="20" start="false" img="room_drones_14" />
+		<engines power="1" room="18" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="19" start="false" img="room_hacking_7" />
+		<medbay power="1" room="5" start="false" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="1" start="false" img="room_mind_10" />
+		<oxygen power="1" room="15" start="false" img="room_oxygen_13" />
+		<pilot power="1" room="3" start="true" img="room_pilot_4">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="6" start="false" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="4" room="8" start="true" img="room_shields_3">
+			<slot>
+				<direction>left</direction>
+				<number>2</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="16" start="false" />
+		<weapons power="4" room="2" start="true" img="room_weapons_6">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="10" start="false" img="room_artillery" weapon="ARTILLERY_PL_PLASMA"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="LASER_HEAVY_PIERCE_2" />
+		<weapon name="BA_BOMB_HEAL_2" /><!-- 1.25 -->
+		<weapon name="SHIPRADAR"/>
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="9" />
+	<crewCount amount="1" class="rock" />
+	<crewCount amount="1" class="rock" />
+	<aug name="O2_MASKS" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_STEALTH" layout="phacker_boss" img="phacker_boss">
+	<class>Hacker Dreadnought</class>
+	<name>Warcraft</name>
+	<desc>その強力な武器にもかかわらず、この船はいくつかの補助システムを欠いています。</desc>
+	<unlock>This ship is being built near the Engi homeworlds. To unlock it you'll need to help them, but they only trust their own kind.</unlock>
+	<systemList>
+		<battery power="1" room="11" start="false" img="room_battery_6" />
+		<cloaking power="1" room="3" start="false" img="room_cloaking_9" />
+		<clonebay power="1" room="2" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="13" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="10" start="false" img="room_drones_14" />
+		<engines power="1" room="12" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="7" start="true" img="room_hacking_4" />
+		<medbay power="1" room="2" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="8" start="false" img="room_mind_1" />
+		<oxygen power="1" room="6" start="true" img="room_oxygen_5" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="14" start="false" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="5" start="true" img="room_shields_15">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="4" start="false" />
+		<weapons power="4" room="1" start="true" img="room_weapons_2">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="9" start="false" img="room_artillery_3" weapon="ARTILLERY_PL_BOMB_BREACH"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="WEAPONS_BOSS_HACKER" />
+		<weapon name="PULSE_CANNONS" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="slug" />
+	<crewCount amount="1" class="slug" />
+	<crewCount amount="1" class="slug" />
+	<aug name="SLUG_GEL" />
+	<aug name="HACKING_STUN" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_STEALTH_2" layout="pautocruiser" img="pautocruiser">
+	<class>Drone</class>
+	<name>Space Boat</name>
+	<desc>乗組員を奪われたこの船は、AIの管理下にあります。ただし、途中で乗組員を雇うことはできます。ライフサポートシステムをインストールすることを忘れないでください。</desc>
+	<unlock>Complete 2/3 of the Hacker Dreadnought Achievements to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="1" start="false" img="room_battery_70" />
+		<cloaking power="1" room="14" start="false" img="room_cloaking_120" />
+		<clonebay power="1" room="2" start="false">
+			<slot>
+				<number>2</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="6" start="false" img="room_doors_4">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</doors>
+		<drones power="2" room="13" start="true" img="room_drones_140" />
+		<engines power="2" room="12" start="true" img="room_engines">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="3" start="false" img="room_hacking_6" />
+		<medbay power="1" room="2" start="false" img="room_medbay_7">
+			<slot>
+				<number>2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="5" start="false" img="room_mind_6" />
+		<oxygen power="1" room="4" start="false" img="room_oxygen_8" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="8" start="true" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="7" start="true" img="room_shields">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="10" start="false" />
+		<weapons power="4" room="9" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="11" start="false" img="room_artillery_2" weapon="ARTILLERY_PL_ONI"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="15" count="3">
+		<weapon name="GAUSS_ORDEN_PP" />
+		<weapon name="LASER_PIERCE_1" />
+	</weaponList>
+	<droneList drones="15" count="3"><!-- 1.25 drooes was 5 -->
+		<drone name="DE_REPAIR_2" />
+		<drone name="DE_DRONE_DEFENSE_LIGHT_MISSILE" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="8" />
+	<aug name="SLUG_GEL" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_STEALTH_3" layout="phalship" img="phalship">
+	<class>HAL Cruiser</class>
+	<name>HAL 3000</name>
+	<desc>HALドローンの1つは、連邦のニーズに合わせて再プログラムされました。この船にはランダムなHALドローンが装備されています。</desc>
+	<unlock>Get to the 8th sector with the Drone and Advanced Edition enabled to unlock this ship.</unlock>
+	<systemList>
+		<artillery power="1" max="4" room="4" start="true" weapon="HAL_EYE_PLAYER" img="room_artillery_kanpukter" /><!-- 1.26 added max -->
+		<battery power="1" room="10" start="false" img="room_battery_3" />
+		<cloaking power="1" room="8" start="false" img="room_cloaking_10" />
+		<clonebay power="1" room="14" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="11" start="false" img="room_doors_30">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="4" room="3" start="true" img="room_drones_12" />
+		<engines power="3" room="7" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="1" start="true" img="room_hacking_8" />
+		<medbay power="1" room="14" start="false" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="2" start="false" img="room_mind_10" />
+		<oxygen power="1" room="5" start="false" img="room_oxygen_19" />
+		<pilot power="1" room="0" start="true" img="room_pilot_10">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="12" start="true" img="room_sensors_2">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="6" start="true" img="room_shields_5">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="9" start="false" />
+		<weapons power="1" room="13" start="true" img="room_weapons_11">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+	</systemList>
+	<weaponSlots>3</weaponSlots>
+	<droneSlots>3</droneSlots>
+	<weaponList missiles="0" count="3" />
+	<droneList drones="30" count="3"><!-- 1.25 drones was 20 -->
+		<drone name="HAL_REPAIR" />
+		<drone name="HAL_DRONES_TWO_POWER" />
+		<drone name="HAL_DRONES_TWO_POWER" />
+	</droneList>
+	<health amount="30" />
+	<maxPower amount="10" />
+	<aug name="DEFENSE_SCRAMBLER" />
+</shipBlueprint>
+
+<weaponBlueprint name="HAL_EYE_PLAYER">
+	<type>BURST</type><!-- 1.26 -->
+	<flavorType>HAL Eye</flavorType>
+	<title>HAL Eye</title>
+	<short>HAL Eye</short>
+	<desc>分析HALシステム。一度に5発の発射体を発射し、フェーズイオンと乗組員にダメージを与えます。 [40‡]</desc><!-- 1.26 -->
+	<tooltip>Analytical HAL system. Fires 5 projectiles all at once, dealing 3 phase ion and 30 crew damage each. [40 ‡]</tooltip><!-- 1.26 -->
+	<radius>35</radius><!-- 1.26 -->
+	<locked>1</locked>
+	<damage>0</damage>
+	<ion>3</ion>
+	<persDamage>2</persDamage> <!-- up -->
+	<shots>1</shots> <!-- 1.26 | up -->
+	<sp>5</sp>
+	<spin>3000</spin>
+	<stunChance>5</stunChance>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>40.2</cooldown> <!-- up --><!-- 1.27 was 40 -->
+	<power>1</power>
+	<cost>0</cost>
+	<bp>10</bp>
+	<speed>20</speed>
+	<rarity>0</rarity>
+	<!-- <image>hal_proj_3</image> --><!-- 1.26 -->
+	<projectiles><!-- 1.26 -->
+		<projectile count="5" fake="false">hal_proj_3</projectile>
+	</projectiles>
+	<explosion>ba_explosion_ion_phase</explosion>
+	<launchSounds>
+		<sound>hal_art_shot_1</sound>
+		<sound>hal_art_shot_2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>hal_eye</weaponArt>
+</weaponBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_CRYSTAL" layout="p_crystal_bomber_b" img="p_crystal_bomber_b">
+	<class>Strange Ship</class>
+	<name>Not Determined</name>
+	<desc>この奇妙な船は、実際には一種のクリスタル爆撃機であり、非常に武装した種類のものです。</desc>
+	<unlock>Travel to a lost sector of the galaxy to find this powerful vessel.</unlock>
+	<systemList>
+		<battery power="1" room="12" start="false" img="room_battery_17" />
+		<cloaking power="1" room="9" start="false" img="room_cloaking_120" />
+		<clonebay power="1" room="14" start="false"><!-- 1.26 room was 3 -->
+			<slot>
+				<number>0</number><!-- was 1 - when did this change? -->
+			</slot>
+		</clonebay>
+		<doors power="1" room="0" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="13" start="false" img="room_drones_14" />
+		<engines power="3" room="6" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="11" start="false" img="room_hacking_4" />
+		<medbay power="1" room="14" start="true" img="room_medbay_6"><!-- 1.26 room was 3, img was medbay -->
+			<slot>
+				<number>-2</number><!-- was 1 - when did this change? -->
+			</slot>
+		</medbay>
+		<mind power="1" room="10" start="false" img="room_mind_1" />
+		<oxygen power="1" room="5" start="true" img="room_oxygen_2" />
+		<pilot power="1" room="8" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="2" room="2" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="4" start="true" img="room_shields_4">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="3" start="false" /><!-- 1.26 room was 7 -->
+		<weapons power="2" room="1" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="7" start="false" img="room_artillery_2" weapon="ARTILLERY_PL_CRYSTAL_CYAN"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="CRYSTAL_HEAVY_1" />
+		<weapon name="CRYSTAL_HEAVY_1" />
+		<weapon name="BA_CRYSTAL_LIGHT_1" />
+		<weapon name="BA_CRYSTAL_LIGHT_1" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="crystal" />
+	<crewCount amount="1" class="crystal" />
+	<crewCount amount="1" class="crystal" />
+	<aug name="CRYSTAL_SHARDS" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_CRYSTAL_2" layout="p_crystal_drednout" img="p_crystal_drednout">
+	<class>Crystalline Dreadnought</class>
+	<name>Crystallite</name>
+	<desc>この秘密の水晶船には、対人プロトタイプが装備されています。戦闘後、敵の船は通常チーズのように見えます。</desc>
+	<unlock>Complete 2/3 of the Strange Ship Achievements to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="10" start="false" img="room_battery_10" />
+		<cloaking power="1" room="3" start="false" img="room_cloaking_10" />
+		<clonebay power="1" room="2" start="false">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="7" start="true" img="room_doors_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="14" start="false" img="room_drones_12" />
+		<engines power="3" room="9" start="true" img="room_engines_2">
+			<slot>
+				<direction>down</direction>
+				<number>2</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="13" start="false" img="room_hacking_4" />
+		<medbay power="1" room="2" start="true" img="room_medbay">
+			<slot>
+				<number>1</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="12" start="false" img="room_mind_6" />
+		<oxygen power="1" room="1" start="true" img="room_oxygen_14" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="2" room="5" start="true" img="room_sensors_4">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="4" start="true" img="room_shields_4">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="8" start="false" />
+		<weapons power="3" room="6" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="11" start="false" img="room_artillery" weapon="ARTILLERY_PL_CRYSTAL_CYAN"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="CRYSTAL_PRO_HEAVY" />
+		<weapon name="CRYSTAL_PRO_LIGHT" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="9" />
+	<crewCount amount="1" class="crystal" />
+	<crewCount amount="1" class="crystal" />
+	<crewCount amount="1" class="crystal" />
+	<aug name="CRYSTAL_SHARDS" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ANAEROBIC" layout="PLANIUS_X" img="PLANIUS_X">
+	<class>Lanius Dreadnought</class>
+	<name>Sharp Knives</name>
+	<desc>この弩級戦艦は、反人員のプロトタイプでさらに武装しています。残念ながら、それらはわずかに損傷しています。</desc>
+	<unlock>>Entice the Lanius with a valuable fleet, unlock 4 ships in addition to the starting one to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="6" start="false" img="room_battery_10" />
+		<cloaking power="1" room="14" start="false" img="room_cloaking_4" /> <!-- 1.26 room was 8, img was cloaking-->
+		<clonebay power="1" room="1" start="true">
+			<slot>
+				<number>1</number>
+			</slot>
+		</clonebay>
+		<doors power="1" room="7" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="11" start="false" img="room_drones_12" />
+		<engines power="2" room="10" start="true" img="room_engines_3">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="12" start="false" img="room_hacking_10" />
+		<medbay power="1" room="1" start="false" img="room_medbay_9">
+			<slot>
+				<number>-2</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="3" start="false" img="room_mind_5" />
+		<oxygen power="1" room="13" start="false" img="room_oxygen_9" />
+		<pilot power="1" room="5" start="true" img="room_pilot_2">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</pilot>
+		<sensors power="2" room="4" start="true" img="room_sensors_6">
+			<slot>
+				<direction>right</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="9" start="true" img="room_shields_2">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="2" start="false" />
+		<weapons power="3" room="0" start="true" img="room_weapons">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="8" start="false" img="room_artillery_3" weapon="ARTILLERY_PL_SHOTGUN"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="PHOTO_2" />
+		<weapon name="OMICRON_AUTOCANNON_12" />
+		<weapon name="OMICRON_TRIPLE_BLASTER_12" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="7" />
+	<crewCount amount="1" class="anaerobic" />
+	<crewCount amount="1" class="anaerobic" />
+	<crewCount amount="1" class="anaerobic" />
+	<aug name="O2_MASKS" />
+</shipBlueprint>
+
+<shipBlueprint name="PLAYER_SHIP_ANAEROBIC_2" layout="pmothership" img="pmothership">
+	<class>Avatar Dreadnought</class>
+	<name>Ghost Brigade</name>
+	<desc>この船は空気呼吸のレースには適していませんが、アバターはあまり気にしません。</desc>
+	<unlock>Complete 2/3 of the Lanius Dreadnought Achievements to unlock this ship.</unlock>
+	<systemList>
+		<battery power="1" room="8" start="false" img="room_battery_150" />
+		<cloaking power="1" room="6" start="false" img="room_cloaking_120" />
+		<clonebay power="1" room="15" start="true">
+			<slot>
+				<number>0</number>
+			</slot>
+		</clonebay>
+		<doors power="2" room="2" start="true" img="room_doors">
+			<slot>
+				<direction>up</direction>
+				<number>1</number>
+			</slot>
+		</doors>
+		<drones power="2" room="11" start="false" img="room_drones_140" />
+		<engines power="3" room="13" start="true" img="room_engines_8">
+			<slot>
+				<direction>left</direction>
+				<number>1</number>
+			</slot>
+		</engines>
+		<hacking power="1" room="10" start="false" img="room_hacking_10" />
+		<medbay power="1" room="15" start="false" img="room_medbay_4">
+			<slot>
+				<number>0</number>
+			</slot>
+		</medbay>
+		<mind power="1" room="9" start="false" img="room_mind_9" />
+		<oxygen power="1" room="12" start="false" img="room_oxygen_3" />
+		<pilot power="1" room="0" start="true" img="room_pilot">
+			<slot>
+				<direction>right</direction>
+				<number>0</number>
+			</slot>
+		</pilot>
+		<sensors power="1" room="1" start="true" img="room_sensors">
+			<slot>
+				<direction>down</direction>
+				<number>1</number>
+			</slot>
+		</sensors>
+		<shields power="2" room="14" start="true" img="room_shields_4">
+			<slot>
+				<direction>left</direction>
+				<number>0</number>
+			</slot>
+		</shields>
+		<teleporter power="1" room="7" start="false" />
+		<weapons power="3" room="3" start="true" img="room_weapons_4">
+			<slot>
+				<direction>up</direction>
+				<number>0</number>
+			</slot>
+		</weapons>
+		<artillery power="2" max="4" room="4" start="false" img="room_artillery_4" weapon="ARTILLERY_PL_SHOTGUN"/> <!-- 1.26 -->
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>2</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="LASER_PRISM_3" />
+	</weaponList>
+	<droneList drones="0" count="2" />
+	<health amount="30" />
+	<maxPower amount="8" />
+	<crewCount amount="1" class="ghost" />
+	<crewCount amount="1" class="ghost" />
+	<crewCount amount="1" class="ghost" />
+	<aug name="ION_ARMOR" />
+</shipBlueprint>
